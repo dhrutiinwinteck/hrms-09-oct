@@ -1,0 +1,1067 @@
+/* ============================================================
+
+   PunchCard.css
+
+   EXACT STRUCTURE OF THE PROVIDED DESIGN REFERENCE
+
+   ------------------------------------------------------------
+
+   Design only. No attendance/API logic is changed.
+
+   ============================================================ */
+
+
+
+.punch-attendance-layout {
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.71fr) minmax(420px, 1fr);
+
+  gap: 14px;
+
+  width: 100%;
+
+  align-items: stretch;
+
+}
+
+
+
+/* ============================================================
+
+   COMMON CARD
+
+   ============================================================ */
+
+
+
+.punch-card {
+
+  min-width: 0;
+
+  height: 214px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+
+}
+
+
+
+.punch-card:hover {
+
+  box-shadow: 0 8px 26px rgba(18, 46, 38, 0.06);
+
+}
+
+
+
+/* ============================================================
+
+   WORK CARD
+
+   Reference:
+
+   [large clock] | [heading/text/button] | [map]
+
+   ============================================================ */
+
+
+
+.punch-card-work {
+
+  display: grid;
+
+  grid-template-columns: 220px minmax(300px, 1fr) 290px;
+
+  align-items: stretch;
+
+  background: #f4f9f7;
+
+  border: 1px solid #d4e3dc;
+
+}
+
+
+
+/* ============================================================
+
+   LEFT CLOCK
+
+   ============================================================ */
+
+
+
+.punch-card-left {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 16px;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+
+.punch-clock-circle {
+
+  width: 174px;
+
+  height: 174px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #edf2ef;
+
+  box-shadow:
+
+    0 5px 18px rgba(20, 47, 39, 0.055),
+
+    inset 0 -4px 10px rgba(20, 47, 39, 0.018);
+
+}
+
+
+
+.punch-clock-inner {
+
+  width: 132px;
+
+  height: 132px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+
+.punch-clock-icon {
+
+  color: #0e8a4b;
+
+  margin-bottom: 7px;
+
+}
+
+
+
+.punch-clock-label {
+
+  color: #0e8a4b;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.22;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  letter-spacing: 0;
+
+}
+
+
+
+.punch-clock-time {
+
+  margin-top: 5px;
+
+  color: #0e8a4b;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  font-variant-numeric: tabular-nums;
+
+}
+
+
+
+/* ============================================================
+
+   CENTER WORK CONTENT
+
+   ============================================================ */
+
+
+
+.punch-card-center {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding: 20px 18px 20px 14px;
+
+  border-left: 1px solid #d8e5df;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+
+.punch-card-section-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 5px;
+
+}
+
+
+
+.punch-status-dot {
+
+  width: 9px;
+
+  height: 9px;
+
+  flex: 0 0 9px;
+
+  border-radius: 50%;
+
+  background: #0e8a4b;
+
+}
+
+
+
+.punch-center-heading {
+
+  margin: 0;
+
+  color: #172321;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+
+}
+
+
+
+.punch-center-status {
+
+  max-width: 310px;
+
+  margin: 5px 0 14px;
+
+  color: #5e6d68;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.42;
+
+  font-weight: 400;
+
+}
+
+
+
+/* The only work action button. */
+
+.punch-primary-action {
+
+  width: min(100%, 265px);
+
+  min-height: 42px;
+
+}
+
+
+
+/* ============================================================
+
+   BUTTON SYSTEM
+
+   ============================================================ */
+
+
+
+.punch-btn {
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  font-weight: 650;
+
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  transition:
+
+    background-color 0.2s ease,
+
+    border-color 0.2s ease,
+
+    box-shadow 0.2s ease,
+
+    transform 0.2s ease;
+
+}
+
+
+
+.punch-btn-primary {
+
+  background: #0e8a4b;
+
+  color: #ffffff;
+
+  border-color: #0e8a4b;
+
+}
+
+
+
+.punch-btn-primary:hover:not(:disabled) {
+
+  background: #0b7841;
+
+  border-color: #0b7841;
+
+  box-shadow: 0 5px 14px rgba(14, 138, 75, 0.2);
+
+  transform: translateY(-1px);
+
+}
+
+
+
+.punch-btn-danger {
+
+  background: #d73535;
+
+  color: #ffffff;
+
+  border-color: #d73535;
+
+}
+
+
+
+.punch-btn-danger:hover:not(:disabled) {
+
+  background: #c72d2d;
+
+  border-color: #c72d2d;
+
+  box-shadow: 0 5px 14px rgba(211, 47, 47, 0.18);
+
+  transform: translateY(-1px);
+
+}
+
+
+
+.punch-btn-outline {
+
+  background: #ffffff;
+
+  color: #0e8a4b;
+
+  border-color: #9ccbb5;
+
+}
+
+
+
+.punch-btn-outline:hover:not(:disabled) {
+
+  background: #f7fbf9;
+
+  border-color: #0e8a4b;
+
+}
+
+
+
+.punch-btn-orange {
+
+  background: #ffffff;
+
+  color: #e87800;
+
+  border-color: #f0a85a;
+
+}
+
+
+
+.punch-btn-orange:hover:not(:disabled) {
+
+  background: #fff8ef;
+
+  border-color: #e87800;
+
+  box-shadow: 0 4px 12px rgba(232, 120, 0, 0.1);
+
+}
+
+
+
+.punch-btn:disabled {
+
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none !important;
+
+  box-shadow: none !important;
+
+}
+
+
+
+/* ============================================================
+
+   LOCATION NOTE
+
+   ============================================================ */
+
+
+
+.punch-location-note {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 8px;
+
+  color: #64716d;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+}
+
+
+
+/* ============================================================
+
+   MAP
+
+   ============================================================ */
+
+
+
+.punch-card-right {
+
+  min-width: 0;
+
+  height: 100%;
+
+  position: relative;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  border-left: 1px solid #d4e2dc;
+
+  background: #edf3f0;
+
+}
+
+
+
+.punch-card-right > * {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
+/* ============================================================
+
+   BREAK CARD
+
+   Reference:
+
+   [large coffee circle] | [heading/text/button/duration]
+
+   No map.
+
+   ============================================================ */
+
+
+
+.punch-card-break {
+
+  display: grid;
+
+  grid-template-columns: 138px minmax(0, 1fr);
+
+  align-items: center;
+
+  background: #fffcf8;
+
+  border: 1px solid #eadfd1;
+
+}
+
+
+
+.break-card-icon-area {
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 12px;
+
+  border-right: 1px solid #eadfd1;
+
+}
+
+
+
+.break-icon-circle {
+
+  width: 142px;
+
+  height: 142px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #f0e9df;
+
+  color: #f07d00;
+
+  box-shadow:
+
+    0 5px 18px rgba(102, 72, 35, 0.045),
+
+    inset 0 -4px 9px rgba(102, 72, 35, 0.015);
+
+}
+
+
+
+.break-card-content {
+
+  min-width: 0;
+
+  height: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding: 18px 18px 18px 20px;
+
+}
+
+
+
+.break-card-heading-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+
+
+.break-status-dot {
+
+  width: 9px;
+
+  height: 9px;
+
+  flex: 0 0 9px;
+
+  border-radius: 50%;
+
+  background: #f08a00;
+
+}
+
+
+
+.break-card-heading {
+
+  margin: 0;
+
+  color: #292721;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+}
+
+
+
+.break-card-description {
+
+  max-width: 285px;
+
+  margin: 7px 0 13px;
+
+  color: #68645e;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.42;
+
+}
+
+
+
+.break-action-button {
+
+  width: 100%;
+
+  min-height: 42px;
+
+}
+
+
+
+.break-card-duration {
+
+  margin-top: 8px;
+
+  color: #716c65;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+}
+
+
+
+/* Active break: keep the same simple structure, only warm accent. */
+
+.punch-card-break:has(.punch-btn-orange) {
+
+  background: #fffaf3;
+
+  border-color: #efd7b8;
+
+}
+
+
+
+.punch-card-break:has(.punch-btn-orange) .break-icon-circle {
+
+  color: #e97800;
+
+}
+
+
+
+/* ============================================================
+
+   RESPONSIVE
+
+   ============================================================ */
+
+
+
+@media (max-width: 1250px) {
+
+  .punch-attendance-layout {
+
+    grid-template-columns: minmax(0, 1.55fr) minmax(390px, 1fr);
+
+  }
+
+
+
+  .punch-card-work {
+
+    grid-template-columns: 190px minmax(270px, 1fr) 270px;
+
+  }
+
+
+
+  .punch-clock-circle {
+
+    width: 150px;
+
+    height: 150px;
+
+  }
+
+
+
+  .punch-clock-inner {
+
+    width: 118px;
+
+    height: 118px;
+
+  }
+
+
+
+  .punch-card-break {
+
+    grid-template-columns: 120px minmax(0, 1fr);
+
+  }
+
+
+
+  .break-icon-circle {
+
+    width: 120px;
+
+    height: 120px;
+
+  }
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .punch-attendance-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .punch-card-work {
+
+    grid-template-columns: 185px minmax(0, 1fr) 300px;
+
+  }
+
+}
+
+
+
+@media (max-width: 760px) {
+
+  .punch-card {
+
+    height: auto;
+
+    min-height: 0;
+
+  }
+
+
+
+  .punch-card-work {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .punch-card-left {
+
+    padding: 18px 12px 8px;
+
+  }
+
+
+
+  .punch-card-center {
+
+    border-left: 0;
+
+    border-top: 1px solid #d8e5df;
+
+    padding: 18px;
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+
+
+  .punch-card-section-heading {
+
+    justify-content: center;
+
+  }
+
+
+
+  .punch-center-status {
+
+    max-width: 100%;
+
+  }
+
+
+
+  .punch-primary-action {
+
+    width: min(100%, 300px);
+
+  }
+
+
+
+  .punch-location-note {
+
+    justify-content: center;
+
+  }
+
+
+
+  .punch-card-right {
+
+    min-height: 210px;
+
+    border-left: 0;
+
+    border-top: 1px solid #d4e2dc;
+
+  }
+
+
+
+  .punch-card-break {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .break-card-icon-area {
+
+    height: auto;
+
+    padding: 18px 12px 8px;
+
+    border-right: 0;
+
+  }
+
+
+
+  .break-card-content {
+
+    height: auto;
+
+    padding: 18px;
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+
+
+  .break-card-heading-row {
+
+    justify-content: center;
+
+  }
+
+
+
+  .break-action-button {
+
+    width: min(100%, 300px);
+
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .punch-clock-circle {
+
+    width: 138px;
+
+    height: 138px;
+
+  }
+
+
+
+  .punch-clock-inner {
+
+    width: 110px;
+
+    height: 110px;
+
+  }
+
+
+
+  .punch-clock-label {
+
+    font-size: 15px;
+
+  }
+
+
+
+  .punch-card-center,
+
+  .break-card-content {
+
+    padding: 15px;
+
+  }
+
+}
+
+
+/* ============================================================
+   LIVE BREAK COUNTDOWN
+   ============================================================ */
+
+.break-card-duration {
+  display: inline-flex;
+  align-items: center;
+  min-height: 16px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1px;
+}
+
+.break-card-duration-overtime {
+  color: #d73535;
+  font-weight: 700;
+}
+
+/* Keep the countdown visually clear without making the card
+   look like an alarm/error panel. */
+.punch-card-break:has(.break-card-duration-overtime) {
+  border-color: #e9c9c9;
+}
+
+.punch-card-break:has(.break-card-duration-overtime) .break-icon-circle {
+  color: #d73535;
+}

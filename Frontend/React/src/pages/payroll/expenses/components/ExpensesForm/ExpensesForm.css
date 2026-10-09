@@ -1,0 +1,431 @@
+.expenses-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: calc(100vh - 145px);
+  background: #ffffff;
+}
+
+.expenses-form__body {
+  overflow-y: auto;
+  padding: 10px 14px 9px;
+  scrollbar-width: thin;
+  scrollbar-color: #c9d4d3 transparent;
+}
+
+.expenses-form__body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.expenses-form__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.expenses-form__body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c9d4d3;
+}
+
+/* =========================================================
+   COMMON FIELD
+   ========================================================= */
+
+.expenses-form__field {
+  position: relative;
+  min-width: 0;
+}
+
+.expenses-form__field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #38565d;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.expenses-form__field label em,
+.expenses-form__attachment label em {
+  color: #e54b50;
+  font-style: normal;
+}
+
+.expenses-form__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid #dce3e3;
+  border-radius: 5px;
+  background: #ffffff;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.expenses-form__control:focus-within {
+  border-color: #4b7778;
+  box-shadow:
+    0 0 0 2px rgba(63, 105, 106, 0.07);
+}
+
+.expenses-form__control-icon {
+  display: flex;
+  flex: 0 0 35px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  color: #4e7779;
+  background: #f0f4f2;
+  border-right: 1px solid #e3e9e8;
+}
+
+.expenses-form__control input,
+.expenses-form__control select,
+.expenses-form__control textarea {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  color: #465d63;
+  background: transparent;
+  font-family: inherit;
+  font-size: 8.5px;
+}
+
+.expenses-form__control input,
+.expenses-form__control select {
+  height: 100%;
+  padding: 0 28px 0 9px;
+}
+
+.expenses-form__control input::placeholder,
+.expenses-form__control textarea::placeholder {
+  color: #a1abad;
+}
+
+.expenses-form__control select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.expenses-form__select-arrow {
+  position: absolute;
+  right: 8px;
+  color: #3f6669;
+  pointer-events: none;
+}
+
+.expenses-form__currency {
+  color: #446b6d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.expenses-form__control--textarea {
+  height: 43px;
+  align-items: stretch;
+}
+
+.expenses-form__control--textarea textarea {
+  min-height: 100%;
+  padding: 7px 9px;
+  resize: none;
+  line-height: 1.4;
+}
+
+.expenses-form__error {
+  display: block;
+  margin-top: 3px;
+  color: #d14b51;
+  font-size: 7px;
+}
+
+/* =========================================================
+   DETAILS AREA
+   ========================================================= */
+
+.expenses-form__details {
+  padding: 1px 0 9px;
+  border-radius: 8px;
+}
+
+.expenses-form__row {
+  display: grid;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.expenses-form__row--two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.expenses-form__row--three {
+  grid-template-columns:
+    1fr
+    1fr
+    0.92fr;
+  gap: 18px;
+}
+
+.expenses-form__field--full {
+  width: 100%;
+}
+
+/* =========================================================
+   ATTACHMENTS
+   ========================================================= */
+
+.expenses-form__attachments {
+  overflow: hidden;
+  margin-top: 0;
+  border: 1px solid #ece9e1;
+  border-radius: 8px;
+  background: #fcfbf8;
+}
+
+.expenses-form__section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 27px;
+  padding: 0 15px;
+  color: #36545a;
+  background:
+    linear-gradient(
+      90deg,
+      #dedbd0 0%,
+      #e7e4dc 100%
+    );
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.expenses-form__section-header svg {
+  color: #477174;
+}
+
+.expenses-form__attachment-content {
+  padding: 9px 14px 7px;
+}
+
+.expenses-form__attachment-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  column-gap: 15px;
+  row-gap: 9px;
+}
+
+.expenses-form__attachment {
+  min-width: 0;
+}
+
+.expenses-form__attachment label {
+  display: block;
+  margin: 0 0 5px;
+  color: #476067;
+  font-size: 8.5px;
+  font-weight: 700;
+}
+
+.expenses-form__file-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+  border: 1px dashed #d9dfdd;
+  border-radius: 6px;
+  background: #fafbf9;
+}
+
+.expenses-form__file-icon {
+  display: flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #466f71;
+  background: #eef3f1;
+  border-right: 1px solid #e0e6e4;
+}
+
+.expenses-form__file-input input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 5px 5px 4px;
+  color: #748286;
+  background: transparent;
+  font-family: inherit;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.expenses-form__file-input input::file-selector-button {
+  height: 21px;
+  margin-right: 5px;
+  padding: 0 7px;
+  border: 1px solid #b9c3c2;
+  border-radius: 3px;
+  color: #3e5054;
+  background: #f5f6f4;
+  font-family: inherit;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+.expenses-form__file-input input::file-selector-button:hover {
+  background: #ecefed;
+}
+
+.expenses-form__file-name {
+  display: block;
+  max-width: 100%;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #6c7b7f;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   LOCATION / DESCRIPTION
+   ========================================================= */
+
+.expenses-form__location-section {
+  padding: 8px 0 0;
+}
+
+.expenses-form__location-section
+  .expenses-form__field
+  + .expenses-form__field {
+  margin-top: 9px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.expenses-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  min-height: 43px;
+  padding: 7px 14px;
+  border-top: 1px solid #eeeae2;
+  background: #faf9f5;
+}
+
+.expenses-form__button {
+  min-width: 100px;
+  height: 28px;
+  padding: 0 19px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 8.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.expenses-form__button:active {
+  transform: translateY(1px);
+}
+
+.expenses-form__button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.expenses-form__button--cancel {
+  border: 1px solid #e0ddd3;
+  color: #56676a;
+  background: #e5e1d7;
+}
+
+.expenses-form__button--cancel:hover:not(:disabled) {
+  background: #dcd8ce;
+}
+
+.expenses-form__button--submit {
+  border: 1px solid #3b6f70;
+  color: #ffffff;
+  background: #3f7475;
+  box-shadow:
+    0 3px 7px rgba(48, 93, 95, 0.12);
+}
+
+.expenses-form__button--submit:hover:not(:disabled) {
+  background: #356869;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .expenses-form__row--three {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expenses-form__row--three
+    .expenses-form__field:last-child {
+    grid-column: span 2;
+  }
+
+  .expenses-form__attachment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .expenses-form {
+    max-height: calc(100vh - 40px);
+  }
+
+  .expenses-form__body {
+    padding: 10px;
+  }
+
+  .expenses-form__row--two,
+  .expenses-form__row--three {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .expenses-form__row--three
+    .expenses-form__field:last-child {
+    grid-column: auto;
+  }
+
+  .expenses-form__attachment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expenses-form__footer {
+    padding: 8px 10px;
+  }
+
+  .expenses-form__button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .expenses-form__footer {
+    gap: 6px;
+  }
+
+  .expenses-form__button {
+    min-width: 0;
+  }
+}

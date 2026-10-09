@@ -1,0 +1,54 @@
+/* src/pages/shifts/shift-assignment/ShiftAssignmentPage.css */
+
+.sa-page {
+    max-width: 2060px;
+    margin: 0 ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+.sa-page__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    font-size: 16px;
+    color: #6b7280;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+}
+
+.sa-page__submit-error {
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    background: #fef2f2;
+    border: 1.5px solid #fca5a5;
+    border-radius: 8px;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.sa-page__submit-success {
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    background: #ecfdf5;
+    border: 1.5px solid #6ee7b7;
+    border-radius: 8px;
+    color: #065f46;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .sa-page {
+        padding: 12px 16px 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sa-page {
+        padding: 8px 12px 20px 12px;
+    }
+}

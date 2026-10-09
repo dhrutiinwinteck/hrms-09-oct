@@ -1,0 +1,861 @@
+/* =========================================================
+   ADMIN POLICY TABLE
+   ========================================================= */
+
+.admin-policy-table,
+.admin-policy-table *,
+.admin-policy-table *::before,
+.admin-policy-table *::after {
+  box-sizing: border-box;
+}
+
+.admin-policy-table {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+  border-top: 0;
+
+  border-radius: 0 0 10px 10px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   TABLE SCROLL
+   ========================================================= */
+
+.admin-policy-table__scroll {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.admin-policy-table__scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.admin-policy-table__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-policy-table__scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.admin-policy-table__element {
+  width: 100%;
+
+  /*
+   * 7 columns are now present.
+   * Kept compact to avoid unnecessary horizontal spacing.
+   */
+  min-width: 920px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: fixed;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+   ========================================================= */
+
+/*
+   Sr. No.      : 7%
+   Policy Name  : 17%
+   Description  : 25%
+   Status       : 10%
+   Created By   : 16%
+   Last Updated : 14%
+   Actions      : 11%
+
+   Total = 100%
+*/
+
+.admin-policy-table__col-serial {
+  width: 7%;
+}
+
+.admin-policy-table__col-policy {
+  width: 17%;
+}
+
+.admin-policy-table__col-description {
+  width: 25%;
+}
+
+.admin-policy-table__col-status {
+  width: 10%;
+}
+
+.admin-policy-table__col-creator {
+  width: 16%;
+}
+
+.admin-policy-table__col-date {
+  width: 14%;
+}
+
+.admin-policy-table__col-actions {
+  width: 11%;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-policy-table__element thead {
+  background: #f7f9fc;
+}
+
+.admin-policy-table__element th {
+  height: 42px;
+
+  padding: 0 11px;
+
+  color: #1c3151;
+  background: #f7f9fc;
+
+  border-bottom: 1px solid #e5ebf2;
+
+  text-align: left;
+  vertical-align: middle;
+
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SR. NO. HEADER
+   ========================================================= */
+
+.admin-policy-table__serial-heading {
+  text-align: center !important;
+}
+
+/* =========================================================
+   ACTIONS HEADER
+   ========================================================= */
+
+.admin-policy-table__actions-heading {
+  text-align: center !important;
+}
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.admin-policy-table__element td {
+  height: 62px;
+
+  padding: 8px 11px;
+
+  color: #243b5a;
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8edf3;
+
+  vertical-align: middle;
+
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.admin-policy-table__element tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admin-policy-table__element tbody tr td {
+  transition:
+    background-color 0.18s ease;
+}
+
+.admin-policy-table__element tbody tr:hover td {
+  background: #fbfdfe;
+}
+
+/* =========================================================
+   SERIAL NUMBER
+   ========================================================= */
+
+.admin-policy-table__serial {
+  width: 100%;
+
+  color: #526983;
+
+  text-align: center;
+  vertical-align: middle;
+
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   POLICY NAME
+   ========================================================= */
+
+.admin-policy-table__policy-name {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #006972;
+
+  font-weight: 600;
+}
+
+.admin-policy-table__policy-name svg {
+  flex: 0 0 auto;
+
+  color: #00858d;
+}
+
+.admin-policy-table__policy-name-text {
+  min-width: 0;
+  max-width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.admin-policy-table__description {
+  width: 100%;
+  max-width: 100%;
+
+  display: -webkit-box;
+
+  overflow: hidden;
+
+  color: #263d5c;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  line-clamp: 2;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.admin-policy-table__status {
+  width: fit-content;
+  min-height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 4px 9px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.admin-policy-table__status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+}
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.admin-policy-table__status--active {
+  color: #079447;
+
+  background: #ebf9f0;
+
+  border: 1px solid #d5f1df;
+}
+
+.admin-policy-table__status--active
+  .admin-policy-table__status-dot {
+  background: #0cb35b;
+}
+
+/* =========================================================
+   INACTIVE
+   ========================================================= */
+
+.admin-policy-table__status--inactive {
+  color: #f02d38;
+
+  background: #fff0f1;
+
+  border: 1px solid #ffdcdf;
+}
+
+.admin-policy-table__status--inactive
+  .admin-policy-table__status-dot {
+  background: #ff343d;
+}
+
+/* =========================================================
+   CREATED BY
+   ========================================================= */
+
+.admin-policy-table__creator {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.admin-policy-table__creator-info {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.admin-policy-table__creator-info strong {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: normal;
+
+  color: #172c4d;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.admin-policy-table__date {
+  width: 100%;
+
+  color: #233b5e;
+
+  font-size: 10.5px;
+  line-height: 1.45;
+
+  white-space: pre-line;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.admin-policy-table__actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.admin-policy-table__action {
+  width: 33px;
+  height: 33px;
+
+  flex: 0 0 33px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* =========================================================
+   VIEW
+   ========================================================= */
+
+.admin-policy-table__action--view {
+  color: #1c3b61;
+}
+
+.admin-policy-table__action--view:hover {
+  color: #006a72;
+
+  background: #f0fbfb;
+
+  border-color: #b8e0e2;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   DELETE
+   ========================================================= */
+
+.admin-policy-table__action--delete {
+  color: #f22d3a;
+}
+
+.admin-policy-table__action--delete:hover {
+  color: #dc1827;
+
+  background: #fff3f4;
+
+  border-color: #ffcbd0;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.admin-policy-table__action:focus-visible {
+  outline: 3px solid rgba(0, 105, 114, 0.12);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-policy-table__empty-cell {
+  height: 220px !important;
+}
+
+.admin-policy-table__empty {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+.admin-policy-table__empty-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3px;
+
+  color: #087b82;
+  background: #edf8f8;
+
+  border: 1px solid #dcf0f1;
+  border-radius: 50%;
+}
+
+.admin-policy-table__empty strong {
+  color: #213958;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-policy-table__empty span {
+  color: #718096;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.admin-policy-table__footer {
+  width: 100%;
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 11px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e7edf3;
+}
+
+/* =========================================================
+   ENTRIES
+   ========================================================= */
+
+.admin-policy-table__entries {
+  flex: 0 0 auto;
+
+  color: #253d5f;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.admin-policy-table__pagination {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* =========================================================
+   PAGE SIZE
+   ========================================================= */
+
+.admin-policy-table__page-size-wrapper {
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  color: #526983;
+
+  font-size: 10.5px;
+
+  white-space: nowrap;
+}
+
+.admin-policy-table__page-size-label {
+  color: #526983;
+}
+
+.admin-policy-table__page-size {
+  width: 52px;
+  height: 36px;
+
+  padding: 0 7px;
+
+  color: #223a5d;
+  background: #ffffff;
+
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.admin-policy-table__page-size:focus {
+  border-color: #087b82;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(8, 123, 130, 0.08);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.admin-policy-table__navigation-button {
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 12px;
+
+  color: #1d3557;
+  background: #ffffff;
+
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.admin-policy-table__navigation-button:hover:not(
+    :disabled
+  ) {
+  background: #f8fafc;
+
+  border-color: #cad5e1;
+}
+
+.admin-policy-table__navigation-button:disabled {
+  color: #a7b3c3;
+
+  background: #f8fafc;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PAGE BUTTONS
+   ========================================================= */
+
+.admin-policy-table__pages {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.admin-policy-table__page {
+  width: 36px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #1d3557;
+  background: #ffffff;
+
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.admin-policy-table__page:hover:not(
+    .admin-policy-table__page--active
+  ) {
+  background: #f8fafc;
+
+  border-color: #cad5e1;
+}
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.admin-policy-table__page--active {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #08777f,
+    #00545c
+  );
+
+  border-color: #00636a;
+
+  box-shadow:
+    0 3px 8px
+    rgba(0, 99, 106, 0.16);
+}
+
+/* =========================================================
+   ELLIPSIS
+   ========================================================= */
+
+.admin-policy-table__ellipsis {
+  min-width: 18px;
+
+  color: #526983;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .admin-policy-table__footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .admin-policy-table__pagination {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .admin-policy-table__element {
+    min-width: 820px;
+  }
+
+  .admin-policy-table__element th {
+    padding: 0 10px;
+  }
+
+  .admin-policy-table__element td {
+    padding: 8px 10px;
+  }
+
+  .admin-policy-table__footer {
+    padding: 14px;
+  }
+
+  .admin-policy-table__entries {
+    white-space: normal;
+  }
+
+  .admin-policy-table__pagination {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    overflow: visible;
+  }
+
+  .admin-policy-table__page-size-wrapper {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+  }
+
+  .admin-policy-table__page-size {
+    width: 65px;
+  }
+
+  .admin-policy-table__navigation-button {
+    width: 100%;
+  }
+
+  .admin-policy-table__pages {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    overflow-x: auto;
+
+    padding: 2px 0;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .admin-policy-table__pages {
+    display: none;
+  }
+
+  .admin-policy-table__pagination {
+    width: 100%;
+  }
+}

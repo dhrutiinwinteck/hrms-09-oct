@@ -1,0 +1,32 @@
+/* src/pages/admin/holidays/components/AdminHolidayRow/AdminHolidayRow.css */
+
+.admin-holiday-row td {
+  vertical-align: middle;
+}
+
+.admin-holiday-row-id {
+  font-weight: 500;
+  color: #6b7a8f;
+  font-size: 13px;
+}
+
+.admin-holiday-row-title {
+  font-weight: 500;
+  color: #1a2332;
+}
+
+.admin-holiday-row-date {
+  color: #4a5568;
+}
+
+.admin-holiday-row-day {
+  color: #6b7a8f;
+}
+
+.admin-holiday-row-status {
+  padding: 8px 16px;
+}
+
+.admin-holiday-row-actions {
+  padding: 8px 16px;
+}

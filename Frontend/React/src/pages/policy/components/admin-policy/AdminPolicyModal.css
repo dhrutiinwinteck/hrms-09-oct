@@ -1,0 +1,631 @@
+/* =========================================================
+   POLICY MODAL - BASE
+========================================================= */
+
+.admin-policy-modal__backdrop,
+.admin-policy-modal__backdrop *,
+.admin-policy-modal__backdrop *::before,
+.admin-policy-modal__backdrop *::after {
+  box-sizing: border-box;
+}
+
+.admin-policy-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.52);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* =========================================================
+   MODAL CONTAINER
+========================================================= */
+
+.admin-policy-modal {
+  width: min(100%, 500px);
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 13px;
+
+  box-shadow:
+    0 22px 60px rgba(15, 23, 42, 0.17),
+    0 7px 20px rgba(15, 23, 42, 0.07);
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.admin-policy-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-policy-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-policy-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-policy-modal__header {
+  min-height: 76px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 19px 24px 15px;
+
+  border-bottom: 1px solid #e8edf3;
+}
+
+.admin-policy-modal__title {
+  margin: 0;
+
+  color: #10213d;
+
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.admin-policy-modal__header-description {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.admin-policy-modal__close {
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #64748b;
+  background: transparent;
+
+  border: 0;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.admin-policy-modal__close:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.admin-policy-modal__form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+
+  padding: 21px 24px 23px;
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.admin-policy-modal__field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.admin-policy-modal__label {
+  color: #334155;
+
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.admin-policy-modal__required {
+  margin-left: 4px;
+
+  color: #ef4444;
+}
+
+/* =========================================================
+   INPUT + TEXTAREA
+========================================================= */
+
+.admin-policy-modal__input,
+.admin-policy-modal__textarea {
+  width: 100%;
+
+  color: #0f172a;
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+
+  outline: none;
+
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-policy-modal__input {
+  height: 44px;
+
+  padding: 0 13px;
+}
+
+.admin-policy-modal__textarea {
+  min-height: 82px;
+
+  padding: 11px 13px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.admin-policy-modal__input::placeholder,
+.admin-policy-modal__textarea::placeholder {
+  color: #94a3b8;
+}
+
+.admin-policy-modal__input:focus,
+.admin-policy-modal__textarea:focus {
+  border-color: #0b7b82;
+
+  box-shadow:
+    0 0 0 3px rgba(11, 123, 130, 0.1);
+}
+
+.admin-policy-modal__input--error {
+  border-color: #ef4444;
+}
+
+/* =========================================================
+   CHARACTER COUNT
+========================================================= */
+
+.admin-policy-modal__character-count {
+  align-self: flex-end;
+
+  margin-top: -3px;
+
+  color: #94a3b8;
+
+  font-family: Inter, sans-serif;
+  font-size: 9px;
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.admin-policy-modal__hidden-file {
+  display: none;
+}
+
+/* =========================================================
+   FILE CONTROL
+========================================================= */
+
+.admin-policy-modal__file-control {
+  min-height: 46px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-policy-modal__file-control--error {
+  border-color: #ef4444;
+
+  box-shadow:
+    0 0 0 2px rgba(239, 68, 68, 0.06);
+}
+
+.admin-policy-modal__file-name {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 13px;
+
+  color: #475569;
+
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+}
+
+.admin-policy-modal__file-name > span {
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.admin-policy-modal__selected-icon {
+  flex-shrink: 0;
+
+  color: #087c88;
+}
+
+/* =========================================================
+   REMOVE FILE
+========================================================= */
+
+.admin-policy-modal__remove-file {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+
+  color: #64748b;
+  background: transparent;
+
+  border: 0;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.admin-policy-modal__remove-file:hover {
+  color: #dc2626;
+
+  background: #fef2f2;
+}
+
+/* =========================================================
+   BROWSE BUTTON
+========================================================= */
+
+.admin-policy-modal__browse {
+  min-width: 104px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 15px;
+
+  color: #334155;
+  background: #f8fafc;
+
+  border: 0;
+  border-left: 1px solid #dbe2ea;
+
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-policy-modal__browse:hover {
+  color: #0f172a;
+
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   FILE INFO
+========================================================= */
+
+.admin-policy-modal__file-info {
+  color: #94a3b8;
+
+  font-family: Inter, sans-serif;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.admin-policy-modal__error {
+  color: #dc2626;
+
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.admin-policy-modal__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 2px;
+}
+
+.admin-policy-modal__cancel,
+.admin-policy-modal__submit {
+  min-width: 112px;
+  height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================================
+   CANCEL
+========================================================= */
+
+.admin-policy-modal__cancel {
+  color: #475569;
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+}
+
+.admin-policy-modal__cancel:hover {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.admin-policy-modal__submit {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #087c82,
+    #00565e
+  );
+
+  border: 1px solid #00656c;
+
+  box-shadow:
+    0 4px 10px rgba(0, 86, 94, 0.15);
+}
+
+.admin-policy-modal__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  background: linear-gradient(
+    135deg,
+    #098b92,
+    #00616a
+  );
+
+  box-shadow:
+    0 6px 14px rgba(0, 86, 94, 0.2);
+}
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.admin-policy-modal button:disabled,
+.admin-policy-modal input:disabled,
+.admin-policy-modal textarea:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .admin-policy-modal__backdrop {
+    align-items: flex-end;
+
+    padding: 10px;
+  }
+
+  .admin-policy-modal {
+    width: 100%;
+
+    max-height: calc(100vh - 20px);
+
+    border-radius: 13px;
+  }
+
+  .admin-policy-modal__header {
+    min-height: 70px;
+
+    padding: 17px 18px 14px;
+  }
+
+  .admin-policy-modal__title {
+    font-size: 20px;
+  }
+
+  .admin-policy-modal__header-description {
+    font-size: 10px;
+  }
+
+  .admin-policy-modal__form {
+    padding: 18px 18px 20px;
+
+    gap: 16px;
+  }
+
+  .admin-policy-modal__label {
+    font-size: 12px;
+  }
+
+  .admin-policy-modal__input {
+    height: 43px;
+
+    font-size: 13px;
+  }
+
+  .admin-policy-modal__textarea {
+    min-height: 78px;
+
+    font-size: 13px;
+  }
+
+  .admin-policy-modal__file-control {
+    flex-direction: column;
+  }
+
+  .admin-policy-modal__file-name {
+    min-height: 44px;
+
+    font-size: 12px;
+  }
+
+  .admin-policy-modal__browse {
+    min-height: 42px;
+
+    width: 100%;
+
+    border-left: 0;
+    border-top: 1px solid #dbe2ea;
+  }
+
+  .admin-policy-modal__actions {
+    flex-direction: column-reverse;
+
+    gap: 8px;
+  }
+
+  .admin-policy-modal__cancel,
+  .admin-policy-modal__submit {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .admin-policy-modal__backdrop {
+    padding: 8px;
+  }
+
+  .admin-policy-modal {
+    max-height: calc(100vh - 16px);
+  }
+
+  .admin-policy-modal__header {
+    padding: 16px;
+  }
+
+  .admin-policy-modal__form {
+    padding: 17px 16px 18px;
+  }
+
+  .admin-policy-modal__title {
+    font-size: 19px;
+  }
+
+  .admin-policy-modal__close {
+    width: 30px;
+    height: 30px;
+
+    flex-basis: 30px;
+  }
+}

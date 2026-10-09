@@ -1,0 +1,54 @@
+.holiday-row {
+  transition: background-color 0.2s ease;
+}
+
+.holiday-row:hover {
+  background-color: #f8fafc;
+}
+
+.holiday-row td {
+  padding: 10px 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.holiday-row-icon {
+  width: 38px;
+  text-align: center;
+}
+
+.holiday-emoji {
+  font-size: 15px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+}
+
+.holiday-row-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e293b;
+  padding-right: 20px;
+}
+
+.holiday-row-date {
+  font-size: 12px;
+  color: #475569;
+}
+
+.holiday-date-icon {
+  margin-right: 8px;
+  color: #94a3b8;
+}
+
+.holiday-row-day {
+  text-align: start;
+}
+
+.holiday-row:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,83 @@
+.resignation-message-field {
+  margin-top: 22px;
+}
+
+.resignation-message-field > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resignation-message-field > label span {
+  color: #dc2626;
+}
+
+.resignation-message-editor {
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.resignation-message-editor:focus-within {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px
+    rgba(37, 99, 235, 0.08);
+}
+
+.resignation-message-editor--error {
+  border-color: #dc2626;
+}
+
+.resignation-message-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e5eaf0;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resignation-message-editor textarea {
+  display: block;
+  width: 100%;
+  min-height: 170px;
+  padding: 14px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.resignation-message-editor textarea::placeholder {
+  color: #94a3b8;
+}
+
+.resignation-message-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.resignation-message-footer small,
+.resignation-message-footer span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.resignation-message-error {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 12px;
+}

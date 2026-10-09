@@ -1,0 +1,88 @@
+.ol-content-card {
+  min-width: 0;
+  padding: 15px 17px 13px;
+  border: 1px solid #e1e8ec;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(24, 61, 76, 0.035);
+}
+
+.ol-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ol-card-heading-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f2f0;
+  color: #0c6675;
+  font-size: 16px;
+}
+
+.ol-card-heading h2 {
+  margin: 0;
+  color: #123d4f;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.ol-card-heading p {
+  margin: 3px 0 0;
+  color: #708592;
+  font-size: 9.5px;
+}
+
+.ol-card-divider {
+  height: 1px;
+  margin: 10px 0;
+  background: #e8edef;
+}
+
+.ol-body-editor-section {
+  margin-top: 12px;
+}
+
+.ol-body-editor-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #173f51;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.ol-required {
+  margin-left: 3px;
+  color: #ef4444;
+}
+
+.ol-editor-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.ol-editor-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .ol-editor-layout {
+    flex-direction: column;
+  }
+
+  .ol-merge-panel {
+    width: 100%;
+  }
+
+  .ol-merge-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

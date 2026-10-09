@@ -1,0 +1,49 @@
+.holiday-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eef2f6;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.holiday-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.holiday-table thead {
+  background-color: #f0f7f4;
+}
+
+.holiday-table thead th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: #1e293b;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.holiday-table-header-icon {
+  width: 38px;
+}
+
+.holiday-table-header-title {
+  width: 35%;
+}
+
+.holiday-table-header-date {
+  width: 30%;
+}
+
+.holiday-table-header-day {
+  width: 25%;
+  text-align: right;
+}
+
+.holiday-table tbody tr:last-child td {
+  border-bottom: none;
+}

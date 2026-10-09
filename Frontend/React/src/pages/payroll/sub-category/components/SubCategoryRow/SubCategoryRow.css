@@ -1,0 +1,94 @@
+.sub-category-table-row {
+  height: 47px;
+
+  border-bottom: 1px solid #ecece7;
+
+  transition:
+    background-color 0.18s ease;
+}
+
+.sub-category-table-row:hover {
+  background: rgba(241, 245, 242, 0.5);
+}
+
+.sub-category-table-row td {
+  padding: 0 15px;
+
+  color: #47656a;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.sub-category-name-cell {
+  color: #315a61 !important;
+
+  font-weight: 600 !important;
+}
+
+.sub-category-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 38px;
+  height: 17px;
+
+  padding: 0 8px;
+
+  border-radius: 10px;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.sub-category-status-badge.active {
+  background: #d6eee2;
+  color: #43836b;
+}
+
+.sub-category-status-badge.inactive {
+  background: #f5dddd;
+  color: #a55d5d;
+}
+
+.sub-category-action-cell {
+  width: 65px;
+
+  text-align: center;
+}
+
+.sub-category-edit-button {
+  width: 25px;
+  height: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #28616a;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.sub-category-edit-button:hover {
+  background: #edf3f1;
+  color: #174e57;
+}
+
+.sub-category-edit-button:focus-visible {
+  outline: 2px solid #7ea4a5;
+  outline-offset: 2px;
+}

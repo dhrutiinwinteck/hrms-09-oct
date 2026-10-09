@@ -1,0 +1,96 @@
+/* src/pages/admin/holidays/components/AdminHolidayPagination/AdminHolidayPagination.css */
+
+.admin-holiday-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.admin-holiday-pagination-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  background: white;
+  color: #4a5568;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  height: 32px;
+}
+
+.admin-holiday-pagination-btn:hover:not(.admin-holiday-pagination-disabled) {
+  background: #f0f2f5;
+  border-color: #b0b8c4;
+}
+
+.admin-holiday-pagination-btn:active:not(.admin-holiday-pagination-disabled) {
+  transform: scale(0.95);
+}
+
+.admin-holiday-pagination-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-holiday-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.admin-holiday-pagination-page {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #4a5568;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-holiday-pagination-page:hover:not(.admin-holiday-pagination-active):not(.admin-holiday-pagination-ellipsis) {
+  background: #f0f2f5;
+  border-color: #d0d7de;
+}
+
+.admin-holiday-pagination-active {
+  background: #0f7b7b;
+  color: white;
+  border-color: #0f7b7b;
+}
+
+.admin-holiday-pagination-active:hover {
+  background: #0d6b6b;
+  border-color: #0d6b6b;
+}
+
+.admin-holiday-pagination-ellipsis {
+  cursor: default;
+  color: #8a9aa8;
+}
+
+@media (max-width: 640px) {
+  .admin-holiday-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-holiday-pagination-btn span {
+    display: none;
+  }
+
+  .admin-holiday-pagination-btn {
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,102 @@
+.payslip-admin-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 2px 0 17px;
+}
+
+.payslip-admin-filters__entries {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.payslip-admin-filters__label {
+  color: #71807f;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.payslip-admin-filters__select-wrapper {
+  position: relative;
+  width: 86px;
+}
+
+.payslip-admin-filters__select {
+  width: 100%;
+  height: 38px;
+  padding: 0 30px 0 13px;
+  border: 1px solid #e2e9e7;
+  border-radius: 8px;
+  outline: none;
+  appearance: none;
+  color: #294342;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.payslip-admin-filters__select:focus {
+  border-color: #75a6a1;
+  box-shadow: 0 0 0 3px rgba(76, 139, 133, 0.08);
+}
+
+.payslip-admin-filters__select-icon {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  color: #354c4c;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.payslip-admin-filters__search {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #e2e9e7;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: border-color 160ms ease;
+}
+
+.payslip-admin-filters__search:focus-within {
+  border-color: #75a6a1;
+  box-shadow: 0 0 0 3px rgba(76, 139, 133, 0.08);
+}
+
+.payslip-admin-filters__search-icon {
+  flex: 0 0 auto;
+  margin-right: 9px;
+  color: #2d4d4c;
+}
+
+.payslip-admin-filters__search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #314746;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.payslip-admin-filters__search input::placeholder {
+  color: #9ba7a5;
+}
+
+@media (max-width: 600px) {
+  .payslip-admin-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payslip-admin-filters__search {
+    width: 100%;
+  }
+}

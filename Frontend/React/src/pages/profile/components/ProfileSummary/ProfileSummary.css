@@ -1,0 +1,393 @@
+/* =========================================================
+   PROFILE SUMMARY
+========================================================= */
+
+.profile-summary {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  margin-top: 10px;
+
+  overflow: hidden;
+
+  border: 1px solid #e7e9ed;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SUMMARY ITEM
+========================================================= */
+
+.profile-summary__item {
+  min-width: 0;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px 13px;
+
+  border-right: 1px solid #edf0f2;
+  border-bottom: 1px solid #edf0f2;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DESKTOP BORDERS
+========================================================= */
+
+/* Remove right border from column 3 */
+.profile-summary__item:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove bottom border from last row */
+.profile-summary__item:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.profile-summary__icon {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2f6f6;
+
+  color: #5c8888;
+
+  box-sizing: border-box;
+}
+
+.profile-summary__icon svg {
+  display: block;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.profile-summary__content {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.profile-summary__label {
+  display: block;
+
+  overflow: hidden;
+
+  color: #7d8996;
+
+  font-size: 6.5px;
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.profile-summary__value {
+  display: block;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #374151;
+
+  font-size: 7.5px;
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.profile-summary__item {
+  transition: background-color 0.18s ease;
+}
+
+.profile-summary__item:hover {
+  background: #fcfdfd;
+}
+
+.profile-summary__item:hover .profile-summary__icon {
+  background: #edf4f4;
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .profile-summary__item {
+    gap: 8px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .profile-summary__icon {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+  }
+
+  .profile-summary__value {
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .profile-summary__item {
+    min-height: 47px;
+
+    padding: 7px 10px;
+
+    gap: 7px;
+  }
+
+  .profile-summary__icon {
+    width: 23px;
+    height: 23px;
+
+    flex-basis: 23px;
+  }
+
+  .profile-summary__icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .profile-summary__label {
+    font-size: 6.2px;
+  }
+
+  .profile-summary__value {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .profile-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Reset desktop 3-column borders */
+  .profile-summary__item:nth-child(3n) {
+    border-right: 1px solid #edf0f2;
+  }
+
+  .profile-summary__item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .profile-summary__item:nth-last-child(-n + 3) {
+    border-bottom: 1px solid #edf0f2;
+  }
+
+  .profile-summary__item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .profile-summary {
+    margin-top: 9px;
+  }
+
+  .profile-summary__item {
+    min-height: 46px;
+
+    padding: 7px 10px;
+
+    gap: 7px;
+  }
+
+  .profile-summary__icon {
+    width: 23px;
+    height: 23px;
+
+    flex-basis: 23px;
+  }
+
+  .profile-summary__label {
+    font-size: 6px;
+  }
+
+  .profile-summary__value {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+  .profile-summary {
+    grid-template-columns: 1fr;
+
+    border-radius: 8px;
+  }
+
+  .profile-summary__item {
+    min-height: 46px;
+
+    padding: 7px 11px;
+
+    border-right: none !important;
+    border-bottom: 1px solid #edf0f2 !important;
+  }
+
+  .profile-summary__item:last-child {
+    border-bottom: none !important;
+  }
+
+  .profile-summary__icon {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+  }
+
+  .profile-summary__icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .profile-summary__label {
+    font-size: 6.5px;
+  }
+
+  .profile-summary__value {
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   430px
+========================================================= */
+
+@media (max-width: 430px) {
+  .profile-summary__item {
+    min-height: 44px;
+
+    padding: 6px 10px;
+
+    gap: 7px;
+  }
+
+  .profile-summary__icon {
+    width: 23px;
+    height: 23px;
+
+    flex-basis: 23px;
+  }
+
+  .profile-summary__label {
+    font-size: 6px;
+  }
+
+  .profile-summary__value {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .profile-summary__item {
+    min-height: 43px;
+
+    padding: 6px 9px;
+  }
+
+  .profile-summary__icon {
+    width: 22px;
+    height: 22px;
+
+    flex-basis: 22px;
+  }
+
+  .profile-summary__icon svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .profile-summary__label {
+    font-size: 5.8px;
+  }
+
+  .profile-summary__value {
+    font-size: 6.8px;
+  }
+}

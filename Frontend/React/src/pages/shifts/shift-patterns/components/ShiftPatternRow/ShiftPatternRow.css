@@ -1,0 +1,8 @@
+.shift-pattern-row .shift-name {
+  margin-left: 10px;
+}
+
+.shift-pattern-row .col-name {
+  display: flex;
+  align-items: center;
+}

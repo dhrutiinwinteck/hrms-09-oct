@@ -1,0 +1,18 @@
+.joining-form-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.joining-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--joining-text, #18364a);
+  margin: 0 0 0 0;
+  letter-spacing: -0.3px;
+}
+
+.joining-form-subtitle {
+  font-size: 14px;
+  color: var(--joining-muted, #71808a);
+  margin: 0;
+}

@@ -1,0 +1,63 @@
+/* ============================================================
+   JOINING APPROVAL STATS
+   ============================================================ */
+
+.joining-approval-stats-container {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   LARGE DESKTOP
+   ============================================================ */
+
+@media (min-width: 1440px) {
+  .joining-approval-stats-container {
+    gap: 18px;
+  }
+}
+
+/* ============================================================
+   DESKTOP
+   ============================================================ */
+
+@media (min-width: 1101px) and (max-width: 1439px) {
+  .joining-approval-stats-container {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .joining-approval-stats-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .joining-approval-stats-container {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+}

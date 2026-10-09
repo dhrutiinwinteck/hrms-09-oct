@@ -1,0 +1,182 @@
+/* src/pages/admin/holidays/components/AdminHolidayTable/AdminHolidayTable.css */
+
+.admin-holiday-table-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e8ecf1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.admin-holiday-table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fafbfc;
+}
+
+.admin-holiday-table-entries {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.admin-holiday-table-entries select {
+  padding: 4px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  font-size: 13px;
+  background: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-holiday-table-entries select:focus {
+  border-color: #0f7b7b;
+}
+
+.admin-holiday-table-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-holiday-table-search input {
+  padding: 6px 36px 6px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 220px;
+  transition: border-color 0.2s ease;
+  background: white;
+}
+
+.admin-holiday-table-search input:focus {
+  outline: none;
+  border-color: #0f7b7b;
+}
+
+.admin-holiday-search-icon {
+  position: absolute;
+  right: 10px;
+  color: #8a9aa8;
+}
+
+.admin-holiday-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-holiday-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-holiday-table thead {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e8ecf1;
+}
+
+.admin-holiday-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.admin-holiday-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f2f5;
+  color: #2d3748;
+}
+
+.admin-holiday-table tr:hover {
+  background: #f8fafc;
+}
+
+.admin-holiday-table-header-id {
+  width: 50px;
+}
+
+.admin-holiday-table-header-title {
+  min-width: 150px;
+}
+
+.admin-holiday-table-header-date {
+  min-width: 120px;
+}
+
+.admin-holiday-table-header-day {
+  min-width: 100px;
+}
+
+.admin-holiday-table-header-status {
+  min-width: 90px;
+}
+
+.admin-holiday-table-header-actions {
+  min-width: 100px;
+}
+
+.admin-holiday-table-loading,
+.admin-holiday-table-empty {
+  text-align: center;
+  padding: 40px 20px !important;
+  color: #8a9aa8;
+}
+
+.admin-holiday-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #e8ecf1;
+  background: #fafbfc;
+}
+
+.admin-holiday-table-info {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .admin-holiday-table-toolbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .admin-holiday-table-entries {
+    justify-content: center;
+  }
+
+  .admin-holiday-table-search input {
+    width: 100%;
+  }
+
+  .admin-holiday-table-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-holiday-table-entries {
+    font-size: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-holiday-table th,
+  .admin-holiday-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

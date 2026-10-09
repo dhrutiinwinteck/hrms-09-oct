@@ -1,0 +1,520 @@
+/* =========================================================
+   JOINING APPROVAL STAT CARD
+   Enterprise HRMS Design
+   ========================================================= */
+
+.joining-approval-stat-card {
+  --stat-accent: #0b6970;
+  --stat-icon-bg: #e8f4f4;
+  --stat-icon-border: #d3e9ea;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 74px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  padding: 10px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edef;
+
+  border-radius: 11px;
+
+  overflow: hidden;
+
+  cursor: default;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+/* =========================================================
+   SUBTLE TOP ACCENT
+   ========================================================= */
+
+.joining-approval-stat-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--stat-accent);
+
+  opacity: 0;
+
+  transition: opacity 180ms ease;
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.joining-approval-stat-card__icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  color: var(--stat-accent);
+
+  background: var(--stat-icon-bg);
+
+  border: 1px solid var(--stat-icon-border);
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.joining-approval-stat-card__content {
+  min-width: 0;
+
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-right: 5px;
+}
+
+/* =========================================================
+   VALUE + LABEL
+   ========================================================= */
+
+.joining-approval-stat-card__main {
+  min-width: 0;
+
+  display: flex;
+  align-items: baseline;
+
+  gap: 8px;
+
+  line-height: 1;
+}
+
+.joining-approval-stat-card__value {
+  color: #102f3b;
+
+  font-size: 20px;
+  font-weight: 650;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.35px;
+
+  white-space: nowrap;
+}
+
+.joining-approval-stat-card__label {
+  min-width: 0;
+
+  color: #172f3a;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.joining-approval-stat-card__subtitle {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7a8b94;
+
+  font-size: 10.5px;
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   RIGHT ARROW
+   ========================================================= */
+
+.joining-approval-stat-card__arrow {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6d7e86;
+
+  border-radius: 50%;
+
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.joining-approval-stat-card:hover {
+  transform: translateY(-1px);
+
+  border-color: #d8e5e7;
+
+  box-shadow:
+    0 4px 12px rgba(13, 47, 59, 0.07),
+    0 1px 3px rgba(13, 47, 59, 0.04);
+}
+
+.joining-approval-stat-card:hover::before {
+  opacity: 0.8;
+}
+
+.joining-approval-stat-card:hover
+  .joining-approval-stat-card__arrow {
+  color: var(--stat-accent);
+
+  background: var(--stat-icon-bg);
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   ACTIVE / FOCUS
+   ========================================================= */
+
+.joining-approval-stat-card:focus-within {
+  border-color: var(--stat-accent);
+
+  box-shadow:
+    0 0 0 3px var(--stat-icon-bg),
+    0 4px 12px rgba(13, 47, 59, 0.06);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .joining-approval-stat-card {
+    min-height: 78px;
+
+    padding: 11px 15px;
+
+    border-radius: 12px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+
+    margin-right: 13px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 21px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 12px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    font-size: 10.5px;
+  }
+}
+
+/* =========================================================
+   STANDARD DESKTOP
+   1200px - 1439px
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .joining-approval-stat-card {
+    min-height: 74px;
+
+    padding: 10px 13px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    margin-right: 11px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 19px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 11.5px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    font-size: 10px;
+  }
+
+  .joining-approval-stat-card__main {
+    gap: 7px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   769px - 1199px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .joining-approval-stat-card {
+    min-height: 70px;
+
+    padding: 9px 11px;
+
+    border-radius: 10px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+
+    margin-right: 9px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 18px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 11px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    margin-top: 3px;
+
+    font-size: 9.5px;
+  }
+
+  .joining-approval-stat-card__main {
+    gap: 5px;
+  }
+
+  .joining-approval-stat-card__arrow {
+    width: 22px;
+    height: 22px;
+
+    flex-basis: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   <= 768px
+
+   Cards become 2-column grid items.
+   The parent Stats component can control the grid.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .joining-approval-stat-card {
+    min-height: 72px;
+
+    padding: 10px 11px;
+
+    border-radius: 10px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    margin-right: 9px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 18px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 11px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    font-size: 9.5px;
+  }
+
+  .joining-approval-stat-card__main {
+    gap: 5px;
+  }
+
+  .joining-approval-stat-card__arrow {
+    width: 21px;
+    height: 21px;
+
+    flex-basis: 21px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .joining-approval-stat-card {
+    min-height: 69px;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 37px;
+    height: 37px;
+
+    flex-basis: 37px;
+
+    margin-right: 8px;
+  }
+
+  .joining-approval-stat-card__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 17px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 10.5px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    margin-top: 3px;
+
+    font-size: 9px;
+  }
+
+  .joining-approval-stat-card__main {
+    gap: 4px;
+  }
+
+  .joining-approval-stat-card__arrow {
+    width: 19px;
+    height: 19px;
+
+    flex-basis: 19px;
+  }
+
+  .joining-approval-stat-card__arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 375px
+   ========================================================= */
+
+@media (max-width: 375px) {
+  .joining-approval-stat-card {
+    min-height: 66px;
+
+    padding: 8px 8px;
+  }
+
+  .joining-approval-stat-card__icon {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+
+    margin-right: 7px;
+  }
+
+  .joining-approval-stat-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .joining-approval-stat-card__value {
+    font-size: 16px;
+  }
+
+  .joining-approval-stat-card__label {
+    font-size: 10px;
+  }
+
+  .joining-approval-stat-card__subtitle {
+    font-size: 8.5px;
+  }
+
+  .joining-approval-stat-card__arrow {
+    display: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .joining-approval-stat-card,
+  .joining-approval-stat-card::before,
+  .joining-approval-stat-card__arrow {
+    transition: none;
+  }
+}

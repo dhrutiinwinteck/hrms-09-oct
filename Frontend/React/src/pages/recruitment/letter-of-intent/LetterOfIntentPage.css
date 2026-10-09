@@ -1,0 +1,536 @@
+/* ============================================================
+   LETTER OF INTENT PAGE
+   Exact desktop enterprise HRMS layout
+   ============================================================ */
+
+.loi-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px 18px 78px;
+  background: #f8fafb;
+  color: #173f4d;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   PAGE HEADER AREA
+   ============================================================ */
+
+.loi-page > .loi-page-header {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+
+.loi-alert {
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.loi-alert-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.loi-alert-success {
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* ============================================================
+   MAIN TWO-COLUMN LAYOUT
+   ============================================================ */
+
+.loi-main-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.43fr)
+    minmax(460px, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+/* ============================================================
+   RIGHT COLUMN
+   ============================================================ */
+
+.loi-right-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ============================================================
+   CONTENT CARD
+   ============================================================ */
+
+.loi-content-card {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 18px 14px;
+  background: #ffffff;
+  border: 1px solid #e4e9ec;
+  border-radius: 11px;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.025),
+    0 3px 10px rgba(15, 23, 42, 0.018);
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   COMMON CARD HEADER
+   ============================================================ */
+
+.loi-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  min-height: 40px;
+}
+
+.loi-card-heading h2 {
+  margin: 0;
+  color: #133f4d;
+  font-size: 15.5px;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.loi-card-heading p {
+  margin: 3px 0 0;
+  color: #607785;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+.loi-card-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #125b6b;
+  background: #edf6f7;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.loi-card-icon-settings {
+  font-size: 17px;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.loi-form-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 12px;
+  background: #e7ecef;
+}
+
+/* ============================================================
+   FORM GRID
+   ============================================================ */
+
+.loi-form-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  column-gap: 13px;
+  row-gap: 12px;
+}
+
+/* ============================================================
+   FORM FIELD
+   ============================================================ */
+
+.loi-field {
+  width: 100%;
+  min-width: 0;
+  display: block;
+}
+
+.loi-field > span,
+.loi-field > .loi-field-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #163f4e;
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.loi-field > span b,
+.loi-field-label b {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.loi-field input,
+.loi-field textarea,
+.loi-field select {
+  width: 100%;
+  min-height: 32px;
+  padding: 6px 9px;
+  border: 1px solid #d9e3e7;
+  border-radius: 6px;
+  outline: none;
+  background: #ffffff;
+  color: #263c48;
+  font-family: inherit;
+  font-size: 11.5px;
+  line-height: 1.35;
+  box-sizing: border-box;
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.loi-field textarea {
+  min-height: 48px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.loi-field input:hover,
+.loi-field textarea:hover,
+.loi-field select:hover {
+  border-color: #b9ccd3;
+}
+
+.loi-field input:focus,
+.loi-field textarea:focus,
+.loi-field select:focus {
+  border-color: #5f9da8;
+  box-shadow: 0 0 0 3px rgba(95, 157, 168, 0.09);
+}
+
+.loi-field input::placeholder,
+.loi-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* ============================================================
+   DATE INPUT
+   ============================================================ */
+
+.loi-input-icon {
+  position: relative;
+  width: 100%;
+}
+
+.loi-input-icon svg {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 9px;
+  color: #466b78;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.loi-input-icon input {
+  padding-left: 32px;
+}
+
+/* ============================================================
+   PROBATION INPUT
+   ============================================================ */
+
+.loi-number-with-unit {
+  width: 100%;
+  min-height: 32px;
+  display: flex;
+  border: 1px solid #d9e3e7;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.loi-number-with-unit input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+.loi-number-with-unit > span {
+  min-width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border-left: 1px solid #e0e7ea;
+  background: #f8fafb;
+  color: #647985;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* ============================================================
+   BODY SECTION
+   ============================================================ */
+
+.loi-body-section {
+  width: 100%;
+  margin-top: 13px;
+}
+
+.loi-body-editor-heading {
+  margin-bottom: 5px;
+}
+
+.loi-body-editor-heading > span {
+  color: #163f4e;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.loi-body-editor-heading b {
+  color: #ef4444;
+}
+
+/* ============================================================
+   EDITOR LAYOUT
+   ============================================================ */
+
+.loi-editor-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 7px;
+  align-items: stretch;
+}
+
+.loi-editor-main {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.loi-loading {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #526b76;
+  font-size: 12px;
+}
+
+.loi-spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #dce8eb;
+  border-top-color: #176170;
+  border-radius: 50%;
+  animation: loi-spin 0.75s linear infinite;
+}
+
+@keyframes loi-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   BOTTOM ACTION BAR
+   ============================================================ */
+
+.loi-page-actions {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+  left: 255px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 18px;
+  background: rgba(255, 255, 255, 0.98);
+  border-top: 1px solid #dfe7ea;
+  box-shadow: 0 -3px 12px rgba(15, 23, 42, 0.045);
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   LEFT ACTION
+   ============================================================ */
+
+.loi-cancel-button {
+  min-height: 34px;
+  padding: 7px 17px;
+  border: 1px solid #cbd8dd;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #274b58;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loi-cancel-button:hover {
+  background: #f8fafb;
+}
+
+/* ============================================================
+   RIGHT ACTIONS
+   ============================================================ */
+
+.loi-primary-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loi-preview-button,
+.loi-save-button {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.loi-preview-button {
+  border: 1px solid #cbd9de;
+  background: #ffffff;
+  color: #244b59;
+}
+
+.loi-preview-button:hover {
+  background: #f7fafb;
+}
+
+.loi-save-button {
+  min-width: 143px;
+  border: 1px solid #17616d;
+  background: #17616d;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(23, 97, 109, 0.13);
+}
+
+.loi-save-button:hover {
+  background: #125664;
+}
+
+.loi-save-button:disabled,
+.loi-cancel-button:disabled,
+.loi-preview-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   DESKTOP HEIGHT OPTIMIZATION
+   ============================================================ */
+
+@media (min-width: 1200px) {
+  .loi-page {
+    padding-top: 14px;
+  }
+
+  .loi-main-grid {
+    gap: 12px;
+  }
+
+  .loi-content-card {
+    padding-top: 14px;
+  }
+
+  .loi-form-grid {
+    row-gap: 10px;
+  }
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .loi-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .loi-right-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .loi-page-actions {
+    left: 0;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .loi-page {
+    padding: 14px 10px 78px;
+  }
+
+  .loi-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loi-editor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .loi-page-actions {
+    left: 0;
+    min-height: 56px;
+    padding: 8px 10px;
+  }
+
+  .loi-primary-actions {
+    gap: 5px;
+  }
+
+  .loi-preview-button,
+  .loi-save-button,
+  .loi-cancel-button {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+}

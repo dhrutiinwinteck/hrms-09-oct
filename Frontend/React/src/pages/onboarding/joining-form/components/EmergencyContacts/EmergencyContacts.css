@@ -1,0 +1,425 @@
+/* ============================================================
+   EMERGENCY CONTACTS SECTION
+   ============================================================ */
+
+.emergency-contacts-section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  color: #18364a;
+}
+
+
+
+/* ============================================================
+   CONTACT LIST
+   ============================================================ */
+
+.emergency-contacts-list {
+  width: 100%;
+}
+
+/* ============================================================
+   CONTACT CARD
+   ============================================================ */
+
+.emergency-contact-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid #dce6e2;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(24, 54, 74, 0.04);
+}
+
+/* ============================================================
+   CONTACT HEADER
+   ============================================================ */
+
+.emergency-contact-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.emergency-contact-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.emergency-contact-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eef7f5;
+  color: var(--joining-primary, #176f73);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.emergency-contact-card-header h3 {
+  margin: 0 0 0.2rem;
+  color: #18364a;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.emergency-contact-card-header p {
+  margin: 0;
+  color: #81929c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   REMOVE BUTTON
+   ============================================================ */
+
+.emergency-remove-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 36px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #efd4d4;
+  border-radius: 8px;
+  background: #fffafa;
+  color: #b33a3a;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.emergency-remove-button:hover {
+  background: #fff0f0;
+  border-color: #e5baba;
+}
+
+.emergency-remove-button:focus-visible {
+  outline: 3px solid rgba(179, 58, 58, 0.15);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   FORM GRID
+   ============================================================ */
+
+.emergency-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 1.5rem;
+}
+
+.emergency-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.emergency-form-group-full {
+  grid-column: 1 / -1;
+}
+
+/* ============================================================
+   LABELS
+   ============================================================ */
+
+.emergency-form-group label {
+  color: #18364a;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.emergency-form-group label span {
+  margin-left: 3px;
+  color: #dc3545;
+}
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.emergency-form-group input,
+.emergency-form-group select,
+.emergency-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d9e2df;
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  background: #ffffff;
+  color: #18364a;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.emergency-form-group input,
+.emergency-form-group select {
+  min-height: 48px;
+}
+
+.emergency-form-group textarea {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.emergency-form-group input::placeholder,
+.emergency-form-group textarea::placeholder {
+  color: #9aaeb8;
+}
+
+.emergency-form-group select {
+  cursor: pointer;
+}
+
+/* ============================================================
+   INPUT FOCUS
+   ============================================================ */
+
+.emergency-form-group input:focus,
+.emergency-form-group select:focus,
+.emergency-form-group textarea:focus {
+  border-color: var(--joining-primary, #176f73);
+  box-shadow: 0 0 0 3px rgba(23, 111, 115, 0.09);
+  background: #ffffff;
+}
+
+.emergency-form-group input:hover,
+.emergency-form-group select:hover,
+.emergency-form-group textarea:hover {
+  border-color: #b9cfca;
+}
+
+/* ============================================================
+   ADD CONTACT
+   ============================================================ */
+
+.emergency-add-contact-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.25rem;
+}
+
+.emergency-add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--joining-primary, #176f73);
+  border-radius: 9px;
+  background: #ffffff;
+  color: var(--joining-primary, #176f73);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.emergency-add-button:hover {
+  background: #f0f8f7;
+  border-color: #125c60;
+}
+
+.emergency-add-button:active {
+  transform: translateY(1px);
+}
+
+.emergency-add-button:focus-visible {
+  outline: 3px solid rgba(23, 111, 115, 0.15);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   NAVIGATION ACTIONS
+   ============================================================ */
+
+.emergency-contacts-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e4e9e7;
+}
+
+.joining-primary-button,
+.joining-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.joining-primary-button {
+  border: 1px solid var(--joining-primary, #176f73);
+  background: var(--joining-primary, #176f73);
+  color: #ffffff;
+}
+
+.joining-primary-button:hover {
+  border-color: #125c60;
+  background: #125c60;
+}
+
+.joining-secondary-button {
+  border: 1px solid #d5dcda;
+  background: #ffffff;
+  color: #18364a;
+}
+
+.joining-secondary-button:hover {
+  border-color: #bdcbc6;
+  background: #f4f7f6;
+}
+
+.joining-primary-button:active,
+.joining-secondary-button:active {
+  transform: translateY(1px);
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .emergency-contacts-section {
+    padding: 1.5rem;
+  }
+
+  .emergency-contact-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .emergency-contacts-section {
+    padding: 1.25rem;
+  }
+
+  .emergency-contacts-header {
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .emergency-contacts-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .emergency-contacts-header h2 {
+    font-size: 22px;
+  }
+
+  .emergency-contacts-header p {
+    font-size: 14px;
+  }
+
+  .emergency-contact-card {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .emergency-contact-card-header {
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .emergency-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .emergency-form-group-full {
+    grid-column: auto;
+  }
+
+  .emergency-contacts-actions {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .emergency-contacts-section {
+    padding: 1rem;
+  }
+
+  .emergency-contact-card {
+    padding: 1rem;
+  }
+
+  .emergency-contact-card-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .emergency-remove-button {
+    align-self: flex-start;
+  }
+
+  .emergency-contacts-actions {
+    gap: 0.75rem;
+  }
+
+  .joining-primary-button,
+  .joining-secondary-button {
+    flex: 1;
+    min-width: 0;
+    padding: 0.7rem 1rem;
+  }
+}

@@ -1,0 +1,423 @@
+/* =========================================================
+   LEAVE EMPLOYEES FILTERS
+   ========================================================= */
+
+.leave-employees-filters,
+.leave-employees-filters *,
+.leave-employees-filters *::before,
+.leave-employees-filters *::after {
+  box-sizing: border-box;
+}
+
+.leave-employees-filters {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* =========================================================
+   PRIMARY ROW
+   ========================================================= */
+
+.leave-employees-filters__primary {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+
+  gap: 16px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.leave-employees-filters__status-field {
+  display: flex;
+  flex-direction: column;
+
+  width: 190px;
+
+  flex: 0 0 190px;
+
+  gap: 6px;
+}
+
+.leave-employees-filters__label {
+  color: #64748b;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.leave-employees-filters__select {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 34px 0 13px;
+
+  color: #30445f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.leave-employees-filters__select:hover {
+  border-color: #bfcddd;
+}
+
+.leave-employees-filters__select:focus {
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 3px
+      rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
+.leave-employees-filters__search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 188px;
+  height: 44px;
+
+  flex: 0 0 188px;
+
+  gap: 8px;
+
+  padding: 0 18px;
+
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  background: #36414d;
+
+  border: 1px solid #36414d;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.leave-employees-filters__search-button:hover {
+  background: #29333e;
+
+  box-shadow:
+    0 4px 10px
+      rgba(15, 23, 42, 0.12);
+
+  transform: translateY(-1px);
+}
+
+.leave-employees-filters__search-button:active {
+  transform: translateY(0);
+}
+
+.leave-employees-filters__search-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLE SEARCH
+   ========================================================= */
+
+.leave-employees-filters__search-field {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: auto;
+}
+
+.leave-employees-filters__search-label {
+  color: #1e3a5f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.leave-employees-filters__search-input-wrapper {
+  position: relative;
+
+  width: 280px;
+  flex: 0 0 280px;
+}
+
+.leave-employees-filters__search-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 13px;
+
+  color: #8fa0b5;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+.leave-employees-filters__search-input {
+  display: block;
+
+  width: 100%;
+  height: 44px;
+
+  padding:
+    0 13px 0 40px;
+
+  color: #263c59;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+
+  outline: none;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.leave-employees-filters__search-input::placeholder {
+  color: #9aaabd;
+}
+
+.leave-employees-filters__search-input:hover {
+  border-color: #bdcad9;
+}
+
+.leave-employees-filters__search-input:focus {
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 3px
+      rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   RESET
+
+   ALWAYS VISIBLE
+   ========================================================= */
+
+.leave-employees-filters__reset-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 96px;
+  height: 44px;
+
+  flex: 0 0 96px;
+
+  gap: 7px;
+
+  padding: 0 14px;
+
+  color: #53657c;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.leave-employees-filters__reset-button:hover {
+  color: #2563eb;
+
+  background: #f8fbff;
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 2px 6px
+      rgba(37, 99, 235, 0.08);
+}
+
+.leave-employees-filters__reset-button:active {
+  background: #f1f5f9;
+}
+
+.leave-employees-filters__reset-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .leave-employees-filters__primary {
+    flex-wrap: wrap;
+  }
+
+  .leave-employees-filters__search-field {
+    margin-left: 0;
+
+    flex: 1 1 320px;
+  }
+
+  .leave-employees-filters__search-input-wrapper {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .leave-employees-filters__primary {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .leave-employees-filters__status-field,
+  .leave-employees-filters__search-button,
+  .leave-employees-filters__search-field,
+  .leave-employees-filters__reset-button {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .leave-employees-filters__search-field {
+    align-items: stretch;
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .leave-employees-filters__search-input-wrapper {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .leave-employees-filters__primary {
+    padding: 12px;
+  }
+
+  .leave-employees-filters__select,
+  .leave-employees-filters__search-button,
+  .leave-employees-filters__search-input,
+  .leave-employees-filters__reset-button {
+    height: 42px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-employees-filters__select,
+  .leave-employees-filters__search-button,
+  .leave-employees-filters__search-input,
+  .leave-employees-filters__reset-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,498 @@
+/* ============================================================
+   DEPARTMENT FILTER
+============================================================ */
+
+.department-filter {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CONTROLS
+============================================================ */
+
+.department-filter-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+
+/* ============================================================
+   ACCESSIBILITY LABEL
+============================================================ */
+
+.department-filter-label {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+
+/* ============================================================
+   SEARCH
+============================================================ */
+
+.department-search-wrapper {
+  position: relative;
+
+  width: 195px;
+
+  flex: 0 0 195px;
+}
+
+
+.department-search-input {
+  width: 100%;
+
+  height: 35px;
+
+  display: block;
+
+  padding: 0 34px 0 11px;
+
+  box-sizing: border-box;
+
+  color: #30373b;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e8e6;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.015);
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+
+.department-search-input::placeholder {
+  color: #9aa1a4;
+
+  opacity: 1;
+}
+
+
+.department-search-input:hover:not(:disabled) {
+  border-color: #d2dbd7;
+}
+
+
+.department-search-input:focus {
+  border-color: #78a99a;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 129, 117, 0.08);
+}
+
+
+.department-search-input:disabled {
+  color: #959b9e;
+
+  background: #f7f8f8;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   REMOVE NATIVE SEARCH CLEAR BUTTON
+============================================================ */
+
+.department-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+
+  appearance: none;
+}
+
+
+/* ============================================================
+   SEARCH ICON
+============================================================ */
+
+.department-search-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 10px;
+
+  color: #737b7e;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.department-status-wrapper {
+  position: relative;
+
+  width: 138px;
+
+  flex: 0 0 138px;
+}
+
+
+.department-status-select {
+  width: 100%;
+
+  height: 35px;
+
+  display: block;
+
+  padding: 0 30px 0 11px;
+
+  box-sizing: border-box;
+
+  color: #3f474b;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e8e6;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.015);
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+
+.department-status-select:hover:not(:disabled) {
+  border-color: #d2dbd7;
+}
+
+
+.department-status-select:focus {
+  border-color: #78a99a;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 129, 117, 0.08);
+}
+
+
+.department-status-select:disabled {
+  color: #959b9e;
+
+  background: #f7f8f8;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   STATUS ICON
+============================================================ */
+
+.department-status-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 10px;
+
+  color: #646e72;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+
+/* ============================================================
+   RESET BUTTON
+============================================================ */
+
+.department-reset-button {
+  height: 35px;
+
+  min-width: 72px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  flex: 0 0 auto;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  color: #456765;
+
+  background: #f7faf9;
+
+  border: 1px solid #cfded9;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.02);
+
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+
+/* ============================================================
+   RESET ICON
+============================================================ */
+
+.department-reset-icon {
+  width: 14px;
+  height: 14px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   RESET HOVER
+============================================================ */
+
+.department-reset-button:hover:not(:disabled) {
+  color: #2f7374;
+
+  background: #edf5f2;
+
+  border-color: #abc9c2;
+
+  box-shadow:
+    0 2px 6px rgba(47, 115, 116, 0.08);
+}
+
+
+/* ============================================================
+   RESET ACTIVE
+============================================================ */
+
+.department-reset-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+
+/* ============================================================
+   RESET FOCUS
+============================================================ */
+
+.department-reset-button:focus-visible {
+  border-color: #78a99a;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 129, 117, 0.08);
+}
+
+
+/* ============================================================
+   RESET DISABLED
+============================================================ */
+
+.department-reset-button:disabled {
+  color: #a7afb0;
+
+  background: #f7f8f8;
+
+  border-color: #e7ebea;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+  .department-filter-controls {
+    gap: 10px;
+  }
+
+  .department-search-wrapper {
+    width: 190px;
+
+    flex-basis: 190px;
+  }
+
+  .department-status-wrapper {
+    width: 135px;
+
+    flex-basis: 135px;
+  }
+
+  .department-reset-button {
+    min-width: 70px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+  .department-filter-controls {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .department-search-wrapper,
+  .department-status-wrapper {
+    width: 100%;
+
+    flex: 1 1 auto;
+  }
+
+  .department-search-input,
+  .department-status-select,
+  .department-reset-button {
+    height: 37px;
+
+    font-size: 10px;
+  }
+
+  .department-search-icon {
+    right: 11px;
+  }
+
+  .department-status-icon {
+    right: 11px;
+  }
+
+  .department-reset-button {
+    width: 100%;
+
+    min-width: 0;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 375px) {
+  .department-filter-controls {
+    gap: 7px;
+  }
+
+  .department-search-input,
+  .department-status-select,
+  .department-reset-button {
+    height: 36px;
+
+    font-size: 9.5px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .department-search-input,
+  .department-status-select,
+  .department-reset-button {
+    transition: none;
+  }
+}

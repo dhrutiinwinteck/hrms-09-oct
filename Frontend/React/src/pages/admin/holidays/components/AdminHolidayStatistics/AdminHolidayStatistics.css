@@ -1,0 +1,21 @@
+/* src/pages/admin/holidays/components/AdminHolidayStatistics/AdminHolidayStatistics.css */
+
+.admin-holiday-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .admin-holiday-statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-holiday-statistics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,978 @@
+/* ============================================================
+   RESIGNATION TABLE
+   Enterprise HRMS / SaaS Table Styling
+   Optimized for 100% Browser Zoom
+   ============================================================ */
+
+
+/* ============================================================
+   TABLE CONTAINER
+   ============================================================ */
+
+.resignation-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 6px 4px 10px;
+
+    background-color: #ffffff;
+
+    /*
+     * Horizontal scrolling belongs to the table container,
+     * not the complete dashboard.
+     */
+    overflow-x: auto;
+    overflow-y: visible;
+
+    box-sizing: border-box;
+
+    /*
+     * Prevent the browser from adding unnecessary
+     * horizontal scrolling to the parent.
+     */
+    overscroll-behavior-x: contain;
+}
+
+
+/* ============================================================
+   TABLE BASE
+   ============================================================ */
+
+.resignation-table {
+    width: 100%;
+
+    /*
+     * Allow the table to shrink with the available
+     * dashboard width.
+     */
+    min-width: 0;
+
+    border-collapse: separate;
+
+    /*
+     * Reduced from 8px to 5px to save vertical space.
+     */
+    border-spacing: 0 5px;
+
+    /*
+     * Fixed layout gives predictable column sizing
+     * instead of allowing long content to expand columns.
+     */
+    table-layout: fixed;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   TABLE HEADER
+   ============================================================ */
+
+.resignation-table thead {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.resignation-table thead tr {
+    background: #f4f7fa;
+}
+
+
+/* ============================================================
+   HEADER CELLS
+   ============================================================ */
+
+.resignation-table th {
+    height: 38px;
+
+    padding: 0 10px;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+    font-weight: 700;
+
+    color: #344054;
+
+    background: #f4f7fa;
+
+    border-top: 1px solid #e4e7ec;
+
+    border-bottom: 1px solid #e4e7ec;
+
+    white-space: nowrap;
+
+    vertical-align: middle;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   FIRST HEADER CELL
+   ============================================================ */
+
+.resignation-table th:first-child {
+    border-left: 1px solid #e4e7ec;
+
+    border-top-left-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+}
+
+
+/* ============================================================
+   LAST HEADER CELL
+   ============================================================ */
+
+.resignation-table th:last-child {
+    border-right: 1px solid #e4e7ec;
+
+    border-top-right-radius: 10px;
+
+    border-bottom-right-radius: 10px;
+}
+
+
+/* ============================================================
+   HEADER TYPOGRAPHY
+   ============================================================ */
+
+.resignation-table th:not(.th-timeline) {
+    letter-spacing: 0.01em;
+}
+
+
+/* ============================================================
+   HEADER COLUMN WIDTHS
+   ============================================================ */
+
+/*
+ * These widths are intentionally more compact than the
+ * previous version so the dashboard works at 100% zoom.
+ */
+
+.th-timeline {
+    width: 42px;
+
+    min-width: 42px;
+
+    padding-left: 6px !important;
+
+    padding-right: 6px !important;
+}
+
+
+/* Employee */
+
+.resignation-table th:nth-child(2) {
+    width: 18%;
+
+    min-width: 170px;
+}
+
+
+/* Resignation Details */
+
+.resignation-table th:nth-child(3) {
+    width: 28%;
+
+    min-width: 280px;
+}
+
+
+/* Reason */
+
+.resignation-table th:nth-child(4) {
+    width: 13%;
+
+    min-width: 120px;
+}
+
+
+/* Status */
+
+.resignation-table th:nth-child(5) {
+    width: 11%;
+
+    min-width: 105px;
+}
+
+
+/* Approvals */
+
+.resignation-table th:nth-child(6) {
+    width: 12%;
+
+    min-width: 115px;
+}
+
+
+/* Actions */
+
+.th-actions {
+    width: 65px;
+
+    min-width: 65px;
+
+    text-align: center !important;
+}
+
+
+/* ============================================================
+   BODY ROW
+   ============================================================ */
+
+.resignation-row {
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 8px rgba(16, 24, 40, 0.04);
+
+    border-radius: 12px;
+
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* ============================================================
+   HOVER EFFECT
+   ============================================================ */
+
+.resignation-row:hover {
+    background: #fbfdff;
+
+    box-shadow:
+        0 4px 14px rgba(16, 24, 40, 0.07);
+}
+
+
+/* ============================================================
+   BODY CELLS
+   ============================================================ */
+
+.resignation-row td {
+    height: 52px;
+
+    padding: 5px 7px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eef1f4;
+
+    border-bottom: 1px solid #eef1f4;
+
+    vertical-align: middle;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   FIRST BODY CELL
+   ============================================================ */
+
+.resignation-row td:first-child {
+    border-left: 1px solid #eef1f4;
+
+    border-top-left-radius: 12px;
+
+    border-bottom-left-radius: 12px;
+}
+
+
+/* ============================================================
+   LAST BODY CELL
+   ============================================================ */
+
+.resignation-row td:last-child {
+    border-right: 1px solid #eef1f4;
+
+    border-top-right-radius: 12px;
+
+    border-bottom-right-radius: 12px;
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.td-timeline {
+    width: 42px;
+
+    min-width: 42px;
+
+    position: relative;
+
+    text-align: center;
+}
+
+
+/*
+ * Vertical line behind timeline dots.
+ */
+
+.td-timeline::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 2px;
+
+    height: calc(100% + 6px);
+
+    background-color: #e4e7ec;
+
+    z-index: 0;
+}
+
+
+/*
+ * Don't show line after the final row.
+ */
+
+.resignation-row:last-child .td-timeline::after {
+    display: none;
+}
+
+
+/* ============================================================
+   TIMELINE DOT
+   ============================================================ */
+
+.timeline-dot {
+    width: 12px;
+
+    height: 12px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    border-radius: 50%;
+
+    border: 3px solid #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   TIMELINE STATUS COLORS
+   ============================================================ */
+
+.timeline-dot.approved {
+    background-color: #12b76a;
+}
+
+
+.timeline-dot.pending {
+    background-color: #f79009;
+}
+
+
+.timeline-dot.rejected {
+    background-color: #f04438;
+}
+
+
+.timeline-dot.withdrawn {
+    background-color: #98a2b3;
+}
+
+
+/*
+ * Remove old tbody pseudo-line.
+ */
+
+.resignation-table tbody::before {
+    display: none;
+}
+
+
+/* ============================================================
+   EMPLOYEE CARD
+   ============================================================ */
+
+.employee-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    padding: 4px 7px;
+
+    background: #f8fafc;
+
+    border: 1px solid #edf0f3;
+
+    border-radius: 10px;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+
+    box-sizing: border-box;
+}
+
+
+.resignation-row:hover .employee-card {
+    background: #f4f8fc;
+
+    border-color: #e2e8f0;
+}
+
+
+/* ============================================================
+   AVATAR
+   ============================================================ */
+
+.avatar-initials {
+    width: 30px;
+
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   EMPLOYEE TEXT
+   ============================================================ */
+
+.employee-meta {
+    min-width: 0;
+
+    max-width: 100%;
+}
+
+
+.emp-name {
+    display: block;
+
+    max-width: 150px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    font-weight: 600;
+
+    color: #101828;
+}
+
+
+.emp-role {
+    display: block;
+
+    max-width: 150px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    line-height: 15px;
+
+    color: #667085;
+}
+
+
+/* ============================================================
+   RESIGNATION DETAILS
+   ============================================================ */
+
+.td-details {
+    min-width: 0;
+
+    width: 100%;
+}
+
+
+.details-flex {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+.date-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+
+    flex: 1 1 0;
+}
+
+
+/* ============================================================
+   CALENDAR ICON
+   ============================================================ */
+
+.calendar-icon {
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    color: #475467;
+
+    background: #f2f4f7;
+
+    border-radius: 6px;
+}
+
+
+/* ============================================================
+   DATE CONTENT
+   ============================================================ */
+
+.date-group > div {
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+.date-value {
+    display: block;
+
+    font-size: 12px;
+
+    line-height: 17px;
+
+    font-weight: 600;
+
+    color: #344054;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   DATE LABEL
+   ============================================================ */
+
+.date-label {
+    display: block;
+
+    margin-top: 1px;
+
+    font-size: 9px;
+
+    line-height: 13px;
+
+    color: #667085;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   VERTICAL DIVIDER
+   ============================================================ */
+
+.vertical-divider {
+    width: 1px;
+
+    height: 28px;
+
+    flex: 0 0 1px;
+
+    background-color: #eaecf0;
+}
+
+
+/* ============================================================
+   REASON
+   ============================================================ */
+
+.td-reason {
+    min-width: 0;
+}
+
+
+.reason-text {
+    display: block;
+
+    max-width: 100%;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    color: #344054;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.td-status {
+    min-width: 0;
+
+    white-space: nowrap;
+}
+
+
+/*
+ * Keeps status badge visually centered.
+ */
+
+.td-status > * {
+    vertical-align: middle;
+}
+
+
+/* ============================================================
+   APPROVAL STACK
+   ============================================================ */
+
+.td-approvals {
+    min-width: 0;
+}
+
+
+.approval-stack {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   APPROVAL CIRCLE
+   ============================================================ */
+
+.step-circle {
+    width: 28px;
+
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   APPROVED
+   ============================================================ */
+
+.step-circle.approved {
+    background-color: #ecfdf3;
+
+    color: #12b76a;
+
+    border: 1px solid #abefc6;
+}
+
+
+/* ============================================================
+   PENDING
+   ============================================================ */
+
+.step-circle.pending {
+    background-color: #f2f4f7;
+
+    color: #667085;
+
+    border: 1px solid #d0d5dd;
+}
+
+
+/* ============================================================
+   STEP AVATAR
+   ============================================================ */
+
+.step-avatar {
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.td-actions {
+    width: 65px;
+
+    min-width: 65px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.btn-icon-only {
+    width: 30px;
+
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 1px solid transparent;
+
+    border-radius: 7px;
+
+    color: #667085;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.btn-icon-only:hover {
+    background-color: #f2f4f7;
+
+    border-color: #e4e7ec;
+
+    color: #344054;
+}
+
+
+.btn-icon-only:focus-visible {
+    outline: 2px solid #2563eb;
+
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.loading-placeholder {
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 12px;
+}
+
+
+/* ============================================================
+   RESPONSIVE - 1200px
+   ============================================================ */
+
+@media (max-width: 1200px) {
+    .resignation-table {
+        /*
+         * Keep a controlled minimum width for smaller screens.
+         * The parent container will handle horizontal scrolling.
+         */
+        min-width: 1000px;
+    }
+
+    .resignation-table th:nth-child(2) {
+        min-width: 165px;
+    }
+
+    .resignation-table th:nth-child(3),
+    .td-details {
+        min-width: 270px;
+    }
+
+    .resignation-table th:nth-child(4) {
+        min-width: 115px;
+    }
+
+    .resignation-table th:nth-child(5) {
+        min-width: 105px;
+    }
+
+    .resignation-table th:nth-child(6) {
+        min-width: 110px;
+    }
+
+    .details-flex {
+        gap: 8px;
+    }
+
+    .date-group {
+        gap: 6px;
+    }
+
+    .date-value {
+        font-size: 11px;
+    }
+
+    .date-label {
+        font-size: 9px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - 768px
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .resignation-container {
+        padding: 4px 0;
+    }
+
+    .resignation-table {
+        min-width: 1000px;
+    }
+
+    .resignation-table th {
+        height: 38px;
+
+        padding: 0 8px;
+
+        font-size: 11px;
+    }
+
+    .resignation-row td {
+        height: 50px;
+
+        padding: 5px 6px;
+    }
+
+    .employee-card {
+        gap: 7px;
+
+        padding: 3px 6px;
+    }
+
+    .avatar-initials {
+        width: 28px;
+
+        height: 28px;
+
+        flex-basis: 28px;
+    }
+
+    .emp-name,
+    .emp-role {
+        max-width: 140px;
+    }
+}

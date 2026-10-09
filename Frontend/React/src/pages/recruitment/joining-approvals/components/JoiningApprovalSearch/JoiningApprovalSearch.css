@@ -1,0 +1,90 @@
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.joining-approval-search {
+  flex: 0 0 240px;
+
+  width: 240px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.joining-approval-search:focus-within {
+  border-color: #0f766e;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(15, 118, 110, 0.08);
+}
+
+
+.search-icon {
+  flex: 0 0 auto;
+
+  width: 18px;
+
+  height: 18px;
+
+  margin-right: 9px;
+
+  color: #64748b;
+}
+
+
+.joining-approval-search input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+
+.joining-approval-search input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .joining-approval-search {
+    width: 100%;
+
+    flex: 1 1 auto;
+  }
+}

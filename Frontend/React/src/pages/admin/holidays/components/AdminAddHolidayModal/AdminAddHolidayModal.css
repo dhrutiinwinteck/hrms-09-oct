@@ -1,0 +1,211 @@
+/* src/pages/admin/holidays/components/AdminAddHolidayModal/AdminAddHolidayModal.css */
+
+.admin-holiday-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  animation: adminHolidayFadeIn 0.2s ease;
+}
+
+.admin-holiday-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  width: 450px;
+  max-width: 92%;
+  animation: adminHolidaySlideIn 0.3s ease;
+}
+
+@keyframes adminHolidayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes adminHolidaySlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.admin-holiday-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e8ecf1;
+}
+
+.admin-holiday-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2332;
+  margin: 0;
+}
+
+.admin-holiday-modal-close {
+  background: none;
+  border: none;
+  color: #8a9aa8;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.admin-holiday-modal-close:hover {
+  background: #f0f2f5;
+  color: #4a5568;
+}
+
+.admin-holiday-modal-form {
+  padding: 24px;
+}
+
+.admin-holiday-form-group {
+  margin-bottom: 20px;
+}
+
+.admin-holiday-form-group:last-of-type {
+  margin-bottom: 24px;
+}
+
+.admin-holiday-form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.admin-holiday-form-required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.admin-holiday-form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1a2332;
+  transition: all 0.2s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.admin-holiday-form-input:focus {
+  outline: none;
+  border-color: #0f7b7b;
+  box-shadow: 0 0 0 3px rgba(15, 123, 123, 0.1);
+}
+
+.admin-holiday-form-input::placeholder {
+  color: #8a9aa8;
+}
+
+.admin-holiday-form-input-error {
+  border-color: #dc3545;
+}
+
+.admin-holiday-form-input-error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.admin-holiday-form-error {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #dc3545;
+}
+
+.admin-holiday-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.admin-holiday-btn-cancel,
+.admin-holiday-btn-submit {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 36px;
+}
+
+.admin-holiday-btn-cancel {
+  background: #f0f2f5;
+  color: #4a5568;
+}
+
+.admin-holiday-btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+.admin-holiday-btn-submit {
+  background: #0f7b7b;
+  color: white;
+}
+
+.admin-holiday-btn-submit:hover {
+  background: #0d6b6b;
+  box-shadow: 0 2px 8px rgba(15, 123, 123, 0.3);
+}
+
+.admin-holiday-btn-cancel:active,
+.admin-holiday-btn-submit:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  .admin-holiday-modal {
+    width: 96%;
+    max-width: 96%;
+  }
+
+  .admin-holiday-modal-header {
+    padding: 16px 20px;
+  }
+
+  .admin-holiday-modal-form {
+    padding: 20px;
+  }
+
+  .admin-holiday-modal-actions {
+    flex-direction: column;
+  }
+
+  .admin-holiday-btn-cancel,
+  .admin-holiday-btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}

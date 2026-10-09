@@ -1,0 +1,248 @@
+/* WorkExperience.css */
+
+/* Main Container */
+.dynamic-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Wrapper for each Job Entry */
+.dynamic-item-wrapper {
+  background-color: #FFFFFF;       /* Pure white for each block */
+  border: 1px solid #e2e8f0;       /* Subtle border matching the form */
+  border-radius: 12px;             /* Rounded corners */
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* Very slight depth */
+}
+
+/* Remove Button */
+.remove-item-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.remove-item-btn:hover {
+  background: #fecaca;
+}
+
+/* Grid layout - reusing the exact same grid as Basic Info */
+.basic-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+}
+
+.basic-info-grid .form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-info-grid .form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Typography for Labels */
+.basic-info-grid .form-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark, #19383a);
+  margin-bottom: 6px;
+}
+
+.basic-info-grid .form-field .required {
+  color: #d9534f;
+  margin-left: 2px;
+}
+
+/* Consistent Input Styling */
+.basic-info-grid .form-field input,
+.basic-info-grid .form-field select {
+  height: 42px;
+  border: 1px solid var(--input-border, #d9ddd9);
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  background: var(--input-bg, #fafaf8);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  font-family: inherit;
+  width: 100%; /* Prevents shrinking */
+}
+
+.basic-info-grid .form-field textarea {
+  border: 1px solid var(--input-border, #d9ddd9);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: var(--input-bg, #fafaf8);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  width: 100%;
+}
+
+/* Focus States */
+.basic-info-grid .form-field input:focus,
+.basic-info-grid .form-field select:focus,
+.basic-info-grid .form-field textarea:focus {
+  border-color: var(--primary-teal, #1f6669);
+  box-shadow: 0 0 0 3px rgba(31, 102, 105, 0.1);
+  background: #ffffff;
+}
+
+/* Placeholder Styling */
+.basic-info-grid .form-field input::placeholder,
+.basic-info-grid .form-field textarea::placeholder {
+  color: #aab5b2;
+}
+
+/* "Add Another Experience" Button */
+.add-item-btn {
+  background: transparent;
+  color: var(--primary-teal, #1f6669);
+  border: 1px dashed var(--primary-teal, #1f6669);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.add-item-btn:hover {
+  background: rgba(31, 102, 105, 0.05);
+  border-color: var(--primary-teal, #1f6669);
+}
+
+/* ============================================================
+   COMPANY DOCUMENT FILE UPLOAD
+   ============================================================ */
+
+.basic-info-grid .form-field input[type="file"] {
+  width: 100%;
+  height: 42px;
+
+  padding: 5px 8px;
+
+  background: var(--input-bg, #fafaf8);
+
+  border: 1px solid var(--input-border, #d9ddd9);
+
+  border-radius: 8px;
+
+  color: var(--text-dark, #19383a);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Choose File Button */
+
+.basic-info-grid
+  .form-field
+  input[type="file"]::file-selector-button {
+  height: 30px;
+
+  margin-right: 10px;
+
+  padding: 4px 12px;
+
+  background: #e3efed;
+
+  color: var(--primary-teal, #1f6669);
+
+  border: 1px solid #c4dcd8;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Hover */
+
+.basic-info-grid
+  .form-field
+  input[type="file"]::file-selector-button:hover {
+  background: #d3e7e3;
+
+  border-color: var(--primary-teal, #1f6669);
+}
+
+/* Focus */
+
+.basic-info-grid .form-field input[type="file"]:focus {
+  border-color: var(--primary-teal, #1f6669);
+
+  box-shadow: 0 0 0 3px rgba(31, 102, 105, 0.1);
+
+  background: #ffffff;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .basic-info-grid .form-field input[type="file"] {
+    height: 42px;
+
+    font-size: 12px;
+  }
+
+  .basic-info-grid
+    .form-field
+    input[type="file"]::file-selector-button {
+    font-size: 11px;
+
+    padding: 4px 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .basic-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .basic-info-grid .form-field.full-width {
+    grid-column: 1;
+  }
+
+  .dynamic-item-wrapper {
+    padding: 1.25rem;
+  }
+}

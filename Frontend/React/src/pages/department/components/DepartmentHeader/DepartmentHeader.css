@@ -1,0 +1,534 @@
+/* =========================================================
+   DEPARTMENT HEADER
+   Enterprise HRMS Design
+========================================================= */
+
+.department-header {
+  position: relative;
+
+  width: 100%;
+  min-height: 109px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 18px 22px;
+
+  background: #f8faf9;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.department-header__content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.department-header__left {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.department-header__title {
+  margin: 0;
+
+  color: #193b3d;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 21px;
+  line-height: 28px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.25px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.department-header__subtitle {
+  margin: 3px 0 0;
+
+  color: #687a7c;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  line-height: 17px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+========================================================= */
+
+.department-header__right {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.department-header__breadcrumb {
+  display: flex;
+  align-items: center;
+
+  min-height: 16px;
+
+  white-space: nowrap;
+}
+
+
+.department-header__breadcrumb-item {
+  color: #718083;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+  line-height: 15px;
+
+  font-weight: 500;
+}
+
+
+.department-header__breadcrumb-item--active {
+  color: #354e50;
+
+  font-weight: 500;
+}
+
+
+.department-header__breadcrumb-chevron {
+  width: 11px;
+  height: 11px;
+
+  margin: 0 5px;
+
+  color: #9aa8a9;
+
+  stroke-width: 1.7;
+}
+
+
+/* =========================================================
+   ADD DEPARTMENT BUTTON
+========================================================= */
+
+.department-header__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+
+  min-width: 132px;
+
+  padding: 0 17px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #3d7777;
+
+  border-radius: 20px;
+
+  background: #3d7777;
+
+  color: #ffffff;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+
+.department-header__add-button:hover {
+  background: #326969;
+
+  border-color: #326969;
+
+  box-shadow:
+    0 4px 10px rgba(38, 91, 93, 0.16);
+}
+
+
+.department-header__add-button:active {
+  transform: translateY(1px);
+
+  box-shadow:
+    0 2px 5px rgba(38, 91, 93, 0.12);
+}
+
+
+.department-header__add-button:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(61, 119, 119, 0.18);
+}
+
+
+/* =========================================================
+   PLUS ICON
+========================================================= */
+
+.department-header__add-icon {
+  width: 14px;
+  height: 14px;
+
+  margin-right: 7px;
+
+  flex-shrink: 0;
+
+  stroke-width: 2;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.department-header__dots {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 48px;
+  right: 21px;
+
+  width: 40px;
+  height: 40px;
+
+  pointer-events: none;
+
+  opacity: 0.48;
+
+  background-image: radial-gradient(
+    circle,
+    #d3dedd 1.2px,
+    transparent 1.2px
+  );
+
+  background-size: 8px 8px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 18%,
+    #000000 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 18%,
+    #000000 100%
+  );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1440px
+========================================================= */
+
+@media (min-width: 1440px) {
+  .department-header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .department-header__title {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   992px - 1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+  .department-header {
+    min-height: 105px;
+
+    padding: 18px 20px;
+  }
+
+  .department-header__content {
+    gap: 24px;
+  }
+
+  .department-header__title {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+
+@media (max-width: 991px) {
+  .department-header {
+    min-height: 102px;
+
+    padding: 17px 18px;
+  }
+
+  .department-header__content {
+    gap: 20px;
+  }
+
+  .department-header__title {
+    font-size: 20px;
+
+    line-height: 27px;
+  }
+
+  .department-header__subtitle {
+    font-size: 10.5px;
+  }
+
+  .department-header__breadcrumb {
+    display: none;
+  }
+
+  .department-header__right {
+    justify-content: center;
+  }
+
+  .department-header__add-button {
+    height: 35px;
+
+    min-width: 132px;
+
+    padding-inline: 15px;
+  }
+
+  .department-header__dots {
+    top: 47px;
+    right: 15px;
+
+    opacity: 0.3;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+  .department-header {
+    min-height: auto;
+
+    padding: 16px;
+  }
+
+  .department-header__content {
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .department-header__left {
+    flex: 1;
+  }
+
+  .department-header__title {
+    font-size: 19px;
+
+    line-height: 25px;
+
+    letter-spacing: -0.2px;
+  }
+
+  .department-header__subtitle {
+    max-width: 360px;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    line-height: 15px;
+  }
+
+  .department-header__right {
+    align-items: flex-end;
+  }
+
+  .department-header__add-button {
+    height: 34px;
+
+    min-width: 128px;
+
+    padding: 0 13px;
+
+    font-size: 10.5px;
+  }
+
+  .department-header__add-icon {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 6px;
+  }
+
+  .department-header__dots {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .department-header {
+    padding: 15px;
+  }
+
+  .department-header__content {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+  .department-header__right {
+    align-items: stretch;
+  }
+
+  .department-header__add-button {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 36px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .department-header {
+    padding: 14px;
+  }
+
+  .department-header__title {
+    font-size: 18px;
+
+    line-height: 24px;
+  }
+
+  .department-header__subtitle {
+    font-size: 9.5px;
+
+    line-height: 14px;
+  }
+
+  .department-header__add-button {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .department-header__add-button {
+    transition: none;
+  }
+}

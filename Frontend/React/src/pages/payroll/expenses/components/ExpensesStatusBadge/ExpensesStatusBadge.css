@@ -1,0 +1,30 @@
+.expenses-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  padding: 0 7px;
+  border-radius: 10px;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.expenses-status-badge--pending {
+  color: #896d27;
+  background: #fff6d9;
+}
+
+.expenses-status-badge--approved {
+  color: #2f7358;
+  background: #e5f5ed;
+}
+
+.expenses-status-badge--rejected {
+  color: #a3474d;
+  background: #ffebed;
+}
+
+.expenses-status-badge--paid {
+  color: #356e8c;
+  background: #e6f2fa;
+}

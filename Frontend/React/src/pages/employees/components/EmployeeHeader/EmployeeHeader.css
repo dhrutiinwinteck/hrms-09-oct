@@ -1,0 +1,47 @@
+/* src/pages/employees/components/EmployeeHeader/EmployeeHeader.css */
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employee-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employee-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.employee-header-breadcrumb {
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-separator {
+  color: #d1d5db;
+}
+
+.employee-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.employee-header-right button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+}

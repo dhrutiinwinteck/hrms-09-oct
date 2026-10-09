@@ -1,0 +1,466 @@
+.experience-info {
+  width: 100%;
+  min-width: 0;
+
+  margin-top: 10px;
+
+  padding: 10px 12px 9px;
+
+  border: 1px solid #e5e8e8;
+  border-top: 2px solid #c6a775;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.experience-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.experience-info__title {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  min-width: 0;
+}
+
+.experience-info__title-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 5px;
+
+  background: #f7f1e8;
+
+  color: #a27d48;
+}
+
+.experience-info__title h3 {
+  margin: 0;
+
+  color: #26323f;
+
+  font-size: 10px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.experience-info__more {
+  width: 24px;
+  height: 22px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #7b8794;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.experience-info__table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+}
+
+.experience-info__table {
+  width: 100%;
+
+  min-width: 650px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.experience-info__table th:nth-child(1),
+.experience-info__table td:nth-child(1) {
+  width: 25%;
+}
+
+.experience-info__table th:nth-child(2),
+.experience-info__table td:nth-child(2) {
+  width: 27%;
+}
+
+.experience-info__table th:nth-child(3),
+.experience-info__table td:nth-child(3) {
+  width: 16%;
+}
+
+.experience-info__table th:nth-child(4),
+.experience-info__table td:nth-child(4) {
+  width: 16%;
+}
+
+.experience-info__table th:nth-child(5),
+.experience-info__table td:nth-child(5) {
+  width: 16%;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.experience-info__table th {
+  height: 32px;
+
+  padding: 0 6px;
+
+  background: #fcfaf7;
+
+  color: #7e8994;
+
+  font-size: 6.5px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE DATA
+========================================= */
+
+.experience-info__table td {
+  height: 38px;
+
+  padding: 5px 6px;
+
+  border-top: 1px solid #f0f2f3;
+
+  color: #46515e;
+
+  font-size: 7px;
+
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  vertical-align: middle;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   INLINE INPUT
+========================================= */
+
+.experience-info__table td input {
+  width: 100%;
+
+  height: 22px;
+
+  padding: 2px 5px;
+
+  border: 1px solid #ddcfb9;
+
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #fffdf9;
+
+  color: #46515e;
+
+  font-family: inherit;
+
+  font-size: 7px;
+
+  box-sizing: border-box;
+}
+
+.experience-info__table td input:focus {
+  border-color: #c6a775;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(198, 167, 117, 0.1);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.experience-info__actions {
+  min-height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 9px;
+}
+
+
+/* =========================================
+   BUTTON BASE
+========================================= */
+
+.experience-info__edit,
+.experience-info__add,
+.experience-info__save,
+.experience-info__cancel {
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   EDIT
+========================================= */
+
+.experience-info__edit {
+  min-width: 96px;
+
+  border: 1px solid transparent;
+
+  background: #faf8f4;
+
+  color: #8b6c3f;
+}
+
+.experience-info__edit:hover {
+  background: #f3eee5;
+}
+
+
+/* =========================================
+   ADD
+========================================= */
+
+.experience-info__add {
+  min-width: 105px;
+
+  border: 1px solid transparent;
+
+  background: #faf8f4;
+
+  color: #8b6c3f;
+}
+
+.experience-info__add:hover {
+  background: #f3eee5;
+}
+
+.experience-info__add--editing {
+  min-width: 105px;
+}
+
+
+/* =========================================
+   SAVE
+========================================= */
+
+.experience-info__save {
+  min-width: 58px;
+
+  border: 1px solid #a98b62;
+
+  background: #a98b62;
+
+  color: #ffffff;
+}
+
+.experience-info__save:hover {
+  background: #96784f;
+}
+
+
+/* =========================================
+   CANCEL
+========================================= */
+
+.experience-info__cancel {
+  min-width: 62px;
+
+  border: 1px solid #e0e4e6;
+
+  background: #ffffff;
+
+  color: #737e87;
+}
+
+.experience-info__cancel:hover {
+  background: #f7f8f8;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.experience-info__edit:focus-visible,
+.experience-info__add:focus-visible,
+.experience-info__save:focus-visible,
+.experience-info__cancel:focus-visible {
+  outline: 2px solid rgba(198, 167, 117, 0.25);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .experience-info__table {
+    min-width: 620px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .experience-info {
+    padding: 10px 11px 9px;
+  }
+
+  .experience-info__table {
+    min-width: 620px;
+  }
+
+  .experience-info__table th {
+    height: 31px;
+  }
+
+  .experience-info__table td {
+    height: 36px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .experience-info {
+    padding: 9px 10px 8px;
+  }
+
+  .experience-info__title h3 {
+    font-size: 9px;
+  }
+
+  .experience-info__table {
+    min-width: 590px;
+  }
+
+  .experience-info__table th {
+    font-size: 6px;
+  }
+
+  .experience-info__table td,
+  .experience-info__table td input {
+    font-size: 6.7px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+  .experience-info__table {
+    min-width: 560px;
+  }
+
+  .experience-info__title h3 {
+    font-size: 8.5px;
+  }
+
+  .experience-info__actions {
+    gap: 4px;
+  }
+
+  .experience-info__edit,
+  .experience-info__add,
+  .experience-info__save,
+  .experience-info__cancel {
+    font-size: 6.5px;
+    padding: 0 8px;
+  }
+}

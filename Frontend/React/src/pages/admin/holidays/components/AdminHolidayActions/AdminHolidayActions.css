@@ -1,0 +1,45 @@
+/* src/pages/admin/holidays/components/AdminHolidayActions/AdminHolidayActions.css */
+
+.admin-holiday-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.admin-holiday-action-btn {
+  padding: 4px 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-holiday-action-btn:hover {
+  background: #f0f2f5;
+}
+
+.admin-holiday-action-edit {
+  color: #0f7b7b;
+}
+
+.admin-holiday-action-edit:hover {
+  background: #e6f3f3;
+  color: #0d6b6b;
+}
+
+.admin-holiday-action-delete {
+  color: #dc3545;
+}
+
+.admin-holiday-action-delete:hover {
+  background: #fde8ea;
+  color: #c82333;
+}
+
+.admin-holiday-action-btn:active {
+  transform: scale(0.92);
+}

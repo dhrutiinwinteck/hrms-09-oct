@@ -1,0 +1,259 @@
+/* =========================================================
+   POLICY DETAIL PAGE
+========================================================= */
+
+.policy-detail-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f7faf9;
+  color: #1e293b;
+}
+
+.policy-detail-page *,
+.policy-detail-page *::before,
+.policy-detail-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENT AREA
+========================================================= */
+
+.policy-detail-content {
+  width: 100%;
+  min-width: 0;
+
+  flex: 1;
+
+  padding: 12px 24px 24px;
+}
+
+/* =========================================================
+   MAIN POLICY CONTAINER
+========================================================= */
+
+.policy-detail-container {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 26px 30px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe8e5;
+  border-radius: 10px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.02),
+    0 4px 14px rgba(15, 23, 42, 0.025);
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.policy-detail-header {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.policy-detail-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.policy-detail-heading h1 {
+  margin: 0 0 6px;
+
+  color: #17233c;
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.25px;
+}
+
+.policy-detail-heading p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #526d91;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   POLICY LIST SECTION
+========================================================= */
+
+.policy-detail-list-section {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+  .policy-detail-content {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .policy-detail-container {
+    padding: 28px 32px 32px;
+  }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1280px) {
+  .policy-detail-content {
+    padding: 12px 20px 20px;
+  }
+
+  .policy-detail-container {
+    padding: 24px;
+  }
+
+  .policy-detail-header {
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .policy-detail-content {
+    padding: 12px 16px 18px;
+  }
+
+  .policy-detail-container {
+    padding: 22px;
+  }
+
+  .policy-detail-heading h1 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .policy-detail-content {
+    padding: 10px 14px 16px;
+  }
+
+  .policy-detail-container {
+    padding: 18px;
+
+    border-radius: 8px;
+  }
+
+  .policy-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+  }
+
+  .policy-detail-heading {
+    width: 100%;
+  }
+
+  .policy-detail-heading h1 {
+    margin-bottom: 5px;
+
+    font-size: 19px;
+  }
+
+  .policy-detail-heading p {
+    max-width: none;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .policy-detail-content {
+    padding: 8px 10px 14px;
+  }
+
+  .policy-detail-container {
+    padding: 15px;
+
+    border-radius: 7px;
+  }
+
+  .policy-detail-header {
+    gap: 10px;
+
+    margin-bottom: 15px;
+  }
+
+  .policy-detail-heading h1 {
+    font-size: 18px;
+  }
+
+  .policy-detail-heading p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .policy-detail-content {
+    padding: 8px;
+  }
+
+  .policy-detail-container {
+    padding: 12px;
+  }
+
+  .policy-detail-heading h1 {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,726 @@
+{
+  "applications": [
+    {
+      "basicInformation": {
+        "fullName": "aaa",
+        "email": "abcd@gmail.com",
+        "phoneNumber": "9876532222",
+        "alternativePhone": "09321571537",
+        "positionApplied": "Software Developer",
+        "dateOfApplication": "2026-07-29",
+        "resume": {
+          "0": {}
+        },
+        "countryCode": "+91"
+      },
+      "personalDetails": {
+        "dateOfBirth": "2026-07-02",
+        "maritalStatus": "Unmarried",
+        "gender": "Female",
+        "nationality": "Indian",
+        "aadharNumber": "654321098763",
+        "panNumber": "ABCDE1234F",
+        "currentAddress": "aaaaaaaaaaa",
+        "permanentAddress": "aaaaaaaaaaa"
+      },
+      "emergencyContacts": {
+        "contact1": {
+          "fullName": "abc",
+          "relationship": "Father",
+          "phoneNumber": "09321571537",
+          "emailAddress": "abcd@gmail.com",
+          "address": "abcd@gmail.com"
+        },
+        "contact2": null
+      },
+      "workExperiences": {
+        "isFresher": true,
+        "experiences": []
+      },
+      "educations": {
+        "educations": []
+      },
+      "references": {
+        "reference1": {
+          "fullName": "",
+          "designation": "",
+          "companyOrganization": "",
+          "emailAddress": "",
+          "phoneNumber": "",
+          "relationship": "",
+          "mayWeContact": false
+        },
+        "reference2": null
+      },
+      "status": "Submitted",
+      "applicationDate": "2026-07-29T06:23:17.534Z",
+      "createdAt": "2026-07-29T06:23:17.534Z",
+      "updatedAt": "2026-07-29T06:23:17.534Z",
+      "id": "jlKre8a1ipE"
+    }
+  ],
+  "positions": [
+    {
+      "id": "1",
+      "name": "Software Developer"
+    },
+    {
+      "id": "2",
+      "name": "Senior Software Developer"
+    },
+    {
+      "id": "3",
+      "name": "Frontend Developer"
+    },
+    {
+      "id": "4",
+      "name": "Backend Developer"
+    },
+    {
+      "id": "5",
+      "name": "Full Stack Developer"
+    },
+    {
+      "id": "6",
+      "name": "DevOps Engineer"
+    },
+    {
+      "id": "7",
+      "name": "UI/UX Designer"
+    },
+    {
+      "id": "8",
+      "name": "Product Manager"
+    },
+    {
+      "id": "9",
+      "name": "Project Manager"
+    },
+    {
+      "id": "10",
+      "name": "Business Analyst"
+    },
+    {
+      "id": "11",
+      "name": "Quality Assurance Engineer"
+    },
+    {
+      "id": "12",
+      "name": "Data Analyst"
+    },
+    {
+      "id": "13",
+      "name": "Data Scientist"
+    },
+    {
+      "id": "14",
+      "name": "Machine Learning Engineer"
+    },
+    {
+      "id": "15",
+      "name": "Cloud Architect"
+    },
+    {
+      "id": "16",
+      "name": "System Administrator"
+    },
+    {
+      "id": "17",
+      "name": "Network Engineer"
+    },
+    {
+      "id": "18",
+      "name": "Security Analyst"
+    },
+    {
+      "id": "19",
+      "name": "HR Manager"
+    },
+    {
+      "id": "20",
+      "name": "Recruitment Specialist"
+    },
+    {
+      "id": "21",
+      "name": "Digital Marketing Specialist"
+    },
+    {
+      "id": "22",
+      "name": "SEO Specialist"
+    },
+    {
+      "id": "23",
+      "name": "Content Writer"
+    },
+    {
+      "id": "24",
+      "name": "Graphic Designer"
+    },
+    {
+      "id": "25",
+      "name": "Video Editor"
+    },
+    {
+      "id": "26",
+      "name": "Social Media Manager"
+    },
+    {
+      "id": "27",
+      "name": "Help Desk Support"
+    },
+    {
+      "id": "28",
+      "name": "Technical Support Engineer"
+    },
+    {
+      "id": "29",
+      "name": "Customer Service Representative"
+    },
+    {
+      "id": "30",
+      "name": "Sales Executive"
+    }
+  ],
+  "qualifications": [
+    {
+      "id": "1",
+      "name": "Bachelor of Technology (B.Tech)"
+    },
+    {
+      "id": "2",
+      "name": "Bachelor of Engineering (B.E)"
+    },
+    {
+      "id": "3",
+      "name": "Bachelor of Science (B.Sc)"
+    },
+    {
+      "id": "4",
+      "name": "Bachelor of Commerce (B.Com)"
+    },
+    {
+      "id": "5",
+      "name": "Bachelor of Arts (B.A)"
+    },
+    {
+      "id": "6",
+      "name": "Master of Technology (M.Tech)"
+    },
+    {
+      "id": "7",
+      "name": "Master of Engineering (M.E)"
+    },
+    {
+      "id": "8",
+      "name": "Master of Science (M.Sc)"
+    },
+    {
+      "id": "9",
+      "name": "Master of Business Administration (MBA)"
+    },
+    {
+      "id": "10",
+      "name": "Master of Commerce (M.Com)"
+    },
+    {
+      "id": "11",
+      "name": "Master of Arts (M.A)"
+    },
+    {
+      "id": "12",
+      "name": "Doctor of Philosophy (Ph.D)"
+    },
+    {
+      "id": "13",
+      "name": "Diploma"
+    },
+    {
+      "id": "14",
+      "name": "Post Graduate Diploma"
+    },
+    {
+      "id": "15",
+      "name": "Certificate Course"
+    }
+  ],
+  "employeeTypes": [
+    {
+      "id": "1",
+      "name": "Full Time"
+    },
+    {
+      "id": "2",
+      "name": "Part Time"
+    },
+    {
+      "id": "3",
+      "name": "Contract"
+    },
+    {
+      "id": "4",
+      "name": "Internship"
+    },
+    {
+      "id": "5",
+      "name": "Freelance"
+    },
+    {
+      "id": "6",
+      "name": "Temporary"
+    },
+    {
+      "id": "7",
+      "name": "Permanent"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "1",
+      "name": "Father"
+    },
+    {
+      "id": "2",
+      "name": "Mother"
+    },
+    {
+      "id": "3",
+      "name": "Spouse"
+    },
+    {
+      "id": "4",
+      "name": "Sibling"
+    },
+    {
+      "id": "5",
+      "name": "Friend"
+    },
+    {
+      "id": "6",
+      "name": "Colleague"
+    },
+    {
+      "id": "7",
+      "name": "Relative"
+    },
+    {
+      "id": "8",
+      "name": "Other"
+    }
+  ],
+  "genders": [
+    {
+      "id": "1",
+      "name": "Male"
+    },
+    {
+      "id": "2",
+      "name": "Female"
+    },
+    {
+      "id": "3",
+      "name": "Other"
+    }
+  ],
+  "maritalStatuses": [
+    {
+      "id": "1",
+      "name": "Married"
+    },
+    {
+      "id": "2",
+      "name": "Unmarried"
+    },
+    {
+      "id": "3",
+      "name": "Divorced"
+    },
+    {
+      "id": "4",
+      "name": "Widowed"
+    },
+    {
+      "id": "5",
+      "name": "Separated"
+    }
+  ],
+  "nationalities": [
+    {
+      "id": "1",
+      "name": "Indian"
+    },
+    {
+      "id": "2",
+      "name": "American"
+    },
+    {
+      "id": "3",
+      "name": "British"
+    },
+    {
+      "id": "4",
+      "name": "Canadian"
+    },
+    {
+      "id": "5",
+      "name": "Australian"
+    },
+    {
+      "id": "6",
+      "name": "Other"
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+      "name": "Housekeeping",
+      "status": "active",
+      "employeeCount": 28
+    },
+    {
+      "id": "2",
+      "name": "Human Resource",
+      "status": "active",
+      "employeeCount": 35
+    },
+    {
+      "id": "3",
+      "name": "IT",
+      "status": "active",
+      "employeeCount": 68
+    },
+    {
+      "id": "4",
+      "name": "Operations",
+      "status": "active",
+      "employeeCount": 125
+    },
+    {
+      "id": "5",
+      "name": "Marketing",
+      "status": "active",
+      "employeeCount": 45
+    },
+    {
+      "id": "6",
+      "name": "Finance",
+      "status": "inactive",
+      "employeeCount": 0
+    },
+    {
+      "id": "7",
+      "name": "Sales",
+      "status": "active",
+      "employeeCount": 60
+    },
+    {
+      "id": "8",
+      "name": "Legal",
+      "status": "active",
+      "employeeCount": 10
+    },
+    {
+      "id": "9",
+      "name": "R&D",
+      "status": "active",
+      "employeeCount": 30
+    },
+    {
+      "id": "10",
+      "name": "Customer Support",
+      "status": "active",
+      "employeeCount": 80
+    },
+    {
+      "id": "11",
+      "name": "Procurement",
+      "status": "inactive",
+      "employeeCount": 0
+    },
+    {
+      "id": "12",
+      "name": "Administration",
+      "status": "active",
+      "employeeCount": 20
+    },
+    {
+      "name": "IT",
+      "status": "active",
+      "employeeCount": 0,
+      "id": "momHxDxMdTw"
+    }
+  ],
+  "joiningForms": [
+    {
+      "basicInformation": {},
+      "personalDetails": {},
+      "workExperience": [],
+      "education": [],
+      "documents": [],
+      "references": [],
+      "status": "Submitted",
+      "applicationDate": "2026-08-10T10:34:27.577Z",
+      "createdAt": "2026-08-10T10:34:27.577Z",
+      "updatedAt": "2026-08-10T10:34:27.577Z",
+      "id": "ymzoitmuD2o"
+    },
+    {
+      "basicInformation": {
+        "fullName": "abc",
+        "email": "abc@gmail.com",
+        "phone": "09321571537",
+        "alternatePhone": "09372496494",
+        "position": "Developer"
+      },
+      "personalDetails": {
+        "fatherName": "aaa",
+        "motherName": "bbb",
+        "nationality": "indian",
+        "religion": "hindu",
+        "aadhaarNumber": "987654321000",
+        "panNumber": "abcef1234f",
+        "permanentAddress": "thane ",
+        "sameAsPermanent": true,
+        "currentAddress": "thane "
+      },
+      "workExperience": [],
+      "education": [],
+      "documents": {
+        "relieving": {},
+        "offer": {},
+        "salary": {},
+        "education": {},
+        "id": {},
+        "address": {},
+        "photo": {},
+        "signature": {}
+      },
+      "references": [],
+      "id": "8dtT7MeICsk"
+    }
+  ],
+  "employees": [],
+  "shiftPatterns": [],
+  "shiftAssignments": [],
+  "punches": [
+    {
+      "action": "Break In",
+      "timestamp": "2026-08-19T05:42:41.833Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Thane Subdistrict, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19448811760034,
+      "longitude": 72.955348538998,
+      "id": "dGyo4Akev44"
+    },
+    {
+      "action": "Break Out",
+      "timestamp": "2026-08-19T05:42:43.094Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Thane Subdistrict, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19448811760034,
+      "longitude": 72.955348538998,
+      "id": "WXqzVMexHe4"
+    },
+    {
+      "action": "Punch Out",
+      "timestamp": "2026-08-19T05:42:44.291Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Thane Subdistrict, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19448811760034,
+      "longitude": 72.955348538998,
+      "id": "YUvM9TCj4cI"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T05:42:50.565Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Thane Subdistrict, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19448811760034,
+      "longitude": 72.955348538998,
+      "id": "Bt-2Z7rJt5A"
+    },
+    {
+      "action": "Break In",
+      "timestamp": "2026-08-19T05:42:53.118Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Thane Subdistrict, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19448811760034,
+      "longitude": 72.955348538998,
+      "id": "Ikavx4WziAo"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T06:13:45.060Z",
+      "address": "Udyog Nagar, Mumbai, Maharashtra 400062, India",
+      "latitude": 19.1718,
+      "longitude": 72.8413,
+      "accuracy": 5000,
+      "id": "RjO7tTc_iUE"
+    },
+    {
+      "action": "Break In",
+      "timestamp": "2026-08-19T06:14:53.269Z",
+      "address": "Udyog Nagar, Mumbai, Maharashtra 400062, India",
+      "latitude": 19.1718,
+      "longitude": 72.8413,
+      "accuracy": 5000,
+      "id": "fZbzfhUkins"
+    },
+    {
+      "action": "Punch Out",
+      "timestamp": "2026-08-19T06:14:59.703Z",
+      "address": "Road Number 15, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra 400604, India",
+      "latitude": 19.194577218894977,
+      "longitude": 72.95520100218789,
+      "accuracy": 87,
+      "id": "8tMXZpRzW8k"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T06:30:06.105Z",
+      "address": "Road Number 15, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra 400604, India",
+      "latitude": 19.19459199438329,
+      "longitude": 72.95521895260173,
+      "accuracy": 84,
+      "id": "1BBXb2VxYTQ"
+    },
+    {
+      "action": "Break In",
+      "timestamp": "2026-08-19T06:30:09.082Z",
+      "address": "Road Number 15, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra 400604, India",
+      "latitude": 19.19459199438329,
+      "longitude": 72.95521895260173,
+      "accuracy": 84,
+      "id": "OdfddYyqMKQ"
+    },
+    {
+      "action": "Break Out",
+      "timestamp": "2026-08-19T06:30:10.244Z",
+      "address": "Road Number 15, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra 400604, India",
+      "latitude": 19.19459199438329,
+      "longitude": 72.95521895260173,
+      "accuracy": 84,
+      "id": "YayzQtlsGic"
+    },
+    {
+      "action": "Punch Out",
+      "timestamp": "2026-08-19T06:30:11.659Z",
+      "address": "Road Number 15, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra 400604, India",
+      "latitude": 19.19459199438329,
+      "longitude": 72.95521895260173,
+      "accuracy": 84,
+      "id": "VSUp_YTHmuE"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T06:40:45.685Z",
+      "address": "Road Number 15, Wagle Industrial Estate, Thane, Maharashtra, 400604, India",
+      "latitude": 19.19456637599441,
+      "longitude": 72.95526233638311,
+      "accuracy": 84,
+      "id": "iyhDRSLdhK0"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T07:04:44.708Z",
+      "address": "LOTUS PARK",
+      "latitude": 19.194530498912535,
+      "longitude": 72.95526013935061,
+      "accuracy": 89,
+      "id": "-jzJi76w8m4"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-19T07:13:11.174Z",
+      "address": "Club House, Udyog Nagar, Goregaon West, Mumbai, Maharashtra, 400062, India",
+      "latitude": 19.1718,
+      "longitude": 72.8413,
+      "accuracy": 5000,
+      "id": "3U4mkF1PUX4"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:24:27.969Z",
+      "address": "Raval Pada / Ghartan Pada, Sant Mirabai Road, Ashokvan, Dahisar East, Maharashtra, 400068, India",
+      "latitude": 19.2519,
+      "longitude": 72.8681,
+      "accuracy": 50000,
+      "id": "2k5KHH3vSXc"
+    },
+    {
+      "action": "Punch Out",
+      "timestamp": "2026-08-20T07:24:54.598Z",
+      "address": "Raval Pada / Ghartan Pada, Sant Mirabai Road, Ashokvan, Dahisar East, Maharashtra, 400068, India",
+      "latitude": 19.2519,
+      "longitude": 72.8681,
+      "accuracy": 50000,
+      "id": "oq_S90Asz2U"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:37:59.230Z",
+      "address": "Centrum Business Square, Centrum Business Square, Plot D1, Road No. 16, Near Lotus IT Park, Wagle Industrial Estate, Thane, Maharashtra 400604",
+      "latitude": 19.19454300085369,
+      "longitude": 72.95528823359366,
+      "accuracy": 82,
+      "id": "eNReavGRkQQ"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:40:38.612Z",
+      "address": "Centrum Business Square, Plot D1, Road No. 16, Near Lotus IT Park, Wagle Industrial Estate, Thane, Maharashtra 400604",
+      "latitude": 19.194518518326205,
+      "longitude": 72.95529835858277,
+      "accuracy": 82,
+      "id": "_g_Qxx_Fx9c"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:46:22.872Z",
+      "address": "Centrum Business Square, Plot D1, Road No. 16, Near Lotus IT Park, Wagle Industrial Estate, Thane, Maharashtra 400604",
+      "latitude": 19.19445576915356,
+      "longitude": 72.9554089253931,
+      "accuracy": 86,
+      "id": "8o9mtQzJc1Y"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:49:19.017Z",
+      "address": "LOTUS PARK, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra, 400604, India",
+      "latitude": 19.194546190995908,
+      "longitude": 72.95531413315142,
+      "accuracy": 83,
+      "id": "AoAZaJ7rEBA"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T07:49:58.514Z",
+      "address": "Raval Pada / Ghartan Pada, Sant Mirabai Road, Ashokvan, Dahisar East, Maharashtra, 400068, India",
+      "latitude": 19.2519,
+      "longitude": 72.8681,
+      "accuracy": 50000,
+      "id": "o0Y-ACvAeJY"
+    },
+    {
+      "action": "Punch In",
+      "timestamp": "2026-08-20T09:57:32.364Z",
+      "address": "LOTUS PARK, Road Number 15, Wagle Industrial Estate, Thane, Maharashtra, 400604, India",
+      "latitude": 19.194525727337197,
+      "longitude": 72.95528598651096,
+      "accuracy": 84,
+      "id": "nIgSsLcBUOs"
+    }
+  ],
+  "policies": [
+    {
+      "title": "testing",
+      "description": "testing",
+      "documentUrl": "blob:http://localhost:5173/8f30925e-d2de-44b0-a9f0-b3dd30ef77ed",
+      "version": "1.0",
+      "effectiveDate": "2026-08-20",
+      "status": "Active",
+      "isAccepted": false,
+      "createdBy": "admin",
+      "createdByName": "Varun Sharma",
+      "creatorRole": "Admin",
+      "createdAt": "2026-08-20T07:10:31.165Z",
+      "updatedAt": "2026-08-20T07:10:31.165Z",
+      "id": "uGWZNm2Xk60"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,13 @@
+.payslip-admin-statistics {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-top: 19px;
+}
+
+@media (max-width: 850px) {
+  .payslip-admin-statistics {
+    flex-wrap: wrap;
+    gap: 14px 22px;
+  }
+}

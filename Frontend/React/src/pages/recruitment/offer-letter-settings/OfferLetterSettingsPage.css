@@ -1,0 +1,56 @@
+.offer-letter-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 17px 17px 18px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfcfc 55%,
+      #f7f9fa 100%
+    );
+  color: #193f50;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.offer-letter-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.72fr) minmax(390px, 1fr);
+  align-items: start;
+  gap: 10px;
+}
+
+.offer-letter-left,
+.offer-letter-right {
+  min-width: 0;
+}
+
+.offer-letter-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1180px) {
+  .offer-letter-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(350px, 0.9fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .offer-letter-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-letter-page {
+    padding: 12px;
+  }
+}

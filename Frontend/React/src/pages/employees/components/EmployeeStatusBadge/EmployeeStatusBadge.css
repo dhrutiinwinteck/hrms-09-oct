@@ -1,0 +1,66 @@
+.employee-status-badge {
+  display: inline-block;
+
+  padding: 4px 12px;
+
+  border-radius: 12px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #ffffff;
+
+  letter-spacing: 0.3px;
+
+  text-transform: capitalize;
+}
+
+
+/* ============================================================
+   ADDED:
+   Only Active badge gets pointer cursor.
+============================================================ */
+
+.employee-status-badge-clickable {
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+/* ============================================================
+   ADDED:
+   Active badge hover effect.
+============================================================ */
+
+.employee-status-badge-clickable:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================================================
+   ADDED:
+   Active badge click effect.
+============================================================ */
+
+.employee-status-badge-clickable:active {
+  transform: scale(0.97);
+}
+
+
+/* ============================================================
+   ADDED:
+   Keyboard accessibility.
+============================================================ */
+
+.employee-status-badge-clickable:focus-visible {
+  outline: 2px solid #2563eb;
+
+  outline-offset: 2px;
+}

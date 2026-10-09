@@ -1,0 +1,690 @@
+/* =========================================
+   DESIGNATION TABLE
+========================================= */
+
+.designation-table {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e5eaec;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TABLE HEADER + ROW
+========================================= */
+
+.designation-table__header,
+.designation-table__row {
+  display: grid;
+
+  grid-template-columns:
+    58px
+    minmax(260px, 2.3fr)
+    minmax(150px, 1.3fr)
+    100px
+    100px
+    90px;
+
+  align-items: center;
+
+  column-gap: 8px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.designation-table__header {
+  min-height: 42px;
+
+  background: #2f806f;
+  color: #ffffff;
+}
+
+.designation-table__cell {
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+.designation-table__header
+.designation-table__cell {
+  color: #ffffff;
+
+  font-size: 9.5px;
+  line-height: 1.2;
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.designation-table__body {
+  width: 100%;
+  min-width: 0;
+}
+
+.designation-table__row {
+  min-height: 60px;
+
+  border-bottom: 1px solid #edf0f1;
+
+  background: #ffffff;
+
+  transition:
+    background-color 150ms ease;
+}
+
+.designation-table__row:hover {
+  background: #fbfcfc;
+}
+
+.designation-table__row:last-child {
+  border-bottom: 0;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.designation-table__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 6px;
+
+  background: #f3f5f5;
+  color: #475569;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* =========================================
+   DESIGNATION
+========================================= */
+
+.designation-table__designation-wrapper {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 10px;
+}
+
+.designation-table__designation-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 36px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  background: #edf5f1;
+  color: #2f806f;
+}
+
+.designation-table__designation-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #17212b;
+
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   DEPARTMENT
+========================================= */
+
+.designation-table__department-name {
+  display: block;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #4b5563;
+
+  font-size: 10.5px;
+  line-height: 1.3;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.designation-table__status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 48px;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.designation-table__status--active {
+  background: #e4f1e9;
+  color: #32725b;
+}
+
+.designation-table__status--inactive {
+  background: #f8e9e5;
+  color: #a85b4d;
+}
+
+/* =========================================
+   EMPLOYEES
+========================================= */
+
+.designation-table__employee-count {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.designation-table__employee-count strong {
+  color: #18232d;
+
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.designation-table__employee-count span {
+  color: #64748b;
+
+  font-size: 9px;
+  line-height: 1;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.designation-table__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.designation-table__action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e7e9;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.designation-table__action-button:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   EDIT
+========================================= */
+
+.designation-table__action-button--edit {
+  color: #2f806f;
+}
+
+.designation-table__action-button--edit:hover {
+  border-color: #b8d3cb;
+
+  background: #f0f7f4;
+}
+
+/* =========================================
+   DELETE
+========================================= */
+
+.designation-table__action-button--delete {
+  color: #d75b5b;
+}
+
+.designation-table__action-button--delete:hover {
+  border-color: #efc3c3;
+
+  background: #fff5f5;
+}
+
+/* Disabled delete */
+
+.designation-table__action-button:disabled {
+  opacity: 0.9;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.designation-table__action-button:disabled:hover {
+  transform: none;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.designation-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 52px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+.designation-table__showing {
+  color: #52606b;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.designation-table__pagination {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.designation-table__page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: #f5f6f7;
+  color: #46515b;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.designation-table__page-button:hover:not(:disabled) {
+  background: #eaf2ef;
+
+  color: #2f806f;
+}
+
+.designation-table__page-button--active {
+  background: #2f806f;
+
+  color: #ffffff;
+}
+
+.designation-table__page-button--active:hover {
+  background: #286f61;
+
+  color: #ffffff;
+}
+
+.designation-table__page-button--arrow {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.designation-table__page-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.designation-table__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 140px;
+
+  padding: 20px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+/* =========================================
+   LARGE DESKTOP
+   1201px+
+========================================= */
+
+@media (min-width: 1201px) {
+  .designation-table__header,
+  .designation-table__row {
+    column-gap: 8px;
+
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .designation-table__row {
+    min-height: 50px;
+  }
+}
+
+/* =========================================
+   LAPTOP
+   901px - 1200px
+========================================= */
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .designation-table {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 820px;
+
+    column-gap: 7px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .designation-table__row {
+    min-height: 59px;
+  }
+
+  .designation-table__designation-wrapper {
+    gap: 9px;
+  }
+}
+
+/* =========================================
+   TABLET
+   601px - 900px
+========================================= */
+
+@media (max-width: 900px) {
+  .designation-table {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 820px;
+
+    column-gap: 7px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .designation-table__header {
+    min-height: 40px;
+  }
+
+  .designation-table__row {
+    min-height: 58px;
+  }
+
+  .designation-table__designation-icon {
+    flex-basis: 35px;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .designation-table__designation-wrapper {
+    gap: 9px;
+  }
+
+  .designation-table__footer {
+    min-width: 820px;
+
+    min-height: 50px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   <= 600px
+========================================= */
+
+@media (max-width: 600px) {
+  .designation-table {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    border-radius: 11px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 800px;
+
+    column-gap: 6px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .designation-table__header {
+    min-height: 39px;
+  }
+
+  .designation-table__row {
+    min-height: 57px;
+  }
+
+  .designation-table__header
+  .designation-table__cell {
+    font-size: 9px;
+  }
+
+  .designation-table__designation-wrapper {
+    gap: 8px;
+  }
+
+  .designation-table__designation-icon {
+    flex-basis: 34px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+  }
+
+  .designation-table__designation-name {
+    font-size: 10.5px;
+  }
+
+  .designation-table__department-name {
+    font-size: 10px;
+  }
+
+  .designation-table__footer {
+    min-width: 800px;
+
+    min-height: 49px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   <= 480px
+========================================= */
+
+@media (max-width: 480px) {
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 780px;
+  }
+
+  .designation-table__row {
+    min-height: 56px;
+  }
+
+  .designation-table__footer {
+    min-width: 780px;
+  }
+
+  .designation-table__action-button {
+    flex-basis: 27px;
+
+    width: 27px;
+    height: 27px;
+  }
+
+  .designation-table__actions {
+    gap: 5px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================= */
+
+@media (max-width: 360px) {
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 760px;
+
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .designation-table__row {
+    min-height: 55px;
+  }
+
+  .designation-table__footer {
+    min-width: 760px;
+
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   <= 320px
+========================================= */
+
+@media (max-width: 320px) {
+  .designation-table__header,
+  .designation-table__row {
+    min-width: 740px;
+  }
+
+  .designation-table__row {
+    min-height: 54px;
+  }
+
+  .designation-table__footer {
+    min-width: 740px;
+  }
+}

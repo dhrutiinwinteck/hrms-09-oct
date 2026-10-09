@@ -1,0 +1,93 @@
+/* ============================================================
+   AVAILABLE MERGE FIELDS
+   ============================================================ */
+
+.loi-merge-fields {
+  width: 150px;
+  min-width: 150px;
+  height: 100%;
+  padding: 9px 8px;
+  background: #eff8f1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.loi-merge-fields h4 {
+  margin: 0;
+  color: #355b42;
+  font-size: 10.5px;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.loi-merge-fields p {
+  margin: 3px 0 8px;
+  color: #68806e;
+  font-size: 8px;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   FIELD LIST
+   ============================================================ */
+
+.loi-merge-field-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+/* ============================================================
+   MERGE FIELD
+   ============================================================ */
+
+.loi-merge-field-list button {
+  width: auto;
+  max-width: 100%;
+  min-height: 17px;
+  padding: 2px 5px;
+  border: 1px solid #cbe7b8;
+  border-radius: 8px;
+  background: #e8f7c8;
+  color: #52722d;
+  font-family: inherit;
+  font-size: 7.7px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.loi-merge-field-list button:hover {
+  background: #ddf0b7;
+  border-color: #afd594;
+}
+
+.loi-merge-field-list button:active {
+  background: #d4e9a9;
+}
+
+@media (max-width: 700px) {
+  .loi-merge-fields {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .loi-merge-field-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 4px;
+  }
+}

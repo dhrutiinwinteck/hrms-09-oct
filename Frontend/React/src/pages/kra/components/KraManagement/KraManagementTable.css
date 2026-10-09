@@ -1,0 +1,1012 @@
+/* =========================================================
+   KRA MANAGEMENT TABLE
+   Enterprise HRMS
+   Compact Reference-Aligned Design
+   ========================================================= */
+
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.kra-management-table-card {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 8px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7e5;
+  border-radius: 9px;
+
+  box-shadow:
+    0 2px 5px rgba(25, 49, 44, 0.025),
+    0 6px 16px rgba(25, 49, 44, 0.04);
+}
+
+
+/* =========================================================
+   TABLE SCROLL CONTAINER
+   ========================================================= */
+
+.kra-management-table-scroll {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8e6;
+  border-radius: 6px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c9d5d2 #f6f8f7;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.kra-management-table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+
+.kra-management-table-scroll::-webkit-scrollbar-track {
+  background: #f6f8f7;
+}
+
+
+.kra-management-table-scroll::-webkit-scrollbar-thumb {
+  background: #c9d5d2;
+
+  border: 1px solid #f6f8f7;
+  border-radius: 999px;
+}
+
+
+.kra-management-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #afc0bc;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.kra-management-table {
+  width: 100%;
+  min-width: 1010px;
+
+  margin: 0;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: auto;
+
+  color: #17302c;
+
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.kra-management-table thead {
+  background: #edf2f0;
+}
+
+
+.kra-management-table th {
+  height: 36px;
+
+  box-sizing: border-box;
+
+  padding: 0 9px;
+
+  color: #173b38;
+
+  background: #edf2f0;
+
+  border-bottom: 1px solid #dde5e2;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.2;
+
+  text-align: left;
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.kra-management-table td {
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 5px 9px;
+
+  color: #243c37;
+
+  background: transparent;
+
+  border-bottom: 1px solid #e8edeb;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 450;
+  line-height: 1.3;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+
+.kra-management-table tbody tr {
+  background: #ffffff;
+
+  transition:
+    background-color 0.15s ease;
+}
+
+
+.kra-management-table tbody tr:hover {
+  background: #fafcfb;
+}
+
+
+.kra-management-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   EMPLOYEE COLUMN
+   ========================================================= */
+
+.kra-management-employee {
+  min-width: 132px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+/* =========================================================
+   EMPLOYEE AVATAR
+   ========================================================= */
+
+.kra-management-avatar {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 1;
+
+  user-select: none;
+
+  transition:
+    transform 0.16s ease;
+}
+
+
+.kra-management-table tbody tr:hover
+.kra-management-avatar {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   EMPLOYEE INFORMATION
+   ========================================================= */
+
+.kra-management-employee-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+
+.kra-management-employee-info strong {
+  display: block;
+
+  max-width: 125px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #173631;
+
+  font-family: inherit;
+  font-size: 10.2px;
+  font-weight: 650;
+  line-height: 1.25;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESIGNATION
+   ========================================================= */
+
+.kra-management-designation {
+  display: inline-block;
+
+  max-width: 115px;
+
+  overflow: hidden;
+
+  color: #61716d;
+
+  font-family: inherit;
+  font-size: 9.7px;
+  font-weight: 400;
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SORT HEADING
+   ========================================================= */
+
+.kra-management-sort-heading {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 3px;
+
+  vertical-align: middle;
+}
+
+
+.kra-management-sort-heading svg {
+  width: 11px;
+  height: 11px;
+
+  flex: 0 0 11px;
+
+  color: #496b66;
+}
+
+
+/* =========================================================
+   SCORE BADGE
+   ========================================================= */
+
+.kra-management-score {
+  min-width: 36px;
+  min-height: 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 2px 6px;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 1;
+
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   GOOD SCORE
+   ========================================================= */
+
+.kra-management-score--good {
+  color: #176d52;
+
+  background: #e1f2eb;
+}
+
+
+/* =========================================================
+   AVERAGE SCORE
+   ========================================================= */
+
+.kra-management-score--average {
+  color: #bf6b0d;
+
+  background: #fff0da;
+}
+
+
+/* =========================================================
+   ACTION COLUMN
+   ========================================================= */
+
+.kra-management-action-heading {
+  text-align: center !important;
+}
+
+
+.kra-management-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.kra-management-action-button {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  color: #24443f;
+
+  background: #f4f6f5;
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+
+.kra-management-action-button svg {
+  display: block;
+
+  width: 13px;
+  height: 13px;
+
+  flex-shrink: 0;
+}
+
+
+.kra-management-action-button:hover {
+  color: #205f59;
+
+  background: #e8efed;
+
+  border-color: #dce6e3;
+
+  transform: translateY(-1px);
+}
+
+
+.kra-management-action-button:active {
+  transform: translateY(0);
+}
+
+
+.kra-management-action-button:focus-visible {
+  border-color: #6f9691;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 95, 96, 0.09);
+}
+
+
+/* =========================================================
+   DELETE ACTION
+   ========================================================= */
+
+.kra-management-action-button--delete {
+  color: #c64b42;
+
+  background: #fff4f2;
+}
+
+
+.kra-management-action-button--delete:hover {
+  color: #ae382f;
+
+  background: #fde9e5;
+
+  border-color: #f5d7d2;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.kra-management-table-empty {
+  height: 90px !important;
+
+  color: #71807c !important;
+
+  background: #ffffff !important;
+
+  font-size: 10.5px !important;
+  font-weight: 450 !important;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLE FOOTER
+   ========================================================= */
+
+.kra-management-table-footer {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  box-sizing: border-box;
+
+  padding:
+    9px
+    5px
+    0;
+}
+
+
+/* =========================================================
+   RECORD INFORMATION
+   ========================================================= */
+
+.kra-management-table-info {
+  margin: 0;
+  padding: 0;
+
+  color: #536560;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 450;
+  line-height: 1.35;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAGINATION AREA
+   ========================================================= */
+
+.kra-management-pagination-area {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PAGE SIZE
+   ========================================================= */
+
+.kra-management-page-size {
+  flex-shrink: 0;
+}
+
+
+.kra-management-page-size select {
+  height: 29px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding:
+    0
+    27px
+    0
+    9px;
+
+  color: #425651;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dce4e1;
+  border-radius: 5px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 9.5px;
+  font-weight: 450;
+  line-height: normal;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+
+.kra-management-page-size select:hover {
+  border-color: #c3d0cd;
+}
+
+
+.kra-management-page-size select:focus {
+  border-color: #3f716d;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 95, 96, 0.08);
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.kra-management-pagination {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   PAGE BUTTON
+   ========================================================= */
+
+.kra-management-page-button {
+  min-width: 27px;
+  height: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 6px;
+
+  color: #304641;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe6e4;
+  border-radius: 5px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 9.5px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+
+.kra-management-page-button svg {
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  flex-shrink: 0;
+}
+
+
+.kra-management-page-button:hover:not(:disabled) {
+  color: #234d48;
+
+  background: #f5f8f7;
+
+  border-color: #becdca;
+}
+
+
+.kra-management-page-button:focus-visible {
+  border-color: #6f9691;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 95, 96, 0.08);
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.kra-management-page-button--active {
+  color: #ffffff;
+
+  background: #315f64;
+
+  border-color: #315f64;
+
+  box-shadow:
+    0 1px 4px rgba(49, 95, 100, 0.13);
+}
+
+
+.kra-management-page-button--active:hover:not(:disabled) {
+  color: #ffffff;
+
+  background: #315f64;
+
+  border-color: #315f64;
+}
+
+
+/* =========================================================
+   DISABLED PAGE BUTTON
+   ========================================================= */
+
+.kra-management-page-button:disabled {
+  color: #b4bfbc;
+
+  background: #f7f8f8;
+
+  border-color: #e5e9e8;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-management-table {
+    min-width: 1010px;
+  }
+
+  .kra-management-table th {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .kra-management-table td {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-management-table-card {
+    padding: 7px;
+  }
+
+  .kra-management-table {
+    min-width: 1000px;
+  }
+
+  .kra-management-table th {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .kra-management-table td {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   Keep all table columns.
+   Horizontal scrolling is intentional.
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .kra-management-table-card {
+    padding: 7px;
+  }
+
+  .kra-management-table {
+    min-width: 990px;
+  }
+
+  .kra-management-table-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kra-management-table-footer {
+    padding:
+      10px
+      4px
+      0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-table-card {
+    padding: 6px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-table-scroll {
+    border-radius: 5px;
+  }
+
+  .kra-management-table {
+    min-width: 970px;
+  }
+
+  .kra-management-table th {
+    height: 36px;
+
+    padding-right: 8px;
+    padding-left: 8px;
+
+    font-size: 9.7px;
+  }
+
+  .kra-management-table td {
+    height: 41px;
+
+    padding:
+      5px
+      8px;
+
+    font-size: 9.7px;
+  }
+
+  .kra-management-avatar {
+    width: 28px;
+    height: 28px;
+
+    flex-basis: 28px;
+
+    font-size: 9px;
+  }
+
+  .kra-management-employee {
+    min-width: 128px;
+
+    gap: 7px;
+  }
+
+  .kra-management-employee-info strong {
+    max-width: 115px;
+
+    font-size: 10px;
+  }
+
+  .kra-management-designation {
+    font-size: 9.5px;
+  }
+
+  .kra-management-score {
+    min-width: 35px;
+    min-height: 19px;
+
+    padding:
+      2px
+      5px;
+
+    font-size: 9.4px;
+  }
+
+  .kra-management-action-button {
+    width: 25px;
+    height: 25px;
+
+    flex-basis: 25px;
+  }
+
+  .kra-management-table-footer {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 9px;
+
+    padding:
+      10px
+      2px
+      1px;
+  }
+
+  .kra-management-table-info {
+    width: 100%;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+  .kra-management-pagination-area {
+    width: 100%;
+
+    justify-content: space-between;
+
+    gap: 8px;
+  }
+
+  .kra-management-pagination {
+    gap: 4px;
+  }
+
+  .kra-management-page-button {
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .kra-management-page-size select {
+    height: 30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-table-card {
+    padding: 5px;
+  }
+
+  .kra-management-pagination-area {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .kra-management-page-size {
+    width: 100%;
+  }
+
+  .kra-management-page-size select {
+    width: 100%;
+    height: 33px;
+  }
+
+  .kra-management-pagination {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-management-table-card {
+    padding: 4px;
+  }
+
+  .kra-management-table {
+    min-width: 950px;
+  }
+
+  .kra-management-table-footer {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .kra-management-page-button {
+    min-width: 28px;
+    height: 28px;
+
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-management-table tbody tr,
+  .kra-management-avatar,
+  .kra-management-action-button,
+  .kra-management-page-button,
+  .kra-management-page-size select {
+    transition: none;
+  }
+
+  .kra-management-table tbody tr:hover
+  .kra-management-avatar,
+  .kra-management-action-button:hover {
+    transform: none;
+  }
+}

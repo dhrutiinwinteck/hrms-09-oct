@@ -1,0 +1,95 @@
+/**
+ * ======================================================
+ * Attendance Module - Statistics Styles
+ * ======================================================
+ * Enterprise-grade styling for the statistics grid.
+ *
+ * @module components/AttendanceStatistics
+ */
+
+/* -----------------------------------------------------------------------------
+ * Container
+ * ----------------------------------------------------------------------------- */
+
+.attendance-statistics {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * Grid Layout
+ * ----------------------------------------------------------------------------- */
+
+.attendance-statistics__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+/* -----------------------------------------------------------------------------
+ * Individual Card
+ * ----------------------------------------------------------------------------- */
+
+.attendance-statistics__card {
+  min-height: 100px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Error State
+ * ----------------------------------------------------------------------------- */
+
+.attendance-statistics--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: #fef2f2;
+  border-radius: 0.75rem;
+  color: #991b1b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.attendance-statistics__error-icon {
+  font-size: 1.25rem;
+}
+
+.attendance-statistics__error-message {
+  color: #991b1b;
+}
+
+/* -----------------------------------------------------------------------------
+ * Responsive Adjustments
+ * ----------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .attendance-statistics__grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.875rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .attendance-statistics__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .attendance-statistics__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.625rem;
+  }
+}
+
+/* Very small screens - single column */
+@media (max-width: 360px) {
+  .attendance-statistics__grid {
+    grid-template-columns: 1fr;
+  }
+}

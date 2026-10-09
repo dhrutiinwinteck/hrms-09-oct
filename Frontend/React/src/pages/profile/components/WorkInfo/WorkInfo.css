@@ -1,0 +1,417 @@
+.work-info {
+  width: 100%;
+  min-width: 0;
+
+  padding: 12px 13px 10px;
+
+  border: 1px solid #e7e1d8;
+  border-top: 2px solid #c7a978;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.work-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.work-info__title {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.work-info__title svg {
+  color: #a47e45;
+
+  flex-shrink: 0;
+}
+
+.work-info__title h3 {
+  margin: 0;
+
+  color: #26323f;
+
+  font-size: 10px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.work-info__menu {
+  color: #8b949d;
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.work-info__body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+
+/* =========================================
+   ROW
+========================================= */
+
+.work-info__row {
+  min-width: 0;
+  min-height: 37px;
+
+  display: grid;
+  grid-template-columns: 46% minmax(0, 54%);
+
+  align-items: center;
+
+  gap: 4px;
+
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.work-info__row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.work-info__label {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.work-info__field-icon {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #f4f7f7;
+
+  color: #60908e;
+}
+
+
+/* Phone */
+.work-info__row:nth-child(1)
+  .work-info__field-icon {
+  background: #edf8f4;
+  color: #4d9680;
+}
+
+/* Email */
+.work-info__row:nth-child(2)
+  .work-info__field-icon {
+  background: #f0f7f7;
+  color: #5b9290;
+}
+
+/* Designation */
+.work-info__row:nth-child(3)
+  .work-info__field-icon {
+  background: #fff4ec;
+  color: #b48556;
+}
+
+/* Department */
+.work-info__row:nth-child(4)
+  .work-info__field-icon {
+  background: #f3f6f0;
+  color: #81916d;
+}
+
+/* Reports To */
+.work-info__row:nth-child(5)
+  .work-info__field-icon {
+  background: #f4f2f8;
+  color: #81799b;
+}
+
+/* Gender */
+.work-info__row:nth-child(6)
+  .work-info__field-icon {
+  background: #fff6ed;
+  color: #a98455;
+}
+
+
+.work-info__field-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #667381;
+
+  font-size: 7.5px;
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   VALUE
+========================================= */
+
+.work-info__value {
+  min-width: 0;
+
+  color: #374151;
+
+  font-size: 7.5px;
+  line-height: 1.45;
+
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.work-info__input {
+  width: 100%;
+  min-width: 0;
+
+  height: 24px;
+
+  padding: 3px 6px;
+
+  border: 1px solid #ddd7c9;
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #fffdf9;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 7.5px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.work-info__input:focus {
+  border-color: #c7a978;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(199, 169, 120, 0.1);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.work-info__actions {
+  min-height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 11px;
+}
+
+.work-info__edit,
+.work-info__save,
+.work-info__cancel {
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+
+/* Edit */
+
+.work-info__edit {
+  min-width: 96px;
+
+  border: 1px solid transparent;
+
+  background: #faf7f1;
+
+  color: #8b6c3f;
+}
+
+.work-info__edit:hover {
+  background: #f4eee4;
+}
+
+
+/* Save */
+
+.work-info__save {
+  border: 1px solid #a98a5e;
+
+  background: #a98a5e;
+
+  color: #ffffff;
+}
+
+.work-info__save:hover {
+  background: #927649;
+}
+
+
+/* Cancel */
+
+.work-info__cancel {
+  border: 1px solid #e4e0d8;
+
+  background: #ffffff;
+
+  color: #707b86;
+}
+
+.work-info__cancel:hover {
+  background: #faf9f7;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.work-info__edit:focus-visible,
+.work-info__save:focus-visible,
+.work-info__cancel:focus-visible {
+  outline: 2px solid rgba(169, 138, 94, 0.35);
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .work-info {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .work-info__row {
+    grid-template-columns: 44% minmax(0, 56%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .work-info__row {
+    min-height: 36px;
+  }
+
+  .work-info__field-icon {
+    width: 21px;
+    height: 21px;
+
+    flex-basis: 21px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .work-info__row {
+    grid-template-columns: 42% minmax(0, 58%);
+  }
+
+  .work-info__field-name,
+  .work-info__value,
+  .work-info__input {
+    font-size: 7px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .work-info {
+    padding: 11px 10px 9px;
+  }
+
+  .work-info__row {
+    grid-template-columns: 40% minmax(0, 60%);
+  }
+
+  .work-info__field-icon {
+    width: 20px;
+    height: 20px;
+
+    flex-basis: 20px;
+  }
+
+  .work-info__field-name,
+  .work-info__value,
+  .work-info__input {
+    font-size: 6.8px;
+  }
+}

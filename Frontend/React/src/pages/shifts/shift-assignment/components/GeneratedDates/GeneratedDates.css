@@ -1,0 +1,346 @@
+/* ============================================================
+   GENERATED DATES SECTION
+============================================================ */
+
+.sa-section--generated-dates {
+    margin-top: 18px;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.sa-section__generated-header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.sa-generated-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 28px;
+    height: 24px;
+
+    padding: 0 9px;
+
+    border-radius: 999px;
+
+    background: #e9f8f4;
+    color: #079c91;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ============================================================
+   GENERATED DATES WRAPPER
+============================================================ */
+
+.sa-generated-dates {
+    width: 100%;
+
+    border: 1px solid #e3e8ef;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+/* ============================================================
+   DATE ROW
+============================================================ */
+
+.sa-generated-date-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1fr)
+        minmax(130px, 170px)
+        minmax(300px, 1.25fr);
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 72px;
+
+    padding: 12px 16px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    background: #ffffff;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sa-generated-date-row:last-child {
+    border-bottom: none;
+}
+
+.sa-generated-date-row:hover {
+    background: #fbfdfd;
+}
+
+.sa-generated-date-row--weekoff {
+    background: #fffdf6;
+}
+
+.sa-generated-date-row--leave {
+    background: #fff8fa;
+}
+
+/* ============================================================
+   DATE INFO
+============================================================ */
+
+.sa-generated-date-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.sa-generated-date-icon {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf8f7;
+    color: #079c91;
+}
+
+.sa-generated-date-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.sa-generated-date-value {
+    color: #172033;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.sa-generated-day {
+    color: #8290a3;
+
+    font-size: 12px;
+}
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.sa-generated-date-status {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+}
+
+.sa-generated-status {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 5px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.sa-generated-status--working {
+    background: #edf9f3;
+    color: #198754;
+}
+
+.sa-generated-status--weekoff {
+    background: #fff4d6;
+    color: #b77900;
+}
+
+.sa-generated-status--leave {
+    background: #ffecef;
+    color: #d6335c;
+}
+
+/* ============================================================
+   PATTERN CONTROL
+============================================================ */
+
+.sa-generated-pattern-control {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.sa-generated-pattern-icon {
+    position: absolute;
+
+    left: 12px;
+
+    color: #94a0b1;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.sa-generated-pattern-select {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding:
+        0 36px
+        0 38px;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #52647b;
+
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    appearance: auto;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sa-generated-pattern-select:hover {
+    border-color: #9fcfc9;
+}
+
+.sa-generated-pattern-select:focus {
+    border-color: #079c91;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7, 156, 145, 0.1);
+}
+
+.sa-generated-pattern-select:disabled {
+    background: #f5f7f9;
+
+    color: #a3adba;
+
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+
+.sa-generated-empty {
+    min-height: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #a1adbc;
+
+    text-align: center;
+}
+
+.sa-generated-empty svg {
+    color: #c5ced9;
+}
+
+.sa-generated-empty strong {
+    color: #687589;
+
+    font-size: 14px;
+}
+
+.sa-generated-empty span {
+    font-size: 12px;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .sa-generated-date-row {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+    .sa-generated-pattern-control {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .sa-generated-date-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 13px;
+    }
+
+    .sa-generated-pattern-control {
+        grid-column: auto;
+    }
+
+    .sa-generated-date-status {
+        justify-content: flex-start;
+    }
+
+    .sa-generated-pattern-select {
+        min-height: 42px;
+    }
+}

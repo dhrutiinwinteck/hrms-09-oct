@@ -1,0 +1,468 @@
+/* =========================================================
+   DESIGNATION STAT CARD
+========================================================= */
+
+.designation-stat-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  /*
+   * Keep the complete content group centered.
+   */
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 104px;
+
+  padding: 14px 16px;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e9eb;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.02);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.designation-stat-card:hover {
+  transform: translateY(-1px);
+
+  border-color: #d8e2df;
+
+  box-shadow:
+    0 3px 8px rgba(15, 23, 42, 0.04),
+    0 8px 18px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.designation-stat-card__icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 40px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 11px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   GREEN ICON
+========================================================= */
+
+.designation-stat-card--green
+.designation-stat-card__icon {
+  background: #e8f3ee;
+
+  color: #2f806f;
+}
+
+/* =========================================================
+   ORANGE ICON
+========================================================= */
+
+.designation-stat-card--orange
+.designation-stat-card__icon {
+  background: #f8eee3;
+
+  color: #a86b32;
+}
+
+/* =========================================================
+   BLUE ICON
+========================================================= */
+
+.designation-stat-card--blue
+.designation-stat-card__icon {
+  background: #edf4f2;
+
+  color: #2f806f;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.designation-stat-card__content {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 0 1 auto;
+
+  min-width: 0;
+
+  padding-top: 1px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.designation-stat-card__title {
+  display: block;
+
+  max-width: 170px;
+
+  margin: 0;
+
+  color: #1f2933;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.designation-stat-card__value {
+  display: block;
+
+  margin: 4px 0 0;
+
+  color: #14202b;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.45px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.designation-stat-card__description {
+  display: block;
+
+  max-width: 170px;
+
+  margin: 6px 0 0;
+
+  color: #64748b;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+  .designation-stat-card {
+    min-height: 106px;
+
+    padding: 15px 17px;
+
+    gap: 10px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 40px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .designation-stat-card__title {
+    font-size: 11px;
+  }
+
+  .designation-stat-card__value {
+    font-size: 22px;
+  }
+
+  .designation-stat-card__description {
+    font-size: 9.5px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   <= 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+  .designation-stat-card {
+    min-height: 104px;
+
+    padding: 14px 15px;
+
+    gap: 10px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 40px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .designation-stat-card__title {
+    max-width: 190px;
+  }
+
+  .designation-stat-card__description {
+    max-width: 190px;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .designation-stat-card {
+    min-height: 100px;
+
+    padding: 14px;
+
+    gap: 9px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 39px;
+
+    width: 39px;
+    height: 39px;
+
+    border-radius: 10px;
+  }
+
+  .designation-stat-card__title {
+    font-size: 10.5px;
+  }
+
+  .designation-stat-card__value {
+    font-size: 21px;
+  }
+
+  .designation-stat-card__description {
+    margin-top: 5px;
+
+    font-size: 9.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   <= 600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .designation-stat-card {
+    justify-content: flex-start;
+
+    min-height: 96px;
+
+    padding: 13px 14px;
+
+    gap: 9px;
+
+    border-radius: 11px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 38px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+  }
+
+  .designation-stat-card__title {
+    max-width: 220px;
+
+    font-size: 10.5px;
+  }
+
+  .designation-stat-card__value {
+    margin-top: 4px;
+
+    font-size: 21px;
+  }
+
+  .designation-stat-card__description {
+    max-width: 220px;
+
+    margin-top: 5px;
+
+    font-size: 9.5px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .designation-stat-card {
+    min-height: 94px;
+
+    padding: 12px 13px;
+
+    gap: 8px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 37px;
+
+    width: 37px;
+    height: 37px;
+
+    border-radius: 9px;
+  }
+
+  .designation-stat-card__title {
+    max-width: 200px;
+
+    font-size: 10px;
+  }
+
+  .designation-stat-card__value {
+    font-size: 20px;
+  }
+
+  .designation-stat-card__description {
+    max-width: 200px;
+
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .designation-stat-card {
+    min-height: 90px;
+
+    padding: 11px 12px;
+
+    gap: 8px;
+  }
+
+  .designation-stat-card__icon {
+    flex-basis: 35px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 9px;
+  }
+
+  .designation-stat-card__title {
+    max-width: 175px;
+
+    font-size: 9.5px;
+  }
+
+  .designation-stat-card__value {
+    font-size: 19px;
+  }
+
+  .designation-stat-card__description {
+    max-width: 175px;
+
+    margin-top: 4px;
+
+    font-size: 8.5px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .designation-stat-card {
+    transition: none;
+  }
+
+  .designation-stat-card:hover {
+    transform: none;
+  }
+}

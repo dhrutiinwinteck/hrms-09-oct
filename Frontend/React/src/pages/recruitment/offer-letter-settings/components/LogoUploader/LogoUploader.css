@@ -1,0 +1,340 @@
+.ol-logo-upload-wrapper {
+  min-width: 0;
+}
+
+.ol-logo-upload-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ol-logo-dropzone {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  height: 68px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px dashed #8eb3bd;
+  border-radius: 6px;
+  background: #fbfdfd;
+  color: #0b5667;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ol-logo-dropzone:hover {
+  background: #f4fafb;
+  border-color: #3f8998;
+}
+
+.ol-logo-dropzone strong {
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.ol-logo-dropzone span {
+  color: #728895;
+  font-size: 8.5px;
+}
+
+.ol-current-logo {
+  position: relative;
+  width: 74px;
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ol-current-logo img {
+  width: 66px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ol-current-logo span {
+  color: #637b89;
+  font-size: 8px;
+}
+
+.ol-logo-remove {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f3b3b3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ef5350;
+  cursor: pointer;
+}
+
+.ol-default-logo-icon {
+  width: 36px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dce7eb;
+  border-radius: 5px;
+  color: #79a0ab;
+}
+
+/* =========================================================
+   OFFER LETTER - COMPANY LOGO UPLOADER
+   ========================================================= */
+
+.ol-logo-upload-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+.ol-logo-upload-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+/* =========================================================
+   UPLOAD BOX
+   ========================================================= */
+
+.ol-logo-dropzone {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  min-width: 0;
+
+  width: 100%;
+  height: 68px;
+
+  box-sizing: border-box;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  border: 1px dashed #8eb3bd;
+  border-radius: 6px;
+
+  background: #fbfdfd;
+
+  color: #0b5667;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ol-logo-dropzone:hover {
+  background: #f4fafb;
+  border-color: #3f8998;
+}
+
+.ol-logo-dropzone svg {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  color: #0b5667;
+
+  margin-bottom: 1px;
+}
+
+.ol-logo-dropzone strong {
+  display: block;
+
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #0b5667;
+}
+
+.ol-logo-dropzone span {
+  display: block;
+
+  font-size: 8.5px;
+  line-height: 1.2;
+
+  color: #728895;
+}
+
+
+/* =========================================================
+   CURRENT LOGO
+   ========================================================= */
+
+.ol-current-logo {
+  position: relative;
+
+  width: 74px;
+  min-width: 74px;
+  height: 68px;
+
+  display: flex;
+
+  flex-shrink: 0;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  box-sizing: border-box;
+}
+
+.ol-current-logo img {
+  display: block;
+
+  width: 66px;
+  height: 40px;
+
+  object-fit: contain;
+}
+
+.ol-current-logo span {
+  display: block;
+
+  margin: 0;
+
+  color: #637b89;
+
+  font-size: 8px;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   REMOVE BUTTON
+   ========================================================= */
+
+.ol-logo-remove {
+  position: absolute;
+
+  top: -6px;
+  right: -4px;
+
+  width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid #f3b3b3;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #ef5350;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ol-logo-remove:hover {
+  background: #fff5f5;
+  border-color: #ef5350;
+  color: #d93636;
+}
+
+
+/* =========================================================
+   NO LOGO PLACEHOLDER
+   ========================================================= */
+
+.ol-default-logo-icon {
+  width: 36px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dce7eb;
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #79a0ab;
+}
+
+.ol-default-logo-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* =========================================================
+   HIDDEN FILE INPUT
+   ========================================================= */
+
+.ol-logo-dropzone input[type="file"] {
+  display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .ol-logo-upload-row {
+    gap: 10px;
+  }
+
+  .ol-logo-dropzone {
+    height: 64px;
+  }
+
+  .ol-current-logo {
+    width: 68px;
+    min-width: 68px;
+    height: 64px;
+  }
+
+  .ol-current-logo img {
+    width: 60px;
+    height: 36px;
+  }
+}

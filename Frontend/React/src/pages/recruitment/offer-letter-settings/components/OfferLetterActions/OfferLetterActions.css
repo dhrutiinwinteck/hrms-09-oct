@@ -1,0 +1,86 @@
+.ol-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ol-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.ol-cancel-button,
+.ol-preview-button,
+.ol-save-button {
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 15px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.ol-cancel-button {
+  border: 1px solid #cbd9df;
+  background: #ffffff;
+  color: #315466;
+}
+
+.ol-cancel-button:hover,
+.ol-preview-button:hover {
+  border-color: #9ebbc5;
+  background: #f7fafb;
+}
+
+.ol-preview-button {
+  border: 1px solid #cbd9df;
+  background: #ffffff;
+  color: #315466;
+}
+
+.ol-save-button {
+  min-width: 143px;
+  border: 1px solid #176777;
+  background: #176b78;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(20, 101, 116, 0.14);
+}
+
+.ol-save-button:hover {
+  background: #125d69;
+  transform: translateY(-1px);
+}
+
+.ol-save-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+@media (max-width: 650px) {
+  .ol-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .ol-actions-right {
+    width: 100%;
+  }
+
+  .ol-preview-button,
+  .ol-save-button {
+    flex: 1;
+  }
+}

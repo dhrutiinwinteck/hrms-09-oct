@@ -1,0 +1,49 @@
+/**
+ * @file RememberMe.css
+ * @description Styles for the remember me checkbox.
+ * @version 1.0.0
+ */
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #334155;
+}
+
+.remember-me__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.remember-me__custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.remember-me__input:checked + .remember-me__custom-checkbox {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
+
+.remember-me__input:focus + .remember-me__custom-checkbox {
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25);
+}
+
+.remember-me__label {
+  user-select: none;
+}

@@ -1,0 +1,96 @@
+/* Dashboard.css - Enterprise Exact Replica Layout */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F8F9FA; /* Professional light gray background */
+  
+  /* REMOVED width: 100%; to prevent conflicting with flex:1 parent */
+  box-sizing: border-box;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* This keeps it centered within its parent's padding */
+  margin-top: 10px;
+}
+
+/* 1. Stats Grid: 4 Cards in 2x2 layout */
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+/* 2. Bottom Widget Grid: 3 Equal Columns */
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+/* 3. Notices Row: 3 Equal Cards */
+.dashboard-notices-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+/* ---------------------- Responsive Layout ---------------------- */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .dashboard {
+    padding: 24px;
+  }
+  
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+  }
+
+  .dashboard-col-timeline {
+    grid-column: span 2; /* Timeline takes full width on smaller screens */
+  }
+  
+  .dashboard-notices-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .dashboard-stats-grid {
+    grid-template-columns: 1fr; /* 1 Column on Mobile */
+    gap: 16px;
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dashboard-col-timeline {
+    grid-column: span 1;
+  }
+
+  .dashboard-notices-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

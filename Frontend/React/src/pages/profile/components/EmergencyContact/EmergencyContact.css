@@ -1,0 +1,376 @@
+.emergency-contact {
+  width: 100%;
+  min-width: 0;
+
+  padding: 12px 13px 10px;
+
+  border: 1px solid #e4e8ea;
+  border-top: 2px solid #4c9291;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.emergency-contact__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.emergency-contact__title {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.emergency-contact__title svg {
+  color: #4c9291;
+  flex-shrink: 0;
+}
+
+.emergency-contact__title h3 {
+  margin: 0;
+
+  color: #26323f;
+
+  font-size: 10px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.emergency-contact__menu {
+  color: #8b949d;
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.emergency-contact__body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+
+/* =========================================
+   ROW
+========================================= */
+
+.emergency-contact__row {
+  min-width: 0;
+  min-height: 37px;
+
+  display: grid;
+  grid-template-columns: 46% minmax(0, 54%);
+
+  align-items: center;
+
+  gap: 4px;
+
+  border-bottom: 1px solid #f0f2f3;
+}
+
+.emergency-contact__row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.emergency-contact__label {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.emergency-contact__field-icon {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #f2f7f7;
+
+  color: #609493;
+}
+
+.emergency-contact__row:nth-child(1)
+  .emergency-contact__field-icon {
+  background: #fff4ee;
+  color: #d78a65;
+}
+
+.emergency-contact__row:nth-child(2)
+  .emergency-contact__field-icon {
+  background: #fff0f2;
+  color: #d47d85;
+}
+
+.emergency-contact__row:nth-child(4)
+  .emergency-contact__field-icon {
+  background: #f7f3e9;
+  color: #9c8353;
+}
+
+.emergency-contact__row:nth-child(5)
+  .emergency-contact__field-icon {
+  background: #f3f2f8;
+  color: #7d7b9d;
+}
+
+.emergency-contact__field-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #667381;
+
+  font-size: 7.5px;
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   VALUE
+========================================= */
+
+.emergency-contact__value {
+  min-width: 0;
+
+  color: #374151;
+
+  font-size: 7.5px;
+  line-height: 1.45;
+
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.emergency-contact__input {
+  width: 100%;
+  min-width: 0;
+
+  height: 24px;
+
+  padding: 3px 6px;
+
+  border: 1px solid #d5e1e1;
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #fbfdfd;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 7.5px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.emergency-contact__input:focus {
+  border-color: #4c9291;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(76, 146, 145, 0.08);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.emergency-contact__actions {
+  min-height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 11px;
+}
+
+.emergency-contact__edit,
+.emergency-contact__save,
+.emergency-contact__cancel {
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.emergency-contact__edit {
+  min-width: 96px;
+
+  border: 1px solid transparent;
+
+  background: #f3f8f8;
+
+  color: #397c7b;
+}
+
+.emergency-contact__edit:hover {
+  background: #e9f2f2;
+}
+
+.emergency-contact__save {
+  border: 1px solid #4c9291;
+
+  background: #4c9291;
+
+  color: #ffffff;
+}
+
+.emergency-contact__save:hover {
+  background: #3f8180;
+}
+
+.emergency-contact__cancel {
+  border: 1px solid #e4e8ea;
+
+  background: #ffffff;
+
+  color: #707b86;
+}
+
+.emergency-contact__cancel:hover {
+  background: #f7f8f9;
+}
+
+.emergency-contact__edit:focus-visible,
+.emergency-contact__save:focus-visible,
+.emergency-contact__cancel:focus-visible {
+  outline: 2px solid rgba(76, 146, 145, 0.35);
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .emergency-contact {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .emergency-contact__row {
+    grid-template-columns: 44% minmax(0, 56%);
+  }
+}
+
+@media (max-width: 768px) {
+  .emergency-contact__row {
+    min-height: 36px;
+  }
+
+  .emergency-contact__field-icon {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .emergency-contact__row {
+    grid-template-columns: 42% minmax(0, 58%);
+  }
+
+  .emergency-contact__field-name,
+  .emergency-contact__value,
+  .emergency-contact__input {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .emergency-contact {
+    padding: 11px 10px 9px;
+  }
+
+  .emergency-contact__row {
+    grid-template-columns: 40% minmax(0, 60%);
+  }
+
+  .emergency-contact__field-icon {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  .emergency-contact__field-name,
+  .emergency-contact__value,
+  .emergency-contact__input {
+    font-size: 6.8px;
+  }
+}

@@ -1,0 +1,298 @@
+.comp-off-application-card {
+  border: 1px solid #e6ebe8;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.comp-off-application-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e9eeeb;
+}
+
+.application-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #376d6d;
+}
+
+.comp-off-application-header h2 {
+  margin: 0;
+  color: #142b3d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.comp-off-application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.application-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 14px;
+}
+
+.application-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.application-field > label {
+  color: #2e434c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.application-field > label span {
+  margin-left: 3px;
+  color: #e1544e;
+}
+
+.application-field > label span.optional {
+  color: #71817f;
+  font-weight: 400;
+}
+
+.application-date-field {
+  position: relative;
+}
+
+.application-date-field input {
+  width: 100%;
+  height: 37px;
+  box-sizing: border-box;
+  padding: 0 35px 0 11px;
+  border: 1px solid #d7dfdc;
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+  color: #30474f;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.application-date-field svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #4f686d;
+  pointer-events: none;
+}
+
+.application-field textarea {
+  min-height: 101px;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d7dfdc;
+  border-radius: 6px;
+  outline: none;
+  color: #30474f;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.application-field textarea:focus,
+.application-date-field input:focus {
+  border-color: #5a8a87;
+}
+
+.application-field textarea::placeholder {
+  color: #879593;
+}
+
+.reason-counter {
+  margin-top: -3px;
+  text-align: right;
+  color: #84918f;
+  font-size: 9px;
+}
+
+.application-field small {
+  color: #d74c47;
+  font-size: 10px;
+}
+
+.day-type-options {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 37px;
+}
+
+.radio-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #40565d;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #bdc9c6;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.radio-option input:checked + .custom-radio {
+  border: 4px solid #377071;
+}
+
+.comp-off-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 112px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px dashed #bfcfcb;
+  border-radius: 7px;
+  background: #fbfcfb;
+  color: #477273;
+  cursor: pointer;
+}
+
+.comp-off-upload svg {
+  margin-bottom: 5px;
+}
+
+.comp-off-upload strong {
+  color: #445a60;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.comp-off-upload button {
+  min-width: 105px;
+  height: 31px;
+  margin: 7px 0 5px;
+  border: 1px solid #cad6d2;
+  border-radius: 5px;
+  background: #fff;
+  color: #365c61;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comp-off-upload span {
+  color: #6d7e7c;
+  font-size: 9px;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 34px;
+  margin-top: -7px;
+  padding: 0 9px;
+  border: 1px solid #dbe5e1;
+  border-radius: 6px;
+  background: #f7faf8;
+}
+
+.selected-file > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: #456064;
+  font-size: 10px;
+}
+
+.selected-file > div span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-file > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #73817f;
+  cursor: pointer;
+}
+
+.application-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.application-cancel-button,
+.application-submit-button {
+  height: 39px;
+  padding: 0 17px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.application-cancel-button {
+  border: 1px solid #d5dfdb;
+  background: #fff;
+  color: #253c45;
+}
+
+.application-submit-button {
+  border: 1px solid #376d6d;
+  background: #376d6d;
+  color: #fff;
+}
+
+.application-submit-button:disabled,
+.application-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comp-off-form-error,
+.comp-off-form-success {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+.comp-off-form-error {
+  background: #fff0ef;
+  color: #c84540;
+}
+
+.comp-off-form-success {
+  background: #eaf7ef;
+  color: #24875d;
+}

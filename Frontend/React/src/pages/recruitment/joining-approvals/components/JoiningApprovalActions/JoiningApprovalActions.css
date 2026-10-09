@@ -1,0 +1,215 @@
+/* =========================================================
+   JOINING APPROVAL ACTIONS
+   ========================================================= */
+
+.joining-approval-actions {
+  width: max-content;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  flex-wrap: nowrap;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   BASE ACTION BUTTON
+   ========================================================= */
+
+.action-btn {
+  min-width: 0;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 9px;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.action-btn svg {
+  flex: 0 0 auto;
+}
+
+.action-btn span {
+  display: inline-block;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.action-btn:focus-visible {
+  outline: 2px solid rgba(15, 118, 110, 0.3);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   ACCEPT
+   ========================================================= */
+
+.action-btn.accept {
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  background: #f7fff9;
+}
+
+.action-btn.accept:hover {
+  color: #166534;
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.action-btn.accept:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   REJECT
+   ========================================================= */
+
+.action-btn.reject {
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  background: #fffafa;
+}
+
+.action-btn.reject:hover {
+  color: #b91c1c;
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.action-btn.reject:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   HOLD
+   ========================================================= */
+
+.action-btn.hold {
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+  background: #fffdf9;
+}
+
+.action-btn.hold:hover {
+  color: #9a3412;
+  border-color: #fdba74;
+  background: #fff7ed;
+}
+
+.action-btn.hold:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   SEND
+   ========================================================= */
+
+.action-btn.send {
+  color: #0f766e;
+  border: 1px solid #99f6e4;
+  background: #f7fffe;
+}
+
+.action-btn.send:hover {
+  color: #115e59;
+  border-color: #5eead4;
+  background: #f0fdfa;
+}
+
+.action-btn.send:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   TABLE WIDTH SUPPORT
+   ========================================================= */
+
+@media (max-width: 1280px) {
+  .joining-approval-actions {
+    gap: 4px;
+  }
+
+  .action-btn {
+    height: 29px;
+
+    padding: 0 7px;
+
+    gap: 4px;
+
+    font-size: 10px;
+  }
+
+  .action-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .joining-approval-actions {
+    width: 100%;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    height: 32px;
+
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .joining-approval-actions {
+    width: 100%;
+  }
+
+  .action-btn {
+    flex: 1 1 calc(50% - 5px);
+
+    min-width: 0;
+  }
+}

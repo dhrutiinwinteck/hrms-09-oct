@@ -1,0 +1,356 @@
+.punch-map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 90px;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+
+/* ============================================================
+   LEAFLET MAP
+============================================================ */
+
+.punch-map {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border-radius: inherit;
+}
+
+/*
+ * Keep all Leaflet map layers below our custom information panel.
+ */
+.punch-map-container .leaflet-container {
+  z-index: 1;
+}
+
+.punch-map-container .leaflet-pane {
+  z-index: 1;
+}
+
+.punch-map-container .leaflet-map-pane {
+  z-index: 1;
+}
+
+.punch-map-container .leaflet-tile-pane {
+  z-index: 1;
+}
+
+.punch-map-container .leaflet-overlay-pane {
+  z-index: 2;
+}
+
+.punch-map-container .leaflet-shadow-pane {
+  z-index: 3;
+}
+
+.punch-map-container .leaflet-marker-pane {
+  z-index: 4;
+}
+
+.punch-map-container .leaflet-tooltip-pane {
+  z-index: 5;
+}
+
+.punch-map-container .leaflet-popup-pane {
+  z-index: 6;
+}
+
+/* ============================================================
+   PLACEHOLDER
+============================================================ */
+
+.punch-map-placeholder {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  min-height: 200px;
+
+  padding: 1rem;
+
+  background: #f8f9fa;
+  color: #6c757d;
+
+  text-align: center;
+
+  border-radius: inherit;
+}
+
+.punch-map-loading {
+  font-size: 0.9rem;
+  color: #6c757d;
+
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.punch-map-error {
+  font-size: 0.9rem;
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.punch-map-hint {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+.punch-map-retry {
+  margin-top: 0.75rem;
+  padding: 0.3rem 1rem;
+
+  background: #1e2a3a;
+  color: #fff;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 0.8rem;
+
+  transition: background 0.2s ease;
+}
+
+.punch-map-retry:hover {
+  background: #2c3e50;
+}
+
+/* ============================================================
+   LOADING ANIMATION
+============================================================ */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ============================================================
+   LOCATION INFORMATION OVERLAY
+============================================================ */
+
+/*
+ * IMPORTANT:
+ * This must stay ABOVE the Leaflet map.
+ */
+.punch-map-info {
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(30, 42, 58, 0.12);
+
+  border-radius: 8px;
+
+  padding: 0.6rem 0.75rem;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 0.5rem;
+
+  font-size: 0.75rem;
+
+  color: #1e2a3a;
+
+  /*
+   * Prevent the map from receiving clicks
+   * through the information panel.
+   */
+  pointer-events: none;
+}
+
+/* ============================================================
+   LOCATION TEXT
+============================================================ */
+
+.punch-map-location {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  flex: 1;
+}
+
+.punch-map-location-label {
+  font-weight: 600;
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+
+  color: #6c757d;
+
+  margin-bottom: 2px;
+}
+
+.punch-map-location-address {
+  display: block;
+
+  font-weight: 500;
+
+  color: #1e2a3a;
+
+  line-height: 1.35;
+
+  /*
+   * Long addresses should wrap instead of
+   * overflowing outside the map.
+   */
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* ============================================================
+   ACCURACY
+============================================================ */
+
+.punch-map-distance {
+  display: flex;
+
+  gap: 0.75rem;
+
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.punch-map-accuracy {
+  color: #6c757d;
+
+  white-space: nowrap;
+}
+
+/* ============================================================
+   OPTIONAL STATUS
+============================================================ */
+
+.punch-map-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.4rem;
+}
+
+.punch-map-status-dot {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+}
+
+.punch-map-status-dot.inside {
+  background: #28a745;
+}
+
+.punch-map-status-dot.outside {
+  background: #ffc107;
+}
+
+.punch-map-status-text {
+  font-weight: 500;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 600px) {
+  .punch-map-info {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    padding: 0.55rem 0.65rem;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.3rem;
+
+    font-size: 0.7rem;
+  }
+
+  .punch-map-location {
+    width: 100%;
+  }
+
+  .punch-map-location-address {
+    font-size: 0.7rem;
+  }
+
+  .punch-map-distance {
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    gap: 0.25rem;
+  }
+}
+
+/* ============================================================
+   VERY SMALL SCREENS
+============================================================ */
+
+@media (max-width: 360px) {
+  .punch-map-info {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+
+    padding: 0.5rem;
+  }
+
+  .punch-map-location-label {
+    font-size: 0.65rem;
+  }
+
+  .punch-map-location-address {
+    font-size: 0.68rem;
+  }
+
+  .punch-map-accuracy {
+    font-size: 0.65rem;
+  }
+}

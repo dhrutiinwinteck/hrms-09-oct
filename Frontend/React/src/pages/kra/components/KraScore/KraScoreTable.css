@@ -1,0 +1,811 @@
+/* =========================================================
+   KRA SCORE TABLE
+   Enterprise HRMS
+   ========================================================= */
+
+.kra-score-table-card {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8e6;
+  border-radius: 10px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.02),
+    0 4px 12px rgba(15, 45, 39, 0.035);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kra-score-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 13px;
+}
+
+.kra-score-table-title-wrapper {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 8px;
+
+  color: #182522;
+}
+
+.kra-score-table-title-wrapper svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+.kra-score-table-title {
+  margin: 0;
+
+  color: #182522;
+
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 650;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   SHOW ENTRIES
+   ========================================================= */
+
+.kra-score-entries-control {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  color: #33433f;
+
+  font-family: inherit;
+  font-size: 11.5px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.kra-score-entries-control label {
+  margin: 0;
+
+  color: inherit;
+
+  font: inherit;
+}
+
+.kra-score-entries-control select {
+  width: 66px;
+  height: 34px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0 27px 0 11px;
+
+  border: 1px solid #dce4e2;
+  border-radius: 6px;
+
+  outline: none;
+
+  background-color: #ffffff;
+
+  color: #263934;
+
+  font-family: inherit;
+  font-size: 11.5px;
+  line-height: normal;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.kra-score-entries-control select:hover {
+  border-color: #b8ccc7;
+}
+
+.kra-score-entries-control select:focus {
+  border-color: #087f70;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 127, 112, 0.08);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.kra-score-table-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border: 1px solid #e4e9e7;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c8d5d1 transparent;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.kra-score-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.kra-score-table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kra-score-table-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #c8d5d1;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.kra-score-table {
+  width: 100%;
+  min-width: 860px;
+
+  margin: 0;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.kra-score-table thead {
+  background: #f7f5f2;
+}
+
+.kra-score-table th {
+  height: 38px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  color: #30403c;
+
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 650;
+
+  letter-spacing: 0.015em;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.kra-score-table th:nth-child(1) {
+  width: 15%;
+}
+
+.kra-score-table th:nth-child(2) {
+  width: 15%;
+}
+
+.kra-score-table th:nth-child(3) {
+  width: 10%;
+}
+
+.kra-score-table th:nth-child(4) {
+  width: 14%;
+}
+
+.kra-score-table th:nth-child(5) {
+  width: 14%;
+}
+
+.kra-score-table th:nth-child(6) {
+  width: 20%;
+}
+
+.kra-score-table th:nth-child(7) {
+  width: 12%;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.kra-score-table tbody tr {
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8edeb;
+
+  transition: background-color 0.15s ease;
+}
+
+.kra-score-table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.kra-score-table tbody tr:hover {
+  background: #fbfdfc;
+}
+
+.kra-score-table td {
+  height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 6px 12px;
+
+  color: #33433f;
+
+  font-family: inherit;
+  font-size: 11.25px;
+  line-height: 1.35;
+  font-weight: 400;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   SCORE BADGE
+   ========================================================= */
+
+.kra-score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 60px;
+  min-height: 24px;
+
+  box-sizing: border-box;
+
+  padding: 3px 8px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  font-variant-numeric: tabular-nums;
+}
+
+.kra-score-badge--good {
+  color: #277628;
+
+  background: #edf6e9;
+}
+
+.kra-score-badge--average {
+  color: #d56c0b;
+
+  background: #fff4e4;
+}
+
+.kra-score-badge--poor {
+  color: #d62d2d;
+
+  background: #fdecec;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.kra-score-status {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 100%;
+
+  gap: 7px;
+
+  color: #33433f;
+
+  font-family: inherit;
+  font-size: 11.25px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.kra-status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+
+  background: #879691;
+}
+
+.kra-status--success .kra-status-dot {
+  background: #27942c;
+}
+
+.kra-status--warning .kra-status-dot {
+  background: #ee8a22;
+}
+
+.kra-status--danger .kra-status-dot {
+  background: #dc2929;
+}
+
+.kra-status--neutral .kra-status-dot {
+  background: #879691;
+}
+
+
+/* =========================================================
+   ACTION COLUMN
+   ========================================================= */
+
+.kra-action-column {
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.kra-score-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+.kra-score-action-btn {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0;
+
+  border: 1px solid #dfe6e3;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #40524d;
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.kra-score-action-btn svg {
+  flex-shrink: 0;
+}
+
+.kra-score-action-btn:hover {
+  border-color: #bdd8d2;
+
+  background: #f1f8f6;
+
+  color: #087f70;
+}
+
+.kra-score-action-btn--delete:hover {
+  border-color: #efcccc;
+
+  background: #fff5f5;
+
+  color: #c83a3a;
+}
+
+.kra-score-action-btn:active {
+  transform: scale(0.96);
+}
+
+.kra-score-action-btn:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.kra-score-empty {
+  height: 90px !important;
+
+  padding: 20px !important;
+
+  color: #7b8985 !important;
+
+  font-size: 11.5px !important;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+   Kept for pagination/footer integration if used by parent.
+   ========================================================= */
+
+.kra-score-table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-top: 13px;
+
+  padding: 0 4px;
+}
+
+.kra-score-entry-info {
+  margin: 0;
+
+  color: #4c5d58;
+
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.kra-score-pagination {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.kra-pagination-btn {
+  min-width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0 7px;
+
+  border: 1px solid #dfe6e3;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #33433f;
+
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.kra-pagination-btn:hover:not(
+    :disabled,
+    .kra-pagination-btn--active
+  ) {
+  border-color: #bfd8d2;
+
+  background: #f2f8f6;
+
+  color: #087f70;
+}
+
+.kra-pagination-btn--active {
+  border-color: #245e61;
+
+  background: #245e61;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 2px 5px rgba(36, 94, 97, 0.16);
+}
+
+.kra-pagination-btn:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.kra-pagination-arrow {
+  padding: 0;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-score-table-card {
+    padding: 15px;
+  }
+
+  .kra-score-table {
+    min-width: 840px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-score-table-card {
+    padding: 15px 14px;
+  }
+
+  .kra-score-table-title {
+    font-size: 16px;
+  }
+
+  .kra-score-table {
+    min-width: 820px;
+  }
+
+  .kra-score-table th {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
+  .kra-score-table td {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-score-table-card {
+    padding: 14px 12px;
+
+    border-radius: 9px;
+  }
+
+  .kra-score-table-header {
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+  }
+
+  .kra-score-table-title-wrapper {
+    gap: 7px;
+  }
+
+  .kra-score-table-title-wrapper svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .kra-score-table-title {
+    font-size: 15.5px;
+  }
+
+  .kra-score-entries-control {
+    gap: 6px;
+
+    font-size: 10.5px;
+  }
+
+  .kra-score-entries-control select {
+    width: 58px;
+    height: 32px;
+
+    padding-right: 22px;
+    padding-left: 8px;
+
+    font-size: 10.5px;
+  }
+
+  .kra-score-table {
+    min-width: 790px;
+  }
+
+  .kra-score-table th {
+    height: 37px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+
+    font-size: 9.75px;
+  }
+
+  .kra-score-table td {
+    height: 43px;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+  }
+
+  .kra-score-table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 0;
+  }
+
+  .kra-score-pagination {
+    align-self: flex-end;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .kra-score-table-card {
+    padding: 13px 10px;
+  }
+
+  .kra-score-table-header {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+  }
+
+  .kra-score-entries-control {
+    align-self: flex-end;
+  }
+
+  .kra-score-table {
+    min-width: 760px;
+  }
+
+  .kra-score-table-footer {
+    align-items: stretch;
+  }
+
+  .kra-score-pagination {
+    align-self: flex-start;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 2px;
+
+    scrollbar-width: thin;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-score-table-card {
+    padding: 12px 9px;
+  }
+
+  .kra-score-table-title {
+    font-size: 15px;
+  }
+
+  .kra-score-entries-control {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-score-table tbody tr,
+  .kra-score-action-btn,
+  .kra-pagination-btn,
+  .kra-score-entries-control select {
+    transition: none;
+  }
+
+  .kra-score-action-btn:active {
+    transform: none;
+  }
+}

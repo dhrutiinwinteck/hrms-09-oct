@@ -1,0 +1,104 @@
+.comp-off-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.comp-off-summary-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 86px;
+  padding: 13px 15px;
+  overflow: hidden;
+  border: 1px solid #e7ebe8;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.summary-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.summary-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-card-content span {
+  color: #5f706d;
+  font-size: 12px;
+}
+
+.summary-card-content strong {
+  color: #10283a;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.comp-off-summary-card.total
+  .summary-card-icon {
+  background: #e7efed;
+  color: #39706e;
+}
+
+.comp-off-summary-card.approved
+  .summary-card-icon {
+  background: #e0f3e9;
+  color: #2f9870;
+}
+
+.comp-off-summary-card.pending
+  .summary-card-icon {
+  background: #fbefd9;
+  color: #bd8532;
+}
+
+.comp-off-summary-card.rejected
+  .summary-card-icon {
+  background: #fbe2df;
+  color: #d9534f;
+}
+
+.summary-card-wave {
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  width: 73px;
+  height: 27px;
+}
+
+.summary-card-wave span {
+  display: block;
+  width: 17px;
+  border-top: 1.5px solid #6da39b;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.summary-card-wave span:nth-child(1) {
+  height: 9px;
+}
+
+.summary-card-wave span:nth-child(2) {
+  height: 17px;
+}
+
+.summary-card-wave span:nth-child(3) {
+  height: 12px;
+}
+
+.summary-card-wave span:nth-child(4) {
+  height: 22px;
+}

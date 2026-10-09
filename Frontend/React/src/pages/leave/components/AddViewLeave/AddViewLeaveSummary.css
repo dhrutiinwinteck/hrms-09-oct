@@ -1,0 +1,634 @@
+/* =========================================================
+   ADD / VIEW LEAVE SUMMARY
+   Compact Enterprise HRMS
+   ========================================================= */
+
+.add-view-leave-summary,
+.add-view-leave-summary *,
+.add-view-leave-summary *::before,
+.add-view-leave-summary *::after {
+  box-sizing: border-box;
+}
+
+.add-view-leave-summary {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0 26px 18px;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.add-view-leave-summary__grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+   ========================================================= */
+
+.add-view-leave-summary-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 96px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 14px 36px 14px 15px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5ebf1;
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 5px rgba(15, 23, 42, 0.025),
+    0 6px 16px rgba(15, 23, 42, 0.035);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+
+/* =========================================================
+   SUBTLE CARD ACCENT
+   ========================================================= */
+
+.add-view-leave-summary-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 13px;
+  bottom: 13px;
+  left: 0;
+
+  width: 3px;
+
+  border-radius: 0 3px 3px 0;
+
+  background: var(--summary-accent);
+}
+
+
+/* =========================================================
+   SUBTLE DECORATIVE BACKGROUND
+   ========================================================= */
+
+.add-view-leave-summary-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -30px;
+  bottom: -45px;
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: var(--summary-icon-bg);
+
+  opacity: 0.32;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+@media (hover: hover) {
+  .add-view-leave-summary-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d9e2eb;
+
+    box-shadow:
+      0 4px 9px rgba(15, 23, 42, 0.04),
+      0 10px 22px rgba(15, 23, 42, 0.055);
+  }
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.add-view-leave-summary-card__icon-wrapper {
+  position: relative;
+  z-index: 1;
+
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 13px;
+
+  color: var(--summary-accent);
+  background: var(--summary-icon-bg);
+
+  border: 1px solid var(--summary-icon-border);
+  border-radius: 50%;
+}
+
+.add-view-leave-summary-card__icon-wrapper svg {
+  width: 23px;
+  height: 23px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.add-view-leave-summary-card__content {
+  position: relative;
+  z-index: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   RESET TEXT MARGINS
+   ========================================================= */
+
+.add-view-leave-summary-card__title,
+.add-view-leave-summary-card__value,
+.add-view-leave-summary-card__description {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.add-view-leave-summary-card__title {
+  margin-bottom: 4px;
+
+  color: var(--summary-accent);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.add-view-leave-summary-card__value {
+  margin-bottom: 4px;
+
+  color: var(--summary-value);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.add-view-leave-summary-card__description {
+  color: #64748b;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   MORE BUTTON
+   ========================================================= */
+
+.add-view-leave-summary-card__menu {
+  position: absolute;
+  z-index: 2;
+
+  top: 10px;
+  right: 8px;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #94a3b8;
+  background: transparent;
+
+  border: 0;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.add-view-leave-summary-card__menu svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+@media (hover: hover) {
+  .add-view-leave-summary-card__menu:hover {
+    color: #475569;
+    background: #f1f5f9;
+  }
+}
+
+.add-view-leave-summary-card__menu:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.55);
+  outline-offset: 1px;
+}
+
+
+/* =========================================================
+   TOTAL EMPLOYEES
+   BLUE
+   ========================================================= */
+
+.add-view-leave-summary-card--employees {
+  --summary-accent: #1673d9;
+  --summary-value: #1769c2;
+
+  --summary-icon-bg: #eaf3ff;
+  --summary-icon-border: #dcecff;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(240, 247, 255, 0.5) 0%,
+      #ffffff 58%
+    );
+}
+
+
+/* =========================================================
+   CASUAL LEAVE
+   GREEN
+   ========================================================= */
+
+.add-view-leave-summary-card--casual {
+  --summary-accent: #25a844;
+  --summary-value: #219a38;
+
+  --summary-icon-bg: #eaf8ed;
+  --summary-icon-border: #daf0df;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(240, 251, 243, 0.5) 0%,
+      #ffffff 58%
+    );
+}
+
+
+/* =========================================================
+   SICK LEAVE
+   ORANGE
+   ========================================================= */
+
+.add-view-leave-summary-card--sick {
+  --summary-accent: #e99a00;
+  --summary-value: #d98f00;
+
+  --summary-icon-bg: #fff5df;
+  --summary-icon-border: #f9e9c5;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255, 249, 237, 0.6) 0%,
+      #ffffff 58%
+    );
+}
+
+
+/* =========================================================
+   COMP OFF
+   PURPLE
+   ========================================================= */
+
+.add-view-leave-summary-card--compOff {
+  --summary-accent: #7140db;
+  --summary-value: #7140db;
+
+  --summary-icon-bg: #f1eafd;
+  --summary-icon-border: #e6dcfa;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(248, 245, 255, 0.65) 0%,
+      #ffffff 58%
+    );
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+  .add-view-leave-summary {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .add-view-leave-summary__grid {
+    gap: 12px;
+  }
+
+  .add-view-leave-summary-card {
+    min-height: 92px;
+
+    padding:
+      13px
+      34px
+      13px
+      13px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+
+    margin-right: 11px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .add-view-leave-summary-card__title {
+    font-size: 11px;
+  }
+
+  .add-view-leave-summary-card__value {
+    font-size: 21px;
+  }
+
+  .add-view-leave-summary-card__description {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP
+   Keep all four cards while enough width is available
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .add-view-leave-summary {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .add-view-leave-summary__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .add-view-leave-summary-card {
+    min-height: 94px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .add-view-leave-summary {
+    padding:
+      0
+      16px
+      16px;
+  }
+
+  .add-view-leave-summary__grid {
+    gap: 11px;
+  }
+
+  .add-view-leave-summary-card {
+    min-height: 90px;
+
+    padding:
+      12px
+      32px
+      12px
+      12px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    margin-right: 10px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add-view-leave-summary-card__value {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .add-view-leave-summary {
+    padding:
+      0
+      14px
+      14px;
+  }
+
+  .add-view-leave-summary__grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .add-view-leave-summary-card {
+    min-height: 84px;
+
+    padding:
+      11px
+      34px
+      11px
+      12px;
+
+    border-radius: 9px;
+  }
+
+  .add-view-leave-summary-card::before {
+    top: 11px;
+    bottom: 11px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    margin-right: 11px;
+  }
+
+  .add-view-leave-summary-card__title {
+    margin-bottom: 3px;
+
+    font-size: 11px;
+  }
+
+  .add-view-leave-summary-card__value {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+  }
+
+  .add-view-leave-summary-card__description {
+    font-size: 10px;
+  }
+
+  .add-view-leave-summary-card__menu {
+    top: 8px;
+    right: 7px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .add-view-leave-summary {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .add-view-leave-summary-card {
+    min-height: 82px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .add-view-leave-summary-card__icon-wrapper svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .add-view-leave-summary-card__value {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .add-view-leave-summary-card,
+  .add-view-leave-summary-card__menu {
+    transition: none;
+  }
+
+  .add-view-leave-summary-card:hover {
+    transform: none;
+  }
+}

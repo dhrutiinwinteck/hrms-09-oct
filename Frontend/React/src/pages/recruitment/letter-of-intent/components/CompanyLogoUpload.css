@@ -1,0 +1,183 @@
+/* ============================================================
+   COMPANY LOGO
+   ============================================================ */
+
+.loi-logo-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.loi-logo-field > .loi-field-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #163f4e;
+  font-size: 10.5px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* ============================================================
+   UPLOAD ROW
+   ============================================================ */
+
+.loi-logo-upload-row {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: stretch;
+  gap: 9px;
+}
+
+/* ============================================================
+   UPLOAD AREA
+   ============================================================ */
+
+.loi-logo-upload {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px dashed #8fb2b8;
+  border-radius: 6px;
+  background: #fbfdfd;
+  color: #1c5968;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.loi-logo-upload:hover {
+  background: #f5fafb;
+  border-color: #5e969f;
+}
+
+.loi-logo-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.loi-logo-upload input:disabled {
+  cursor: not-allowed;
+}
+
+.loi-logo-upload svg {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 3px;
+  color: #175f70;
+}
+
+.loi-logo-upload strong {
+  font-size: 9.5px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.loi-logo-upload span {
+  margin-top: 2px;
+  color: #6c7e86;
+  font-size: 7.8px;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   CURRENT LOGO
+   ============================================================ */
+
+.loi-current-logo {
+  position: relative;
+  width: 84px;
+  min-width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-sizing: border-box;
+}
+
+.loi-current-logo img {
+  display: block;
+  width: 76px;
+  height: 44px;
+  object-fit: contain;
+  border: 1px solid #e7ecee;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.loi-current-logo span {
+  color: #647780;
+  font-size: 7.5px;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   REMOVE BUTTON
+   ============================================================ */
+
+.loi-current-logo button {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #f4b4b4;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ef4444;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.loi-current-logo button:hover {
+  background: #fef2f2;
+}
+
+/* ============================================================
+   NO LOGO
+   ============================================================ */
+
+.loi-no-logo {
+  width: 84px;
+  min-width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #94a3b8;
+  font-size: 8px;
+  text-align: center;
+}
+
+.loi-no-logo svg {
+  color: #9aaeb6;
+}
+
+@media (max-width: 700px) {
+  .loi-logo-upload-row {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .loi-current-logo,
+  .loi-no-logo {
+    width: 100%;
+    min-width: 0;
+  }
+}

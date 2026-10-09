@@ -1,0 +1,474 @@
+/* =========================================================
+   KRA SCORE HEADER
+   Enterprise HRMS
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER ROOT
+   ========================================================= */
+
+.kra-score-header {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 14px 12px 13px;
+
+  background: #ffffff;
+
+  border: 0;
+  border-bottom: 1px solid #e5ebe9;
+
+  border-radius: 0;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+   ========================================================= */
+
+.kra-score-header-left {
+  min-width: 0;
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 6px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.kra-score-header-title {
+  margin: 0;
+  padding: 0;
+
+  color: #101d1a;
+
+  font-family: inherit;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.kra-score-breadcrumb {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #62716d;
+
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   BREADCRUMB ITEM
+   ========================================================= */
+
+.kra-score-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: #62716d;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIVE BREADCRUMB
+   ========================================================= */
+
+.kra-score-breadcrumb-active {
+  color: #263f3a;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BREADCRUMB SEPARATOR
+   ========================================================= */
+
+.kra-score-breadcrumb-separator {
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 13px;
+
+  color: #95a39f;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.kra-score-header-right {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   ADD KRA SCORE BUTTON
+   ========================================================= */
+
+.kra-score-add-button {
+  height: 40px;
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 18px;
+
+  color: #ffffff;
+
+  background: #315f64;
+
+  border: 1px solid #315f64;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 4px rgba(32, 72, 70, 0.08),
+    0 4px 10px rgba(32, 72, 70, 0.06);
+
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+
+/* =========================================================
+   BUTTON ICON
+   ========================================================= */
+
+.kra-score-add-button svg {
+  width: 17px;
+  height: 17px;
+
+  flex: 0 0 17px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.kra-score-add-button:hover {
+  background: #285459;
+
+  border-color: #285459;
+
+  box-shadow:
+    0 3px 6px rgba(32, 72, 70, 0.1),
+    0 6px 12px rgba(32, 72, 70, 0.08);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+   ========================================================= */
+
+.kra-score-add-button:active {
+  background: #234b50;
+
+  border-color: #234b50;
+
+  box-shadow:
+    0 1px 3px rgba(32, 72, 70, 0.1);
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON ACCESSIBILITY
+   ========================================================= */
+
+.kra-score-add-button:focus-visible {
+  outline: 3px solid rgba(49, 95, 100, 0.16);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-score-header {
+    padding:
+      14px
+      12px
+      13px;
+  }
+
+  .kra-score-header-title {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-score-header {
+    gap: 20px;
+
+    padding:
+      13px
+      12px;
+  }
+
+  .kra-score-header-title {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-score-header {
+    gap: 18px;
+
+    padding:
+      13px
+      10px;
+  }
+
+  .kra-score-header-title {
+    font-size: 25px;
+  }
+
+  .kra-score-breadcrumb {
+    font-size: 12px;
+  }
+
+  .kra-score-add-button {
+    height: 39px;
+    min-height: 39px;
+
+    padding: 0 16px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-score-header {
+    gap: 16px;
+
+    padding:
+      12px
+      8px;
+  }
+
+  .kra-score-header-title {
+    font-size: 24px;
+  }
+
+  .kra-score-header-left {
+    gap: 5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-score-header {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    padding:
+      12px
+      6px;
+  }
+
+  .kra-score-header-left {
+    width: 100%;
+
+    gap: 4px;
+  }
+
+  .kra-score-header-title {
+    font-size: 22px;
+
+    letter-spacing: -0.3px;
+  }
+
+  .kra-score-breadcrumb {
+    gap: 5px;
+
+    font-size: 11.5px;
+  }
+
+  .kra-score-header-right {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+  .kra-score-add-button {
+    width: 100%;
+
+    height: 40px;
+    min-height: 40px;
+
+    padding:
+      0
+      14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-score-header {
+    gap: 11px;
+
+    padding:
+      11px
+      4px;
+  }
+
+  .kra-score-header-title {
+    font-size: 21px;
+  }
+
+  .kra-score-breadcrumb {
+    font-size: 11px;
+  }
+
+  .kra-score-breadcrumb-separator {
+    width: 12px;
+    height: 12px;
+
+    flex-basis: 12px;
+  }
+
+  .kra-score-add-button {
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-score-header {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .kra-score-add-button {
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-score-add-button {
+    transition: none;
+  }
+
+  .kra-score-add-button:hover,
+  .kra-score-add-button:active {
+    transform: none;
+  }
+}

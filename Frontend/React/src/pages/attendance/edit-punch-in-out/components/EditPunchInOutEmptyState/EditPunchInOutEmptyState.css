@@ -1,0 +1,22 @@
+.edit-punch-in-out-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+  margin-top: 24px;
+}
+
+.edit-punch-in-out-empty-state__icon {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.edit-punch-in-out-empty-state__message {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+}

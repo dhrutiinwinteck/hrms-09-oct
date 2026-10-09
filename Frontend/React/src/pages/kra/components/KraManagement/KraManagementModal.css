@@ -1,0 +1,1082 @@
+/* =========================================================
+   KRA MANAGEMENT MODAL
+   Enterprise HRMS
+   Compact Reference-Aligned Design
+   ========================================================= */
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.kra-management-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  background: rgba(16, 34, 31, 0.38);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.kra-management-modal {
+  width: min(620px, 100%);
+
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 28px rgba(20, 50, 45, 0.1),
+    0 24px 55px rgba(20, 50, 45, 0.13);
+
+  animation:
+    kra-management-modal-enter
+    0.18s
+    ease-out;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kra-management-modal-header {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5ebe9;
+}
+
+
+.kra-management-modal-heading {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.kra-management-modal-heading-icon {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #315f60;
+
+  background: #edf4f2;
+
+  border: 1px solid #d8e5e1;
+  border-radius: 7px;
+}
+
+
+.kra-management-modal-heading-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+.kra-management-modal-heading h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #172c28;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+
+  letter-spacing: -0.015em;
+}
+
+
+.kra-management-modal-heading p {
+  margin: 2px 0 0;
+  padding: 0;
+
+  color: #74827e;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.kra-management-modal-close {
+  width: 29px;
+  height: 29px;
+
+  flex: 0 0 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  color: #687975;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+
+.kra-management-modal-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+.kra-management-modal-close:hover {
+  color: #183631;
+
+  background: #f5f8f7;
+
+  border-color: #c9d7d3;
+}
+
+
+.kra-management-modal-close:active {
+  background: #eef3f1;
+}
+
+
+/* =========================================================
+   EMPLOYEE SUMMARY
+   ========================================================= */
+
+.kra-management-modal-employee {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  box-sizing: border-box;
+
+  margin: 12px 16px 0;
+  padding: 9px 11px;
+
+  background: #f7faf9;
+
+  border: 1px solid #e1e9e6;
+  border-radius: 7px;
+}
+
+
+.kra-management-modal-avatar {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #275e5c;
+
+  background: #dcecea;
+
+  border-radius: 50%;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+
+.kra-management-modal-employee-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+
+.kra-management-modal-employee-info strong {
+  max-width: 100%;
+
+  overflow: hidden;
+
+  color: #193631;
+
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 650;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.kra-management-modal-employee-info span {
+  max-width: 100%;
+
+  overflow: hidden;
+
+  color: #74827e;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.kra-management-modal-form {
+  min-height: 0;
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.kra-management-modal-body {
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px 14px;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px 16px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd8d4 transparent;
+}
+
+
+.kra-management-modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.kra-management-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.kra-management-modal-body::-webkit-scrollbar-thumb {
+  background: #cbd8d4;
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.kra-management-modal-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.kra-management-modal-field-full {
+  grid-column: 1 / -1;
+}
+
+
+.kra-management-modal-field label {
+  margin: 0;
+  padding: 0;
+
+  color: #334b46;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+
+.kra-management-required {
+  margin-left: 2px;
+
+  color: #168275;
+}
+
+
+/* =========================================================
+   READ ONLY FIELD
+   ========================================================= */
+
+.kra-management-modal-readonly {
+  width: 100%;
+  height: 36px;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 11px;
+
+  color: #253d38;
+
+  background: #f8faf9;
+
+  border: 1px solid #dce5e2;
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SELF SCORE
+   ========================================================= */
+
+.kra-management-modal-score-readonly {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  padding: 8px 11px;
+
+  background: #edf7f3;
+
+  border: 1px solid #d4e9e1;
+  border-radius: 7px;
+}
+
+
+.kra-management-modal-score-readonly strong {
+  flex: 0 0 auto;
+
+  color: #147157;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+.kra-management-modal-score-readonly span {
+  min-width: 0;
+
+  color: #73827e;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   SCORE INPUT
+   ========================================================= */
+
+.kra-management-score-input-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+.kra-management-score-input-wrapper input {
+  width: 100%;
+  height: 36px;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding:
+    0
+    36px
+    0
+    11px;
+
+  outline: none;
+
+  color: #1d3631;
+
+  background: #ffffff;
+
+  border: 1px solid #ccd9d5;
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: normal;
+
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background-color 0.16s ease;
+}
+
+
+.kra-management-score-input-wrapper
+input:hover:not(:disabled) {
+  border-color: #aebfba;
+}
+
+
+.kra-management-score-input-wrapper input:focus {
+  border-color: #34716b;
+
+  box-shadow:
+    0 0 0 3px rgba(52, 113, 107, 0.08);
+}
+
+
+.kra-management-score-input-wrapper input:disabled {
+  color: #465d58;
+
+  background: #f7f9f8;
+
+  border-color: #dce5e2;
+
+  cursor: default;
+
+  opacity: 1;
+}
+
+
+.kra-management-score-input-wrapper > span {
+  position: absolute;
+
+  top: 50%;
+  right: 11px;
+
+  color: #768580;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 550;
+  line-height: 1;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   REMOVE NUMBER SPINNERS
+   ========================================================= */
+
+.kra-management-score-input-wrapper
+input::-webkit-inner-spin-button,
+.kra-management-score-input-wrapper
+input::-webkit-outer-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+
+.kra-management-score-input-wrapper
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.kra-management-score-input-wrapper
+.kra-management-input-error {
+  border-color: #c85c54;
+}
+
+
+.kra-management-score-input-wrapper
+.kra-management-input-error:hover {
+  border-color: #c85c54;
+}
+
+
+.kra-management-score-input-wrapper
+.kra-management-input-error:focus {
+  border-color: #c85c54;
+
+  box-shadow:
+    0 0 0 3px rgba(200, 92, 84, 0.08);
+}
+
+
+.kra-management-modal-field small {
+  display: block;
+
+  margin: -1px 0 0;
+
+  color: #bd4c45;
+
+  font-family: inherit;
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.kra-management-modal-footer {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  padding: 10px 16px;
+
+  background: #fafcfb;
+
+  border-top: 1px solid #e3eae8;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+   ========================================================= */
+
+.kra-management-modal-secondary,
+.kra-management-modal-primary {
+  min-width: 80px;
+  min-height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 13px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+
+.kra-management-modal-primary svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.kra-management-modal-secondary {
+  color: #465b56;
+
+  background: #ffffff;
+
+  border: 1px solid #ccd8d5;
+}
+
+
+.kra-management-modal-secondary:hover {
+  color: #304944;
+
+  background: #f5f8f7;
+
+  border-color: #adbfba;
+}
+
+
+.kra-management-modal-secondary:active {
+  background: #eef3f1;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.kra-management-modal-primary {
+  color: #ffffff;
+
+  background: #315f64;
+
+  border: 1px solid #315f64;
+
+  box-shadow:
+    0 1px 4px rgba(49, 95, 100, 0.14);
+}
+
+
+.kra-management-modal-primary:hover {
+  background: #285459;
+
+  border-color: #285459;
+
+  box-shadow:
+    0 3px 8px rgba(49, 95, 100, 0.18);
+
+  transform: translateY(-1px);
+}
+
+
+.kra-management-modal-primary:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.kra-management-modal-close:focus-visible,
+.kra-management-modal-secondary:focus-visible,
+.kra-management-modal-primary:focus-visible {
+  outline: 2px solid rgba(49, 95, 100, 0.28);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes kra-management-modal-enter {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(6px)
+      scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-management-modal-overlay {
+    padding: 14px;
+  }
+
+  .kra-management-modal {
+    max-height: calc(100vh - 28px);
+    max-height: calc(100dvh - 28px);
+  }
+
+  .kra-management-modal-header {
+    padding: 13px 14px;
+  }
+
+  .kra-management-modal-employee {
+    margin:
+      12px
+      14px
+      0;
+  }
+
+  .kra-management-modal-body {
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .kra-management-modal-footer {
+    padding:
+      10px
+      14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-modal-overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .kra-management-modal {
+    width: 100%;
+
+    max-height: 92vh;
+    max-height: 92dvh;
+
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+    border-radius:
+      12px
+      12px
+      0
+      0;
+  }
+
+  .kra-management-modal-header {
+    gap: 10px;
+
+    padding: 13px;
+  }
+
+  .kra-management-modal-heading {
+    gap: 8px;
+  }
+
+  .kra-management-modal-heading-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-basis: 32px;
+  }
+
+  .kra-management-modal-heading-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .kra-management-modal-heading h2 {
+    font-size: 14.5px;
+  }
+
+  .kra-management-modal-heading p {
+    display: none;
+  }
+
+  .kra-management-modal-close {
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+  .kra-management-modal-employee {
+    margin:
+      11px
+      13px
+      0;
+
+    padding:
+      8px
+      10px;
+  }
+
+  .kra-management-modal-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-basis: 32px;
+  }
+
+  .kra-management-modal-body {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding: 13px;
+  }
+
+  .kra-management-modal-field-full {
+    grid-column: auto;
+  }
+
+  .kra-management-modal-readonly,
+  .kra-management-score-input-wrapper input {
+    height: 39px;
+
+    font-size: 11px;
+  }
+
+  .kra-management-modal-score-readonly {
+    min-height: 0;
+
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding:
+      9px
+      11px;
+  }
+
+  .kra-management-modal-score-readonly span {
+    text-align: left;
+  }
+
+  .kra-management-modal-footer {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    padding:
+      10px
+      13px;
+  }
+
+  .kra-management-modal-secondary,
+  .kra-management-modal-primary {
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+
+    font-size: 11px;
+  }
+
+  .kra-management-modal-footer
+  .kra-management-modal-secondary:only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-modal-header {
+    padding: 12px;
+  }
+
+  .kra-management-modal-heading-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-basis: 30px;
+  }
+
+  .kra-management-modal-heading h2 {
+    font-size: 14px;
+  }
+
+  .kra-management-modal-employee {
+    margin:
+      10px
+      12px
+      0;
+  }
+
+  .kra-management-modal-body {
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+  .kra-management-modal-footer {
+    padding:
+      9px
+      12px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-management-modal-header {
+    gap: 7px;
+  }
+
+  .kra-management-modal-heading {
+    gap: 7px;
+  }
+
+  .kra-management-modal-heading-icon {
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+  .kra-management-modal-close {
+    width: 28px;
+    height: 28px;
+
+    flex-basis: 28px;
+  }
+
+  .kra-management-modal-footer {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .kra-management-modal-footer
+  .kra-management-modal-secondary:only-child {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-management-modal {
+    animation: none;
+  }
+
+  .kra-management-modal-close,
+  .kra-management-modal-secondary,
+  .kra-management-modal-primary,
+  .kra-management-score-input-wrapper input {
+    transition: none;
+  }
+
+  .kra-management-modal-primary:hover {
+    transform: none;
+  }
+}

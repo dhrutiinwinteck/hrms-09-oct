@@ -1,0 +1,94 @@
+.basic-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--joining-text, #18364a);
+  margin-bottom: 4px;
+}
+
+.form-field .required {
+  color: #d9534f;
+  margin-left: 2px;
+}
+
+/* --- NEW WRAPPER FIX --- */
+.input-wrapper {
+  position: relative;
+  display: block;
+}
+
+/* Target all inputs and selects INSIDE the wrapper */
+.input-wrapper select,
+.input-wrapper input {
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  border: 1px solid var(--joining-border, #e4e8e7);
+  border-radius: 6px;
+  padding: 0 36px 0 12px; /* Pad right side so text doesn't go behind our icon */
+  font-size: 14px;
+  background-color: #f7f7f7 !important;
+  color: #18364a !important;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  
+  /* Kill the native browser icons completely */
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  background-color: #f7f7f7 !important;
+  border-color: var(--joining-primary, #176f73);
+  box-shadow: 0 0 0 3px rgba(23, 111, 115, 0.1);
+}
+
+.input-wrapper input::placeholder {
+  color: #aab5b2;
+}
+
+/* --- CUSTOM ICONS (Overlay using ::after) --- */
+
+/* 1. Custom Date Picker Icon */
+.input-wrapper:has(> input[type="date"])::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none; /* Makes the icon click-through to the input */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 2. Custom Select Dropdown Arrow */
+.input-wrapper:has(> select)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  pointer-events: none; /* Makes the icon click-through to the select */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

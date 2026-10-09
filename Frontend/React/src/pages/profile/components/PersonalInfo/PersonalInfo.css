@@ -1,0 +1,387 @@
+.personal-info {
+  width: 100%;
+  min-width: 0;
+
+  padding: 12px 13px 10px;
+
+  border: 1px solid #e4e8ea;
+  border-top: 2px solid #4c9291;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.personal-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.personal-info__title {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.personal-info__title svg {
+  color: #4c9291;
+  flex-shrink: 0;
+}
+
+.personal-info__title h3 {
+  margin: 0;
+
+  color: #26323f;
+
+  font-size: 10px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.personal-info__menu {
+  color: #8b949d;
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+.personal-info__body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+
+/* =========================================
+   ROW
+========================================= */
+
+.personal-info__row {
+  min-width: 0;
+  min-height: 37px;
+
+  display: grid;
+  grid-template-columns: 46% minmax(0, 54%);
+
+  align-items: center;
+
+  gap: 4px;
+
+  border-bottom: 1px solid #f0f2f3;
+
+  box-sizing: border-box;
+}
+
+.personal-info__row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.personal-info__label {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.personal-info__field-icon {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #f2f7f7;
+
+  color: #619492;
+}
+
+.personal-info__row:nth-child(1)
+  .personal-info__field-icon {
+  background: #fff2f0;
+  color: #d98778;
+}
+
+.personal-info__row:nth-child(4)
+  .personal-info__field-icon {
+  background: #fff1f5;
+  color: #c56b82;
+}
+
+.personal-info__row:nth-child(5)
+  .personal-info__field-icon {
+  background: #f3f2f8;
+  color: #7c7b9c;
+}
+
+.personal-info__field-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #667381;
+
+  font-size: 7.5px;
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   VALUE
+========================================= */
+
+.personal-info__value {
+  min-width: 0;
+
+  color: #374151;
+
+  font-size: 7.5px;
+  line-height: 1.45;
+
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.personal-info__input {
+  width: 100%;
+  min-width: 0;
+
+  height: 24px;
+
+  padding: 3px 6px;
+
+  border: 1px solid #d5e1e1;
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #fbfdfd;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 7.5px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.personal-info__input:focus {
+  border-color: #4c9291;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(76, 146, 145, 0.08);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.personal-info__actions {
+  min-height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 11px;
+}
+
+
+/* =========================================
+   EDIT
+========================================= */
+
+.personal-info__edit,
+.personal-info__save,
+.personal-info__cancel {
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 10px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.personal-info__edit {
+  min-width: 96px;
+
+  border: 1px solid transparent;
+
+  background: #f3f8f8;
+
+  color: #397c7b;
+}
+
+.personal-info__edit:hover {
+  background: #e9f2f2;
+}
+
+.personal-info__save {
+  border: 1px solid #4c9291;
+
+  background: #4c9291;
+
+  color: #ffffff;
+}
+
+.personal-info__save:hover {
+  background: #3f8180;
+}
+
+.personal-info__cancel {
+  border: 1px solid #e4e8ea;
+
+  background: #ffffff;
+
+  color: #707b86;
+}
+
+.personal-info__cancel:hover {
+  background: #f7f8f9;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.personal-info__edit:focus-visible,
+.personal-info__save:focus-visible,
+.personal-info__cancel:focus-visible {
+  outline: 2px solid rgba(76, 146, 145, 0.35);
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .personal-info {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .personal-info__row {
+    grid-template-columns: 44% minmax(0, 56%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .personal-info__row {
+    min-height: 36px;
+  }
+
+  .personal-info__field-icon {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .personal-info__row {
+    grid-template-columns: 42% minmax(0, 58%);
+  }
+
+  .personal-info__field-name,
+  .personal-info__value,
+  .personal-info__input {
+    font-size: 7px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .personal-info {
+    padding: 11px 10px 9px;
+  }
+
+  .personal-info__row {
+    grid-template-columns: 40% minmax(0, 60%);
+  }
+
+  .personal-info__field-icon {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  .personal-info__field-name,
+  .personal-info__value,
+  .personal-info__input {
+    font-size: 6.8px;
+  }
+}

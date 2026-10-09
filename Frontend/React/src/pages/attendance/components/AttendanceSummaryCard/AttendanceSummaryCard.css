@@ -1,0 +1,142 @@
+/* src/pages/attendance/components/AttendanceSummaryCard/AttendanceSummaryCard.css */
+
+.attendance-summary-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.attendance-summary-card:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  border-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.attendance-summary-card__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.attendance-summary-card__icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.attendance-summary-card__icon {
+  color: currentColor;
+  stroke-width: 2;
+}
+
+.attendance-summary-card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.attendance-summary-card__title {
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 0.25rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.attendance-summary-card__value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.attendance-summary-card__value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  font-family: 'Inter', sans-serif;
+}
+
+.attendance-summary-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.125rem;
+}
+
+.attendance-summary-card__percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.attendance-summary-card__subtitle {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Loading skeleton */
+.attendance-summary-card--loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.attendance-summary-card__skeleton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.attendance-summary-card__skeleton-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #e5e7eb;
+}
+.attendance-summary-card__skeleton-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.attendance-summary-card__skeleton-title {
+  width: 60%;
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+.attendance-summary-card__skeleton-value {
+  width: 40%;
+  height: 28px;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .attendance-summary-card {
+    padding: 1rem 1.25rem;
+  }
+  .attendance-summary-card__value {
+    font-size: 1.5rem;
+  }
+  .attendance-summary-card__icon-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,810 @@
+/* =========================================================
+   LEAVE EMPLOYEES / LEAVE REQUESTS TABLE
+   ========================================================= */
+
+.leave-employees-table {
+  width: 100%;
+  overflow: hidden;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #ffffff;
+}
+
+.leave-employees-table *,
+.leave-employees-table *::before,
+.leave-employees-table *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SCROLL CONTAINER
+   ========================================================= */
+
+.leave-employees-table__scroll {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border: 1px solid #e4eaf2;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  scrollbar-width: thin;
+  scrollbar-color:
+    #cbd5e1
+    #f8fafc;
+}
+
+.leave-employees-table__scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.leave-employees-table__scroll::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.leave-employees-table__scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.leave-employees-table__table {
+  width: 100%;
+  min-width: 1180px;
+
+  border-spacing: 0;
+  border-collapse: separate;
+
+  color: #14213d;
+
+  font-size: 13px;
+
+  table-layout: fixed;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.leave-employees-table__table thead {
+  background:
+    linear-gradient(
+      180deg,
+      #fbfcfe 0%,
+      #f7f9fc 100%
+    );
+}
+
+.leave-employees-table__table th {
+  height: 48px;
+
+  padding: 0 16px;
+
+  color: #10244b;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-align: left;
+  white-space: nowrap;
+
+  border-right: 1px solid #e6ebf2;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.leave-employees-table__table th:last-child {
+  border-right: none;
+}
+
+/* =========================================================
+   SORTABLE HEADER
+   ========================================================= */
+
+.leave-employees-table__header-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 0;
+
+  color: inherit;
+
+  font: inherit;
+
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.leave-employees-table__header-button:hover {
+  color: #2563eb;
+}
+
+.leave-employees-table__header-button > svg {
+  flex: 0 0 auto;
+
+  margin-left: 10px;
+
+  color: #9eabc0;
+}
+
+.leave-employees-table__sort-neutral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  margin-left: 10px;
+
+  color: #bdc7d5;
+}
+
+.leave-employees-table__sort-neutral svg + svg {
+  margin-top: -3px;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+
+   Employee     20%
+   From          9%
+   To            9%
+   No of Days    9%
+   Leave Type   14%
+   Reason       19%
+   Status       11%
+   Actions        9%
+   ========================================================= */
+
+.leave-employees-table__table th:nth-child(1) {
+  width: 20%;
+}
+
+.leave-employees-table__table th:nth-child(2) {
+  width: 9%;
+}
+
+.leave-employees-table__table th:nth-child(3) {
+  width: 9%;
+}
+
+.leave-employees-table__table th:nth-child(4) {
+  width: 9%;
+}
+
+.leave-employees-table__table th:nth-child(5) {
+  width: 14%;
+}
+
+.leave-employees-table__table th:nth-child(6) {
+  width: 19%;
+}
+
+.leave-employees-table__table th:nth-child(7) {
+  width: 11%;
+}
+
+.leave-employees-table__table th:nth-child(8) {
+  width: 9%;
+}
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.leave-employees-table__table td {
+  height: 64px;
+
+  padding: 8px 16px;
+
+  vertical-align: middle;
+
+  color: #19304f;
+
+  border-right: 1px solid #e7ecf2;
+  border-bottom: 1px solid #e7ecf2;
+
+  background: #ffffff;
+}
+
+.leave-employees-table__table td:last-child {
+  border-right: none;
+}
+
+.leave-employees-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.leave-employees-table__table tbody tr {
+  transition:
+    background-color 150ms ease;
+}
+
+.leave-employees-table__table tbody tr:hover td {
+  background: #fbfdff;
+}
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.leave-employees-table__employee {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 11px;
+}
+
+.leave-employees-table__avatar {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 1px solid #e1e8f0;
+  border-radius: 50%;
+
+  background: #e2e8f0;
+}
+
+.leave-employees-table__employee-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 3px;
+}
+
+.leave-employees-table__employee-name {
+  display: block;
+
+  overflow: hidden;
+
+  color: #10244b;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leave-employees-table__employee-id-text {
+  display: block;
+
+  color: #71829a;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.leave-employees-table__date {
+  display: block;
+
+  color: #19304f;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   NO OF DAYS
+   ========================================================= */
+
+.leave-employees-table__days {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  min-height: 28px;
+
+  padding: 0 8px;
+
+  color: #1e3a5f;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   LEAVE TYPE
+   ========================================================= */
+
+.leave-employees-table__leave-type {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 100%;
+
+  padding: 7px 9px;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leave-employees-table__leave-type--blue {
+  color: #1769d2;
+  background: #eaf4ff;
+}
+
+.leave-employees-table__leave-type--red {
+  color: #c62828;
+  background: #fff0f0;
+}
+
+.leave-employees-table__leave-type--purple {
+  color: #6547ed;
+  background: #f0edff;
+}
+
+.leave-employees-table__leave-type--green {
+  color: #27845c;
+  background: #e8f7ef;
+}
+
+.leave-employees-table__leave-type--orange {
+  color: #d96a18;
+  background: #fff1e8;
+}
+
+.leave-employees-table__leave-type--pink {
+  color: #c43d76;
+  background: #fff0f6;
+}
+
+.leave-employees-table__leave-type--gray {
+  color: #52647d;
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   REASON
+   ========================================================= */
+
+.leave-employees-table__reason {
+  display: block;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  color: #52647d;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.leave-employees-table__status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 9px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.leave-employees-table__status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+.leave-employees-table__status--pending {
+  color: #b45309;
+  background: #fff7e6;
+}
+
+.leave-employees-table__status--approved {
+  color: #16805c;
+  background: #e8f7f0;
+}
+
+.leave-employees-table__status--rejected {
+  color: #dc2626;
+  background: #fff0f0;
+}
+
+.leave-employees-table__status--cancelled {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.leave-employees-table__actions-heading {
+  text-align: center !important;
+}
+
+.leave-employees-table__actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.leave-employees-table__action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  padding: 0;
+
+  color: #1a304d;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe6ee;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.leave-employees-table__action-button:hover {
+  color: #2563eb;
+
+  background: #f8fbff;
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 3px 8px
+      rgba(15, 23, 42, 0.06);
+
+  transform: translateY(-1px);
+}
+
+.leave-employees-table__action-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.leave-employees-table__empty-cell {
+  height: 180px !important;
+
+  padding: 0 !important;
+
+  border-right: none !important;
+}
+
+.leave-employees-table__empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+
+  gap: 6px;
+
+  text-align: center;
+}
+
+.leave-employees-table__empty-state strong {
+  color: #263c59;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.leave-employees-table__empty-state span {
+  color: #8292a8;
+
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.leave-employees-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  min-height: 65px;
+
+  padding: 12px 14px;
+}
+
+.leave-employees-table__entries {
+  margin: 0;
+
+  color: #1d3451;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.leave-employees-table__page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 36px;
+  height: 36px;
+
+  padding: 0 9px;
+
+  color: #52647d;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe5f0;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.leave-employees-table__page-button:hover:not(:disabled):not(
+    .leave-employees-table__page-button--active
+  ) {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 2px 6px rgba(37, 99, 235, 0.08);
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.leave-employees-table__page-button--active {
+  color: #ffffff;
+
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 3px 8px rgba(37, 99, 235, 0.20);
+}
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.leave-employees-table__page-button:disabled {
+  color: #b8c3d0;
+
+  background: #f8fafc;
+
+  border-color: #e2e8f0;
+
+  cursor: not-allowed;
+
+  opacity: 1;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.leave-employees-table__page-button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+  .leave-employees-table__table {
+    min-width: 1120px;
+  }
+
+  .leave-employees-table__table th,
+  .leave-employees-table__table td {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .leave-employees-table__footer {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding-top: 16px;
+  }
+
+  .leave-employees-table__pagination {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .leave-employees-table__table {
+    min-width: 1080px;
+  }
+
+  .leave-employees-table__table th {
+    height: 44px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+
+    font-size: 11px;
+  }
+
+  .leave-employees-table__table td {
+    height: 56px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .leave-employees-table__avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-basis: 32px;
+  }
+
+  .leave-employees-table__employee-name {
+    font-size: 12px;
+  }
+
+  .leave-employees-table__employee-id-text,
+  .leave-employees-table__date,
+  .leave-employees-table__reason {
+    font-size: 11px;
+  }
+
+  .leave-employees-table__footer {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .leave-employees-table__page-button {
+    min-width: 35px;
+    height: 35px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-employees-table__table tbody tr,
+  .leave-employees-table__action-button,
+  .leave-employees-table__page-button {
+    transition: none;
+  }
+}

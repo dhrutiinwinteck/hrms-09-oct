@@ -1,0 +1,33 @@
+.expenses-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e9eeee;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.expenses-stat-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #285f62;
+  background: #e8f1f0;
+}
+
+.expenses-stat-card__label {
+  display: block;
+  margin-bottom: 2px;
+  color: #89969a;
+  font-size: 8px;
+}
+
+.expenses-stat-card__value {
+  display: block;
+  color: #29464d;
+  font-size: 15px;
+}

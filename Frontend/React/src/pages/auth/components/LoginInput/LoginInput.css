@@ -1,0 +1,67 @@
+/**
+ * @file LoginInput.css
+ * @description Styles for the login input component.
+ * @version 1.0.0
+ */
+
+.login-input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.login-input__icon {
+  position: absolute;
+  left: 16px;
+  color: #94a3b8;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-input__field {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px 0 48px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #0f172a;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-input__field::placeholder {
+  color: #94a3b8;
+}
+
+.login-input__field:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.login-input__field:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+.login-input__toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-input__toggle:hover {
+  color: #0f172a;
+}

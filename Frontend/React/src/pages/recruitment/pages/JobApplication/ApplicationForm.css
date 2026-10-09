@@ -1,0 +1,933 @@
+/* ============================================
+   Page Container - Clean Background
+   ============================================ */
+
+.application-form-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #F5F0EB 0%,
+    #EDE8E0 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.application-form-wrapper {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   Main Container with Background Image
+   ============================================ */
+
+.application-form-container {
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+
+/* ============================================
+   Overlay for Readability
+   ============================================ */
+
+.form-container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  z-index: 0;
+  border-radius: 16px;
+}
+
+
+/* ============================================
+   Content on Top of Background
+   ============================================ */
+
+.form-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============================================
+   Header
+   ============================================ */
+
+.form-header {
+  padding: 32px 40px 20px 40px;
+
+  border-bottom: 1px solid
+    rgba(231, 226, 217, 0.5);
+}
+
+
+/* ============================================
+   Header Top
+   ============================================ */
+
+.header-top {
+  margin-bottom: 16px;
+}
+
+
+/* ============================================
+   Logo Section
+   ============================================ */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* ============================================
+   Company Logo
+   ============================================ */
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   Logo Fallback
+   ============================================ */
+
+.logo-fallback {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #6D8F8D;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* ============================================
+   Logo Text
+   ============================================ */
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* ============================================
+   Company Name
+   ============================================ */
+
+.company-name {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #2C3E50;
+
+  margin: 0;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ============================================
+   Company Tagline
+   ============================================ */
+
+.company-tagline {
+  font-size: 13px;
+
+  color: #6D8F8D;
+
+  margin: 0;
+
+  font-weight: 400;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ============================================
+   Header Bottom
+   ============================================ */
+
+.header-bottom {
+  padding-top: 4px;
+}
+
+
+/* ============================================
+   Form Title
+   ============================================ */
+
+.form-title {
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #2C3E50;
+
+  margin: 0 0 4px 0;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* ============================================
+   Form Subtitle
+   ============================================ */
+
+.form-subtitle {
+  font-size: 15px;
+
+  color: #666666;
+
+  margin: 0;
+
+  font-weight: 400;
+}
+
+
+/* ============================================
+   Stepper
+   ============================================ */
+
+.stepper-container {
+  padding: 24px 40px 20px 40px;
+
+  overflow-x: auto;
+
+  border-bottom: 1px solid
+    rgba(240, 236, 230, 0.5);
+}
+
+
+.stepper-track {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  min-width: 580px;
+}
+
+
+.step-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex: 0 1 auto;
+
+  position: relative;
+}
+
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background: #E7E2D9;
+
+  color: #666666;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+
+  border: 2px solid transparent;
+}
+
+
+.step-circle.step-active {
+  background: #6D8F8D;
+
+  color: #FFFFFF;
+
+  border-color: #6D8F8D;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(109, 143, 141, 0.15);
+}
+
+
+.step-connector {
+  flex: 1;
+
+  height: 2px;
+
+  background: #E7E2D9;
+
+  margin: 0 4px;
+
+  position: relative;
+
+  top: 20px;
+
+  min-width: 20px;
+}
+
+
+.step-label {
+  font-size: 11px;
+
+  color: #999999;
+
+  font-weight: 500;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+
+.step-label.step-label-active {
+  color: #6D8F8D;
+
+  font-weight: 600;
+}
+
+
+/* ============================================
+   Form Card
+   ============================================ */
+
+.form-card {
+  background: rgba(248, 246, 242, 0.85);
+
+  padding: 32px 40px;
+
+  margin: 0 40px 20px 40px;
+
+  border-radius: 12px;
+
+  min-height: 400px;
+
+  backdrop-filter: blur(4px);
+
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+.form-card-content {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ============================================
+   Error Message
+   ============================================ */
+
+.error-message {
+  color: #D32F2F;
+
+  padding: 10px 16px;
+
+  background: #FFEBEE;
+
+  border-radius: 8px;
+
+  margin-top: 16px;
+
+  border-left: 4px solid #D32F2F;
+}
+
+
+/* ============================================
+   Navigation Buttons
+   ============================================ */
+
+.form-navigation {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 24px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid
+    rgba(231, 226, 217, 0.5);
+}
+
+
+/* ============================================
+   Left Navigation Buttons
+   ============================================ */
+
+.form-navigation-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   Secondary Button
+   ============================================ */
+
+.form-navigation .btn-secondary {
+  background: transparent;
+
+  color: #666666;
+
+  border: 1px solid #E7E2D9;
+
+  padding: 10px 32px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  min-width: 100px;
+}
+
+
+.form-navigation .btn-secondary:hover {
+  background: #F5F0EB;
+
+  border-color: #6D8F8D;
+
+  color: #6D8F8D;
+}
+
+
+/* ============================================
+   Primary Button
+   ============================================ */
+
+.form-navigation .btn-primary {
+  background: #6D8F8D;
+
+  color: #FFFFFF;
+
+  border: none;
+
+  padding: 10px 32px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  min-width: 140px;
+}
+
+
+.form-navigation .btn-primary:hover {
+  background: #4E6868;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 16px
+    rgba(109, 143, 141, 0.25);
+}
+
+
+.form-navigation .btn-primary:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.application-form-footer {
+  padding: 20px 40px 28px 40px;
+
+  border-top: 1px solid
+    rgba(231, 226, 217, 0.5);
+}
+
+
+.footer-security {
+  font-size: 13px;
+
+  color: #888888;
+
+  text-align: center;
+
+  margin: 0 0 16px 0;
+}
+
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+.footer-copyright {
+  font-size: 13px;
+
+  color: #888888;
+
+  margin: 0;
+}
+
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+
+.footer-link {
+  font-size: 13px;
+
+  color: #6D8F8D;
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+
+.footer-link:hover {
+  color: #4E6868;
+
+  text-decoration: underline;
+}
+
+
+.footer-divider {
+  color: #E7E2D9;
+
+  user-select: none;
+}
+
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+
+/* ============================================
+   Tablet
+   ============================================ */
+
+@media (max-width: 1024px) {
+
+  .form-header {
+    padding: 28px 32px 16px 32px;
+  }
+
+
+  .stepper-container {
+    padding: 20px 32px 16px 32px;
+  }
+
+
+  .form-card {
+    padding: 28px 32px;
+
+    margin: 0 32px 16px 32px;
+  }
+
+
+  .application-form-footer {
+    padding: 16px 32px 24px 32px;
+  }
+
+}
+
+
+/* ============================================
+   Small Tablet / Large Mobile
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .application-form-page {
+    padding: 16px;
+  }
+
+
+  .form-header {
+    padding: 24px 24px 16px 24px;
+  }
+
+
+  .header-top {
+    justify-content: center;
+  }
+
+
+  .logo-section {
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .company-name {
+    font-size: 18px;
+  }
+
+
+  .company-tagline {
+    font-size: 12px;
+  }
+
+
+  .form-title {
+    font-size: 22px;
+  }
+
+
+  .form-subtitle {
+    font-size: 14px;
+  }
+
+
+  .stepper-container {
+    padding: 16px 24px 16px 24px;
+  }
+
+
+  .stepper-track {
+    min-width: 460px;
+  }
+
+
+  .step-circle {
+    width: 32px;
+    height: 32px;
+
+    font-size: 13px;
+  }
+
+
+  .step-connector {
+    top: -10px;
+  }
+
+
+  .step-label {
+    font-size: 10px;
+  }
+
+
+  .form-card {
+    padding: 24px 24px;
+
+    margin: 0 24px 16px 24px;
+
+    min-height: 320px;
+  }
+
+
+  /* ============================================
+     Mobile Navigation
+     ============================================ */
+
+  .form-navigation {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+
+  .form-navigation-left {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 12px;
+  }
+
+
+  .form-navigation-left .btn-secondary {
+    flex: 1;
+  }
+
+
+  .form-navigation > .btn-primary {
+    width: 100%;
+  }
+
+
+  .form-navigation .btn-secondary,
+  .form-navigation .btn-primary {
+    justify-content: center;
+  }
+
+
+  .application-form-footer {
+    padding: 16px 24px 20px 24px;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 8px;
+  }
+
+
+  .footer-links {
+    justify-content: center;
+  }
+
+}
+
+
+/* ============================================
+   Mobile
+   ============================================ */
+
+@media (max-width: 480px) {
+
+  .application-form-page {
+    padding: 8px;
+  }
+
+
+  .form-header {
+    padding: 20px 16px 12px 16px;
+  }
+
+
+  .header-top {
+    justify-content: center;
+  }
+
+
+ .logo-section {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.logo-text {
+  align-items: center;
+}
+
+
+  .company-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .company-name {
+    font-size: 16px;
+  }
+
+
+  .company-tagline {
+    font-size: 11px;
+  }
+
+
+  .form-title {
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+
+  .form-subtitle {
+    font-size: 13px;
+
+    text-align: center;
+  }
+
+
+  .stepper-container {
+    padding: 12px 16px 12px 16px;
+  }
+
+
+  .stepper-track {
+    min-width: 320px;
+  }
+
+
+  .step-circle {
+    width: 28px;
+    height: 28px;
+
+    font-size: 11px;
+  }
+
+
+  .step-connector {
+    top: -8px;
+
+    margin: 0 2px;
+  }
+
+
+  .step-label {
+    font-size: 8px;
+  }
+
+
+  .form-card {
+    padding: 16px 16px;
+
+    margin: 0 16px 12px 16px;
+
+    min-height: 260px;
+
+    border-radius: 8px;
+  }
+
+
+  /* ============================================
+     Mobile Navigation
+     ============================================ */
+
+  .form-navigation {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+
+  .form-navigation-left {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 8px;
+  }
+
+
+  .form-navigation-left .btn-secondary {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 10px 16px;
+  }
+
+
+  .form-navigation > .btn-primary {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .application-form-footer {
+    padding: 12px 16px 16px 16px;
+  }
+
+
+  .footer-security {
+    font-size: 12px;
+  }
+
+
+  .footer-copyright,
+  .footer-link {
+    font-size: 12px;
+  }
+
+}

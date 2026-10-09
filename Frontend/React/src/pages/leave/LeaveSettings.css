@@ -1,0 +1,544 @@
+/* =========================================================
+   LEAVE SETTINGS PAGE
+   ========================================================= */
+
+.leave-settings-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  color: #14213d;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f8fafc;
+}
+
+.leave-settings-page *,
+.leave-settings-page *::before,
+.leave-settings-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT CONTAINER
+   ========================================================= */
+
+.leave-settings-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 8px 24px 32px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.leave-settings-card {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8f0;
+  border-radius: 12px;
+
+  box-shadow:
+    0 2px 5px rgba(15, 23, 42, 0.015),
+    0 8px 24px rgba(15, 23, 42, 0.025);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.leave-settings-card__header {
+  display: flex;
+  align-items: center;
+
+  min-height: 76px;
+
+  gap: 12px;
+
+  padding: 15px 19px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8edf3;
+}
+
+
+/* =========================================================
+   HEADER ICON
+   ========================================================= */
+
+.leave-settings-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  color: #2563eb;
+
+  background: #eaf3ff;
+
+  border: 1px solid #d9e9ff;
+  border-radius: 11px;
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+   ========================================================= */
+
+.leave-settings-card__header > div:last-child {
+  min-width: 0;
+}
+
+.leave-settings-card__header h1 {
+  margin: 0 0 3px;
+
+  color: #10244b;
+
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+.leave-settings-card__header p {
+  margin: 0;
+
+  color: #667b97;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.leave-settings-form {
+  width: 100%;
+
+  padding: 24px 19px 22px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.leave-settings-field {
+  width: 100%;
+
+  margin-bottom: 18px;
+}
+
+.leave-settings-field label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #445d79;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+   ========================================================= */
+
+.leave-settings-field select,
+.leave-settings-field input {
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+
+  padding: 0 13px;
+
+  color: #30435e;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  outline: none;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ee;
+  border-radius: 7px;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.leave-settings-field select {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   NUMBER INPUT
+   ========================================================= */
+
+.leave-settings-field input[type="number"] {
+  appearance: textfield;
+}
+
+.leave-settings-field input[type="number"]::-webkit-inner-spin-button,
+.leave-settings-field input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+
+/* =========================================================
+   INPUT HOVER
+   ========================================================= */
+
+.leave-settings-field select:hover:not(:disabled),
+.leave-settings-field input:hover:not(:disabled) {
+  border-color: #c5d1df;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.leave-settings-field select:focus,
+.leave-settings-field input:focus {
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.leave-settings-field select:disabled,
+.leave-settings-field input:disabled {
+  color: #8b9aab;
+
+  background: #f8fafc;
+
+  cursor: not-allowed;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   LOADING MESSAGE
+   ========================================================= */
+
+.leave-settings-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 160px;
+
+  padding: 30px 20px;
+
+  color: #8090a5;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.leave-settings-error {
+  width: 100%;
+
+  margin: 2px 0 16px;
+
+  padding: 11px 13px;
+
+  color: #b42318;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  background: #fff5f5;
+
+  border: 1px solid #ffd6d6;
+  border-radius: 7px;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.leave-settings-success {
+  width: 100%;
+
+  margin: 2px 0 16px;
+
+  padding: 11px 13px;
+
+  color: #087443;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  background: #f0fdf4;
+
+  border: 1px solid #ccefd9;
+  border-radius: 7px;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.leave-settings-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 145px;
+  height: 42px;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: #2563eb;
+
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.leave-settings-save:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+
+  box-shadow:
+    0 7px 16px rgba(37, 99, 235, 0.22);
+
+  transform: translateY(-1px);
+}
+
+.leave-settings-save:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.leave-settings-save:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.leave-settings-save:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   1350px
+   ========================================================= */
+
+@media (max-width: 1350px) {
+  .leave-settings-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .leave-settings-container {
+    padding: 12px 15px 26px;
+  }
+
+  .leave-settings-card__header {
+    min-height: 70px;
+
+    padding: 14px 16px;
+  }
+
+  .leave-settings-form {
+    padding: 20px 16px;
+  }
+
+  .leave-settings-save {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .leave-settings-container {
+    padding:
+      10px
+      11px
+      22px;
+  }
+
+  .leave-settings-card {
+    border-radius: 10px;
+  }
+
+  .leave-settings-card__header {
+    align-items: flex-start;
+
+    padding: 14px;
+  }
+
+  .leave-settings-card__icon {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+  }
+
+  .leave-settings-card__header h1 {
+    font-size: 20px;
+  }
+
+  .leave-settings-card__header p {
+    font-size: 11px;
+  }
+
+  .leave-settings-form {
+    padding: 18px 14px 20px;
+  }
+
+  .leave-settings-field {
+    margin-bottom: 16px;
+  }
+
+  .leave-settings-field label {
+    font-size: 11px;
+  }
+
+  .leave-settings-field select,
+  .leave-settings-field input {
+    height: 40px;
+
+    font-size: 12px;
+  }
+
+  .leave-settings-error,
+  .leave-settings-success {
+    font-size: 10px;
+  }
+
+  .leave-settings-save {
+    height: 42px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .leave-settings-container {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .leave-settings-card__header {
+    padding: 13px;
+  }
+
+  .leave-settings-form {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-settings-save,
+  .leave-settings-field select,
+  .leave-settings-field input {
+    transition: none;
+  }
+}

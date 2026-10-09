@@ -1,0 +1,495 @@
+.payroll-settings-page {
+  min-height: 100%;
+  padding: 28px 32px 40px;
+  background: #f8f7f2;
+  color: #15343c;
+  font-family: "Inter", sans-serif;
+}
+
+.payroll-settings-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.payroll-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #789094;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.payroll-settings-header h1 {
+  margin: 0;
+  color: #15343c;
+  font-size: 31px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.payroll-settings-header p {
+  margin: 8px 0 0;
+  color: #73878a;
+  font-size: 14px;
+}
+
+
+.payroll-settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.8fr);
+  align-items: start;
+  gap: 22px;
+}
+
+
+.company-settings-card,
+.company-preview-card {
+  border: 1px solid #e7e7df;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 24px rgba(38, 65, 65, 0.045);
+}
+
+
+.company-settings-card {
+  padding: 27px;
+}
+
+.company-preview-card {
+  padding: 27px;
+  background: #f1f5f1;
+}
+
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eceee8;
+}
+
+.settings-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e5eeea;
+  color: #285e60;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  color: #17343c;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.settings-card-header p {
+  margin: 5px 0 0;
+  color: #789094;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+.company-logo-section {
+  margin-top: 25px;
+  margin-bottom: 23px;
+}
+
+.settings-label,
+.settings-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #203b42;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.settings-form-group label span {
+  margin-left: 3px;
+  color: #d45e55;
+}
+
+
+.logo-upload-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px;
+  gap: 18px;
+  align-items: center;
+}
+
+
+.logo-upload-box {
+  display: flex;
+  min-height: 142px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  border: 1.5px dashed #becdca;
+  border-radius: 13px;
+  background: #fbfcf9;
+  color: #376b6d;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.logo-upload-box:hover {
+  border-color: #557f7d;
+  background: #f2f7f3;
+}
+
+.logo-upload-box strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.logo-upload-box span {
+  color: #84999b;
+  font-size: 10px;
+}
+
+
+.logo-preview-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.company-logo-preview,
+.logo-empty-state {
+  display: flex;
+  width: 94px;
+  height: 94px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e9e4;
+  border-radius: 14px;
+  background: #f1f5f1;
+  color: #6e8f8e;
+  object-fit: contain;
+}
+
+.logo-preview-container span {
+  color: #688083;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.remove-logo-button {
+  position: absolute;
+  top: -7px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e6d7d2;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #b05d55;
+  cursor: pointer;
+}
+
+
+.settings-form-group {
+  margin-bottom: 21px;
+}
+
+.settings-form-group input,
+.settings-form-group textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #dce3df;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #29444a;
+  font-family: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-form-group input {
+  height: 44px;
+  padding: 0 14px;
+}
+
+.settings-form-group textarea {
+  min-height: 100px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.settings-form-group input::placeholder,
+.settings-form-group textarea::placeholder {
+  color: #a4b1b0;
+}
+
+.settings-form-group input:focus,
+.settings-form-group textarea:focus {
+  border-color: #6e9692;
+  box-shadow: 0 0 0 3px rgba(110, 150, 146, 0.1);
+}
+
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  color: #668a89;
+  transform: translateY(-50%);
+}
+
+.input-with-icon input {
+  padding-left: 41px;
+}
+
+
+.settings-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 9px;
+}
+
+.settings-cancel-button,
+.settings-save-button {
+  display: inline-flex;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 23px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-cancel-button {
+  border: 1px solid #b6c8c6;
+  background: #ffffff;
+  color: #35575c;
+}
+
+.settings-save-button {
+  border: 1px solid #285d5e;
+  background: #285f60;
+  color: #ffffff;
+}
+
+.settings-save-button:hover {
+  background: #214f50;
+}
+
+.settings-save-button:disabled,
+.settings-cancel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+.preview-company-content {
+  padding: 27px 8px 20px;
+  text-align: center;
+}
+
+.preview-logo-wrapper {
+  display: flex;
+  width: 88px;
+  height: 88px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 17px;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #557f7d;
+  overflow: hidden;
+}
+
+.preview-company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview-company-content h3 {
+  margin: 0 auto 20px;
+  color: #1b3c43;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.preview-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 10px 0;
+  color: #678286;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.preview-detail svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #527c7a;
+}
+
+
+.preview-divider {
+  height: 1px;
+  margin: 0 8px;
+  background: #d5e1dc;
+}
+
+.preview-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 21px 8px;
+  color: #527576;
+}
+
+.preview-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.preview-note p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+.preview-document {
+  min-height: 205px;
+  padding: 23px;
+  border: 1px solid #e1e9e4;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.preview-document-title {
+  margin-bottom: 23px;
+  color: #d9e2e2;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.preview-document-line {
+  width: 55%;
+  height: 10px;
+  margin-bottom: 13px;
+  border-radius: 5px;
+  background: #eef3f1;
+}
+
+.preview-document-line.wide {
+  width: 100%;
+}
+
+.preview-document-line.medium {
+  width: 75%;
+}
+
+
+.payroll-alert {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.payroll-alert-error {
+  border: 1px solid #f0d4d0;
+  background: #fff5f3;
+  color: #a54f47;
+}
+
+.payroll-alert-success {
+  border: 1px solid #cce4d4;
+  background: #f0faf3;
+  color: #36764e;
+}
+
+.payroll-settings-loading {
+  padding: 50px;
+  color: #527576;
+  font-size: 14px;
+}
+
+
+@media (max-width: 1100px) {
+
+  .payroll-settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .company-preview-card {
+    max-width: none;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .payroll-settings-page {
+    padding: 20px 15px 30px;
+  }
+
+  .payroll-settings-header h1 {
+    font-size: 25px;
+  }
+
+  .company-settings-card,
+  .company-preview-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .logo-upload-row {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-preview-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .settings-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-cancel-button,
+  .settings-save-button {
+    width: 100%;
+  }
+
+}

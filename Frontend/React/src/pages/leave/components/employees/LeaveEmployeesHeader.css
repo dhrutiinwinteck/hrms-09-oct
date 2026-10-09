@@ -1,0 +1,577 @@
+/* =========================================================
+   EMPLOYEES HEADER
+   Compact Enterprise HRMS Header
+   ========================================================= */
+
+.leave-employees-header,
+.leave-employees-header *,
+.leave-employees-header *::before,
+.leave-employees-header *::after {
+  box-sizing: border-box;
+}
+
+.leave-employees-header {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.leave-employees-header__content {
+  width: 100%;
+  min-width: 0;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin: 0;
+  padding: 12px 24px;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.leave-employees-header__text {
+  flex: 1 1 auto;
+
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE ROW
+   ========================================================= */
+
+.leave-employees-header__title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE ICON
+   ========================================================= */
+
+.leave-employees-header__title-icon {
+  width: 21px;
+  height: 21px;
+
+  flex: 0 0 21px;
+
+  color: #075968;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.leave-employees-header__title {
+  margin: 0;
+  padding: 0;
+
+  color: #102a43;
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.leave-employees-header__description {
+  max-width: 520px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #60758a;
+
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.leave-employees-header__right {
+  flex: 0 0 auto;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 13px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   EMPLOYEE VISUAL
+   ========================================================= */
+
+.leave-employees-header__employee-visual {
+  position: relative;
+
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* =========================================================
+   VISUAL CIRCLE
+   ========================================================= */
+
+.leave-employees-header__visual-circle {
+  position: relative;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #075968;
+
+  background: #eef8f8;
+
+  border: 1px solid #d4eaea;
+  border-radius: 50%;
+}
+
+.leave-employees-header__visual-circle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -4px;
+
+  border: 1px solid rgba(7, 89, 104, 0.07);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.leave-employees-header__visual-circle svg {
+  width: 23px;
+  height: 23px;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+   ========================================================= */
+
+.leave-employees-header__visual-dot {
+  position: absolute;
+  z-index: 3;
+
+  display: block;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.leave-employees-header__visual-dot--top {
+  top: 2px;
+  right: 2px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #75bda1;
+}
+
+.leave-employees-header__visual-dot--bottom {
+  bottom: 3px;
+  left: 2px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #075968;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.leave-employees-header__breadcrumb {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #102a43;
+
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BREADCRUMB PARENT
+   ========================================================= */
+
+.leave-employees-header__breadcrumb-parent {
+  color: #687e8f;
+
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: color 160ms ease;
+}
+
+.leave-employees-header__breadcrumb-parent:hover {
+  color: #075968;
+}
+
+
+/* =========================================================
+   BREADCRUMB ICON
+   ========================================================= */
+
+.leave-employees-header__breadcrumb-icon {
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 13px;
+
+  color: #9aa8b5;
+}
+
+
+/* =========================================================
+   CURRENT PAGE
+   ========================================================= */
+
+.leave-employees-header__breadcrumb-current {
+  color: #31485b;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   KEYBOARD / ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-employees-header__breadcrumb-parent {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1279px
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .leave-employees-header__content {
+    min-height: 74px;
+
+    gap: 20px;
+
+    padding: 11px 20px;
+  }
+
+  .leave-employees-header__title {
+    font-size: 21px;
+  }
+
+  .leave-employees-header__description {
+    max-width: 470px;
+
+    font-size: 11px;
+  }
+
+  .leave-employees-header__right {
+    gap: 11px;
+  }
+
+  .leave-employees-header__employee-visual {
+    width: 43px;
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+  .leave-employees-header__visual-circle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .leave-employees-header__visual-circle svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .leave-employees-header__breadcrumb {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .leave-employees-header__content {
+    min-height: 70px;
+
+    gap: 16px;
+
+    padding: 10px 16px;
+  }
+
+  .leave-employees-header__title-row {
+    gap: 6px;
+
+    margin-bottom: 3px;
+  }
+
+  .leave-employees-header__title {
+    font-size: 20px;
+  }
+
+  .leave-employees-header__title-icon {
+    width: 19px;
+    height: 19px;
+
+    flex-basis: 19px;
+  }
+
+  .leave-employees-header__description {
+    max-width: 400px;
+
+    font-size: 10.5px;
+  }
+
+  .leave-employees-header__employee-visual {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .leave-employees-header__visual-circle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .leave-employees-header__visual-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .leave-employees-header__breadcrumb {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .leave-employees-header__content {
+    min-height: 66px;
+
+    gap: 12px;
+
+    padding: 9px 14px;
+  }
+
+  .leave-employees-header__title {
+    font-size: 19px;
+  }
+
+  .leave-employees-header__title-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-basis: 18px;
+  }
+
+  .leave-employees-header__description {
+    max-width: 320px;
+
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .leave-employees-header__right {
+    gap: 8px;
+  }
+
+  .leave-employees-header__employee-visual {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .leave-employees-header__visual-circle {
+    width: 33px;
+    height: 33px;
+  }
+
+  .leave-employees-header__visual-circle svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .leave-employees-header__visual-circle::before {
+    inset: -3px;
+  }
+
+  .leave-employees-header__visual-dot--top {
+    width: 4px;
+    height: 4px;
+  }
+
+  .leave-employees-header__visual-dot--bottom {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .leave-employees-header__content {
+    min-height: 62px;
+
+    gap: 10px;
+
+    padding: 8px 12px;
+  }
+
+  .leave-employees-header__title {
+    font-size: 18px;
+
+    letter-spacing: -0.2px;
+  }
+
+  .leave-employees-header__description {
+    max-width: 260px;
+
+    font-size: 9.5px;
+  }
+
+  .leave-employees-header__employee-visual {
+    width: 35px;
+    height: 35px;
+
+    flex-basis: 35px;
+  }
+
+  .leave-employees-header__visual-circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .leave-employees-header__visual-circle svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .leave-employees-header__content {
+    min-height: 60px;
+
+    padding: 8px 10px;
+  }
+
+  .leave-employees-header__title {
+    font-size: 17px;
+  }
+
+  .leave-employees-header__description {
+    max-width: 100%;
+
+    font-size: 9.5px;
+  }
+
+  .leave-employees-header__right {
+    display: none;
+  }
+}

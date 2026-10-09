@@ -1,0 +1,108 @@
+/* ============================================================
+   DESIGNATION STATISTICS
+============================================================ */
+
+.designation-statistics {
+  display: grid;
+
+  /*
+   * Desktop:
+   * Keep cards compact and avoid unnecessary
+   * empty space on the right side.
+   */
+  grid-template-columns: repeat(4, 280px);
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  gap: 10px;
+
+  justify-content: start;
+  align-items: stretch;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+   1281px+
+============================================================ */
+
+@media (min-width: 1281px) {
+  .designation-statistics {
+    grid-template-columns: repeat(4, 280px);
+
+    gap: 10px;
+  }
+}
+
+
+/* ============================================================
+   DESKTOP
+   1101px - 1280px
+
+   Cards automatically share available width here
+   so they don't overflow.
+============================================================ */
+
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .designation-statistics {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   769px - 1100px
+============================================================ */
+
+@media (max-width: 1100px) {
+  .designation-statistics {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+
+    gap: 12px;
+
+    justify-content: stretch;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   <= 600px
+============================================================ */
+
+@media (max-width: 600px) {
+  .designation-statistics {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 10px;
+
+    justify-content: stretch;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   <= 380px
+============================================================ */
+
+@media (max-width: 380px) {
+  .designation-statistics {
+    gap: 8px;
+  }
+}

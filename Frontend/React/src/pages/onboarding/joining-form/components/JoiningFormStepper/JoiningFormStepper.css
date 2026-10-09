@@ -1,0 +1,196 @@
+/* ============================================================
+   JOINING FORM STEPPER
+   ============================================================ */
+
+.joining-form-stepper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0.25rem 0.75rem;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================================
+   STEPPER TRACK
+   ============================================================ */
+
+.stepper-track {
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  min-width: 100%;
+}
+
+/* ============================================================
+   STEPPER ITEM
+   ============================================================ */
+
+.stepper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 125px;
+  min-width: 125px;
+}
+
+/* ============================================================
+   STEP CIRCLE AND CONNECTING LINE
+   ============================================================ */
+
+.stepper-step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+}
+
+.stepper-circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: #e8edec;
+  color: #71808a;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stepper-circle.active {
+  background: var(--joining-primary, #176f73);
+  color: #ffffff;
+  border-color: var(--joining-primary, #176f73);
+}
+
+.stepper-circle.completed {
+  background: var(--joining-primary, #176f73);
+  color: #ffffff;
+  border-color: var(--joining-primary, #176f73);
+}
+
+.stepper-line {
+  flex: 1;
+  height: 2px;
+  background: #dce1df;
+  margin: 0 8px;
+  transition: background-color 0.2s ease;
+}
+
+.stepper-line.completed-line {
+  background: var(--joining-primary, #176f73);
+}
+
+/* ============================================================
+   STEPPER LABEL
+   ============================================================ */
+
+.stepper-label {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  margin-top: 12px;
+  padding: 0 3px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #71808a;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-weight: 500;
+}
+
+.stepper-label.active-label {
+  color: var(--joining-text, #18364a);
+  font-weight: 600;
+}
+
+.stepper-label.completed-label {
+  color: var(--joining-primary, #176f73);
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .stepper-item {
+    flex-basis: 120px;
+    min-width: 120px;
+  }
+
+  .stepper-label {
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .joining-form-stepper {
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.125rem 0.75rem;
+  }
+
+  .stepper-track {
+    min-width: max-content;
+  }
+
+  .stepper-item {
+    flex-basis: 110px;
+    min-width: 110px;
+  }
+
+  .stepper-circle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 13px;
+  }
+
+  .stepper-step {
+    height: 36px;
+  }
+
+  .stepper-line {
+    margin: 0 6px;
+  }
+
+  .stepper-label {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.35;
+    min-height: 30px;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .stepper-item {
+    flex-basis: 100px;
+    min-width: 100px;
+  }
+
+  .stepper-label {
+    font-size: 10px;
+  }
+
+  .stepper-line {
+    margin: 0 5px;
+  }
+}

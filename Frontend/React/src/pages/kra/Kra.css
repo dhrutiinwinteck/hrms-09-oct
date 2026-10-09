@@ -1,0 +1,578 @@
+/* =========================================================
+   KRA PAGE
+   Employee KRA Score Module
+   Enterprise HRMS
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE ROOT
+   ========================================================= */
+
+.kra-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  background: #f7f9f8;
+  color: #182522;
+}
+
+
+/* =========================================================
+   MAIN CONTENT CONTAINER
+   ========================================================= */
+
+.kra-page-container {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+}
+
+
+/* =========================================================
+   DIRECT CHILD SAFETY
+   ========================================================= */
+
+.kra-page-container > * {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE SECTION
+   ========================================================= */
+
+.kra-page-container > .kra-score-table-card {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   PAGE PAGINATION
+   ========================================================= */
+
+.kra-page-pagination {
+  width: 100%;
+  min-width: 0;
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 14px 20px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 10px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.02),
+    0 3px 8px rgba(15, 45, 39, 0.025);
+}
+
+
+/* =========================================================
+   PAGINATION INFORMATION
+   ========================================================= */
+
+.kra-page-pagination-info {
+  margin: 0;
+  padding: 0;
+
+  color: #40534e;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAGINATION CONTROLS
+   ========================================================= */
+
+.kra-page-pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   PAGINATION BUTTON
+   ========================================================= */
+
+.kra-page-pagination-btn {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 36px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 7px;
+
+  color: #40534e;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.025);
+
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+
+/* =========================================================
+   PAGINATION ICON
+   ========================================================= */
+
+.kra-page-pagination-btn svg {
+  width: 16px;
+  height: 16px;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  stroke-width: 1.8;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PAGINATION HOVER
+   ========================================================= */
+
+.kra-page-pagination-btn:hover:not(
+  :disabled,
+  .kra-page-pagination-btn--active
+) {
+  background: #f1f7f5;
+
+  border-color: #b9d3cc;
+
+  color: #087f70;
+
+  box-shadow:
+    0 2px 5px rgba(15, 45, 39, 0.06);
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.kra-page-pagination-btn--active {
+  background: #245e61;
+  border-color: #245e61;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 3px 7px rgba(36, 94, 97, 0.18);
+
+  cursor: default;
+}
+
+
+/* Protect against global button CSS */
+.kra-page-pagination-controls
+  .kra-page-pagination-btn.kra-page-pagination-btn--active {
+  background-color: #245e61;
+  border-color: #245e61;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.kra-page-pagination-btn:disabled {
+  background: #f6f8f7;
+
+  border-color: #e3e9e7;
+
+  color: #aab6b2;
+
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   PAGINATION BUTTON ACTIVE STATE
+   ========================================================= */
+
+.kra-page-pagination-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+
+/* =========================================================
+   PAGINATION ACCESSIBILITY
+   ========================================================= */
+
+.kra-page-pagination-btn:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.24);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MODAL BACKDROP
+   Temporary support until KraScoreModal is connected
+   ========================================================= */
+
+.kra-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 999;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  background: rgba(15, 35, 31, 0.35);
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1440px
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-page-container {
+    padding: 15px 20px 18px;
+
+    gap: 3px;
+  }
+
+  .kra-page-pagination {
+    padding: 14px 24px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-page-container {
+    padding: 18px;
+
+    gap: 15px;
+  }
+
+  .kra-page-pagination {
+    padding: 13px 18px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-page-container {
+    padding: 16px;
+
+    gap: 14px;
+  }
+
+  .kra-page-pagination {
+    min-height: 60px;
+
+    padding: 12px 16px;
+  }
+
+  .kra-page-pagination-btn {
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-page-container {
+    padding: 14px;
+
+    gap: 13px;
+  }
+
+  .kra-page-pagination {
+    min-height: auto;
+
+    gap: 14px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+  }
+
+  .kra-page-pagination-info {
+    font-size: 11.5px;
+  }
+
+  .kra-page-pagination-controls {
+    gap: 6px;
+  }
+
+  .kra-page-pagination-btn {
+    width: 33px;
+    min-width: 33px;
+    height: 33px;
+
+    flex-basis: 33px;
+
+    border-radius: 6px;
+  }
+
+  .kra-page-pagination-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-page-container {
+    padding: 12px;
+
+    gap: 12px;
+  }
+
+  .kra-page-pagination {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .kra-page-pagination-info {
+    width: 100%;
+
+    white-space: normal;
+  }
+
+  .kra-page-pagination-controls {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+
+  .kra-page-pagination-btn {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+
+    flex-basis: 32px;
+
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-page-container {
+    padding: 10px;
+
+    gap: 10px;
+  }
+
+  .kra-page-pagination {
+    padding: 10px;
+
+    gap: 10px;
+  }
+
+  .kra-page-pagination-info {
+    font-size: 11px;
+  }
+
+  .kra-page-pagination-controls {
+    gap: 5px;
+  }
+
+  .kra-page-pagination-btn {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+
+    flex-basis: 30px;
+
+    font-size: 11px;
+  }
+
+  .kra-page-pagination-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-page *,
+  .kra-page *::before,
+  .kra-page *::after {
+    scroll-behavior: auto;
+  }
+
+  .kra-page-pagination-btn {
+    transition: none;
+  }
+
+  .kra-page-pagination-btn:active:not(:disabled) {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   KRA SCORE LIST SECTION
+   ========================================================= */
+
+.kra-score-list-section {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.02),
+    0 4px 12px rgba(15, 45, 39, 0.03);
+}
+
+
+/* Prevent double outer card styling if KraScoreTable
+   already provides its own card container */
+.kra-score-list-section .kra-score-table-card {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* Pagination belongs to the same table card */
+.kra-score-list-section .kra-page-pagination {
+  border: 0;
+  border-top: 1px solid #e4ebe8;
+
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* Pagination number emphasis */
+.kra-page-pagination-info strong {
+  color: #182522;
+  font-weight: 600;
+}

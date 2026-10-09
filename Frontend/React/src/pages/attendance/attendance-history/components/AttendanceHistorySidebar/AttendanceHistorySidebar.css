@@ -1,0 +1,13 @@
+/* src/pages/attendance/attendance-history/components/AttendanceHistorySidebar/AttendanceHistorySidebar.css */
+
+.attendance-history-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .attendance-history-sidebar {
+    margin-top: 16px;
+  }
+}

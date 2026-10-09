@@ -1,0 +1,943 @@
+/* =========================================================
+   LEAVE BALANCE SUMMARY
+   Enterprise HRMS Theme
+   ========================================================= */
+
+.leave-balance,
+.leave-balance *,
+.leave-balance *::before,
+.leave-balance *::after {
+  box-sizing: border-box;
+}
+
+.leave-balance {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   YEARLY LEAVE SUMMARY
+   ========================================================= */
+
+.leave-balance__yearly-grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+
+/* =========================================================
+   YEARLY CARD
+   ========================================================= */
+
+.leave-balance__yearly-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 13px 18px;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.018),
+    0 4px 12px rgba(15, 23, 42, 0.028);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+/* =========================================================
+   YEARLY TOP ACCENT
+   ========================================================= */
+
+.leave-balance__yearly-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   YEARLY PAID LEAVE
+   ========================================================= */
+
+.leave-balance__yearly-card--paid {
+  background: #e1f5ed;
+
+  border: 1px solid #c9ebdf;
+}
+
+.leave-balance__yearly-card--paid::before {
+  background: #10a978;
+}
+
+
+/* =========================================================
+   YEARLY CASUAL LEAVE
+   ========================================================= */
+
+.leave-balance__yearly-card--casual {
+  background: #fff1df;
+
+  border: 1px solid #f5dfc4;
+}
+
+.leave-balance__yearly-card--casual::before {
+  background: #e9a23b;
+}
+
+
+/* =========================================================
+   YEARLY VALUE
+   ========================================================= */
+
+.leave-balance__yearly-value {
+  margin: 0 0 4px;
+  padding: 0;
+
+  color: #172b27;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   YEARLY TITLE
+   ========================================================= */
+
+.leave-balance__yearly-title {
+  margin: 0;
+  padding: 0;
+
+  color: #40504c;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   YEARLY HOVER
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .leave-balance__yearly-card:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 5px 16px rgba(15, 23, 42, 0.055);
+  }
+}
+
+
+/* =========================================================
+   CURRENT BALANCE GRID
+   ========================================================= */
+
+.leave-balance__grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e9ef;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.018),
+    0 4px 12px rgba(15, 23, 42, 0.028);
+}
+
+
+/* =========================================================
+   INDIVIDUAL BALANCE CARD
+   ========================================================= */
+
+.leave-balance__card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 16px 18px;
+
+  border-right: 1px solid #e5eaf0;
+
+  overflow: hidden;
+
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+/* =========================================================
+   TOP ACCENT
+   ========================================================= */
+
+.leave-balance__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   LAST CARD
+   ========================================================= */
+
+.leave-balance__card:last-child {
+  border-right: 0;
+}
+
+
+/* =========================================================
+   CARD BACKGROUNDS
+   ========================================================= */
+
+.leave-balance__card--paid {
+  background: #fbfefd;
+}
+
+.leave-balance__card--casual {
+  background: #fffdf9;
+}
+
+.leave-balance__card--comp {
+  background: #fdfcff;
+}
+
+
+/* =========================================================
+   ACCENT COLORS
+   ========================================================= */
+
+.leave-balance__card--paid::before {
+  background: #10a978;
+}
+
+.leave-balance__card--casual::before {
+  background: #e9a23b;
+}
+
+.leave-balance__card--comp::before {
+  background: #7965c9;
+}
+
+
+/* =========================================================
+   ICON BASE
+   ========================================================= */
+
+.leave-balance__icon {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+/* =========================================================
+   ICON INNER RING
+   ========================================================= */
+
+.leave-balance__icon::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 4px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ICON SVG
+   ========================================================= */
+
+.leave-balance__icon svg {
+  position: relative;
+
+  z-index: 1;
+
+  width: 19px;
+  height: 19px;
+}
+
+
+/* =========================================================
+   PAID ICON
+   ========================================================= */
+
+.leave-balance__icon--paid {
+  color: #07875f;
+
+  background: #e1f5ed;
+
+  box-shadow:
+    0 3px 9px rgba(16, 169, 120, 0.08);
+}
+
+
+/* =========================================================
+   CASUAL ICON
+   ========================================================= */
+
+.leave-balance__icon--casual {
+  color: #d68117;
+
+  background: #fff1df;
+
+  box-shadow:
+    0 3px 9px rgba(233, 162, 59, 0.08);
+}
+
+
+/* =========================================================
+   COMP OFF ICON
+   ========================================================= */
+
+.leave-balance__icon--comp {
+  color: #6752b8;
+
+  background: #eeeafd;
+
+  box-shadow:
+    0 3px 9px rgba(121, 101, 201, 0.08);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.leave-balance__content {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.leave-balance__title {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 3px;
+
+  margin: 0 0 7px;
+  padding: 0;
+
+  color: #40504c;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   SHORT NAME
+   ========================================================= */
+
+.leave-balance__short-name {
+  margin: 0;
+  padding: 0;
+
+  color: #697873;
+
+  font: inherit;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   AVAILABLE
+   ========================================================= */
+
+.leave-balance__available {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin: 0 0 4px;
+  padding: 0;
+
+  color: #536a88;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.leave-balance__available strong {
+  color: #29466d;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   USED
+   ========================================================= */
+
+.leave-balance__used {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #536a88;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.leave-balance__used strong {
+  color: #29466d;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .leave-balance__card:hover {
+    z-index: 2;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 5px 16px rgba(15, 23, 42, 0.045);
+  }
+
+  .leave-balance__card:hover .leave-balance__icon {
+    transform: translateY(-1px);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1600px
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .leave-balance__yearly-card {
+    min-height: 86px;
+  }
+
+  .leave-balance__yearly-value {
+    font-size: 25px;
+  }
+
+  .leave-balance__yearly-title {
+    font-size: 11.5px;
+  }
+
+  .leave-balance__card {
+    min-height: 122px;
+
+    gap: 13px;
+
+    padding:
+      16px
+      20px;
+  }
+
+  .leave-balance__icon {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+  }
+
+  .leave-balance__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .leave-balance__title {
+    font-size: 11.5px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1279px
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .leave-balance__yearly-grid {
+    gap: 14px;
+  }
+
+  .leave-balance__yearly-card {
+    min-height: 80px;
+
+    padding:
+      12px
+      16px;
+  }
+
+  .leave-balance__yearly-value {
+    font-size: 23px;
+  }
+
+  .leave-balance__card {
+    min-height: 112px;
+
+    gap: 10px;
+
+    padding:
+      14px
+      14px;
+  }
+
+  .leave-balance__icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .leave-balance__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .leave-balance__title {
+    font-size: 10.5px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 9.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .leave-balance__yearly-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .leave-balance__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .leave-balance__card {
+    min-height: 108px;
+
+    gap: 12px;
+
+    padding:
+      14px
+      16px;
+
+    border-bottom: 1px solid #e5eaf0;
+  }
+
+  .leave-balance__card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .leave-balance__card:nth-child(3) {
+    border-bottom: 0;
+  }
+
+  .leave-balance__card:last-child {
+    border-bottom: 0;
+  }
+
+  .leave-balance__icon {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+  .leave-balance__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .leave-balance__title {
+    font-size: 10.5px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 9.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 560px
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .leave-balance__yearly-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+  }
+
+  .leave-balance__yearly-card {
+    min-height: 76px;
+
+    border-radius: 7px;
+  }
+
+  .leave-balance__yearly-value {
+    font-size: 22px;
+  }
+
+  .leave-balance__yearly-title {
+    font-size: 10.5px;
+  }
+
+  .leave-balance__grid {
+    grid-template-columns: 1fr;
+
+    border-radius: 8px;
+  }
+
+  .leave-balance__card {
+    min-height: 88px;
+
+    gap: 11px;
+
+    padding:
+      12px
+      14px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #e5eaf0;
+  }
+
+  .leave-balance__card:nth-child(2),
+  .leave-balance__card:nth-child(3) {
+    border-bottom: 1px solid #e5eaf0;
+  }
+
+  .leave-balance__card:last-child {
+    border-bottom: 0;
+  }
+
+  .leave-balance__icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .leave-balance__icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .leave-balance__title {
+    margin-bottom: 5px;
+
+    font-size: 10.5px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 390px
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .leave-balance__yearly-card {
+    min-height: 72px;
+
+    padding:
+      11px
+      12px;
+  }
+
+  .leave-balance__yearly-value {
+    font-size: 21px;
+  }
+
+  .leave-balance__yearly-title {
+    font-size: 10px;
+  }
+
+  .leave-balance__card {
+    min-height: 82px;
+
+    gap: 10px;
+
+    padding:
+      11px
+      12px;
+  }
+
+  .leave-balance__icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .leave-balance__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .leave-balance__title {
+    font-size: 10px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+  .leave-balance__yearly-value {
+    font-size: 20px;
+  }
+
+  .leave-balance__yearly-title {
+    font-size: 9.5px;
+  }
+
+  .leave-balance__card {
+    min-height: 78px;
+
+    gap: 9px;
+
+    padding:
+      10px
+      11px;
+  }
+
+  .leave-balance__icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .leave-balance__icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .leave-balance__title {
+    font-size: 9.5px;
+  }
+
+  .leave-balance__available,
+  .leave-balance__used {
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-balance__card,
+  .leave-balance__icon,
+  .leave-balance__yearly-card {
+    transition: none;
+  }
+
+  .leave-balance__card:hover .leave-balance__icon {
+    transform: none;
+  }
+
+  .leave-balance__yearly-card:hover {
+    transform: none;
+  }
+}

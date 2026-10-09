@@ -1,0 +1,270 @@
+/* =========================================================
+   JOINING APPROVAL PAGINATION
+   ========================================================= */
+
+.joining-approval-pagination {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 11px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 1px solid #eef1f4;
+}
+
+/* =========================================================
+   PAGINATION INFO
+   ========================================================= */
+
+.pagination-info {
+  min-width: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   PAGINATION CONTROLS
+   ========================================================= */
+
+.pagination-controls {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+}
+
+.pagination-controls button {
+  min-width: 31px;
+  height: 31px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.pagination-controls button:hover:not(
+  :disabled
+):not(.active) {
+  border-color: #cbd5e1;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+}
+
+.pagination-controls button:focus-visible {
+  outline: 2px solid
+    rgba(15, 118, 110, 0.25);
+
+  outline-offset: 2px;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.pagination-controls button.active {
+  border-color: #0f766e;
+
+  background: #0f766e;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 1px 2px
+    rgba(15, 118, 110, 0.15);
+}
+
+/* =========================================================
+   ELLIPSIS
+   ========================================================= */
+
+.pagination-controls .ellipsis {
+  min-width: 20px;
+  height: 31px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  user-select: none;
+}
+
+/* =========================================================
+   1280px - 1439px
+   ========================================================= */
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .joining-approval-pagination {
+    min-height: 56px;
+
+    padding: 10px 16px;
+  }
+
+  .pagination-controls {
+    gap: 3px;
+  }
+
+  .pagination-controls button {
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .pagination-controls .ellipsis {
+    height: 30px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .joining-approval-pagination {
+    padding: 10px 14px;
+  }
+
+  .pagination-info {
+    font-size: 11px;
+  }
+
+  .pagination-controls button {
+    min-width: 29px;
+    height: 29px;
+  }
+
+  .pagination-controls .ellipsis {
+    height: 29px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .joining-approval-pagination {
+    min-height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+  .pagination-info {
+    width: 100%;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+  .pagination-controls {
+    max-width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 3px;
+  }
+
+  .pagination-controls button {
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .pagination-controls .ellipsis {
+    min-width: 18px;
+    height: 30px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .joining-approval-pagination {
+    padding: 11px 8px;
+  }
+
+  .pagination-info {
+    font-size: 10.5px;
+  }
+
+  .pagination-controls {
+    gap: 2px;
+  }
+
+  .pagination-controls button {
+    min-width: 28px;
+    height: 28px;
+
+    padding: 0 5px;
+  }
+
+  .pagination-controls .ellipsis {
+    min-width: 16px;
+    height: 28px;
+  }
+}

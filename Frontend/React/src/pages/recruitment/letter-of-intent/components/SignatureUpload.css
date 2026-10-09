@@ -1,0 +1,276 @@
+/* ============================================================
+   HR SIGNATURE UPLOAD
+   ============================================================ */
+
+.loi-signature-upload {
+  min-width: 0;
+}
+
+.loi-signature-upload > span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #344054;
+
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   UPLOAD ROW
+   ============================================================ */
+
+.loi-signature-upload-row {
+  display: flex;
+  align-items: stretch;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+
+/* ============================================================
+   DROPZONE
+   ============================================================ */
+
+.loi-signature-dropzone {
+  position: relative;
+
+  min-height: 76px;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 8px;
+
+  border: 1px dashed #b9cbd1;
+  border-radius: 7px;
+
+  background: #f8fbfc;
+
+  color: #53717b;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.loi-signature-dropzone:hover {
+  border-color: #78a7b4;
+
+  background: #f2f8fa;
+}
+
+.loi-signature-dropzone.is-uploading {
+  cursor: wait;
+
+  opacity: 0.75;
+}
+
+.loi-signature-dropzone svg {
+  color: #527b87;
+}
+
+.loi-signature-dropzone strong {
+  color: #355967;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.loi-signature-dropzone small {
+  color: #82949a;
+
+  font-size: 7.5px;
+  line-height: 1.2;
+}
+
+
+/* ============================================================
+   CURRENT SIGNATURE
+   ============================================================ */
+
+.loi-signature-preview {
+  position: relative;
+
+  width: 105px;
+  min-width: 105px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 5px;
+
+  border: 1px solid #e1e9ec;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   SIGNATURE IMAGE BOX
+   ============================================================ */
+
+.loi-signature-image-box {
+  width: 94px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid #edf1f3;
+  border-radius: 4px;
+
+  /*
+   * WHITE BACKGROUND ONLY.
+   *
+   * The uploaded PNG itself is transparent.
+   *
+   * This makes the signature preview look exactly
+   * like it will look on the white Letter of Intent.
+   */
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   ACTUAL SIGNATURE
+   ============================================================ */
+
+.loi-signature-image-box img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 92px;
+  max-height: 45px;
+
+  object-fit: contain;
+
+  /*
+   * Do not apply:
+   *
+   * filter
+   * opacity
+   * mix-blend-mode
+   * background
+   *
+   * The original signature pixels should remain untouched.
+   */
+
+  background: transparent;
+}
+
+
+/* ============================================================
+   CURRENT SIGNATURE LABEL
+   ============================================================ */
+
+.loi-signature-preview small {
+  color: #64748b;
+
+  font-size: 7.5px;
+}
+
+
+/* ============================================================
+   REMOVE BUTTON
+   ============================================================ */
+
+.loi-signature-remove {
+  position: absolute;
+
+  top: -5px;
+  right: -5px;
+
+  z-index: 2;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #fecaca;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #ef4444;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.loi-signature-remove:hover {
+  background: #fef2f2;
+}
+
+
+/* ============================================================
+   LOADER
+   ============================================================ */
+
+.loi-signature-spin {
+  animation:
+    loi-signature-spin 0.9s linear infinite;
+}
+
+@keyframes loi-signature-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .loi-signature-upload-row {
+    flex-direction: column;
+  }
+
+  .loi-signature-preview {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .loi-signature-image-box {
+    width: 100%;
+  }
+}

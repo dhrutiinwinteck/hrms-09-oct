@@ -1,0 +1,31 @@
+.send-resignation-header {
+  margin-bottom: 20px;
+}
+
+.send-resignation-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.send-resignation-breadcrumb strong {
+  color: #334155;
+  font-weight: 500;
+}
+
+.send-resignation-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.send-resignation-header p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}

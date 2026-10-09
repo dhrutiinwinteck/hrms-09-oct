@@ -1,0 +1,177 @@
+/* ============================================================
+   SETTINGS SIDEBAR (Left Info Panel)
+   ============================================================ */
+
+.settings-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px 32px;
+  text-align: center;
+  background-color: #F8FAFC;
+  border-radius: 30px 0 0 30px;
+}
+
+/* Large circular illustration */
+.settings-sidebar__illustration {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #E8F5F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F766E;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.settings-sidebar__illustration:hover {
+  transform: scale(1.04);
+}
+
+/* Heading */
+.settings-sidebar__heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.settings-sidebar__heading-highlight {
+  color: #0F766E;
+}
+
+/* Underline divider */
+.settings-sidebar__divider {
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: #0F766E;
+  margin: 8px auto 16px;
+}
+
+/* Description */
+.settings-sidebar__description {
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto 20px;
+}
+
+/* Tip card */
+.settings-sidebar__tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ECFDF5;
+  padding: 16px 20px;
+  border-radius: 16px;
+  max-width: 340px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #A7E4D6;
+}
+
+.settings-sidebar__tip-icon {
+  color: #0F766E;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.settings-sidebar__tip-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F766E;
+}
+
+.settings-sidebar__tip-text {
+  font-size: 14px;
+  color: #1F2937;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .settings-sidebar {
+    padding: 32px 24px;
+    border-radius: 24px 0 0 24px;
+  }
+  .settings-sidebar__illustration {
+    width: 120px;
+    height: 120px;
+  }
+  .settings-sidebar__illustration svg {
+    width: 56px;
+    height: 56px;
+  }
+  .settings-sidebar__heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-sidebar {
+    padding: 24px 20px;
+    border-radius: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EAECF0;
+    min-height: 200px;
+  }
+  .settings-sidebar__illustration {
+    width: 100px;
+    height: 100px;
+  }
+  .settings-sidebar__illustration svg {
+    width: 48px;
+    height: 48px;
+  }
+  .settings-sidebar__heading {
+    font-size: 24px;
+  }
+  .settings-sidebar__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .settings-sidebar__tip {
+    max-width: 100%;
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-sidebar {
+    padding: 16px;
+    min-height: 160px;
+  }
+  .settings-sidebar__illustration {
+    width: 80px;
+    height: 80px;
+  }
+  .settings-sidebar__illustration svg {
+    width: 40px;
+    height: 40px;
+  }
+  .settings-sidebar__heading {
+    font-size: 20px;
+  }
+  .settings-sidebar__divider {
+    width: 40px;
+    height: 3px;
+  }
+  .settings-sidebar__tip {
+    padding: 12px 14px;
+  }
+  .settings-sidebar__tip-text {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,661 @@
+/* ============================================================
+   FILTER BAR
+   Enterprise HRMS Filter Panel
+   Optimized for 100% Browser Zoom
+   ============================================================ */
+
+
+/* ============================================================
+   FILTER CONTAINER
+   ============================================================ */
+
+.fb-container {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 14px;
+
+    box-sizing: border-box;
+
+    background: #f4f7fa;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(16, 24, 40, 0.04);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   FILTER GROUP
+   ============================================================ */
+
+.fb-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    /*
+     * Allows the filter groups to shrink
+     * instead of forcing the entire bar wider.
+     */
+    flex: 1 1 0;
+
+    min-width: 0;
+}
+
+
+/* ============================================================
+   ICON BOX
+   ============================================================ */
+
+.fb-icon-box {
+    width: 36px;
+
+    height: 36px;
+
+    min-width: 36px;
+
+    min-height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 8px;
+
+    color: #344054;
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.fb-icon {
+    width: 19px;
+
+    height: 19px;
+
+    color: #475467;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   INPUT WRAPPER
+   ============================================================ */
+
+.fb-input-wrapper {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    min-width: 0;
+
+    flex: 1 1 auto;
+
+    max-width: 100%;
+}
+
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.fb-label {
+    display: block;
+
+    margin: 0 0 2px;
+
+    font-size: 11px;
+
+    line-height: 15px;
+
+    font-weight: 600;
+
+    color: #344054;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   INPUT + SELECT BASE
+   ============================================================ */
+
+.fb-input,
+.fb-select {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    height: 30px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    color: #1d2939;
+
+    font-weight: 500;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* ============================================================
+   DATE INPUT
+   ============================================================ */
+
+.fb-input {
+    width: 100%;
+
+    max-width: 205px;
+
+    padding: 5px 9px;
+
+    border-color: #e4e7ec;
+}
+
+
+/* ============================================================
+   DATE INPUT FOCUS
+   ============================================================ */
+
+.fb-input:focus {
+    border-color: #98a2b3;
+
+    box-shadow:
+        0 0 0 2px rgba(152, 162, 179, 0.12);
+}
+
+
+/* ============================================================
+   SELECT CONTAINER
+   ============================================================ */
+
+.fb-select-container {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 180px;
+
+    min-width: 0;
+
+    flex: 1 1 auto;
+}
+
+
+/* ============================================================
+   SELECT
+   ============================================================ */
+
+.fb-select {
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    padding: 5px 32px 5px 9px;
+
+    border-color: #e4e7ec;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   SELECT FOCUS
+   ============================================================ */
+
+.fb-select:focus {
+    border-color: #98a2b3;
+
+    box-shadow:
+        0 0 0 2px rgba(152, 162, 179, 0.12);
+}
+
+
+/* ============================================================
+   SELECT CHEVRON
+   ============================================================ */
+
+.fb-select-chevron {
+    position: absolute;
+
+    right: 9px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    color: #475467;
+
+    width: 16px;
+
+    height: 16px;
+}
+
+
+/* ============================================================
+   ACTION AREA
+   ============================================================ */
+
+.fb-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    /*
+     * Keep actions together without allowing them
+     * to force the filter bar beyond its width.
+     */
+    flex: 0 0 auto;
+
+    margin-left: auto;
+
+    padding-left: 14px;
+
+    border-left: 1px solid #dfe3e8;
+
+    min-width: 0;
+}
+
+
+/* ============================================================
+   RESET BUTTON
+   ============================================================ */
+
+.fb-btn-reset {
+    height: 34px;
+
+    min-width: 76px;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #fff7f2;
+
+    color: #344054;
+
+    border: 1px solid #f2e1d7;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   RESET HOVER
+   ============================================================ */
+
+.fb-btn-reset:hover {
+    background: #fff1e8;
+
+    border-color: #e8d3c5;
+}
+
+
+/* ============================================================
+   RESET ACTIVE
+   ============================================================ */
+
+.fb-btn-reset:active {
+    transform: translateY(1px);
+}
+
+
+/* ============================================================
+   APPLY BUTTON
+   ============================================================ */
+
+.fb-btn-apply {
+    height: 34px;
+
+    min-width: 92px;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #243b3d;
+
+    color: #ffffff;
+
+    border: 1px solid #243b3d;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   APPLY HOVER
+   ============================================================ */
+
+.fb-btn-apply:hover {
+    background: #1d3234;
+
+    border-color: #1d3234;
+
+    box-shadow:
+        0 2px 5px rgba(36, 59, 61, 0.15);
+}
+
+
+/* ============================================================
+   APPLY ACTIVE
+   ============================================================ */
+
+.fb-btn-apply:active {
+    transform: translateY(1px);
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+.fb-btn-reset:focus-visible,
+.fb-btn-apply:focus-visible,
+.fb-input:focus-visible,
+.fb-select:focus-visible {
+    outline: 2px solid #2563eb;
+
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   SMALL DESKTOP
+   ============================================================ */
+
+@media (max-width: 1250px) {
+    .fb-container {
+        gap: 10px;
+
+        padding: 9px 12px;
+    }
+
+    .fb-group {
+        gap: 8px;
+    }
+
+    .fb-input {
+        max-width: 175px;
+    }
+
+    .fb-select-container {
+        max-width: 155px;
+    }
+
+    .fb-actions {
+        padding-left: 10px;
+
+        gap: 6px;
+    }
+
+    .fb-btn-reset,
+    .fb-btn-apply {
+        padding: 0 12px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+    .fb-container {
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        overflow: visible;
+    }
+
+    .fb-group {
+        flex: 1 1 calc(33.333% - 12px);
+
+        min-width: 200px;
+    }
+
+    .fb-input,
+    .fb-select-container {
+        max-width: none;
+
+        width: 100%;
+    }
+
+    .fb-actions {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-left: 0;
+
+        padding-top: 12px;
+
+        border-left: none;
+
+        border-top: 1px solid #dfe3e8;
+
+        justify-content: flex-end;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+    .fb-container {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+        padding: 14px;
+
+        overflow: visible;
+    }
+
+    .fb-group {
+        width: 100%;
+
+        min-width: 0;
+
+        flex: 1 1 auto;
+    }
+
+    .fb-input-wrapper {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .fb-input,
+    .fb-select-container {
+        width: 100%;
+
+        max-width: none;
+    }
+
+    .fb-actions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1.3fr;
+
+        gap: 10px;
+
+        padding-top: 12px;
+    }
+
+    .fb-btn-reset,
+    .fb-btn-apply {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 400px) {
+    .fb-container {
+        padding: 12px;
+    }
+
+    .fb-icon-box {
+        width: 34px;
+
+        height: 34px;
+
+        min-width: 34px;
+
+        min-height: 34px;
+
+        flex-basis: 34px;
+    }
+
+    .fb-label {
+        font-size: 10px;
+    }
+
+    .fb-input,
+    .fb-select {
+        font-size: 12px;
+    }
+}

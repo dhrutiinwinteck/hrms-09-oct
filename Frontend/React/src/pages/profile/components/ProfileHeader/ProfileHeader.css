@@ -1,0 +1,1470 @@
+/* ============================================================
+   PROFILE HEADER
+============================================================ */
+
+.profile-header {
+  position: relative;
+
+  width: 100%;
+  min-height: 145px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 18px 24px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e7e0d5;
+  border-radius: 11px;
+
+  /*
+    Warm ivory background inspired by the reference.
+  */
+  background:
+    linear-gradient(
+      108deg,
+      #fdfcf9 0%,
+      #fbf9f5 48%,
+      #f7f1e9 100%
+    );
+
+  isolation: isolate;
+
+  box-shadow:
+    0 1px 2px rgba(72, 60, 46, 0.035),
+    0 5px 16px rgba(72, 60, 46, 0.045);
+}
+
+
+/* ============================================================
+   DECORATIVE BACKGROUND LAYER
+============================================================ */
+
+.profile-header__decor {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   AVATAR ORGANIC BACKGROUND
+   Large paper-like shape behind avatar
+============================================================ */
+
+.profile-header__avatar-blob {
+  position: absolute;
+
+  width: 370px;
+  height: 155px;
+
+  left: -125px;
+  bottom: -76px;
+
+  border-radius:
+    75% 25% 62% 38% /
+    43% 57% 40% 60%;
+
+  background:
+    linear-gradient(
+      106deg,
+      rgba(218, 204, 185, 0.46) 0%,
+      rgba(227, 215, 198, 0.34) 30%,
+      rgba(238, 228, 214, 0.21) 57%,
+      rgba(248, 243, 236, 0.08) 78%,
+      rgba(252, 249, 245, 0) 100%
+    );
+
+  transform:
+    rotate(-8deg)
+    skewX(-11deg);
+
+  filter: blur(0.6px);
+}
+
+
+/* ============================================================
+   AVATAR SOFT DEPTH
+============================================================ */
+
+.profile-header__avatar-soft-shadow {
+  position: absolute;
+
+  width: 280px;
+  height: 165px;
+
+  left: -92px;
+  top: 1px;
+
+  border-radius:
+    65% 35% 54% 46% /
+    49% 51% 43% 57%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(211, 198, 179, 0.25) 0%,
+      rgba(226, 213, 195, 0.18) 42%,
+      rgba(239, 230, 219, 0.08) 66%,
+      rgba(252, 249, 245, 0) 90%
+    );
+
+  transform:
+    rotate(-9deg)
+    skewX(-9deg);
+
+  filter: blur(10px);
+}
+
+
+/* ============================================================
+   AVATAR LOWER SHADOW
+   This creates the visible shadow below the avatar.
+============================================================ */
+
+.profile-header__avatar-bottom-shadow {
+  position: absolute;
+
+  width: 225px;
+  height: 82px;
+
+  left: -38px;
+  bottom: -28px;
+
+  border-radius:
+    74% 26% 60% 40% /
+    44% 56% 42% 58%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(178, 163, 144, 0.30) 0%,
+      rgba(201, 186, 166, 0.21) 36%,
+      rgba(224, 211, 195, 0.11) 64%,
+      rgba(248, 243, 236, 0) 91%
+    );
+
+  transform:
+    rotate(-7deg)
+    skewX(-12deg);
+
+  filter: blur(8px);
+}
+
+
+/* ============================================================
+   CENTER FLOWING ORGANIC SHAPE
+============================================================ */
+
+.profile-header__center-wave {
+  position: absolute;
+
+  width: 760px;
+  height: 185px;
+
+  left: 7%;
+  bottom: -118px;
+
+  border-radius:
+    70% 30% 56% 44% /
+    40% 60% 43% 57%;
+
+  background:
+    linear-gradient(
+      105deg,
+      rgba(220, 207, 189, 0.28) 0%,
+      rgba(230, 217, 199, 0.21) 34%,
+      rgba(239, 228, 214, 0.12) 62%,
+      rgba(249, 244, 237, 0) 94%
+    );
+
+  transform:
+    rotate(-5deg)
+    skewX(-13deg);
+
+  filter: blur(0.7px);
+}
+
+
+/* ============================================================
+   CENTER SOFT SHADOW
+============================================================ */
+
+.profile-header__center-wave-soft {
+  position: absolute;
+
+  width: 650px;
+  height: 140px;
+
+  left: 28%;
+  bottom: -84px;
+
+  border-radius:
+    72% 28% 58% 42% /
+    46% 54% 40% 60%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(227, 214, 197, 0.20) 0%,
+      rgba(237, 225, 210, 0.12) 45%,
+      rgba(249, 244, 237, 0) 86%
+    );
+
+  transform:
+    rotate(-6deg)
+    skewX(-14deg);
+
+  filter: blur(6px);
+}
+
+
+/* ============================================================
+   RIGHT SIDE ORGANIC SHAPE
+   Behind the plant
+============================================================ */
+
+.profile-header__right-blob {
+  position: absolute;
+
+  width: 500px;
+  height: 190px;
+
+  right: -65px;
+  top: 25px;
+
+  border-radius:
+    46% 54% 38% 62% /
+    58% 42% 61% 39%;
+
+  background:
+    linear-gradient(
+      112deg,
+      rgba(247, 241, 233, 0.04) 0%,
+      rgba(231, 217, 198, 0.23) 43%,
+      rgba(218, 202, 181, 0.18) 69%,
+      rgba(250, 247, 242, 0) 100%
+    );
+
+  transform:
+    rotate(-8deg)
+    skewX(-13deg);
+
+  filter: blur(0.7px);
+}
+
+
+/* ============================================================
+   RIGHT SOFT DEPTH
+============================================================ */
+
+.profile-header__right-blob-soft {
+  position: absolute;
+
+  width: 560px;
+  height: 205px;
+
+  right: -95px;
+  top: 8px;
+
+  border-radius:
+    52% 48% 40% 60% /
+    58% 42% 60% 40%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(207, 195, 177, 0.14) 0%,
+      rgba(226, 213, 196, 0.09) 46%,
+      rgba(248, 243, 236, 0) 84%
+    );
+
+  transform: rotate(-7deg);
+
+  filter: blur(13px);
+}
+
+
+/* ============================================================
+   SUBTLE FLOWING LINE
+============================================================ */
+
+.profile-header__flow-line {
+  position: absolute;
+
+  width: 640px;
+  height: 155px;
+
+  right: 110px;
+  top: -80px;
+
+  border:
+    1px solid rgba(205, 193, 176, 0.22);
+
+  border-radius: 50%;
+
+  transform:
+    rotate(-14deg)
+    scaleX(1.12);
+
+  filter: blur(0.2px);
+}
+
+
+/* ============================================================
+   RIGHT DOT PATTERN
+============================================================ */
+
+.profile-header__dots {
+  position: absolute;
+
+  width: 120px;
+  height: 88px;
+
+  right: 20px;
+  top: 14px;
+
+  opacity: 0.58;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(130, 139, 116, 0.30) 1.4px,
+      transparent 1.7px
+    );
+
+  background-size: 17px 17px;
+
+  mask-image:
+    linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.76) 60%,
+      transparent 100%
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0.76) 60%,
+      transparent 100%
+    );
+}
+
+
+/* ============================================================
+   PNG BACKGROUND
+============================================================ */
+
+.profile-header__background-image {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 53%;
+  height: 100%;
+
+  z-index: 3;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: right center;
+
+  pointer-events: none;
+  user-select: none;
+
+  opacity: 0.94;
+}
+
+
+/* ============================================================
+   SOFT CONTENT PROTECTION
+   IMPORTANT:
+   This MUST stay behind decorative layers.
+============================================================ */
+
+.profile-header__soft-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(253, 252, 249, 0.94) 0%,
+      rgba(253, 252, 249, 0.88) 22%,
+      rgba(253, 252, 249, 0.60) 43%,
+      rgba(253, 252, 249, 0.28) 62%,
+      rgba(253, 252, 249, 0.08) 82%,
+      rgba(253, 252, 249, 0) 100%
+    );
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+============================================================ */
+
+.profile-header__content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* ============================================================
+   AVATAR AREA
+============================================================ */
+
+.profile-header__avatar-area {
+  position: relative;
+
+  width: 145px;
+  height: 125px;
+
+  flex: 0 0 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  isolation: isolate;
+}
+
+
+/* ============================================================
+   LOCAL AVATAR SHADOW
+   Directly under avatar
+============================================================ */
+
+.profile-header__avatar-local-shadow {
+  position: absolute;
+
+  width: 158px;
+  height: 92px;
+
+  left: -7px;
+  top: 45px;
+
+  z-index: 0;
+
+  border-radius:
+    78% 22% 60% 40% /
+    44% 56% 45% 55%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(170, 156, 138, 0.30) 0%,
+      rgba(195, 180, 161, 0.22) 38%,
+      rgba(220, 207, 190, 0.12) 63%,
+      rgba(248, 243, 236, 0) 92%
+    );
+
+  transform:
+    rotate(-9deg)
+    skewX(-11deg);
+
+  filter: blur(7px);
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   AVATAR WRAPPER
+============================================================ */
+
+.profile-header__avatar-wrapper {
+  position: relative;
+
+  z-index: 6;
+
+  flex: 0 0 auto;
+}
+
+
+/* ============================================================
+   AVATAR
+============================================================ */
+
+.profile-header__avatar {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #68a1a1 0%,
+      #5e9999 50%,
+      #568f8f 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 7px 17px rgba(73, 112, 112, 0.15),
+    0 2px 6px rgba(73, 112, 112, 0.10);
+}
+
+
+/* ============================================================
+   CAMERA BUTTON
+============================================================ */
+
+.profile-header__camera {
+  position: absolute;
+
+  right: -4px;
+  bottom: -1px;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #526a70;
+
+  box-shadow:
+    0 3px 8px rgba(56, 63, 64, 0.16);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-header__camera:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 4px 11px rgba(56, 63, 64, 0.20);
+}
+
+.profile-header__camera:focus-visible {
+  outline: 2px solid #5d9494;
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   IDENTITY
+============================================================ */
+
+.profile-header__identity {
+  position: relative;
+
+  z-index: 6;
+
+  min-width: 0;
+
+  flex: 1;
+
+  padding-right: 18px;
+}
+
+
+/* ============================================================
+   NAME + STATUS
+============================================================ */
+
+.profile-header__name-row {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.profile-header__name-row h2 {
+  margin: 0;
+
+  color: #18242d;
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.profile-header__status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 3px 7px;
+
+  border: 1px solid rgba(35, 150, 96, 0.08);
+
+  border-radius: 8px;
+
+  background: #e8f5ee;
+
+  color: #198754;
+
+  font-size: 7px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.profile-header__status-dot {
+  width: 4px;
+  height: 4px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #25a765;
+}
+
+
+/* ============================================================
+   DESIGNATION
+============================================================ */
+
+.profile-header__designation {
+  margin: 5px 0 11px;
+
+  color: #52636c;
+
+  font-size: 10px;
+
+  line-height: 1.3;
+
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   DIVIDER
+============================================================ */
+
+.profile-header__divider {
+  width: min(610px, 100%);
+
+  height: 1px;
+
+  margin-bottom: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #dcd6cc 0%,
+      #e6e0d7 58%,
+      rgba(230, 224, 215, 0) 100%
+    );
+}
+
+
+/* ============================================================
+   META INFORMATION
+============================================================ */
+
+.profile-header__meta {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+
+/* ============================================================
+   META ITEM
+============================================================ */
+
+.profile-header__meta-item {
+  min-width: 125px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* ============================================================
+   META ICON
+============================================================ */
+
+.profile-header__meta-icon {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #61777c;
+}
+
+
+/* ============================================================
+   META CONTENT
+============================================================ */
+
+.profile-header__meta-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+}
+
+
+/* ============================================================
+   META LABEL
+============================================================ */
+
+.profile-header__meta-content span {
+  color: #8b9699;
+
+  font-size: 6.5px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   META VALUE
+============================================================ */
+
+.profile-header__meta-content strong {
+  color: #34454d;
+
+  font-size: 8px;
+
+  line-height: 1.25;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1440px) {
+  .profile-header {
+    min-height: 155px;
+
+    padding: 20px 28px;
+  }
+
+  .profile-header__background-image {
+    width: 52%;
+  }
+
+  .profile-header__avatar-area {
+    width: 150px;
+    height: 130px;
+
+    flex-basis: 150px;
+  }
+
+  .profile-header__avatar {
+    width: 86px;
+    height: 86px;
+
+    font-size: 30px;
+  }
+
+  .profile-header__name-row h2 {
+    font-size: 19px;
+  }
+
+  .profile-header__meta {
+    gap: 42px;
+  }
+
+  .profile-header__center-wave {
+    left: 13%;
+  }
+
+  .profile-header__center-wave-soft {
+    left: 34%;
+  }
+}
+
+
+/* ============================================================
+   SMALL DESKTOP
+============================================================ */
+
+@media (max-width: 1200px) {
+  .profile-header {
+    padding: 18px 20px;
+  }
+
+  .profile-header__background-image {
+    width: 52%;
+  }
+
+  .profile-header__meta {
+    gap: 22px;
+  }
+
+  .profile-header__meta-item {
+    min-width: 110px;
+  }
+
+  .profile-header__identity {
+    padding-right: 12px;
+  }
+
+  .profile-header__center-wave {
+    left: 7%;
+    width: 590px;
+  }
+
+  .profile-header__center-wave-soft {
+    left: 30%;
+    width: 500px;
+  }
+}
+
+
+/* ============================================================
+   TABLET / SMALL DESKTOP
+============================================================ */
+
+@media (max-width: 1024px) {
+  .profile-header {
+    min-height: 140px;
+
+    padding: 17px 18px;
+  }
+
+  .profile-header__background-image {
+    width: 50%;
+  }
+
+  .profile-header__avatar-area {
+    width: 125px;
+    height: 110px;
+
+    flex-basis: 125px;
+  }
+
+  .profile-header__avatar {
+    width: 76px;
+    height: 76px;
+
+    font-size: 27px;
+  }
+
+  .profile-header__meta {
+    gap: 15px;
+  }
+
+  .profile-header__meta-item {
+    min-width: 100px;
+  }
+
+  .profile-header__center-wave {
+    left: 5%;
+    width: 510px;
+  }
+
+  .profile-header__center-wave-soft {
+    left: 27%;
+    width: 420px;
+  }
+
+  .profile-header__right-blob {
+    right: -90px;
+  }
+
+  .profile-header__right-blob-soft {
+    right: -120px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+  .profile-header {
+    min-height: 150px;
+
+    padding: 18px;
+  }
+
+  .profile-header__background-image {
+    width: 47%;
+
+    object-position: right center;
+
+    opacity: 0.80;
+  }
+
+  .profile-header__soft-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(253, 252, 249, 0.96) 0%,
+        rgba(253, 252, 249, 0.90) 42%,
+        rgba(253, 252, 249, 0.35) 76%,
+        rgba(253, 252, 249, 0) 100%
+      );
+  }
+
+  .profile-header__content {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .profile-header__avatar-area {
+    width: 105px;
+    height: 100px;
+
+    flex-basis: 105px;
+  }
+
+  .profile-header__avatar {
+    width: 72px;
+    height: 72px;
+
+    font-size: 25px;
+  }
+
+  .profile-header__meta {
+    flex-wrap: wrap;
+
+    gap: 9px 18px;
+  }
+
+  .profile-header__meta-item {
+    min-width: 125px;
+  }
+
+  .profile-header__avatar-blob {
+    width: 285px;
+    height: 130px;
+
+    left: -108px;
+  }
+
+  .profile-header__center-wave {
+    width: 410px;
+    height: 120px;
+
+    left: 10%;
+
+    bottom: -78px;
+  }
+
+  .profile-header__center-wave-soft {
+    width: 330px;
+    height: 90px;
+
+    left: 29%;
+
+    bottom: -58px;
+  }
+
+  .profile-header__right-blob {
+    width: 340px;
+
+    right: -110px;
+  }
+
+  .profile-header__right-blob-soft {
+    width: 390px;
+
+    right: -125px;
+  }
+
+  .profile-header__dots {
+    right: 12px;
+
+    transform: scale(0.85);
+
+    transform-origin: top right;
+  }
+
+  .profile-header__avatar-local-shadow {
+    width: 132px;
+    height: 78px;
+
+    left: -5px;
+    top: 31px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+  .profile-header {
+    min-height: 250px;
+
+    align-items: flex-start;
+
+    padding: 17px 15px;
+  }
+
+  .profile-header__background-image {
+    width: 65%;
+
+    object-position: right bottom;
+
+    opacity: 0.68;
+  }
+
+  .profile-header__soft-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(253, 252, 249, 0.72) 0%,
+        rgba(253, 252, 249, 0.84) 54%,
+        rgba(247, 243, 237, 0.96) 100%
+      );
+  }
+
+  .profile-header__content {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .profile-header__avatar-area {
+    width: 82px;
+    height: 82px;
+
+    flex-basis: 82px;
+  }
+
+  .profile-header__avatar {
+    width: 64px;
+    height: 64px;
+
+    font-size: 22px;
+  }
+
+  .profile-header__identity {
+    width: 100%;
+
+    padding-right: 0;
+  }
+
+  .profile-header__name-row h2 {
+    font-size: 15px;
+  }
+
+  .profile-header__designation {
+    font-size: 9px;
+  }
+
+  .profile-header__meta {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px 14px;
+  }
+
+  .profile-header__meta-item {
+    min-width: 0;
+  }
+
+  .profile-header__meta-content strong {
+    white-space: normal;
+  }
+
+  .profile-header__avatar-blob {
+    width: 250px;
+    height: 125px;
+
+    left: -105px;
+
+    bottom: -72px;
+  }
+
+  .profile-header__avatar-soft-shadow {
+    width: 190px;
+    height: 125px;
+
+    left: -70px;
+  }
+
+  .profile-header__avatar-bottom-shadow {
+    width: 160px;
+    height: 65px;
+
+    left: -35px;
+  }
+
+  .profile-header__center-wave {
+    width: 300px;
+    height: 105px;
+
+    left: 8%;
+
+    bottom: -70px;
+  }
+
+  .profile-header__center-wave-soft {
+    width: 260px;
+    height: 80px;
+
+    left: 28%;
+
+    bottom: -52px;
+  }
+
+  .profile-header__right-blob {
+    width: 280px;
+    height: 145px;
+
+    right: -100px;
+
+    top: 58px;
+  }
+
+  .profile-header__right-blob-soft {
+    width: 310px;
+    height: 155px;
+
+    right: -110px;
+
+    top: 45px;
+  }
+
+  .profile-header__flow-line {
+    display: none;
+  }
+
+  .profile-header__dots {
+    width: 90px;
+    height: 70px;
+
+    right: 8px;
+    top: 12px;
+
+    background-size: 15px 15px;
+  }
+
+  .profile-header__avatar-local-shadow {
+    width: 120px;
+    height: 70px;
+
+    left: -5px;
+    top: 29px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 430px) {
+  .profile-header {
+    min-height: 285px;
+
+    padding: 15px 13px;
+  }
+
+  .profile-header__background-image {
+    width: 62%;
+
+    object-position: right bottom;
+
+    opacity: 0.60;
+  }
+
+  .profile-header__content {
+    display: block;
+  }
+
+  .profile-header__avatar-area {
+    position: absolute;
+
+    left: 13px;
+    top: 25px;
+
+    width: 76px;
+    height: 76px;
+  }
+
+  .profile-header__avatar {
+    width: 62px;
+    height: 62px;
+
+    font-size: 21px;
+  }
+
+  .profile-header__identity {
+    width: 100%;
+
+    padding-left: 88px;
+  }
+
+  .profile-header__name-row h2 {
+    font-size: 14px;
+  }
+
+  .profile-header__designation {
+    font-size: 8.5px;
+  }
+
+  .profile-header__meta {
+    margin-top: 11px;
+  }
+
+  .profile-header__avatar-blob {
+    width: 220px;
+    height: 110px;
+
+    left: -95px;
+  }
+
+  .profile-header__avatar-soft-shadow {
+    width: 165px;
+    height: 105px;
+
+    left: -62px;
+  }
+
+  .profile-header__avatar-bottom-shadow {
+    width: 140px;
+    height: 58px;
+
+    left: -30px;
+  }
+
+  .profile-header__center-wave {
+    width: 260px;
+    height: 95px;
+
+    left: 5%;
+
+    bottom: -64px;
+  }
+
+  .profile-header__center-wave-soft {
+    width: 220px;
+    height: 72px;
+
+    left: 25%;
+
+    bottom: -48px;
+  }
+
+  .profile-header__right-blob {
+    width: 245px;
+    height: 130px;
+
+    right: -100px;
+
+    top: 75px;
+  }
+
+  .profile-header__right-blob-soft {
+    width: 275px;
+    height: 140px;
+
+    right: -115px;
+
+    top: 60px;
+  }
+
+  .profile-header__avatar-local-shadow {
+    width: 110px;
+    height: 64px;
+
+    left: -3px;
+    top: 28px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL DEVICES
+============================================================ */
+
+@media (max-width: 360px) {
+  .profile-header {
+    min-height: 305px;
+
+    padding: 14px 11px;
+  }
+
+  .profile-header__background-image {
+    width: 58%;
+  }
+
+  .profile-header__avatar-area {
+    left: 11px;
+    top: 22px;
+
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-header__avatar {
+    width: 58px;
+    height: 58px;
+
+    font-size: 20px;
+  }
+
+  .profile-header__identity {
+    padding-left: 80px;
+  }
+
+  .profile-header__name-row h2 {
+    font-size: 13px;
+  }
+
+  .profile-header__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header__avatar-blob {
+    width: 200px;
+    height: 100px;
+
+    left: -90px;
+  }
+
+  .profile-header__avatar-soft-shadow {
+    width: 145px;
+    height: 95px;
+
+    left: -58px;
+  }
+
+  .profile-header__avatar-bottom-shadow {
+    width: 125px;
+    height: 52px;
+
+    left: -28px;
+  }
+
+  .profile-header__center-wave {
+    width: 220px;
+    height: 85px;
+
+    left: 3%;
+  }
+
+  .profile-header__center-wave-soft {
+    width: 190px;
+    height: 65px;
+
+    left: 20%;
+  }
+
+  .profile-header__right-blob {
+    width: 220px;
+
+    right: -95px;
+  }
+
+  .profile-header__right-blob-soft {
+    width: 245px;
+
+    right: -110px;
+  }
+
+  .profile-header__avatar-local-shadow {
+    width: 100px;
+    height: 58px;
+
+    left: -2px;
+    top: 26px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-header__camera {
+    transition: none;
+  }
+}

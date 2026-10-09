@@ -1,0 +1,128 @@
+/* =========================================================
+   KRA STATUS BADGE
+   Enterprise HRMS Theme
+   Fully Scoped
+   ========================================================= */
+
+.kra-status-badge {
+  min-width: 58px;
+  height: 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 9px;
+
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 10.5px;
+  line-height: 1;
+  font-weight: 500;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.kra-status-badge--active {
+  background: #e7f5ef;
+  border-color: #cce8dc;
+  color: #087f70;
+}
+
+
+/* =========================================================
+   INACTIVE
+   ========================================================= */
+
+.kra-status-badge--inactive {
+  background: #fdf0f0;
+  border-color: #f3d6d6;
+  color: #b64040;
+}
+
+
+/* =========================================================
+   PENDING
+   ========================================================= */
+
+.kra-status-badge--pending {
+  background: #fff8e8;
+  border-color: #f0dfb2;
+  color: #916714;
+}
+
+
+/* =========================================================
+   DRAFT
+   ========================================================= */
+
+.kra-status-badge--draft {
+  background: #f4f5f5;
+  border-color: #dfe5e3;
+  color: #667570;
+}
+
+
+/* =========================================================
+   APPROVED
+   ========================================================= */
+
+.kra-status-badge--approved {
+  background: #e7f5ef;
+  border-color: #cce8dc;
+  color: #067563;
+}
+
+
+/* =========================================================
+   REJECTED
+   ========================================================= */
+
+.kra-status-badge--rejected {
+  background: #fdf0f0;
+  border-color: #f3d6d6;
+  color: #b64040;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-status-badge {
+    min-width: 56px;
+    height: 22px;
+
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-status-badge {
+    transition: none;
+  }
+}

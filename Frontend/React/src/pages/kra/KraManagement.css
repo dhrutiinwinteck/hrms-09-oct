@@ -1,0 +1,346 @@
+/* =========================================================
+   KRA MANAGEMENT PAGE
+   Enterprise HRMS
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE ROOT
+
+   IMPORTANT:
+   Individual wide components such as the KRA table manage
+   their own horizontal scrolling internally.
+
+   The page itself must never create horizontal overflow.
+   ========================================================= */
+
+.kra-management-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: #f7f9f8;
+
+  color: #152724;
+}
+
+
+/* =========================================================
+   PAGE CONTENT CONTAINER
+
+   This is the single source of page-level spacing.
+
+   Header
+   Summary
+   Filters
+   Table
+
+   all align against this same horizontal grid.
+   ========================================================= */
+
+.kra-management-container {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding:
+    20px
+    24px
+    28px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.kra-management-section {
+  width: 100%;
+  min-width: 0;
+
+  flex: 0 0 auto;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   HEADER SECTION
+   ========================================================= */
+
+.kra-management-header-section {
+  min-width: 0;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   SUMMARY SECTION
+   ========================================================= */
+
+.kra-management-summary-section {
+  min-width: 0;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   FILTER SECTION
+   ========================================================= */
+
+.kra-management-filters-section {
+  min-width: 0;
+
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   TABLE SECTION
+
+   Do NOT apply horizontal scrolling here.
+
+   KraManagementTable.css owns table scrolling through:
+   .kra-management-table-scroll
+
+   This keeps pagination/footer outside the scroll area.
+   ========================================================= */
+
+.kra-management-table-section {
+  width: 100%;
+  min-width: 0;
+
+  flex: 0 0 auto;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   DIRECT CHILD WIDTH SAFETY
+
+   Critical for:
+   - CSS Grid
+   - Flexbox
+   - Wide tables
+   - Responsive filters
+
+   min-width: 0 prevents a child from forcing the entire
+   dashboard wider than the viewport.
+   ========================================================= */
+
+.kra-management-container > *,
+.kra-management-section > * {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+
+   Keep the dashboard wide like the reference instead of
+   creating unnecessarily large side gutters.
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-management-container {
+    gap: 16px;
+
+    padding:
+      22px
+      24px
+      30px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA LARGE DESKTOP
+   1920px+
+
+   Do not continuously increase horizontal margins.
+   The reference dashboard uses the available width.
+   ========================================================= */
+
+@media (min-width: 1920px) {
+  .kra-management-container {
+    gap: 16px;
+
+    padding:
+      24px
+      24px
+      32px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-management-container {
+    gap: 15px;
+
+    padding:
+      18px
+      20px
+      24px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET LANDSCAPE
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-management-container {
+    gap: 14px;
+
+    padding:
+      16px
+      18px
+      22px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-management-container {
+    gap: 14px;
+
+    padding:
+      15px
+      14px
+      20px;
+  }
+
+  .kra-management-table-section {
+    min-width: 0;
+
+    overflow: visible;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-container {
+    gap: 12px;
+
+    padding:
+      14px
+      12px
+      18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-container {
+    gap: 10px;
+
+    padding:
+      12px
+      10px
+      16px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 340px
+
+   Preserve usable viewport width without removing all
+   breathing room around the dashboard.
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-management-container {
+    gap: 10px;
+
+    padding:
+      11px
+      8px
+      15px;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL BOX SAFETY
+   ========================================================= */
+
+.kra-management-page *,
+.kra-management-page *::before,
+.kra-management-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MEDIA SAFETY
+
+   Do not allow normal images or SVG decorations to create
+   accidental viewport overflow.
+   ========================================================= */
+
+.kra-management-page img,
+.kra-management-page svg {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-management-page *,
+  .kra-management-page *::before,
+  .kra-management-page *::after {
+    scroll-behavior: auto;
+  }
+}

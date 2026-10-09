@@ -1,0 +1,412 @@
+/* ============================================================
+   JOINING APPROVALS PAGE
+   Enterprise HRMS
+   100% Browser Zoom Safe Layout
+   ============================================================ */
+
+
+/* ============================================================
+   PAGE ROOT
+   ============================================================ */
+
+.joining-approvals-page {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    background: #f5f7fa;
+
+    /*
+     * Do not allow the page itself to create horizontal
+     * scrolling. Individual components such as the table
+     * should handle their own overflow.
+     */
+    overflow-x: clip;
+}
+
+
+/* ============================================================
+   PAGE CONTENT
+   ============================================================ */
+
+.page-content {
+    width: 100%;
+
+    max-width: none;
+
+    min-width: 0;
+
+    margin: 0;
+
+    padding:0;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   SECTION SYSTEM
+   ============================================================ */
+
+.joining-approvals-section {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADER SECTION
+   ============================================================ */
+
+.joining-approvals-section--header {
+    margin-bottom: 18px;
+}
+
+
+/* ============================================================
+   STATISTICS SECTION
+   ============================================================ */
+
+.joining-approvals-section--stats {
+    margin-bottom: 16px;
+}
+
+
+/* ============================================================
+   FILTER SECTION
+   ============================================================ */
+
+.joining-approvals-section--filters {
+    margin-bottom: 16px;
+}
+
+
+/* ============================================================
+   TABLE SECTION
+   ============================================================ */
+
+.joining-approvals-section--table {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    margin-bottom: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LOADING STATE
+   ============================================================ */
+
+.loading-spinner {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+
+/* ============================================================
+   ACTION LOADING
+   ============================================================ */
+
+.joining-approval-action-loading {
+    position: fixed;
+
+    right: 24px;
+
+    bottom: 24px;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    max-width: calc(100vw - 48px);
+
+    padding:
+        0 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.16);
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+   1600px+
+   ============================================================ */
+
+@media (min-width: 1600px) {
+
+    .page-content {
+        padding:
+            22px 0px 0px 0px;
+    }
+
+    .joining-approvals-section--header {
+        margin-bottom: 20px;
+    }
+
+    .joining-approvals-section--stats {
+        margin-bottom: 18px;
+    }
+
+    .joining-approvals-section--filters {
+        margin-bottom: 18px;
+    }
+}
+
+
+/* ============================================================
+   DESKTOP
+   1280px - 1599px
+   ============================================================ */
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+    .page-content {
+        padding:
+            20px 0px 0px 0px;
+    }
+}
+
+
+/* ============================================================
+   SMALL DESKTOP
+   1025px - 1279px
+   ============================================================ */
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+
+    .page-content {
+        padding:
+            18px 0px 0px 0px;
+    }
+
+    .joining-approvals-section--header {
+        margin-bottom: 17px;
+    }
+
+    .joining-approvals-section--stats {
+        margin-bottom: 15px;
+    }
+
+    .joining-approvals-section--filters {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   769px - 1024px
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .page-content {
+        padding:
+            16px 0px 0px 0px;
+    }
+
+    .joining-approvals-section--header {
+        margin-bottom: 16px;
+    }
+
+    .joining-approvals-section--stats {
+        margin-bottom: 14px;
+    }
+
+    .joining-approvals-section--filters {
+        margin-bottom: 14px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .joining-approvals-page {
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-x: clip;
+    }
+
+    .page-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        padding:
+            14px 0px 0px 0px;
+    }
+
+    .joining-approvals-section {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+    }
+
+    .joining-approvals-section--header {
+        margin-bottom: 15px;
+    }
+
+    .joining-approvals-section--stats {
+        margin-bottom: 14px;
+    }
+
+    .joining-approvals-section--filters {
+        margin-bottom: 14px;
+    }
+
+    .joining-approval-action-loading {
+        right: 12px;
+
+        bottom: 12px;
+
+        left: 12px;
+
+        max-width: none;
+
+        min-height: 42px;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .page-content {
+        padding:
+            12px 0px 0px 0px;
+    }
+
+    .joining-approvals-section--header {
+        margin-bottom: 13px;
+    }
+
+    .joining-approvals-section--stats {
+        margin-bottom: 13px;
+    }
+
+    .joining-approvals-section--filters {
+        margin-bottom: 13px;
+    }
+
+    .joining-approval-action-loading {
+        right: 10px;
+
+        bottom: 10px;
+
+        left: 10px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ============================================================
+   VERY SMALL DEVICES
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+    .page-content {
+        padding:
+            10px 0px 0px 0px;
+    }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .joining-approval-action-loading {
+        transition: none;
+    }
+}

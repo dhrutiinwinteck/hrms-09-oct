@@ -1,0 +1,13 @@
+.send-resignation-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 24px 32px;
+  box-sizing: border-box;
+  background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .send-resignation-page {
+    padding: 16px;
+  }
+}

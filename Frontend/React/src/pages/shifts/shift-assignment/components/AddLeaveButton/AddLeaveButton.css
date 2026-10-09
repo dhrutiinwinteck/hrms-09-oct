@@ -1,0 +1,36 @@
+/* src/pages/shifts/shift-assignment/components/AddLeaveButton/AddLeaveButton.css */
+
+.sa-add-leave-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 18px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #0d9488;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sa-add-leave-btn:hover:not(.sa-add-leave-btn--disabled) {
+    background: #0f766e;
+}
+
+.sa-add-leave-btn:active:not(.sa-add-leave-btn--disabled) {
+    transform: scale(0.97);
+}
+
+.sa-add-leave-btn--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sa-add-leave-btn__icon {
+    flex-shrink: 0;
+}

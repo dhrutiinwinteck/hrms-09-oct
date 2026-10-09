@@ -1,0 +1,32 @@
+/* src/layouts/DashboardLayout/DashboardLayout.css */
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F8F9FA;
+  overflow-x: hidden;
+}
+
+.dashboard-layout-content {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  background-color: #F8F9FA;
+}
+
+.dashboard-page-content {
+  flex: 1;
+  padding: 0 24px 24px 24px;
+  background-color: #F8F9FA;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page-content {
+    padding: 0 16px 16px 16px;
+  }
+}

@@ -1,0 +1,50 @@
+/* NavigationItem.css */
+
+.navigation-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  display: block;
+  padding: 0px 12px;
+  margin: 2px 0;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #C6D1D4;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+  position: relative;
+}
+
+.navigation-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navigation-link-active {
+  color: #8FC746;
+  background-color: rgba(143, 199, 70, 0.08);
+  padding-left: 14px; /* Indent slightly to make room for the left border */
+}
+
+/* Left active indicator strip */
+.navigation-link-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background-color: #8FC746;
+  border-radius: 0 4px 4px 0;
+}
+
+.navigation-link-active:hover {
+  color: #8FC746;
+  background-color: rgba(143, 199, 70, 0.12);
+} 

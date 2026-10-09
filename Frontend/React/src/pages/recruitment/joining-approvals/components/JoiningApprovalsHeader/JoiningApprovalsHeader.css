@@ -1,0 +1,763 @@
+/* =========================================================
+   JOINING APPROVALS HEADER
+   HRMS ENTERPRISE DESIGN
+   ---------------------------------------------------------
+   UI ONLY
+   No business logic / API / state changes
+   ========================================================= */
+
+.joining-approvals-header {
+  --ja-primary: #0b6970;
+  --ja-primary-dark: #084f55;
+  --ja-primary-soft: #e8f4f4;
+
+  --ja-heading: #0d2f3b;
+  --ja-text: #526776;
+  --ja-muted: #718391;
+
+  --ja-border: #e4ebee;
+  --ja-background: #ffffff;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 24px;
+
+  box-sizing: border-box;
+
+  background: var(--ja-background);
+
+  border: 1px solid var(--ja-border);
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow:
+    0 1px 2px rgba(13, 47, 59, 0.02),
+    0 4px 14px rgba(13, 47, 59, 0.035);
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.joining-approvals-header__content {
+  width: 100%;
+  min-width: 0;
+  min-height: 138px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding: 25px 28px 24px;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   DECORATIVE SHAPES
+   ---------------------------------------------------------
+   Inspired by reference image but using HRMS teal theme.
+   ========================================================= */
+
+.joining-approvals-header__decor {
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  border-radius: 999px;
+
+  background: var(--ja-primary-soft);
+
+  opacity: 0.55;
+}
+
+/* Large soft shape */
+
+.joining-approvals-header__decor--one {
+  width: 290px;
+  height: 180px;
+
+  right: 105px;
+  top: -75px;
+
+  transform: rotate(-8deg);
+
+  opacity: 0.45;
+}
+
+/* Smaller overlapping shape */
+
+.joining-approvals-header__decor--two {
+  width: 180px;
+  height: 130px;
+
+  right: -35px;
+  bottom: -70px;
+
+  transform: rotate(18deg);
+
+  background: #dcebed;
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.joining-approvals-header__left {
+  flex: 1 1 auto;
+
+  min-width: 0;
+
+  padding-right: 35px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.joining-approvals-header__eyebrow {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #657983;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.85px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.joining-approvals-header__title {
+  margin: 0 0 7px;
+
+  color: var(--ja-heading);
+
+  font-size: 29px;
+  font-weight: 650;
+
+  line-height: 1.16;
+
+  letter-spacing: -0.65px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.joining-approvals-header__description {
+  margin: 0;
+
+  max-width: 760px;
+
+  color: var(--ja-text);
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  letter-spacing: 0;
+}
+
+.joining-approvals-header__description-secondary {
+  color: var(--ja-text);
+}
+
+/* =========================================================
+   RIGHT ILLUSTRATION
+   ========================================================= */
+
+.joining-approvals-header__right {
+  flex: 0 0 auto;
+
+  width: 230px;
+  height: 138px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-right: -10px;
+}
+
+.joining-approvals-header__image-wrapper {
+  width: 230px;
+  height: 138px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: relative;
+
+  overflow: hidden;
+
+  /*
+   * Soft fade on the left.
+   * This allows the image to blend into the
+   * light HRMS header background.
+   */
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.18) 14%,
+    rgba(0, 0, 0, 0.62) 32%,
+    #000000 52%,
+    #000000 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.18) 14%,
+    rgba(0, 0, 0, 0.62) 32%,
+    #000000 52%,
+    #000000 100%
+  );
+}
+
+.joining-approvals-header__image {
+  display: block;
+
+  width: auto;
+
+  height: 128px;
+
+  max-width: 230px;
+
+  object-fit: contain;
+
+  object-position: center right;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .joining-approvals-header {
+    margin-bottom: 24px;
+  }
+
+  .joining-approvals-header__content {
+    min-height: 145px;
+
+    padding: 26px 30px 25px;
+  }
+
+  .joining-approvals-header__left {
+    padding-right: 40px;
+  }
+
+  .joining-approvals-header__eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 11px;
+  }
+
+  .joining-approvals-header__title {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+  }
+
+  .joining-approvals-header__description {
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+  .joining-approvals-header__right {
+    width: 250px;
+    height: 145px;
+
+    margin-right: -8px;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 250px;
+    height: 145px;
+  }
+
+  .joining-approvals-header__image {
+    height: 136px;
+    max-width: 250px;
+  }
+
+  .joining-approvals-header__decor--one {
+    width: 320px;
+    height: 195px;
+
+    right: 115px;
+    top: -82px;
+  }
+
+  .joining-approvals-header__decor--two {
+    width: 195px;
+    height: 140px;
+
+    right: -40px;
+    bottom: -75px;
+  }
+}
+
+/* =========================================================
+   STANDARD DESKTOP
+   1200px - 1439px
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .joining-approvals-header__content {
+    min-height: 136px;
+
+    padding: 23px 26px;
+  }
+
+  .joining-approvals-header__left {
+    padding-right: 30px;
+  }
+
+  .joining-approvals-header__title {
+    font-size: 28px;
+  }
+
+  .joining-approvals-header__description {
+    font-size: 14px;
+
+    max-width: 700px;
+  }
+
+  .joining-approvals-header__right {
+    width: 205px;
+    height: 136px;
+
+    margin-right: -8px;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 205px;
+    height: 136px;
+  }
+
+  .joining-approvals-header__image {
+    height: 125px;
+
+    max-width: 205px;
+  }
+
+  .joining-approvals-header__decor--one {
+    width: 270px;
+    height: 165px;
+
+    right: 90px;
+    top: -70px;
+  }
+
+  .joining-approvals-header__decor--two {
+    width: 165px;
+    height: 120px;
+
+    right: -35px;
+    bottom: -65px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   769px - 1199px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .joining-approvals-header {
+    margin-bottom: 20px;
+
+    border-radius: 11px;
+  }
+
+  .joining-approvals-header__content {
+    min-height: 126px;
+
+    padding: 21px 22px;
+  }
+
+  .joining-approvals-header__left {
+    padding-right: 22px;
+  }
+
+  .joining-approvals-header__eyebrow {
+    margin-bottom: 6px;
+
+    font-size: 10px;
+  }
+
+  .joining-approvals-header__title {
+    margin-bottom: 6px;
+
+    font-size: 25px;
+
+    letter-spacing: -0.45px;
+  }
+
+  .joining-approvals-header__description {
+    max-width: 590px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .joining-approvals-header__right {
+    width: 165px;
+    height: 126px;
+
+    margin-right: -6px;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 165px;
+    height: 126px;
+  }
+
+  .joining-approvals-header__image {
+    height: 112px;
+
+    max-width: 165px;
+  }
+
+  .joining-approvals-header__decor--one {
+    width: 220px;
+    height: 140px;
+
+    right: 70px;
+    top: -55px;
+  }
+
+  .joining-approvals-header__decor--two {
+    width: 135px;
+    height: 100px;
+
+    right: -30px;
+    bottom: -55px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .joining-approvals-header {
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+  }
+
+  .joining-approvals-header__content {
+    min-height: 145px;
+
+    display: block;
+
+    padding: 19px 20px 20px;
+  }
+
+  .joining-approvals-header__left {
+    width: 100%;
+
+    padding-right: 75px;
+
+    position: relative;
+
+    z-index: 3;
+  }
+
+  .joining-approvals-header__eyebrow {
+    margin-bottom: 6px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.75px;
+  }
+
+  .joining-approvals-header__title {
+    margin-bottom: 7px;
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.45px;
+
+    white-space: normal;
+  }
+
+  .joining-approvals-header__description {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.52;
+  }
+
+  .joining-approvals-header__desktop-break {
+    display: none;
+  }
+
+  .joining-approvals-header__description-secondary {
+    display: block;
+
+    margin-top: 2px;
+  }
+
+  .joining-approvals-header__right {
+    width: 92px;
+    height: 78px;
+
+    position: absolute;
+
+    right: 7px;
+    bottom: 4px;
+
+    margin: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 92px;
+    height: 78px;
+  }
+
+  .joining-approvals-header__image {
+    width: auto;
+
+    height: 76px;
+
+    max-width: 92px;
+  }
+
+  .joining-approvals-header__decor--one {
+    width: 170px;
+    height: 115px;
+
+    right: 40px;
+    top: -48px;
+
+    opacity: 0.38;
+  }
+
+  .joining-approvals-header__decor--two {
+    width: 105px;
+    height: 80px;
+
+    right: -25px;
+    bottom: -42px;
+
+    opacity: 0.42;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .joining-approvals-header {
+    margin-bottom: 16px;
+
+    border-radius: 9px;
+  }
+
+  .joining-approvals-header__content {
+    min-height: 152px;
+
+    padding: 18px 17px 19px;
+  }
+
+  .joining-approvals-header__left {
+    padding-right: 58px;
+  }
+
+  .joining-approvals-header__eyebrow {
+    margin-bottom: 6px;
+
+    font-size: 9.5px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .joining-approvals-header__title {
+    margin-bottom: 7px;
+
+    font-size: 21px;
+
+    line-height: 1.22;
+  }
+
+  .joining-approvals-header__description {
+    font-size: 12.5px;
+
+    line-height: 1.5;
+  }
+
+  .joining-approvals-header__description-secondary {
+    margin-top: 3px;
+  }
+
+  .joining-approvals-header__right {
+    width: 72px;
+    height: 65px;
+
+    right: 3px;
+    bottom: 3px;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 72px;
+    height: 65px;
+  }
+
+  .joining-approvals-header__image {
+    height: 63px;
+
+    max-width: 72px;
+  }
+
+  .joining-approvals-header__decor--one {
+    width: 135px;
+    height: 100px;
+
+    right: 25px;
+    top: -42px;
+  }
+
+  .joining-approvals-header__decor--two {
+    width: 85px;
+    height: 70px;
+
+    right: -20px;
+    bottom: -35px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   <= 375px
+   ========================================================= */
+
+@media (max-width: 375px) {
+  .joining-approvals-header__content {
+    min-height: 158px;
+
+    padding: 17px 15px 18px;
+  }
+
+  .joining-approvals-header__left {
+    padding-right: 48px;
+  }
+
+  .joining-approvals-header__eyebrow {
+    font-size: 9px;
+  }
+
+  .joining-approvals-header__title {
+    font-size: 20px;
+
+    letter-spacing: -0.3px;
+  }
+
+  .joining-approvals-header__description {
+    font-size: 12px;
+
+    line-height: 1.48;
+  }
+
+  .joining-approvals-header__right {
+    width: 62px;
+    height: 58px;
+
+    right: 2px;
+    bottom: 3px;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    width: 62px;
+    height: 58px;
+  }
+
+  .joining-approvals-header__image {
+    height: 56px;
+
+    max-width: 62px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .joining-approvals-header,
+  .joining-approvals-header__image {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* =========================================================
+   HIGH CONTRAST / PRINT SAFETY
+   ========================================================= */
+
+@media print {
+  .joining-approvals-header {
+    border: 1px solid #d5dde0;
+
+    box-shadow: none;
+  }
+
+  .joining-approvals-header__decor {
+    display: none;
+  }
+
+  .joining-approvals-header__image-wrapper {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

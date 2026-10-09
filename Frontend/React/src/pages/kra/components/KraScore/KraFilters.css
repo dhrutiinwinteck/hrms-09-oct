@@ -1,0 +1,1642 @@
+/* =========================================================
+
+   KRA SCORE FILTERS
+
+   Enterprise HRMS
+
+   Compact Professional Layout
+
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   ROOT
+
+   ========================================================= */
+
+
+
+.kra-score-filters {
+
+ width: 100%;
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ align-items: flex-end;
+
+ justify-content: space-between;
+
+
+
+ gap: 20px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ margin: 0;
+
+ padding: 14px 16px;
+
+
+
+ background: #ffffff;
+
+
+
+ border: 1px solid #e2e8e6;
+
+ border-radius: 10px;
+
+
+
+ box-shadow:
+
+ 0 1px 2px rgba(15, 45, 39, 0.02),
+
+ 0 4px 12px rgba(15, 45, 39, 0.035);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FILTER FIELDS
+
+   ========================================================= */
+
+
+
+.kra-score-filters-fields {
+
+ min-width: 0;
+
+
+
+ flex: 1 1 auto;
+
+
+
+ display: grid;
+
+
+
+ grid-template-columns:
+
+ repeat(3, minmax(150px, 1fr));
+
+
+
+ align-items: end;
+
+
+
+ gap: 18px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FILTER GROUP
+
+   ========================================================= */
+
+
+
+.kra-score-filter-group {
+
+ width: 100%;
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ flex-direction: column;
+
+
+
+ gap: 6px;
+
+
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LABEL
+
+   ========================================================= */
+
+
+
+.kra-score-filter-label {
+
+ display: block;
+
+
+ margin: 0;
+
+ padding: 0;
+
+
+
+ color: #263631;
+
+
+
+ font-family: inherit;
+
+ font-size: 11.5px;
+
+ font-weight: 500;
+
+ line-height: 1.3;
+
+
+
+ cursor: pointer;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT WRAPPER
+
+   ========================================================= */
+
+
+
+.kra-score-select-wrapper {
+
+ position: relative;
+
+
+
+ width: 100%;
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ align-items: center;
+
+
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CALENDAR ICON
+
+   ========================================================= */
+
+
+
+.kra-score-select-icon {
+
+ position: absolute;
+
+
+
+ top: 50%;
+
+ left: 11px;
+
+
+
+ z-index: 2;
+
+
+
+ width: 15px;
+
+ height: 15px;
+
+ color: #5c706a;
+
+
+
+ pointer-events: none;
+
+
+
+ transform: translateY(-50%);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT
+
+   ========================================================= */
+
+
+
+.kra-score-filter-select {
+
+ width: 100%;
+
+ min-width: 0;
+
+
+
+ height: 38px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ margin: 0;
+
+
+
+ padding:
+
+ 0
+
+  34px
+
+ 0
+
+ 34px;
+
+
+
+ appearance: none;
+ -webkit-appearance: none;
+
+ -moz-appearance: none;
+
+
+
+ outline: none;
+
+
+
+ background: #ffffff;
+
+
+
+ border: 1px solid #dce4e1;
+
+ border-radius: 7px;
+
+
+
+ color: #2d3e39;
+
+
+
+ font-family: inherit;
+
+ font-size: 11.5px;
+
+ font-weight: 400;
+
+ line-height: normal;
+
+
+
+ cursor: pointer;
+
+
+
+ transition:
+
+ border-color 0.16s ease,
+
+ box-shadow 0.16s ease,
+
+ background-color 0.16s ease;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT HOVER
+
+   ========================================================= */
+
+
+
+.kra-score-filter-select:hover {
+
+ border-color: #bdccc7;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT FOCUS
+
+   ========================================================= */
+
+
+
+.kra-score-filter-select:focus {
+
+ border-color: #3b7774;
+
+
+
+ box-shadow:
+
+ 0 0 0 3px rgba(59, 119, 116, 0.09);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT CHEVRON
+
+   ========================================================= */
+
+
+
+.kra-score-select-chevron {
+
+ position: absolute;
+
+
+
+ top: 50%;
+
+ right: 11px;
+
+
+
+ width: 14px;
+
+ height: 14px;
+
+
+
+ color: #354944;
+
+
+
+ pointer-events: none;
+
+
+
+ transform: translateY(-50%);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ACTIONS
+
+   ========================================================= */
+
+
+
+.kra-score-filter-actions {
+
+ min-width: 0;
+
+
+ flex: 0 0 auto;
+
+
+
+ display: flex;
+
+ align-items: center;
+
+ justify-content: flex-end;
+
+
+
+ gap: 10px;
+
+
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   COMMON BUTTON
+
+   ========================================================= */
+
+
+
+.kra-score-filter-btn {
+
+ height: 38px;
+
+ min-height: 38px;
+
+
+
+ display: inline-flex;
+
+ align-items: center;
+
+ justify-content: center;
+
+
+
+ gap: 7px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ margin: 0;
+
+ padding: 0 15px;
+
+
+
+ border-radius: 7px;
+
+
+
+ font-family: inherit;
+
+ font-size: 11.5px;
+
+ font-weight: 500;
+
+ line-height: 1;
+
+
+
+ white-space: nowrap;
+
+
+
+ cursor: pointer;
+
+
+ transition:
+
+ background-color 0.16s ease,
+
+ border-color 0.16s ease,
+
+ color 0.16s ease,
+
+ box-shadow 0.16s ease,
+ transform 0.16s ease;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BUTTON ICON
+
+   ========================================================= */
+
+
+
+.kra-score-filter-btn svg {
+
+ width: 14px;
+
+ height: 14px;
+
+
+
+ flex: 0 0 14px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RESET
+
+   ========================================================= */
+
+
+
+.kra-score-filter-reset {
+
+ min-width: 86px;
+
+
+
+ color: #40534e;
+
+
+
+ background: #ffffff;
+
+
+
+ border: 1px solid #dce4e1;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RESET HOVER
+
+   ========================================================= */
+
+
+
+.kra-score-filter-reset:hover {
+
+ color: #1f3530;
+
+
+
+ background: #f7faf9;
+
+
+
+ border-color: #bdcbc7;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   RESET ACTIVE
+
+   ========================================================= */
+
+
+
+.kra-score-filter-reset:active {
+
+ background: #f0f5f3;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   APPLY
+
+   ========================================================= */
+
+
+
+.kra-score-filter-apply {
+
+ min-width: 126px;
+
+
+
+ color: #ffffff;
+
+
+
+ background: #315f64;
+
+
+
+ border: 1px solid #315f64;
+
+
+
+ box-shadow:
+
+ 0 1px 2px rgba(15, 45, 39, 0.05),
+
+ 0 3px 7px rgba(15, 45, 39, 0.07);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   APPLY HOVER
+
+   ========================================================= */
+
+
+
+.kra-score-filter-apply:hover {
+
+ background: #285459;
+
+
+
+ border-color: #285459;
+
+
+ box-shadow:
+
+ 0 2px 4px rgba(15, 45, 39, 0.07),
+
+ 0 5px 10px rgba(15, 45, 39, 0.09);
+
+
+
+ transform: translateY(-1px);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   APPLY ACTIVE
+
+   ========================================================= */
+
+
+
+.kra-score-filter-apply:active {
+
+ background: #224b4f;
+
+
+
+ border-color: #224b4f;
+
+ box-shadow:
+
+ 0 1px 2px rgba(15, 45, 39, 0.07);
+
+
+ transform: translateY(0);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ACCESSIBILITY
+
+   ========================================================= */
+
+
+
+.kra-score-filter-btn:focus-visible {
+
+ outline: 3px solid rgba(49, 95, 100, 0.15);
+
+ outline-offset: 2px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LARGE DESKTOP
+
+   >= 1440px
+
+
+
+   Do not increase vertical size unnecessarily.
+
+   ========================================================= */
+
+
+
+@media (min-width: 1440px) {
+
+ .kra-score-filters {
+
+ gap: 22px;
+
+
+
+ padding:
+
+14px
+
+18px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ gap: 20px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LAPTOP
+
+   <= 1200px
+
+   ========================================================= */
+
+
+
+@media (max-width: 1200px) {
+
+ .kra-score-filters {
+
+ gap: 14px;
+
+
+
+ padding:
+
+13px
+
+ 14px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ gap: 12px;
+
+ }
+
+
+
+ .kra-score-filter-btn {
+
+ padding:
+
+ 0
+
+ 13px;
+
+ }
+
+
+
+ .kra-score-filter-reset {
+ min-width: 80px;
+
+ }
+
+
+
+ .kra-score-filter-apply {
+
+ min-width: 116px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SMALL LAPTOP
+
+   <= 1100px
+
+
+
+   Keep controls on one line while enough width exists.
+
+   ========================================================= */
+
+
+
+@media (max-width: 1100px) {
+
+ .kra-score-filters {
+
+ gap: 12px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ gap: 10px;
+
+
+
+ grid-template-columns:
+
+ repeat(3, minmax(130px, 1fr));
+
+ }
+
+
+
+ .kra-score-filter-select {
+
+ padding-right: 30px;
+
+ padding-left: 31px;
+
+
+
+ font-size: 11px;
+
+ }
+
+
+
+ .kra-score-select-icon {
+
+ left: 9px;
+
+ }
+
+
+
+ .kra-score-select-chevron {
+
+ right: 9px;
+
+ }
+
+
+
+ .kra-score-filter-actions {
+
+ gap: 7px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET
+
+   <= 1024px
+
+
+
+   Actions move to second row.
+
+   ========================================================= */
+
+
+
+@media (max-width: 1024px) {
+
+ .kra-score-filters {
+
+ flex-direction: column;
+
+ align-items: stretch;
+
+
+
+ gap: 12px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ width: 100%;
+
+
+
+ grid-template-columns:
+
+ repeat(3, minmax(0, 1fr));
+
+
+
+ gap: 12px;
+
+ }
+
+
+
+ .kra-score-filter-actions {
+
+ width: 100%;
+
+
+
+ justify-content: flex-end;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET PORTRAIT
+
+   <= 768px
+
+   ========================================================= */
+
+
+
+@media (max-width: 768px) {
+
+ .kra-score-filters {
+
+gap: 13px;
+
+
+
+padding: 14px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ grid-template-columns:
+
+ minmax(0, 1fr);
+
+
+
+ gap: 11px;
+ }
+
+
+
+ .kra-score-filter-group {
+
+ gap: 5px;
+
+ }
+
+
+
+ .kra-score-filter-select {
+
+ height: 40px;
+
+
+
+ font-size: 12px;
+
+ }
+
+
+ .kra-score-filter-btn {
+ height: 40px;
+
+ min-height: 40px;
+
+
+ font-size: 12px;
+
+ }
+
+
+
+ .kra-score-filter-actions {
+
+ display: grid;
+
+
+
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+
+
+
+ gap: 9px;
+
+ }
+
+
+
+ .kra-score-filter-reset,
+
+ .kra-score-filter-apply {
+
+ width: 100%;
+
+ min-width: 0;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MOBILE
+
+   <= 480px
+
+   ========================================================= */
+
+
+
+@media (max-width: 480px) {
+
+ .kra-score-filters {
+
+ gap: 12px;
+
+
+
+ padding: 12px;
+
+ }
+
+
+
+ .kra-score-filters-fields {
+
+ gap: 10px;
+ }
+
+
+
+ .kra-score-filter-actions {
+
+ grid-template-columns: minmax(0, 1fr);
+
+}
+
+
+
+ .kra-score-filter-btn {
+  width: 100%;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SMALL MOBILE
+
+   <= 380px
+
+   ========================================================= */
+
+
+
+@media (max-width: 380px) {
+
+ .kra-score-filters {
+
+ padding: 11px 10px;
+
+}
+
+
+
+ .kra-score-filter-label {
+
+ font-size: 11px;
+
+ }
+
+
+
+ .kra-score-filter-select {
+
+ height: 39px;
+
+
+
+ font-size: 11.5px;
+
+ }
+
+
+ .kra-score-filter-btn {
+ height: 39px;
+
+ min-height: 39px;
+
+
+
+ font-size: 11.5px;
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   EXTRA SMALL MOBILE
+
+   <= 320px
+
+   ========================================================= */
+
+
+
+@media (max-width: 320px) {
+
+ .kra-score-filters {
+
+ padding:
+
+ 10px
+
+8px;
+
+ }
+
+
+
+ .kra-score-filter-select {
+
+ padding-right: 29px;
+
+ padding-left: 30px;
+
+ }
+
+
+
+ .kra-score-select-icon {
+
+ left: 9px;
+
+ }
+
+
+
+ .kra-score-select-chevron {
+
+ right: 9px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REDUCED MOTION
+
+   ========================================================= */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+ .kra-score-filter-select,
+
+ .kra-score-filter-btn {
+
+ transition: none;
+
+ }
+
+
+ .kra-score-filter-apply:hover {
+
+ transform: none;
+ }
+
+}
+
+
+/* =========================================================
+   CUSTOM DROPDOWN
+   Matched 1:1 with KraFilters.tsx
+   ========================================================= */
+
+.kra-score-custom-dropdown {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  z-index: 10;
+}
+
+.kra-score-custom-dropdown--open {
+  z-index: 100;
+}
+
+.kra-score-custom-dropdown--disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+/* Trigger */
+
+.kra-score-custom-dropdown-trigger {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 34px 0 34px;
+  border: 1px solid #d6e1de;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #263a35;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 450;
+  line-height: 1;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 45, 39, 0.02);
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background-color 0.16s ease,
+    transform 0.12s ease;
+}
+
+.kra-score-custom-dropdown-trigger:hover:not(:disabled) {
+  border-color: #b8cbc5;
+  background: #fcfefd;
+}
+
+.kra-score-custom-dropdown-trigger:focus-visible {
+  border-color: #087f70;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.10);
+}
+
+.kra-score-custom-dropdown--open
+.kra-score-custom-dropdown-trigger {
+  border-color: #087f70;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.08);
+}
+
+.kra-score-custom-dropdown-trigger:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.kra-score-custom-dropdown-trigger:disabled {
+  cursor: not-allowed;
+  background: #f5f8f7;
+  color: #7a8985;
+}
+
+/* Calendar / leading icon */
+
+.kra-score-custom-dropdown-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #55736c;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.kra-score-custom-dropdown-icon svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+/* Value */
+
+.kra-score-custom-dropdown-value {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #263a35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kra-score-custom-dropdown-value--placeholder {
+  color: #84928e;
+}
+
+/* Chevron */
+
+.kra-score-custom-dropdown-chevron {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  width: 15px;
+  height: 15px;
+  color: #48625c;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform 0.16s ease, color 0.16s ease;
+}
+
+.kra-score-custom-dropdown--open
+.kra-score-custom-dropdown-chevron {
+  color: #087f70;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Menu */
+
+.kra-score-custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  max-height: 260px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #d7e3df;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow:
+    0 8px 20px rgba(15, 45, 39, 0.08),
+    0 18px 42px rgba(15, 45, 39, 0.10);
+  z-index: 200;
+  animation: kra-score-dropdown-enter 0.12s ease-out;
+  scrollbar-width: thin;
+  scrollbar-color: #c4d5d0 transparent;
+}
+
+.kra-score-custom-dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.kra-score-custom-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kra-score-custom-dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #c4d5d0;
+}
+
+/* Option */
+
+.kra-score-custom-dropdown-option {
+  width: 100%;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 6px;
+  outline: none;
+  background: transparent;
+  color: #30433e;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 450;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease;
+}
+
+.kra-score-custom-dropdown-option:hover,
+.kra-score-custom-dropdown-option--focused {
+  background: #f1f7f5;
+  color: #087f70;
+}
+
+.kra-score-custom-dropdown-option--selected {
+  background: #eaf5f2;
+  color: #087f70;
+  font-weight: 600;
+}
+
+.kra-score-custom-dropdown-option--selected:hover,
+.kra-score-custom-dropdown-option--selected.kra-score-custom-dropdown-option--focused {
+  background: #e3f2ee;
+}
+
+.kra-score-custom-dropdown-option svg {
+  flex: 0 0 auto;
+  color: #087f70;
+}
+
+.kra-score-custom-dropdown-empty {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  color: #7c8c87;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Make the three controls visually consistent with the filter buttons. */
+
+.kra-score-select-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: block;
+}
+
+/* Remove the old native-select visual contract from the cascade. */
+.kra-score-filter-select,
+.kra-score-select-icon,
+.kra-score-select-chevron {
+  all: unset;
+}
+
+/* Responsive dropdown */
+
+@media (max-width: 1100px) {
+  .kra-score-custom-dropdown-trigger {
+    height: 38px;
+    min-height: 38px;
+    padding-left: 31px;
+    padding-right: 30px;
+    font-size: 11px;
+  }
+
+  .kra-score-custom-dropdown-icon {
+    left: 9px;
+  }
+
+  .kra-score-custom-dropdown-chevron {
+    right: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kra-score-custom-dropdown-trigger {
+    height: 40px;
+    min-height: 40px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .kra-score-custom-dropdown-trigger {
+    height: 39px;
+    min-height: 39px;
+    padding-left: 30px;
+    padding-right: 29px;
+    font-size: 11.5px;
+  }
+
+  .kra-score-custom-dropdown-icon {
+    left: 9px;
+  }
+
+  .kra-score-custom-dropdown-chevron {
+    right: 9px;
+  }
+}
+
+@keyframes kra-score-dropdown-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-score-custom-dropdown-trigger,
+  .kra-score-custom-dropdown-option,
+  .kra-score-custom-dropdown-chevron {
+    transition: none;
+  }
+
+  .kra-score-custom-dropdown-menu {
+    animation: none;
+  }
+}

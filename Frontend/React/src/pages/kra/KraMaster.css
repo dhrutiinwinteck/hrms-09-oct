@@ -1,0 +1,669 @@
+/* =========================================================
+   KRA MASTER PAGE
+   Enterprise HRMS Theme
+   Teal + White + Soft Mint
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.kra-master-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  background: #f6f9f8;
+
+  color: #182522;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+   ========================================================= */
+
+.kra-master-content {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 15px 20px 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kra-master-header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.kra-master-heading {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.kra-master-title {
+  margin: 0;
+
+  color: #182522;
+
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.kra-master-subtitle {
+  margin: 0;
+
+  color: #647570;
+
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+   ========================================================= */
+
+.kra-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CONTENT PANEL
+   ========================================================= */
+
+.kra-content-panel {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.025),
+    0 2px 5px rgba(15, 45, 39, 0.02);
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.kra-table-container {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.kra-pagination {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 11px 18px;
+
+  box-sizing: border-box;
+
+  background: #f8faf9;
+
+  border-top: 1px solid #e5ebe9;
+}
+
+
+/* =========================================================
+   PAGINATION INFO
+   ========================================================= */
+
+.kra-pagination-info {
+  min-width: 0;
+
+  color: #647570;
+
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.kra-pagination-info strong {
+  color: #263934;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PAGINATION CONTROLS
+   ========================================================= */
+
+.kra-pagination-controls {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PAGINATION BUTTON
+   ========================================================= */
+
+.kra-pagination-btn {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8e1de;
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #52635f;
+
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+/* =========================================================
+   PAGINATION HOVER
+   ========================================================= */
+
+.kra-pagination-btn:hover:not(:disabled):not(
+    .kra-pagination-btn-active
+  ) {
+  background: #eaf5f2;
+
+  border-color: #bfd8d2;
+
+  color: #075e54;
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.kra-pagination-btn-active {
+  background: #087f70;
+
+  border-color: #087f70;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 2px 4px rgba(8, 127, 112, 0.16);
+}
+
+.kra-pagination-btn-active:hover {
+  background: #06695e;
+
+  border-color: #06695e;
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+   ========================================================= */
+
+.kra-pagination-btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.kra-pagination-btn:disabled {
+  background: #f5f7f6;
+
+  border-color: #e3e9e7;
+
+  color: #a6b0ad;
+
+  cursor: not-allowed;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.kra-pagination-btn:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.kra-pagination-dots {
+  min-width: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #899793;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   LARGE / MEDIUM DESKTOP
+   <= 1280px
+   ========================================================= */
+
+@media (max-width: 1280px) {
+
+  .kra-master-content {
+    padding:
+      18px
+      24px
+      28px;
+  }
+
+  .kra-summary-grid {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .kra-master-content {
+    padding:
+      18px
+      20px
+      26px;
+  }
+
+  .kra-master-header {
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .kra-master-title {
+    font-size: 24px;
+  }
+
+  .kra-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .kra-master-content {
+    padding:
+      16px
+      16px
+      24px;
+  }
+
+  .kra-master-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-bottom: 16px;
+  }
+
+  .kra-master-title {
+    font-size: 22px;
+  }
+
+  .kra-master-subtitle {
+    font-size: 11.5px;
+  }
+
+  .kra-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+  }
+
+  .kra-content-panel {
+    border-radius: 7px;
+  }
+
+  .kra-pagination {
+    min-height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+  }
+
+  .kra-pagination-info {
+    width: 100%;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+  .kra-pagination-controls {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .kra-master-content {
+    padding:
+      14px
+      12px
+      20px;
+  }
+
+  .kra-master-header {
+    margin-bottom: 14px;
+  }
+
+  .kra-master-title {
+    font-size: 20px;
+  }
+
+  .kra-master-subtitle {
+    max-width: 320px;
+
+    font-size: 11px;
+  }
+
+  .kra-summary-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .kra-pagination {
+    padding:
+      11px
+      10px;
+  }
+
+  .kra-pagination-btn {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .kra-master-content {
+    padding:
+      12px
+      8px
+      18px;
+  }
+
+  .kra-master-title {
+    font-size: 19px;
+  }
+
+  .kra-summary-grid {
+    gap: 8px;
+  }
+
+  .kra-pagination {
+    padding:
+      10px
+      8px;
+  }
+
+  .kra-pagination-controls {
+    gap: 3px;
+  }
+
+  .kra-pagination-btn {
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
+
+    font-size: 10.5px;
+  }
+
+  .kra-pagination-dots {
+    min-width: 18px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .kra-pagination-btn {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   API STATES
+   ========================================================= */
+
+.kra-table-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 24px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.kra-api-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin: 12px 0;
+  padding: 12px 16px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.kra-api-error button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: inherit;
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.kra-api-error button:hover {
+  background: #fee2e2;
+}
+
+.kra-saving-indicator {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+
+  padding: 10px 16px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 6px rgba(15, 23, 42, 0.05),
+    0 10px 25px rgba(15, 23, 42, 0.08);
+}

@@ -1,0 +1,177 @@
+/* ============================================================
+   LETTER BODY EDITOR
+   ============================================================ */
+
+.loi-editor-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.loi-editor-toolbar {
+  width: 100%;
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding: 2px 5px;
+  border: 1px solid #d8e1e5;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background: #f7f9fa;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.loi-editor-toolbar select {
+  width: 76px;
+  height: 25px;
+  padding: 2px 5px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #354c57;
+  font-family: inherit;
+  font-size: 8.5px;
+  cursor: pointer;
+}
+
+.loi-editor-toolbar button {
+  width: 24px;
+  height: 25px;
+  flex: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #425762;
+  cursor: pointer;
+}
+
+.loi-editor-toolbar button:hover {
+  color: #145d6c;
+  background: #e8f2f4;
+}
+
+.loi-editor-toolbar button:active {
+  background: #dcebed;
+}
+
+.loi-toolbar-divider {
+  width: 1px;
+  height: 16px;
+  flex: 0 0 1px;
+  margin: 0 3px;
+  background: #d8e1e5;
+}
+
+/* ============================================================
+   EDITOR
+   ============================================================ */
+
+.loi-editor-content {
+  width: 100%;
+  min-height: 278px;
+  max-height: 278px;
+  overflow-y: auto;
+  padding: 8px 9px;
+  border: 1px solid #d8e1e5;
+  border-radius: 0 0 6px 6px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  line-height: 1.43;
+  box-sizing: border-box;
+}
+
+.loi-editor-content:focus {
+  border-color: #72a5ad;
+  box-shadow: 0 0 0 2px rgba(76, 154, 170, 0.07);
+}
+
+/* ============================================================
+   PLACEHOLDER
+   ============================================================ */
+
+.loi-editor-content:empty::before {
+  content: attr(data-placeholder);
+  color: #9aa8af;
+  pointer-events: none;
+}
+
+/* ============================================================
+   EDITOR CONTENT
+   ============================================================ */
+
+.loi-editor-content p {
+  margin: 0 0 7px;
+}
+
+.loi-editor-content h3 {
+  margin: 9px 0 5px;
+  color: #173e4b;
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.loi-editor-content ul,
+.loi-editor-content ol {
+  margin: 3px 0 7px;
+  padding-left: 18px;
+}
+
+.loi-editor-content li {
+  margin-bottom: 2px;
+}
+
+.loi-editor-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   VALIDATION
+   ============================================================ */
+
+.loi-editor-content-error {
+  border-color: #ef4444;
+}
+
+.loi-editor-content-error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.07);
+}
+
+.loi-validation-error {
+  display: block;
+  margin-top: 4px;
+  color: #dc2626;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+.loi-editor-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.loi-editor-content::-webkit-scrollbar-track {
+  background: #f8fafb;
+}
+
+.loi-editor-content::-webkit-scrollbar-thumb {
+  background: #cbd5dc;
+  border-radius: 10px;
+}

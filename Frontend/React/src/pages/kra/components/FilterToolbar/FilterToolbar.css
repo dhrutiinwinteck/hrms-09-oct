@@ -1,0 +1,622 @@
+/* =========================================================
+   KRA FILTER TOOLBAR
+   Enterprise HRMS Theme
+   Teal + White + Soft Mint
+   ========================================================= */
+
+
+/* =========================================================
+   TOOLBAR CONTAINER
+   ========================================================= */
+
+.filter-toolbar {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+
+  gap: 16px;
+
+  padding: 16px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5ebe9;
+}
+
+
+/* =========================================================
+   LEFT FILTER SECTION
+   ========================================================= */
+
+.filter-left {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FILTER GROUP
+   ========================================================= */
+
+.filter-group {
+  min-width: 170px;
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   FILTER LABEL
+   ========================================================= */
+
+.filter-group label {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  color: #263934;
+
+  letter-spacing: 0;
+
+  text-transform: none;
+}
+
+/* =========================================================
+   SELECT WRAPPER
+   Permanent border container
+   ========================================================= */
+
+.filter-select-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #c9ded9;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.filter-select {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0 34px 0 10px;
+
+  border: 0 !important;
+  outline: none !important;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #263934;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   HOVER
+   Keep the permanent border — don't remove it
+   ========================================================= */
+
+.filter-select-wrapper:hover {
+  border-color: #a9c9c1;
+}
+
+
+/* =========================================================
+   FOCUS / OPEN
+   Highlight the entire control
+   ========================================================= */
+
+.filter-select-wrapper:focus-within {
+  border-color: #087f70;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 127, 112, 0.10);
+}
+
+
+/* =========================================================
+   CHEVRON
+   ========================================================= */
+
+.filter-select-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 10px;
+
+  width: 15px;
+  height: 15px;
+
+  color: #647570;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+}
+
+
+/* Focused chevron */
+
+.filter-select-wrapper:focus-within .filter-select-icon {
+  color: #087f70;
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.filter-select:disabled {
+  background: #f3f6f5;
+
+  color: #8a9793;
+
+  cursor: not-allowed;
+}
+
+.filter-select-wrapper:has(.filter-select:disabled) {
+  background: #f3f6f5;
+
+  border-color: #dce4e1;
+}
+/* =========================================================
+   FILTER ACTIONS
+   ========================================================= */
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   COMMON FILTER BUTTON
+   ========================================================= */
+
+.filter-btn {
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
+.filter-btn-search {
+  min-width: 86px;
+
+  background: #087f70;
+
+  border-color: #087f70;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 2px 4px rgba(8, 127, 112, 0.16);
+}
+
+.filter-btn-search:hover {
+  background: #06695e;
+
+  border-color: #06695e;
+
+  box-shadow:
+    0 3px 8px rgba(8, 127, 112, 0.2);
+
+  transform: translateY(-1px);
+}
+
+.filter-btn-search:active {
+  background: #075e54;
+
+  border-color: #075e54;
+
+  box-shadow: none;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESET BUTTON
+   ========================================================= */
+
+.filter-btn-reset {
+  min-width: 78px;
+
+  background: #ffffff;
+
+  border-color: #d3ddda;
+
+  color: #52635f;
+}
+
+.filter-btn-reset:hover {
+  background: #eaf5f2;
+
+  border-color: #bfd8d2;
+
+  color: #075e54;
+}
+
+.filter-btn-reset:active {
+  background: #dfece8;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.filter-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ADD KRA BUTTON
+   ========================================================= */
+
+.filter-btn-add {
+  min-width: 100px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #087f70;
+  border-radius: 5px;
+
+  background: #087f70;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 4px rgba(8, 127, 112, 0.16);
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.filter-btn-add:hover {
+  background: #06695e;
+
+  border-color: #06695e;
+
+  box-shadow:
+    0 4px 10px rgba(8, 127, 112, 0.22);
+
+  transform: translateY(-1px);
+}
+
+.filter-btn-add:active {
+  background: #075e54;
+
+  border-color: #075e54;
+
+  box-shadow: none;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+   ========================================================= */
+
+.filter-btn:focus-visible,
+.filter-btn-add:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   BUTTON DISABLED
+   ========================================================= */
+
+.filter-btn:disabled,
+.filter-btn-add:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   SMALL DESKTOP / TABLET LANDSCAPE
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .filter-toolbar {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 15px 16px;
+  }
+
+  .filter-left {
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: auto;
+    min-width: 160px;
+
+    flex: 1 1 180px;
+  }
+
+  .filter-right {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .filter-toolbar {
+    padding: 14px;
+
+    gap: 12px;
+  }
+
+  .filter-left {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: end;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .filter-actions {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1;
+  }
+
+  .filter-right {
+    width: 100%;
+  }
+
+  .filter-btn-add {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .filter-toolbar {
+    padding: 12px;
+  }
+
+  .filter-left {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .filter-select {
+    height: 38px;
+
+    font-size: 13px;
+  }
+
+  .filter-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    gap: 8px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    height: 38px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  .filter-right {
+    width: 100%;
+  }
+
+  .filter-btn-add {
+    width: 100%;
+    height: 38px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .filter-toolbar {
+    padding: 10px;
+  }
+
+  .filter-left {
+    gap: 9px;
+  }
+
+  .filter-actions {
+    gap: 6px;
+  }
+
+  .filter-select,
+  .filter-btn,
+  .filter-btn-add {
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .filter-select,
+  .filter-btn,
+  .filter-btn-add {
+    transition: none;
+  }
+}

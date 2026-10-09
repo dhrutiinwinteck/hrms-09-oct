@@ -1,0 +1,446 @@
+/**
+ * ======================================================
+ * Attendance Module - Overview Styles
+ * ======================================================
+ * Enterprise-grade styling for the attendance overview strip.
+ *
+ * @module components/AttendanceOverview
+ */
+
+/* -----------------------------------------------------------------------------
+ * CSS Variables
+ * ----------------------------------------------------------------------------- */
+
+:root {
+  --overview-bg: #ffffff;
+  --overview-border-radius: 0.75rem;
+  --overview-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --overview-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --overview-transition: all 0.2s ease-in-out;
+  --overview-day-size: 32px;
+  --overview-day-gap: 3px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Container
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview {
+  background: var(--overview-bg);
+  border-radius: var(--overview-border-radius);
+  box-shadow: var(--overview-shadow);
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0;
+  font-family: var(--overview-font-family);
+  position: relative;
+}
+
+/* -----------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.attendance-overview__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.attendance-overview__month {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* -----------------------------------------------------------------------------
+ * Legend
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.attendance-overview__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.attendance-overview__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * Scrollable Strip
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview__strip {
+  display: flex;
+  gap: var(--overview-day-gap);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.attendance-overview__strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.attendance-overview__strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.attendance-overview__strip::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+.attendance-overview__strip::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* -----------------------------------------------------------------------------
+ * Individual Day
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--overview-day-size);
+  height: var(--overview-day-size);
+  padding: 0.25rem 0.375rem;
+  border-radius: 0.5rem;
+  transition: var(--overview-transition);
+  cursor: default;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.attendance-overview__day:hover {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.attendance-overview__day[role="button"] {
+  cursor: pointer;
+}
+
+.attendance-overview__day[role="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.attendance-overview__day[role="button"]:active {
+  transform: translateY(0);
+}
+
+.attendance-overview__day[role="button"]:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Day Number */
+.attendance-overview__day-number {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+/* Weekday */
+.attendance-overview__day-weekday {
+  font-size: 0.45rem;
+  font-weight: 400;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+/* Status Dot */
+.attendance-overview__day-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 3px;
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.attendance-overview__day:hover .attendance-overview__day-status {
+  transform: scale(1.2);
+}
+
+/* -----------------------------------------------------------------------------
+ * Scroll Hint
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview__scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  background: #f9fafb;
+  border-radius: 0.375rem;
+  animation: scroll-hint-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.attendance-overview__scroll-hint-icon {
+  font-size: 0.875rem;
+  display: inline-block;
+  animation: scroll-hint-move 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Loading Skeleton
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview--loading .attendance-overview__strip {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.attendance-overview__day--skeleton {
+  min-width: var(--overview-day-size);
+  height: var(--overview-day-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.attendance-overview__day-number-skeleton {
+  width: 20px;
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.attendance-overview__day-weekday-skeleton {
+  width: 16px;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite 0.2s;
+}
+
+.attendance-overview__day-status-skeleton {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  animation: skeleton-pulse 1.5s ease-in-out infinite 0.4s;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.attendance-overview__skeleton-title {
+  width: 120px;
+  height: 16px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* -----------------------------------------------------------------------------
+ * Error State
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: #fef2f2;
+  border-radius: var(--overview-border-radius);
+  color: #991b1b;
+}
+
+.attendance-overview__error-icon {
+  font-size: 1.25rem;
+}
+
+.attendance-overview__error-message {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+ * Empty State
+ * ----------------------------------------------------------------------------- */
+
+.attendance-overview--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2.5rem;
+  background: #f9fafb;
+  border-radius: var(--overview-border-radius);
+  color: #6b7280;
+}
+
+.attendance-overview__empty-icon {
+  font-size: 2rem;
+}
+
+.attendance-overview__empty-message {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+ * Responsive Adjustments
+ * ----------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .attendance-overview {
+    padding: 1rem 1.25rem;
+  }
+  :root {
+    --overview-day-size: 48px;
+  }
+  .attendance-overview__day-number {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .attendance-overview {
+    padding: 0.875rem 1rem;
+    margin: 1rem 0;
+  }
+  :root {
+    --overview-day-size: 44px;
+    --overview-day-gap: 3px;
+  }
+  .attendance-overview__header {
+    margin-bottom: 0.5rem;
+  }
+  .attendance-overview__title {
+    font-size: 0.875rem;
+  }
+  .attendance-overview__month {
+    font-size: 0.75rem;
+  }
+  .attendance-overview__legend {
+    gap: 0.5rem;
+    padding: 0.375rem 0;
+  }
+  .attendance-overview__legend-item {
+    font-size: 0.6875rem;
+  }
+  .attendance-overview__day-number {
+    font-size: 0.75rem;
+  }
+  .attendance-overview__day-weekday {
+    font-size: 0.55rem;
+  }
+  .attendance-overview__day-status {
+    width: 8px;
+    height: 8px;
+  }
+  .attendance-overview__scroll-hint {
+    font-size: 0.6875rem;
+    padding: 0.1875rem 0.375rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .attendance-overview {
+    padding: 0.75rem;
+  }
+  :root {
+    --overview-day-size: 38px;
+    --overview-day-gap: 2px;
+  }
+  .attendance-overview__day {
+    padding: 0.125rem 0.25rem;
+    min-width: 38px;
+    height: 44px;
+  }
+  .attendance-overview__day-number {
+    font-size: 0.6875rem;
+  }
+  .attendance-overview__day-weekday {
+    font-size: 0.5rem;
+  }
+  .attendance-overview__legend {
+    gap: 0.375rem;
+  }
+  .attendance-overview__legend-item {
+    font-size: 0.625rem;
+  }
+  .attendance-overview__legend-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .attendance-overview__day-status {
+    width: 7px;
+    height: 7px;
+    margin-top: 2px;
+  }
+}

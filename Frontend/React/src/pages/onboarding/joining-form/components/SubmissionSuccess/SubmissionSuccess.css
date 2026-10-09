@@ -1,0 +1,27 @@
+/* SubmissionSuccess.css */
+.submission-success-wrapper {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 1rem 0 2rem 0; width: 100%; text-align: center;
+}
+.success-illustration {
+  width: 100%; max-width: 350px; margin: 0 auto 1.5rem auto;
+}
+.success-image {
+  width: 100%; height: auto; object-fit: contain;
+}
+.success-title {
+  font-size: 1.5rem; font-weight: 700; color: var(--text-dark, #19383A); margin-bottom: 0.5rem;
+}
+.success-description {
+  font-size: 0.95rem; color: var(--text-secondary, #6B7C7D); line-height: 1.5; max-width: 450px;
+}
+.dashboard-btn {
+  margin: 1.5rem auto;
+}
+.success-next-steps {
+  margin-top: 2rem; background: #FFFFFF; border: 1px solid var(--border-color, #D9DDD9);
+  border-radius: 12px; padding: 1.5rem 2rem; width: 100%; max-width: 500px; text-align: left;
+}
+.success-next-steps h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin: 0 0 0.75rem 0; }
+.success-next-steps ul { list-style: none; padding: 0; margin: 0; }
+.success-next-steps ul li { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.4rem; }

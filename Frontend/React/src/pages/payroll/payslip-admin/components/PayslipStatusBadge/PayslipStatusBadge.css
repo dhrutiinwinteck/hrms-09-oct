@@ -1,0 +1,25 @@
+.payslip-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 0 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.payslip-status-badge--generated {
+  color: #216a5e;
+  background: #e2f3ed;
+}
+
+.payslip-status-badge--pending {
+  color: #8a6b24;
+  background: #fff4d8;
+}
+
+.payslip-status-badge--not-generated {
+  color: #777f80;
+  background: #eef1f1;
+}

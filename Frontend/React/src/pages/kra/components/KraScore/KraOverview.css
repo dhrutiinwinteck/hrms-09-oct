@@ -1,0 +1,748 @@
+/* =========================================================
+   KRA OVERVIEW
+   Enterprise HRMS
+   Compact Professional Layout
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+.kra-overview {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+.kra-overview *,
+.kra-overview *::before,
+.kra-overview *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ILLUSTRATION
+   ========================================================= */
+
+.kra-overview-illustration {
+  width: 100%;
+  min-width: 0;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ILLUSTRATION IMAGE
+   ========================================================= */
+
+.kra-overview-illustration-image {
+  display: block;
+
+  width: 100%;
+  max-width: 215px;
+  height: 140px;
+
+  object-fit: contain;
+  object-position: center;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   KPI MAIN CARD
+   ========================================================= */
+
+.kra-overview-stats {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  padding: 5px 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8e6;
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 5px rgba(15, 45, 39, 0.025),
+    0 7px 18px rgba(15, 45, 39, 0.045);
+}
+
+
+/* =========================================================
+   INDIVIDUAL KPI
+   ========================================================= */
+
+.kra-overview-stat {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 118px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    12px
+    18px;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   KPI SEPARATOR
+   ========================================================= */
+
+.kra-overview-stat:not(:last-child)::after {
+  content: '';
+
+  position: absolute;
+
+  top: 12px;
+  right: 0;
+  bottom: 12px;
+
+  width: 1px;
+
+  background: #e4eae8;
+}
+
+
+/* =========================================================
+   ICON + VALUE
+   ========================================================= */
+
+.kra-overview-stat-top {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 6px;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.kra-overview-stat-icon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.kra-overview-stat-icon svg {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+
+  stroke-width: 1.7;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.kra-overview-stat-value {
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #101c2b;
+
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: 650;
+  line-height: 1;
+
+  letter-spacing: -0.5px;
+
+  white-space: nowrap;
+
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   KPI TEXT
+   Align with number instead of creating excessive indent
+   ========================================================= */
+
+.kra-overview-stat-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+
+  padding-left: 52px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.kra-overview-stat-label {
+  display: block;
+
+  min-width: 0;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #263631;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.kra-overview-stat-description {
+  display: block;
+
+  min-width: 0;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #788783;
+
+  font-family: inherit;
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRIMARY
+   ========================================================= */
+
+.kra-overview-stat-primary
+.kra-overview-stat-icon {
+  color: #b6753d;
+
+  background: #f3ece6;
+
+  border: 1px solid #eadfd5;
+}
+
+
+/* =========================================================
+   WARNING
+   ========================================================= */
+
+.kra-overview-stat-warning
+.kra-overview-stat-icon {
+  color: #c67a1d;
+
+  background: #fff3e3;
+
+  border: 1px solid #fae8cf;
+}
+
+.kra-overview-stat-warning
+.kra-overview-stat-description {
+  color: #ed7b16;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.kra-overview-stat-success
+.kra-overview-stat-icon {
+  color: #356d72;
+
+  background: #eaf3f2;
+
+  border: 1px solid #dcebea;
+}
+
+
+/* =========================================================
+   SECONDARY
+   ========================================================= */
+
+.kra-overview-stat-secondary
+.kra-overview-stat-icon {
+  color: #356d72;
+
+  background: #edf5f4;
+
+  border: 1px solid #dcebea;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   Do NOT make overview excessively large
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-overview {
+    grid-template-columns:
+      245px
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .kra-overview-illustration {
+    height: 150px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 225px;
+    height: 145px;
+  }
+
+  .kra-overview-stat {
+    min-height: 120px;
+
+    padding:
+      12px
+      20px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-overview {
+    grid-template-columns:
+      195px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .kra-overview-illustration {
+    height: 135px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 185px;
+    height: 130px;
+  }
+
+  .kra-overview-stat {
+    min-height: 110px;
+
+    padding:
+      10px
+      13px;
+  }
+
+  .kra-overview-stat-top {
+    gap: 9px;
+
+    margin-bottom: 5px;
+  }
+
+  .kra-overview-stat-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .kra-overview-stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 22px;
+  }
+
+  .kra-overview-stat-content {
+    padding-left: 45px;
+  }
+
+  .kra-overview-stat-label {
+    font-size: 10px;
+  }
+
+  .kra-overview-stat-description {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   2 x 2 KPI GRID
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .kra-overview {
+    grid-template-columns:
+      155px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .kra-overview-illustration {
+    height: 180px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 150px;
+    height: 165px;
+  }
+
+  .kra-overview-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    padding: 4px;
+  }
+
+  .kra-overview-stat {
+    min-height: 82px;
+
+    padding:
+      9px
+      14px;
+  }
+
+  .kra-overview-stat::after {
+    display: none;
+  }
+
+  .kra-overview-stat:nth-child(odd) {
+    border-right: 1px solid #e4eae8;
+  }
+
+  .kra-overview-stat:nth-child(-n + 2) {
+    border-bottom: 1px solid #e4eae8;
+  }
+
+  .kra-overview-stat-content {
+    padding-left: 45px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-overview {
+    grid-template-columns:
+      135px
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .kra-overview-illustration {
+    height: 165px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 130px;
+    height: 150px;
+  }
+
+  .kra-overview-stat {
+    min-height: 78px;
+
+    padding:
+      8px
+      10px;
+  }
+
+  .kra-overview-stat-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+  .kra-overview-stat-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 20px;
+  }
+
+  .kra-overview-stat-content {
+    padding-left: 42px;
+  }
+}
+
+
+/* =========================================================
+   LARGE MOBILE
+   Illustration moves above KPI card
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .kra-overview {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .kra-overview-illustration {
+    height: 115px;
+  }
+
+  .kra-overview-illustration-image {
+    width: auto;
+    max-width: 180px;
+    height: 110px;
+  }
+
+  .kra-overview-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .kra-overview-stat {
+    min-height: 82px;
+
+    padding:
+      9px
+      12px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .kra-overview-illustration {
+    height: 105px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 165px;
+    height: 100px;
+  }
+
+  .kra-overview-stats {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    padding:
+      3px
+      10px;
+  }
+
+  .kra-overview-stat {
+    min-height: 70px;
+
+    padding:
+      8px
+      4px;
+
+    border-right: 0 !important;
+    border-bottom: 1px solid #e4eae8;
+  }
+
+  .kra-overview-stat:last-child {
+    border-bottom: 0;
+  }
+
+  .kra-overview-stat-top {
+    margin-bottom: 4px;
+  }
+
+  .kra-overview-stat-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .kra-overview-stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 21px;
+  }
+
+  .kra-overview-stat-content {
+    padding-left: 45px;
+  }
+
+  .kra-overview-stat-label {
+    font-size: 10px;
+  }
+
+  .kra-overview-stat-description {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-overview {
+    gap: 6px;
+  }
+
+  .kra-overview-illustration {
+    height: 95px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 150px;
+    height: 90px;
+  }
+
+  .kra-overview-stats {
+    padding:
+      3px
+      8px;
+  }
+
+  .kra-overview-stat {
+    min-height: 68px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 320px) {
+  .kra-overview-illustration {
+    height: 88px;
+  }
+
+  .kra-overview-illustration-image {
+    max-width: 140px;
+    height: 84px;
+  }
+
+  .kra-overview-stat {
+    min-height: 66px;
+  }
+
+  .kra-overview-stat-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+  .kra-overview-stat-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .kra-overview-stat-value {
+    font-size: 19px;
+  }
+
+  .kra-overview-stat-content {
+    padding-left: 42px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-overview *,
+  .kra-overview *::before,
+  .kra-overview *::after {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,336 @@
+/* ============================================================
+   ADMIN HOLIDAY HEADER
+   Enterprise HRMS
+   ============================================================ */
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.admin-holiday-header {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 18px;
+
+    padding: 18px 20px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ============================================================
+   LEFT SIDE
+   ============================================================ */
+
+.admin-holiday-header-left {
+    min-width: 0;
+
+    flex: 1 1 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* ============================================================
+   PAGE TITLE
+   ============================================================ */
+
+.admin-holiday-title {
+    margin: 0;
+
+    color: #172b4d;
+
+    font-size: 26px;
+
+    line-height: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.admin-holiday-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 18px;
+
+    font-weight: 400;
+}
+
+
+.admin-holiday-breadcrumb-separator {
+    color: #a8b2c1;
+
+    user-select: none;
+}
+
+
+.admin-holiday-breadcrumb-current {
+    color: #334155;
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   RIGHT SIDE
+   ============================================================ */
+
+.admin-holiday-header-right {
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    margin-left: auto;
+
+    padding-top: 2px;
+}
+
+
+/* ============================================================
+   ADD HOLIDAY BUTTON
+   ============================================================ */
+
+.admin-holiday-add-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-width: 132px;
+
+    height: 38px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #0f766e;
+
+    border-radius: 7px;
+
+    background: #0f766e;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    outline: none;
+
+    box-shadow:
+        0 1px 2px rgba(15, 118, 110, 0.12);
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.12s ease;
+}
+
+
+/* ============================================================
+   BUTTON ICON
+   ============================================================ */
+
+.admin-holiday-add-button svg {
+    flex: 0 0 auto;
+
+    width: 17px;
+
+    height: 17px;
+}
+
+
+/* ============================================================
+   BUTTON HOVER
+   ============================================================ */
+
+.admin-holiday-add-button:hover {
+    background: #115e59;
+
+    border-color: #115e59;
+
+    box-shadow:
+        0 3px 8px rgba(15, 118, 110, 0.20);
+}
+
+
+/* ============================================================
+   BUTTON ACTIVE
+   ============================================================ */
+
+.admin-holiday-add-button:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 1px 3px rgba(15, 118, 110, 0.14);
+}
+
+
+/* ============================================================
+   BUTTON FOCUS
+   ============================================================ */
+
+.admin-holiday-add-button:focus-visible {
+    outline: 2px solid #14b8a6;
+
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   DISABLED
+   ============================================================ */
+
+.admin-holiday-add-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .admin-holiday-header {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        padding: 16px;
+    }
+
+
+    .admin-holiday-header-right {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-top: 0;
+    }
+
+
+    .admin-holiday-add-button {
+        width: 100%;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .admin-holiday-header {
+        margin-bottom: 14px;
+
+        padding: 14px;
+    }
+
+
+    .admin-holiday-title {
+        font-size: 22px;
+
+        line-height: 28px;
+    }
+
+
+    .admin-holiday-breadcrumb {
+        font-size: 11px;
+
+        line-height: 16px;
+    }
+
+
+    .admin-holiday-add-button {
+        height: 38px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-holiday-add-button {
+        transition: none;
+    }
+}

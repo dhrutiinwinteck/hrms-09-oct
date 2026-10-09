@@ -1,0 +1,419 @@
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.leave-view-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(3px);
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.leave-view-modal {
+  width: min(720px, 100%);
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.28);
+
+  animation:
+    leaveViewModalIn
+    0.2s
+    ease-out;
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes leaveViewModalIn {
+  from {
+    opacity: 0;
+    transform:
+      translateY(15px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.leave-view-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 24px;
+
+  border-bottom:
+    1px solid #e5e7eb;
+}
+
+.leave-view-modal__employee {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.leave-view-modal__avatar {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.leave-view-modal__avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.leave-view-modal__employee h2 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.leave-view-modal__employee p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+/* ==========================================================
+   CLOSE ICON
+========================================================== */
+
+.leave-view-modal__close {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.leave-view-modal__close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.leave-view-modal__body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 24px;
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.leave-view-modal__section {
+  margin-bottom: 24px;
+}
+
+.leave-view-modal__section:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.leave-view-modal__section-title {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.leave-view-modal__section-title svg {
+  flex-shrink: 0;
+
+  color: #2563eb;
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.leave-view-modal__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+/* ==========================================================
+   INFORMATION ITEM
+========================================================== */
+
+.leave-view-modal__item {
+  min-width: 0;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f9fafb;
+}
+
+.leave-view-modal__item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+
+  color: #6b7280;
+}
+
+.leave-view-modal__item strong {
+  display: block;
+
+  overflow: hidden;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #111827;
+}
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.leave-view-modal__status-row {
+  display: flex;
+  align-items: center;
+}
+
+.leave-view-status {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.leave-view-status--approved {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.leave-view-status--rejected {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.leave-view-status--pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* ==========================================================
+   REASON
+========================================================== */
+
+.leave-view-modal__reason {
+  padding: 14px;
+
+  border:
+    1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f9fafb;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #374151;
+
+  white-space: pre-wrap;
+
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.leave-view-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 16px 24px;
+
+  border-top:
+    1px solid #e5e7eb;
+}
+
+/* ==========================================================
+   CLOSE BUTTON
+========================================================== */
+
+.leave-view-modal__close-button {
+  min-width: 90px;
+  height: 38px;
+
+  padding: 0 18px;
+
+  border:
+    1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #374151;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.leave-view-modal__close-button:hover {
+  background: #f9fafb;
+
+  border-color: #9ca3af;
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+  .leave-view-modal-overlay {
+    padding: 10px;
+  }
+
+  .leave-view-modal {
+    max-height: 94vh;
+
+    border-radius: 12px;
+  }
+
+  .leave-view-modal__header {
+    padding: 16px;
+  }
+
+  .leave-view-modal__body {
+    padding: 16px;
+  }
+
+  .leave-view-modal__footer {
+    padding: 14px 16px;
+  }
+
+  .leave-view-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leave-view-modal__employee h2 {
+    font-size: 17px;
+  }
+}

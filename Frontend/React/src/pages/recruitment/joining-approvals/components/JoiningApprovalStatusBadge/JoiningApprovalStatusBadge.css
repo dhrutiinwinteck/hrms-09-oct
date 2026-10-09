@@ -1,0 +1,30 @@
+/* JoiningApprovalStatusBadge.css */
+.joining-status-badge {
+  display: inline-block;
+  padding: 2px 10px; /* Slightly tighter padding than before */
+  border-radius: 4px; /* Squared off pill for complexity */
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.joining-status-badge.pending {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.joining-status-badge.approved {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.joining-status-badge.rejected {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.joining-status-badge.hold {
+  background-color: #fef3c7;
+  color: #d97706;
+}

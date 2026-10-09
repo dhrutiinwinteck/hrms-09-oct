@@ -1,0 +1,889 @@
+/* =========================================================
+   ADMIN POLICY SUMMARY
+   Enterprise HRMS
+   Compact Responsive Summary Cards
+   ========================================================= */
+
+
+/* =========================================================
+   BOX SIZING
+   ========================================================= */
+
+.admin-policy-summary,
+.admin-policy-summary *,
+.admin-policy-summary *::before,
+.admin-policy-summary *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+.admin-policy-summary {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   MAIN SUMMARY CONTAINER
+   Desktop: 4 cards in one row
+   ========================================================= */
+
+.admin-policy-summary__grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5ebe9;
+  border-radius: 8px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.02),
+    0 4px 12px rgba(15, 45, 39, 0.025);
+}
+
+
+/* =========================================================
+   SUMMARY ITEM
+   ========================================================= */
+
+.admin-policy-summary__item {
+  position: relative;
+
+  min-width: 0;
+  min-height: 108px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 14px 20px 10px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   VERTICAL DIVIDER
+   ========================================================= */
+
+.admin-policy-summary__item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 14px;
+  right: 0;
+  bottom: 14px;
+
+  width: 1px;
+
+  background: #e3e9e7;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TOP CONTENT
+   ========================================================= */
+
+.admin-policy-summary__top {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.admin-policy-summary__icon {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   ICON SVG
+   ========================================================= */
+
+.admin-policy-summary__icon svg {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.admin-policy-summary__icon--total {
+  color: #2879c9;
+
+  background: #eef6fc;
+
+  border: 1px solid #dcecf8;
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.admin-policy-summary__icon--active {
+  color: #239360;
+
+  background: #edf8f2;
+
+  border: 1px solid #dcefe5;
+}
+
+
+/* =========================================================
+   INACTIVE
+   ========================================================= */
+
+.admin-policy-summary__icon--recentlyCreated {
+  color: #7b61c9;
+
+  background: #f4f0ff;
+
+  border: 1px solid #e7defb;
+}
+
+
+/* =========================================================
+   UPDATED
+   ========================================================= */
+
+.admin-policy-summary__icon--updated {
+  color: #c77a27;
+
+  background: #fff7ec;
+
+  border: 1px solid #f5e7d2;
+}
+
+
+/* =========================================================
+   TEXT CONTENT
+   ========================================================= */
+
+.admin-policy-summary__content {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.admin-policy-summary__value {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #10213d;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 21px;
+  line-height: 1.05;
+  font-weight: 700;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.admin-policy-summary__title {
+  display: block;
+
+  max-width: 100%;
+
+  margin: 3px 0 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #29405d;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.admin-policy-summary__subtitle {
+  display: block;
+
+  max-width: 100%;
+
+  margin: 3px 0 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #687b91;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MINI CHART
+   ========================================================= */
+
+.admin-policy-summary__chart {
+  width: 100%;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  margin: 5px 0 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CHART SVG
+   ========================================================= */
+
+.admin-policy-summary__chart svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   CHART PATH
+   ========================================================= */
+
+.admin-policy-summary__chart path {
+  stroke-width: 1.35;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   CHART COLORS
+   ========================================================= */
+
+.admin-policy-summary__item--total
+  .admin-policy-summary__chart path {
+  stroke: #4a91d3;
+}
+
+.admin-policy-summary__item--active
+  .admin-policy-summary__chart path {
+  stroke: #3ba875;
+}
+
+.admin-policy-summary__item--recentlyCreated
+  .admin-policy-summary__chart path {
+  stroke: #8b73d1;
+}
+
+.admin-policy-summary__item--updated
+  .admin-policy-summary__chart path {
+  stroke: #d89447;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .admin-policy-summary__item {
+    transition:
+      background-color 160ms ease;
+  }
+
+  .admin-policy-summary__item:hover {
+    background: #fbfdfc;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .admin-policy-summary__item {
+    min-height: 110px;
+
+    padding:
+      14px
+      22px
+      10px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 12px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 43px;
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA LARGE DESKTOP
+   1920px+
+   Keep compact appearance.
+   ========================================================= */
+
+@media (min-width: 1920px) {
+  .admin-policy-summary__item {
+    min-height: 112px;
+
+    padding:
+      15px
+      24px
+      10px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1279px
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .admin-policy-summary__item {
+    min-height: 106px;
+
+    padding:
+      13px
+      16px
+      9px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 10px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 20px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 10px;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 9px;
+  }
+
+  .admin-policy-summary__chart {
+    height: 21px;
+
+    flex-basis: 21px;
+
+    margin-top: 4px;
+  }
+}
+
+
+/* =========================================================
+   1024PX
+   Keep 4 cards where enough horizontal space exists,
+   but reduce internal dimensions.
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .admin-policy-summary__item {
+    min-height: 104px;
+
+    padding:
+      12px
+      13px
+      9px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 9px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 19px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 9.8px;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 8.8px;
+  }
+
+  .admin-policy-summary__chart {
+    height: 20px;
+
+    flex-basis: 20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   Switch to 2 x 2 grid.
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .admin-policy-summary__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-policy-summary__item {
+    min-height: 106px;
+
+    padding:
+      13px
+      18px
+      9px;
+  }
+
+  /* Remove right divider from second card */
+
+  .admin-policy-summary__item:nth-child(2)::after {
+    display: none;
+  }
+
+  /* Horizontal divider between rows */
+
+  .admin-policy-summary__item:nth-child(1),
+  .admin-policy-summary__item:nth-child(2) {
+    border-bottom: 1px solid #e3e9e7;
+  }
+
+  .admin-policy-summary__icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 20px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 10.5px;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 9.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .admin-policy-summary__grid {
+    border-radius: 8px;
+  }
+
+  .admin-policy-summary__item {
+    min-height: 102px;
+
+    padding:
+      12px
+      15px
+      8px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 9px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 19px;
+  }
+
+  .admin-policy-summary__chart {
+    height: 19px;
+
+    flex-basis: 19px;
+
+    margin-top: 4px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   Keep 2 columns on wider phones.
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .admin-policy-summary__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-policy-summary__item {
+    min-height: 100px;
+
+    padding:
+      11px
+      12px
+      8px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 8px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 18px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 9.5px;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 8.5px;
+  }
+
+  .admin-policy-summary__chart {
+    height: 18px;
+
+    flex-basis: 18px;
+
+    margin-top: 4px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   1 card per row to avoid compression.
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .admin-policy-summary__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-policy-summary__item {
+    min-height: 94px;
+
+    padding:
+      11px
+      14px
+      7px;
+  }
+
+  /*
+   * Remove all desktop/tablet vertical dividers.
+   */
+  .admin-policy-summary__item::after {
+    display: none;
+  }
+
+  /*
+   * Every card except the last gets a bottom divider.
+   */
+  .admin-policy-summary__item:not(:last-child) {
+    border-bottom: 1px solid #e3e9e7;
+  }
+
+  .admin-policy-summary__top {
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 19px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 10px;
+
+    white-space: normal;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 9px;
+
+    white-space: normal;
+  }
+
+  .admin-policy-summary__chart {
+    height: 17px;
+
+    flex-basis: 17px;
+
+    margin-top: 3px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   320px - 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .admin-policy-summary__item {
+    min-height: 92px;
+
+    padding:
+      10px
+      12px
+      7px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 18px;
+  }
+
+  .admin-policy-summary__title {
+    font-size: 9.8px;
+  }
+
+  .admin-policy-summary__subtitle {
+    font-size: 8.8px;
+  }
+}
+
+
+/* =========================================================
+   320PX SAFETY
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .admin-policy-summary__item {
+    padding:
+      10px
+      10px
+      7px;
+  }
+
+  .admin-policy-summary__top {
+    gap: 8px;
+  }
+
+  .admin-policy-summary__icon {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+  .admin-policy-summary__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .admin-policy-summary__value {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-policy-summary__item {
+    transition: none;
+  }
+}

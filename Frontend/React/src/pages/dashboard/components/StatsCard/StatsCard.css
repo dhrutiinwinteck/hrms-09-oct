@@ -1,0 +1,208 @@
+/* StatsCard.css - Enterprise Modular UI */
+
+.stats-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 13px 14px;
+  border: 1px solid #EEF0F2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Generic Row Layout (Icon Left, Text Right) --- */
+.stats-card-header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.stats-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stats-card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stats-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.stats-card-subtitle {
+  font-size: 12px;
+  color: #888888;
+  margin: 0;
+}
+
+/* --- Centered Value Container --- */
+.stats-card-value-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center; /* Centers the large text */
+  padding: 6px 0;
+}
+
+.stats-card-value-large {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+/* --- Footer Section (Status / Progress) --- */
+.stats-card-footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.stats-card-status {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center aligned text */
+  gap: 6px;
+}
+
+/* --- Color Variants --- */
+.variant-green .stats-card-icon { background: #E8F5E9; color: #2E7D32; }
+.variant-green .stats-card-status { color: #2E7D32; }
+.variant-green .trend-arrow-up { stroke: #2E7D32; }
+
+.variant-orange .stats-card-icon { background: #FFF3E0; color: #EF6C00; }
+.variant-orange .stats-card-status { color: #EF6C00; }
+
+/* ============================================== */
+/* LAYOUT: Donut Chart Layout (Working Hours)     */
+/* ============================================== */
+.stats-card-donut-layout {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 2px;
+}
+
+.stats-card-donut-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.stats-card-donut-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.donut-bg {
+  fill: none;
+  stroke: #F0F2F5;
+  stroke-width: 6;
+}
+
+.donut-fill {
+  fill: none;
+  stroke: #1A5C48;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.stats-card-donut-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1A5C48;
+}
+
+.stats-card-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stats-card-time-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stats-card-hours {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.stats-card-target-hours {
+  font-size: 14px;
+  color: #9AA6B2;
+  font-weight: 400;
+}
+
+.stats-card-percent-text {
+  font-size: 12px;
+  color: #666666;
+}
+
+.stats-card-linear-progress {
+  width: 100%;
+  max-width: 100px;
+  height: 6px;
+  background: #F0F2F5;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.stats-card-linear-fill {
+  height: 100%;
+  background: #1A5C48;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+/* ============================================== */
+/* LAYOUT: Sparkline (Attendance)                 */
+/* ============================================== */
+.stats-card-sparkline-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 1;
+}
+
+.stats-card-sparkline-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sparkline-path {
+  fill: none;
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}

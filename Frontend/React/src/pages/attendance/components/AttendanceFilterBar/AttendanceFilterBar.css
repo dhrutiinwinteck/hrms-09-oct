@@ -1,0 +1,359 @@
+/**
+ * ======================================================
+ * Attendance Module - Filter Bar Styles
+ * ======================================================
+ * Enterprise-grade styling for the filter bar.
+ *
+ * @module components/AttendanceFilterBar
+ */
+
+/* -----------------------------------------------------------------------------
+ * CSS Variables
+ * ----------------------------------------------------------------------------- */
+
+:root {
+  --filter-bg: #ffffff;
+  --filter-border-radius: 0.75rem;
+  --filter-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --filter-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --filter-transition: all 0.2s ease-in-out;
+  --filter-input-border: #d1d5db;
+  --filter-input-focus: #3b82f6;
+  --filter-input-radius: 0.375rem;
+  --filter-label-color: #6b7280;
+  --filter-text-color: #111827;
+}
+
+/* -----------------------------------------------------------------------------
+ * Container
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar {
+  background: var(--filter-bg);
+  border-radius: var(--filter-border-radius);
+  box-shadow: var(--filter-shadow);
+  padding: 0.5rem 0.875rem;
+  margin: 0.75rem 0;
+  font-family: var(--filter-font-family);
+  transition: var(--filter-transition);
+}
+
+/* -----------------------------------------------------------------------------
+ * Mobile Toggle
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__toggle {
+  display: none;
+}
+
+.attendance-filter-bar__toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--filter-input-border);
+  border-radius: var(--filter-input-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--filter-text-color);
+  cursor: pointer;
+  transition: var(--filter-transition);
+  width: 100%;
+}
+
+.attendance-filter-bar__toggle-btn:hover {
+  background: #f9fafb;
+}
+
+.attendance-filter-bar__badge {
+  background: var(--filter-input-focus);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  margin-left: auto;
+}
+
+.attendance-filter-bar__chevron {
+  transition: transform 0.2s ease;
+}
+
+.attendance-filter-bar__chevron.open {
+  transform: rotate(180deg);
+}
+
+/* -----------------------------------------------------------------------------
+ * Content Layout
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem 0.75rem;
+}
+
+/* -----------------------------------------------------------------------------
+ * Filter Groups
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1 0 auto;
+  min-width: 140px;
+}
+
+.attendance-filter-bar__group--search {
+  flex: 2 0 200px;
+}
+
+.attendance-filter-bar__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--filter-label-color);
+  letter-spacing: 0.01em;
+}
+
+/* -----------------------------------------------------------------------------
+ * Input Wrappers
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--filter-input-border);
+  border-radius: var(--filter-input-radius);
+  transition: var(--filter-transition);
+}
+
+.attendance-filter-bar__input-wrapper:focus-within {
+  border-color: var(--filter-input-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon {
+  position: absolute;
+  left: 0.5rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon + input,
+.attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon + select {
+  padding-left: 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+ * Inputs & Selects
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__input,
+.attendance-filter-bar__select {
+  width: 100%;
+  padding: 0.375rem 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-family: var(--filter-font-family);
+  color: var(--filter-text-color);
+  outline: none;
+  min-height: 32px;
+}
+
+.attendance-filter-bar__select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+
+.attendance-filter-bar__select-icon {
+  position: absolute;
+  right: 0.5rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.attendance-filter-bar__input::placeholder {
+  color: #9ca3af;
+}
+
+.attendance-filter-bar__input:disabled,
+.attendance-filter-bar__select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* -----------------------------------------------------------------------------
+ * Clear Buttons
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__clear-btn {
+  position: absolute;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #9ca3af;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--filter-transition);
+}
+
+.attendance-filter-bar__clear-btn:hover {
+  color: #4b5563;
+  background: #f3f4f6;
+}
+
+/* -----------------------------------------------------------------------------
+ * Action Buttons
+ * ----------------------------------------------------------------------------- */
+
+.attendance-filter-bar__actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-bottom: 1px;
+}
+
+.attendance-filter-bar__btn {
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--filter-input-radius);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--filter-transition);
+  border: none;
+  font-family: var(--filter-font-family);
+  white-space: nowrap;
+}
+
+.attendance-filter-bar__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.attendance-filter-bar__btn--apply {
+  background: var(--filter-input-focus);
+  color: #ffffff;
+}
+
+.attendance-filter-bar__btn--apply:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.attendance-filter-bar__btn--reset {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.attendance-filter-bar__btn--reset:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+/* -----------------------------------------------------------------------------
+ * Responsive Adjustments
+ * ----------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .attendance-filter-bar {
+    padding: 0.75rem 1rem;
+  }
+  .attendance-filter-bar__group {
+    min-width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .attendance-filter-bar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .attendance-filter-bar__toggle {
+    display: block;
+  }
+
+  .attendance-filter-bar__content {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 0.75rem;
+  }
+
+  .attendance-filter-bar.expanded .attendance-filter-bar__content {
+    display: flex;
+  }
+
+  .attendance-filter-bar__group {
+    min-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .attendance-filter-bar__group--search {
+    flex: 1 1 auto;
+  }
+
+  .attendance-filter-bar__input,
+  .attendance-filter-bar__select {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .attendance-filter-bar__actions {
+    flex-direction: row;
+    justify-content: stretch;
+    margin-top: 0.25rem;
+  }
+
+  .attendance-filter-bar__btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .attendance-filter-bar {
+    padding: 0.375rem 0.5rem;
+  }
+  .attendance-filter-bar__btn {
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.75rem;
+  }
+  .attendance-filter-bar__input,
+  .attendance-filter-bar__select {
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.5rem;
+    min-height: 34px;
+  }
+  .attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon {
+    left: 0.375rem;
+  }
+  .attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon + input,
+  .attendance-filter-bar__input-wrapper .attendance-filter-bar__input-icon + select {
+    padding-left: 1.75rem;
+  }
+  .attendance-filter-bar__clear-btn {
+    right: 0.25rem;
+  }
+  .attendance-filter-bar__badge {
+    font-size: 0.6875rem;
+    padding: 0.0625rem 0.375rem;
+  }
+}

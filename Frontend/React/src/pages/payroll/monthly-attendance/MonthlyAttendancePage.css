@@ -1,0 +1,124 @@
+/* =========================================================
+   MONTHLY ATTENDANCE PAGE
+   ========================================================= */
+
+.monthly-attendance-page {
+  width: 100%;
+  min-width: 0;
+  padding: 0 20px 22px;
+  box-sizing: border-box;
+  color: #17323b;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.monthly-attendance-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+
+  min-height: 32px;
+  margin-bottom: 7px;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+  line-height: 1.2;
+  color: #83969c;
+
+  white-space: nowrap;
+}
+
+.monthly-attendance-page__breadcrumb strong {
+  color: #28434b;
+  font-weight: 700;
+}
+
+.monthly-attendance-page__breadcrumb-separator {
+  color: #a7b6ba;
+  font-weight: 500;
+}
+
+/* =========================================================
+   MAIN CONTENT CARD
+   ========================================================= */
+
+.monthly-attendance-content-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-top: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfdfd 100%
+    );
+
+  border: 1px solid #edf2f2;
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 18px rgba(31, 73, 78, 0.055),
+    0 1px 3px rgba(31, 73, 78, 0.035);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .monthly-attendance-page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .monthly-attendance-page {
+    padding: 0 12px 18px;
+  }
+
+  .monthly-attendance-page__breadcrumb {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+
+    font-size: 8px;
+
+    scrollbar-width: none;
+  }
+
+  .monthly-attendance-page__breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+
+  .monthly-attendance-content-card {
+    margin-top: 6px;
+    border-radius: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .monthly-attendance-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .monthly-attendance-page__breadcrumb {
+    min-height: 26px;
+    gap: 6px;
+  }
+}

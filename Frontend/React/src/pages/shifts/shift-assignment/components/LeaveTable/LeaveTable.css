@@ -1,0 +1,132 @@
+/* src/pages/shifts/shift-assignment/components/LeaveTable/LeaveTable.css */
+
+.sa-leave-table {
+    border: 1.5px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    min-height: 120px;
+}
+
+.sa-leave-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.sa-leave-table__head {
+    background: #f0fdf4;
+}
+
+.sa-leave-table__th {
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1.5px solid #e5e7eb;
+}
+
+.sa-leave-table__th--action {
+    text-align: center;
+    width: 80px;
+}
+
+.sa-leave-table__body {
+    background: #ffffff;
+}
+
+.sa-leave-table__row {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.sa-leave-table__row:last-child {
+    border-bottom: none;
+}
+
+.sa-leave-table__td {
+    padding: 10px 16px;
+    color: #1f2937;
+    vertical-align: middle;
+}
+
+.sa-leave-table__td--action {
+    text-align: center;
+}
+
+.sa-leave-table__delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #9ca3af;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sa-leave-table__delete-btn:hover {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+/* Empty state */
+.sa-leave-table--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+    padding: 24px;
+}
+
+.sa-leave-table__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sa-leave-table__empty-icon {
+    color: #d1d5db;
+    margin-bottom: 8px;
+}
+
+.sa-leave-table__empty-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0 0 2px 0;
+}
+
+.sa-leave-table__empty-desc {
+    font-size: 13px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .sa-leave-table {
+        overflow-x: auto;
+    }
+
+    .sa-leave-table__table {
+        min-width: 380px;
+    }
+
+    .sa-leave-table__th,
+    .sa-leave-table__td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .sa-leave-table__th--action,
+    .sa-leave-table__td--action {
+        width: 60px;
+    }
+}

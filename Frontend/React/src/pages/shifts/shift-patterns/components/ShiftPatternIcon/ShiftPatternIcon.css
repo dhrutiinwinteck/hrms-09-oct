@@ -1,0 +1,18 @@
+.shift-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #eef2ff; /* soft pastel, can vary by type if needed */
+  color: #4f46e5;
+  flex-shrink: 0;
+}
+
+/* Optional: different pastel per type */
+.shift-icon-wrapper:has(svg[data-type="morning"]) {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+/* Not implemented here due to dynamic nature, but can be adjusted via CSS class if needed */

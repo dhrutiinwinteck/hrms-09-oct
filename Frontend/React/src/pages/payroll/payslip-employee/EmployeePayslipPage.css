@@ -1,0 +1,126 @@
+.employee-payslip-page {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.employee-payslip-header {
+  margin-bottom: 24px;
+}
+
+.employee-payslip-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.employee-payslip-header p {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.employee-payslip-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.employee-payslip-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 300px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.employee-payslip-search svg {
+  color: #64748b;
+}
+
+.employee-payslip-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.employee-payslip-table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.employee-payslip-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.employee-payslip-table th {
+  padding: 14px 16px;
+  background: #f1f5f9;
+  color: #475569;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.employee-payslip-table td {
+  padding: 15px 16px;
+  border-top: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.employee-payslip-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #0f766e;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.employee-payslip-download-button:hover {
+  background: #115e59;
+}
+
+.employee-payslip-message,
+.employee-payslip-empty,
+.employee-payslip-error {
+  padding: 30px;
+  text-align: center;
+  color: #64748b;
+}
+
+.employee-payslip-error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .employee-payslip-page {
+    padding: 16px;
+  }
+
+  .employee-payslip-header h1 {
+    font-size: 23px;
+  }
+
+  .employee-payslip-toolbar {
+    justify-content: stretch;
+  }
+
+  .employee-payslip-search {
+    width: 100%;
+  }
+}

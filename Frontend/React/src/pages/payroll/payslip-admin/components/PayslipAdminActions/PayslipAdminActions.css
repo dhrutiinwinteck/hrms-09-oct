@@ -1,0 +1,24 @@
+.payslip-admin-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.payslip-admin-actions__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  padding: 0;
+  border: 1px solid #e1e9e6;
+  border-radius: 7px;
+  color: #41605e;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.payslip-admin-actions__button:hover {
+  border-color: #a7c6c1;
+  background: #f2f8f6;
+}

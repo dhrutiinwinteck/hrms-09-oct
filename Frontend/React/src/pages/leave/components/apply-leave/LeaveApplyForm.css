@@ -1,0 +1,630 @@
+/* =========================================================
+   ADD LEAVE MODAL - BACKDROP
+   ========================================================= */
+
+.leave-apply-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  overflow-y: auto;
+
+  background: rgba(20, 38, 35, 0.48);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.leave-apply-modal {
+  width: min(100%, 620px);
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8e6;
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 24px rgba(20, 47, 43, 0.12),
+    0 24px 60px rgba(20, 47, 43, 0.16);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.leave-apply-modal__header {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex: 0 0 auto;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 28px;
+
+  border-bottom: 1px solid #e8edeb;
+
+  background: #ffffff;
+}
+
+
+.leave-apply-modal__header h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #17332f;
+
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   CLOSE
+   ========================================================= */
+
+.leave-apply-modal__close {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 34px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 7px;
+
+  color: #496762;
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+
+.leave-apply-modal__close:hover {
+  color: #164f50;
+
+  background: #eef5f3;
+}
+
+
+.leave-apply-modal__close:focus-visible {
+  outline: 2px solid rgba(22, 79, 80, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.leave-apply-form {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  margin: 0;
+   padding: 18px 25px 20px;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.leave-apply-form__grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 30px;
+  row-gap: 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.leave-apply-form__field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.leave-apply-form__field--full {
+  grid-column: 1 / -1;
+}
+
+
+.leave-apply-form__field label {
+  margin: 0;
+  padding: 0;
+
+  color: #435753;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+
+.leave-apply-form__field label span {
+  margin-left: 3px;
+
+  color: #e65b62;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.leave-apply-form__field input,
+.leave-apply-form__field select,
+.leave-apply-form__field textarea {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  border: 1px solid #dfe6e3;
+  border-radius: 7px;
+
+  outline: none;
+
+  color: #253b37;
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+
+.leave-apply-form__field input,
+.leave-apply-form__field select {
+  height: 50px;
+
+  padding: 0 14px;
+}
+
+
+.leave-apply-form__field textarea {
+  min-height: 72px;
+
+  padding: 13px 14px;
+
+  line-height: 1.5;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.leave-apply-form__field input[type='date'] {
+  color-scheme: light;
+
+  cursor: pointer;
+}
+
+
+.leave-apply-form__field
+  input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.leave-apply-form__field input:focus,
+.leave-apply-form__field select:focus,
+.leave-apply-form__field textarea:focus {
+  border-color: #4d8b86;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 139, 134, 0.11);
+}
+
+
+/* =========================================================
+   READ ONLY
+   ========================================================= */
+
+.leave-apply-form__readonly {
+  color: #49605c !important;
+
+  background: #edf1f0 !important;
+
+  border-color: #e3e8e6 !important;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.leave-apply-form__error {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-top: 18px;
+  padding: 10px 12px;
+
+  border: 1px solid #f4cccc;
+  border-radius: 6px;
+
+  color: #b83e45;
+  background: #fff4f4;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.leave-apply-form__actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  margin-top: 26px;
+  padding: 0;
+}
+
+
+.leave-apply-form__cancel,
+.leave-apply-form__submit {
+  min-width: 150px;
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 10px 22px;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+
+/* =========================================================
+   CANCEL
+   ========================================================= */
+
+.leave-apply-form__cancel {
+  border: 1px solid #e2ebe8;
+
+  color: #346b65;
+
+  background: #f5f9f8;
+}
+
+
+.leave-apply-form__cancel:hover {
+  border-color: #cedfdb;
+
+  background: #edf5f3;
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.leave-apply-form__submit {
+  border: 1px solid #174f50;
+
+  color: #ffffff;
+
+  background: #174f50;
+
+  box-shadow:
+    0 4px 10px rgba(23, 79, 80, 0.14);
+}
+
+
+.leave-apply-form__submit:hover {
+  border-color: #103f40;
+
+  background: #103f40;
+
+  box-shadow:
+    0 6px 14px rgba(23, 79, 80, 0.18);
+}
+
+
+.leave-apply-form__cancel:active,
+.leave-apply-form__submit:active {
+  transform: translateY(1px);
+}
+
+
+.leave-apply-form__cancel:focus-visible,
+.leave-apply-form__submit:focus-visible {
+  outline: 3px solid rgba(23, 79, 80, 0.15);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .leave-apply-modal-backdrop {
+    padding: 18px;
+  }
+
+  .leave-apply-modal {
+    max-height: calc(100vh - 36px);
+  }
+
+  .leave-apply-modal__header {
+    min-height: 62px;
+
+    padding:
+      0
+      22px;
+  }
+
+  .leave-apply-modal__header h2 {
+    font-size: 20px;
+  }
+
+  .leave-apply-form {
+    padding:
+      25px
+      28px
+      25px;
+  }
+
+  .leave-apply-form__grid {
+    column-gap: 20px;
+    row-gap: 19px;
+  }
+
+  .leave-apply-form__actions {
+    margin-top: 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .leave-apply-modal-backdrop {
+    align-items: flex-end;
+
+    padding: 0;
+
+    background: rgba(20, 38, 35, 0.5);
+  }
+
+  .leave-apply-modal {
+    width: 100%;
+    max-height: 92dvh;
+
+    margin: 0;
+
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+    border-radius:
+      16px
+      16px
+      0
+      0;
+  }
+
+  .leave-apply-modal__header {
+    min-height: 60px;
+
+    padding:
+      0
+      18px;
+  }
+
+  .leave-apply-modal__header h2 {
+    font-size: 19px;
+  }
+
+  .leave-apply-form {
+    padding:
+      22px
+      18px
+      24px;
+  }
+
+  .leave-apply-form__grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .leave-apply-form__field--empty {
+    display: none;
+  }
+
+  .leave-apply-form__field--full {
+    grid-column: auto;
+  }
+
+  .leave-apply-form__field input,
+  .leave-apply-form__field select {
+    height: 48px;
+  }
+
+  .leave-apply-form__field textarea {
+    min-height: 88px;
+  }
+
+  .leave-apply-form__actions {
+    gap: 12px;
+
+    margin-top: 26px;
+  }
+
+  .leave-apply-form__cancel,
+  .leave-apply-form__submit {
+    flex: 1 1 0;
+
+    min-width: 0;
+    min-height: 44px;
+
+    padding:
+      10px
+      16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .leave-apply-modal__header {
+    padding:
+      0
+      15px;
+  }
+
+  .leave-apply-form {
+    padding:
+      19px
+      15px
+      22px;
+  }
+
+  .leave-apply-form__grid {
+    gap: 16px;
+  }
+
+  .leave-apply-form__field label {
+    font-size: 13px;
+  }
+
+  .leave-apply-form__actions {
+    margin-top: 22px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-apply-modal__close,
+  .leave-apply-form__field input,
+  .leave-apply-form__field select,
+  .leave-apply-form__field textarea,
+  .leave-apply-form__cancel,
+  .leave-apply-form__submit {
+    transition: none;
+  }
+}

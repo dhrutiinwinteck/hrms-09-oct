@@ -1,0 +1,283 @@
+/* =========================================================
+   ADD / VIEW LEAVE HEADER
+   Enterprise HRMS
+   Compact responsive page header
+   ========================================================= */
+
+.add-view-leave-header,
+.add-view-leave-header *,
+.add-view-leave-header *::before,
+.add-view-leave-header *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER ROOT
+   ========================================================= */
+
+.add-view-leave-header {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 14px 24px 13px;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.add-view-leave-header__title {
+  margin: 0;
+  padding: 0;
+
+  color: #172b3a;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.add-view-leave-header__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   BREADCRUMB ITEM
+   ========================================================= */
+
+.add-view-leave-header__breadcrumb-item {
+  margin: 0;
+  padding: 0;
+
+  color: #64748b;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIVE BREADCRUMB
+   ========================================================= */
+
+.add-view-leave-header__breadcrumb-item--active {
+  color: #3f5364;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BREADCRUMB ICON
+   ========================================================= */
+
+.add-view-leave-header__breadcrumb-icon {
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 13px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .add-view-leave-header {
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .add-view-leave-header {
+    padding: 13px 22px 12px;
+  }
+
+  .add-view-leave-header__title {
+    font-size: 23px;
+
+    letter-spacing: -0.3px;
+  }
+
+  .add-view-leave-header__breadcrumb {
+    margin-top: 7px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .add-view-leave-header {
+    padding: 13px 20px 12px;
+  }
+
+  .add-view-leave-header__title {
+    font-size: 22px;
+  }
+
+  .add-view-leave-header__breadcrumb-item {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .add-view-leave-header {
+    padding: 12px 16px 11px;
+  }
+
+  .add-view-leave-header__title {
+    font-size: 21px;
+    line-height: 1.25;
+
+    letter-spacing: -0.25px;
+  }
+
+  .add-view-leave-header__breadcrumb {
+    gap: 5px;
+
+    margin-top: 6px;
+  }
+
+  .add-view-leave-header__breadcrumb-item {
+    font-size: 10.75px;
+  }
+
+  .add-view-leave-header__breadcrumb-icon {
+    width: 12px;
+    height: 12px;
+
+    flex-basis: 12px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .add-view-leave-header {
+    padding: 11px 14px 10px;
+  }
+
+  .add-view-leave-header__title {
+    font-size: 20px;
+
+    letter-spacing: -0.2px;
+  }
+
+  .add-view-leave-header__breadcrumb {
+    column-gap: 4px;
+    row-gap: 5px;
+
+    margin-top: 6px;
+  }
+
+  .add-view-leave-header__breadcrumb-item {
+    font-size: 10.5px;
+  }
+
+  .add-view-leave-header__breadcrumb-icon {
+    width: 11px;
+    height: 11px;
+
+    flex-basis: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .add-view-leave-header {
+    padding: 10px 12px 9px;
+  }
+
+  .add-view-leave-header__title {
+    font-size: 19px;
+  }
+
+  .add-view-leave-header__breadcrumb {
+    column-gap: 3px;
+    row-gap: 4px;
+  }
+
+  .add-view-leave-header__breadcrumb-item {
+    font-size: 10px;
+
+    white-space: normal;
+  }
+
+  .add-view-leave-header__breadcrumb-icon {
+    width: 10px;
+    height: 10px;
+
+    flex-basis: 10px;
+  }
+}

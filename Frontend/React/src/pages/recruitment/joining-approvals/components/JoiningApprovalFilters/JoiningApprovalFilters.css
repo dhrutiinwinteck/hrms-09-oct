@@ -1,0 +1,516 @@
+/* =========================================================
+   JOINING APPROVAL FILTERS
+   ========================================================= */
+
+.joining-approval-filters {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   FILTER FIELDS
+   ========================================================= */
+
+.joining-approval-filters__fields {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(205px, 1.25fr);
+
+  gap: 12px;
+}
+
+.joining-approval-filter-group {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.joining-approval-filter-group--date {
+  min-width: 0;
+}
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.joining-approval-filter-label {
+  display: block;
+
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.joining-approval-select-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.joining-approval-select-wrapper select {
+  width: 100%;
+  min-width: 0;
+
+  height: 38px;
+
+  padding: 0 34px 0 11px;
+
+  box-sizing: border-box;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #334155;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.joining-approval-select-wrapper select:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.joining-approval-select-wrapper select:focus {
+  border-color: #0f766e;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(15, 118, 110, 0.08);
+}
+
+.joining-approval-select-icon {
+  position: absolute;
+
+  right: 10px;
+
+  color: #64748b;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.joining-approval-date-input {
+  width: 100%;
+  min-width: 0;
+
+  height: 38px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.joining-approval-date-input input {
+  width: 100%;
+  min-width: 0;
+
+  height: 38px;
+
+  padding:
+    0 10px 0 34px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.joining-approval-date-input input:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.joining-approval-date-input input:focus {
+  border-color: #0f766e;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(15, 118, 110, 0.08);
+}
+
+.joining-approval-calendar-icon {
+  position: absolute;
+
+  left: 10px;
+
+  color: #64748b;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.joining-approval-filter-actions {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.joining-approval-filter-button {
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.joining-approval-filter-button:focus-visible {
+  outline: 2px solid rgba(15, 118, 110, 0.25);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   PRIMARY FILTER
+   ========================================================= */
+
+.joining-approval-filter-button--primary {
+  min-width: 82px;
+
+  border: 1px solid #075e67;
+
+  background: #075e67;
+
+  color: #ffffff;
+}
+
+.joining-approval-filter-button--primary:hover {
+  border-color: #064f57;
+
+  background: #064f57;
+
+  box-shadow:
+    0 2px 5px rgba(7, 94, 103, 0.15);
+}
+
+.joining-approval-filter-button--primary:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   SECONDARY RESET
+   ========================================================= */
+
+.joining-approval-filter-button--secondary {
+  min-width: 75px;
+
+  border: 1px solid #dbe3ec;
+
+  background: #ffffff;
+
+  color: #475569;
+}
+
+.joining-approval-filter-button--secondary:hover {
+  border-color: #cbd5e1;
+
+  background: #f8fafc;
+
+  color: #334155;
+}
+
+.joining-approval-filter-button--secondary:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .joining-approval-filters {
+    gap: 14px;
+
+    padding: 14px 16px;
+  }
+
+  .joining-approval-filters__fields {
+    grid-template-columns:
+      minmax(165px, 1fr)
+      minmax(165px, 1fr)
+      minmax(165px, 1fr)
+      minmax(220px, 1.25fr);
+
+    gap: 14px;
+  }
+}
+
+/* =========================================================
+   1280px - 1439px
+   Important 100% laptop/desktop range
+   ========================================================= */
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .joining-approval-filters {
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+  .joining-approval-filters__fields {
+    grid-template-columns:
+      minmax(135px, 1fr)
+      minmax(135px, 1fr)
+      minmax(135px, 1fr)
+      minmax(190px, 1.25fr);
+
+    gap: 10px;
+  }
+
+  .joining-approval-filter-button {
+    padding: 0 12px;
+  }
+}
+
+/* =========================================================
+   1100px - 1279px
+   ========================================================= */
+
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .joining-approval-filters {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .joining-approval-filters__fields {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .joining-approval-filter-actions {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+}
+
+/* =========================================================
+   769px - 1099px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1099px) {
+  .joining-approval-filters {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .joining-approval-filters__fields {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .joining-approval-filter-actions {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .joining-approval-filters {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .joining-approval-filters__fields {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+  .joining-approval-filter-group {
+    width: 100%;
+  }
+
+  .joining-approval-filter-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .joining-approval-filter-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .joining-approval-filters {
+    padding: 11px;
+  }
+
+  .joining-approval-filter-label {
+    font-size: 11px;
+  }
+
+  .joining-approval-select-wrapper select,
+  .joining-approval-date-input input {
+    height: 37px;
+
+    font-size: 12px;
+  }
+
+  .joining-approval-filter-button {
+    height: 37px;
+
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .joining-approval-filter-actions {
+    grid-template-columns: 1fr;
+  }
+}

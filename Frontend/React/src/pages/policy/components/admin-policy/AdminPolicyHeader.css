@@ -1,0 +1,1017 @@
+/* =========================================================
+   ADMIN POLICY HEADER
+   Enterprise HRMS
+   Compact Professional Header
+   ========================================================= */
+
+
+/* =========================================================
+   BOX SIZING
+   ========================================================= */
+
+.admin-policy-header,
+.admin-policy-header *,
+.admin-policy-header *::before,
+.admin-policy-header *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.admin-policy-header {
+  position: relative;
+
+  width: calc(100% - 52px);
+  min-width: 0;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin: 10px 26px 0;
+  padding: 12px 10px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+   ========================================================= */
+
+.admin-policy-header__left {
+  position: relative;
+  z-index: 5;
+
+  min-width: 0;
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE ROW
+   ========================================================= */
+
+.admin-policy-header__title-row {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE ICON
+   ========================================================= */
+
+.admin-policy-header__title-icon {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: #087c88;
+
+  background: #eaf7f8;
+
+  border: 1px solid #d8eef0;
+  border-radius: 50%;
+}
+
+
+.admin-policy-header__title-icon svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.admin-policy-header__title {
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #10213d;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.admin-policy-header__subtitle {
+  max-width: 560px;
+
+  margin: 4px 0 0 39px;
+  padding: 0;
+
+  color: #536781;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11.5px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.admin-policy-header__right {
+  position: relative;
+  z-index: 5;
+
+  min-width: 0;
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.admin-policy-header__breadcrumb {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0 3px 0 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+
+.admin-policy-header__breadcrumb-item {
+  margin: 0;
+  padding: 0;
+
+  color: #5c6f88;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+
+.admin-policy-header__breadcrumb-item--current {
+  color: #344d68;
+
+  font-weight: 500;
+}
+
+
+.admin-policy-header__breadcrumb-arrow {
+  width: 12px;
+  height: 12px;
+
+  flex: 0 0 12px;
+
+  color: #8b9aad;
+}
+
+
+/* =========================================================
+   DOCUMENT ILLUSTRATION
+   ========================================================= */
+
+.admin-policy-header__document {
+  position: relative;
+
+  width: 46px;
+  height: 52px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   DOCUMENT PAPER
+   ========================================================= */
+
+.admin-policy-header__document-paper {
+  position: relative;
+
+  width: 37px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #71bcc2;
+
+  background:
+    linear-gradient(
+      145deg,
+      #edfafa 0%,
+      #def2f3 100%
+    );
+
+  border: 1px solid rgba(117, 190, 196, 0.09);
+  border-radius: 4px;
+
+  box-shadow:
+    0 3px 8px rgba(15, 93, 103, 0.06);
+}
+
+
+/* =========================================================
+   PAPER FOLD
+   ========================================================= */
+
+.admin-policy-header__paper-fold {
+  position: absolute;
+
+  top: -1px;
+  right: -1px;
+
+  width: 12px;
+  height: 12px;
+
+  background: #ffffff;
+
+  clip-path: polygon(
+    0 0,
+    100% 100%,
+    100% 0
+  );
+}
+
+
+/* =========================================================
+   FILE ICON
+   ========================================================= */
+
+.admin-policy-header__file-icon {
+  width: 23px;
+  height: 23px;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   DOCUMENT SHIELD
+   ========================================================= */
+
+.admin-policy-header__document-shield {
+  position: absolute;
+
+  right: -1px;
+  bottom: 1px;
+
+  width: 25px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #32999c 0%,
+      #086d72 100%
+    );
+
+  border-radius:
+    5px
+    5px
+    9px
+    9px;
+
+  box-shadow:
+    0 3px 7px rgba(5, 102, 108, 0.16);
+}
+
+
+.admin-policy-header__document-shield svg {
+  width: 17px;
+  height: 17px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   ADD POLICY BUTTON
+   ========================================================= */
+
+.admin-policy-header__add-button {
+  min-width: 132px;
+  height: 36px;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0 12px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00646b 0%,
+      #004e57 100%
+    );
+
+  border: 1px solid #00535b;
+  border-radius: 6px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11.5px;
+  line-height: 1;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 6px rgba(0, 78, 87, 0.11);
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+
+/* =========================================================
+   ADD BUTTON ICONS
+   ========================================================= */
+
+.admin-policy-header__add-icon {
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 16px;
+}
+
+
+.admin-policy-header__button-arrow {
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  margin-left: 1px;
+}
+
+
+/* =========================================================
+   BUTTON STATES
+   ========================================================= */
+
+.admin-policy-header__add-button:hover {
+  border-color: #005760;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00747c 0%,
+      #005760 100%
+    );
+
+  box-shadow:
+    0 4px 10px rgba(0, 78, 87, 0.16);
+
+  transform: translateY(-1px);
+}
+
+
+.admin-policy-header__add-button:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 2px 5px rgba(0, 78, 87, 0.12);
+}
+
+
+.admin-policy-header__add-button:focus {
+  outline: none;
+}
+
+
+.admin-policy-header__add-button:focus-visible {
+  outline: 3px solid rgba(0, 112, 120, 0.16);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DECORATIVE AREA
+   ========================================================= */
+
+.admin-policy-header__decoration {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+
+  width: 43%;
+  height: 42px;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  opacity: 0.48;
+}
+
+
+/* =========================================================
+   DECORATIVE WAVES
+   ========================================================= */
+
+.admin-policy-header__wave {
+  position: absolute;
+
+  right: -20px;
+
+  width: 100%;
+  height: 42px;
+
+  border-top:
+    1px solid
+    rgba(72, 178, 185, 0.09);
+
+  border-radius: 50%;
+
+  transform: rotate(-3deg);
+}
+
+
+.admin-policy-header__wave--1 {
+  bottom: -26px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(89, 192, 198, 0.045),
+      transparent
+    );
+}
+
+
+.admin-policy-header__wave--2 {
+  right: 60px;
+  bottom: -31px;
+
+  opacity: 0.45;
+
+  transform: rotate(4deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .admin-policy-header {
+    min-height: 84px;
+
+    padding: 12px 14px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 22px;
+  }
+
+  .admin-policy-header__right {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA LARGE DESKTOP
+   1920px+
+   ========================================================= */
+
+@media (min-width: 1920px) {
+  .admin-policy-header {
+    min-height: 86px;
+
+    padding:
+      13px
+      16px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .admin-policy-header {
+    min-height: 78px;
+
+    gap: 16px;
+
+    padding: 11px 14px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 21px;
+  }
+
+  .admin-policy-header__subtitle {
+    font-size: 11px;
+  }
+
+  .admin-policy-header__right {
+    gap: 10px;
+  }
+
+  .admin-policy-header__breadcrumb {
+    margin-right: 0;
+  }
+
+  .admin-policy-header__document {
+    width: 44px;
+    height: 50px;
+
+    flex-basis: 44px;
+  }
+
+  .admin-policy-header__document-paper {
+    width: 36px;
+    height: 44px;
+  }
+
+  .admin-policy-header__add-button {
+    min-width: 128px;
+    height: 36px;
+
+    padding: 0 11px;
+
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .admin-policy-header {
+    min-height: 76px;
+
+    gap: 14px;
+
+    padding: 10px 12px;
+  }
+
+  .admin-policy-header__title-icon {
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+  .admin-policy-header__title-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 20px;
+  }
+
+  .admin-policy-header__subtitle {
+    margin-left: 38px;
+
+    font-size: 10.8px;
+  }
+
+  .admin-policy-header__breadcrumb {
+    display: none;
+  }
+
+  .admin-policy-header__document {
+    width: 42px;
+    height: 48px;
+
+    flex-basis: 42px;
+  }
+
+  .admin-policy-header__document-paper {
+    width: 35px;
+    height: 43px;
+  }
+
+  .admin-policy-header__document-shield {
+    width: 23px;
+    height: 25px;
+  }
+
+  .admin-policy-header__document-shield svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .admin-policy-header__add-button {
+    min-width: 124px;
+    height: 35px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .admin-policy-header {
+    width: calc(100% - 32px);
+
+    min-height: 74px;
+
+    gap: 12px;
+
+    margin:
+      8px
+      16px
+      0;
+
+    padding:
+      10px
+      8px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 19px;
+  }
+
+  .admin-policy-header__subtitle {
+    max-width: 360px;
+
+    margin:
+      3px
+      0
+      0
+      38px;
+
+    font-size: 10.5px;
+  }
+
+  .admin-policy-header__document {
+    display: none;
+  }
+
+  .admin-policy-header__add-button {
+    min-width: 120px;
+    height: 35px;
+
+    padding:
+      0
+      10px;
+
+    font-size: 10.8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .admin-policy-header {
+    width: calc(100% - 24px);
+    min-height: auto;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin:
+      8px
+      12px
+      0;
+
+    padding:
+      10px
+      4px
+      11px;
+
+    overflow: visible;
+  }
+
+  .admin-policy-header__left {
+    width: 100%;
+  }
+
+  .admin-policy-header__title-row {
+    gap: 8px;
+  }
+
+  .admin-policy-header__title-icon {
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+  .admin-policy-header__title-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 19px;
+  }
+
+  .admin-policy-header__subtitle {
+    max-width: 100%;
+
+    margin:
+      4px
+      0
+      0
+      37px;
+
+    font-size: 10.8px;
+    line-height: 1.4;
+  }
+
+  .admin-policy-header__right {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+  .admin-policy-header__breadcrumb,
+  .admin-policy-header__document {
+    display: none;
+  }
+
+  .admin-policy-header__add-button {
+    width: 100%;
+    min-width: 0;
+
+    height: 38px;
+
+    font-size: 11.5px;
+  }
+
+  .admin-policy-header__decoration {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .admin-policy-header {
+    width: calc(100% - 20px);
+
+    gap: 9px;
+
+    margin:
+      7px
+      10px
+      0;
+
+    padding:
+      9px
+      2px
+      10px;
+  }
+
+  .admin-policy-header__title-icon {
+    width: 28px;
+    height: 28px;
+
+    flex-basis: 28px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 18px;
+  }
+
+  .admin-policy-header__subtitle {
+    margin-left: 36px;
+
+    font-size: 10.5px;
+  }
+
+  .admin-policy-header__add-button {
+    height: 38px;
+
+    font-size: 11.2px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   320px - 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .admin-policy-header {
+    width: calc(100% - 16px);
+
+    margin:
+      6px
+      8px
+      0;
+
+    padding:
+      8px
+      2px
+      9px;
+  }
+
+  .admin-policy-header__title-row {
+    gap: 7px;
+  }
+
+  .admin-policy-header__title-icon {
+    width: 27px;
+    height: 27px;
+
+    flex-basis: 27px;
+  }
+
+  .admin-policy-header__title-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .admin-policy-header__title {
+    font-size: 17px;
+  }
+
+  .admin-policy-header__subtitle {
+    margin:
+      3px
+      0
+      0;
+
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .admin-policy-header__add-button {
+    height: 37px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   320PX SAFETY
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .admin-policy-header {
+    width: calc(100% - 12px);
+
+    margin:
+      6px
+      6px
+      0;
+  }
+
+  .admin-policy-header__title {
+    font-size: 16.5px;
+  }
+
+  .admin-policy-header__subtitle {
+    font-size: 9.8px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-policy-header__add-button {
+    transition: none;
+  }
+
+  .admin-policy-header__add-button:hover,
+  .admin-policy-header__add-button:active {
+    transform: none;
+  }
+}

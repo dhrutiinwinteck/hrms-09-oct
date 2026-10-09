@@ -1,0 +1,523 @@
+/* =========================================================
+   KRA SUMMARY CARD
+   Enterprise HRMS Dashboard
+   Teal + White + Soft Mint
+
+   Visual Hierarchy:
+   1. Label       -> Standard heading
+   2. Value       -> Primary metric
+   3. Supporting  -> Neutral secondary information
+   4. Icon        -> Teal visual accent
+   ========================================================= */
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.kra-summary-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  height: 132px;
+
+  box-sizing: border-box;
+
+  padding: 20px 82px 18px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe5e2;
+  border-radius: 10px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 45, 39, 0.025),
+    0 4px 10px rgba(15, 45, 39, 0.035);
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.kra-summary-card:hover {
+  border-color: #bfd6d0;
+
+  box-shadow:
+    0 3px 8px rgba(15, 45, 39, 0.05),
+    0 8px 18px rgba(15, 45, 39, 0.055);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.kra-summary-card-main {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 7px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.kra-summary-card-label {
+  display: block;
+
+  max-width: 100%;
+
+  color: #263934;
+
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.kra-summary-card-value {
+  display: block;
+
+  max-width: 100%;
+
+  margin: 0;
+
+  color: #14231f;
+
+  font-family: inherit;
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 650;
+
+  letter-spacing: -0.04em;
+
+  font-variant-numeric: tabular-nums;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SUPPORTING / META TEXT
+
+   Important:
+   Neutral color is intentional.
+   This prevents supporting information from looking like
+   a clickable link, status, alert, or primary action.
+   ========================================================= */
+
+.kra-summary-card-trend {
+  position: absolute;
+
+  left: 20px;
+  bottom: 18px;
+
+  display: block;
+
+  max-width: calc(100% - 100px);
+
+  color: #6b7c77;
+
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ICON CONTAINER
+   ========================================================= */
+
+.kra-summary-card-icon {
+  position: absolute;
+
+  top: 31px;
+  right: 20px;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d3e7e2;
+  border-radius: 10px;
+
+  background: #eaf5f2;
+
+  color: #087f70;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+
+/* =========================================================
+   ICON SVG
+   ========================================================= */
+
+.kra-summary-card-icon svg {
+  width: 24px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   ICON HOVER
+   ========================================================= */
+
+.kra-summary-card:hover .kra-summary-card-icon {
+  background: #e1f1ed;
+
+  border-color: #bddbd4;
+
+  color: #075e54;
+
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   SUBTLE ICON BACKGROUND VARIATIONS
+
+   All variations remain within the same
+   Teal + Soft Mint HRMS palette.
+   ========================================================= */
+
+.kra-summary-card:nth-child(2) .kra-summary-card-icon {
+  background: #edf7f4;
+}
+
+.kra-summary-card:nth-child(3) .kra-summary-card-icon {
+  background: #f1f7f5;
+}
+
+.kra-summary-card:nth-child(4) .kra-summary-card-icon {
+  background: #eef6f4;
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   <= 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .kra-summary-card {
+    height: 124px;
+
+    padding:
+      18px
+      72px
+      16px
+      18px;
+  }
+
+  .kra-summary-card-label {
+    font-size: 12px;
+  }
+
+  .kra-summary-card-value {
+    font-size: 28px;
+  }
+
+  .kra-summary-card-trend {
+    left: 18px;
+    bottom: 16px;
+
+    max-width: calc(100% - 88px);
+
+    font-size: 10.5px;
+  }
+
+  .kra-summary-card-icon {
+    top: 29px;
+    right: 18px;
+
+    width: 48px;
+    height: 48px;
+  }
+
+  .kra-summary-card-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-summary-card {
+    height: 118px;
+
+    padding:
+      17px
+      68px
+      15px
+      17px;
+  }
+
+  .kra-summary-card-main {
+    gap: 5px;
+  }
+
+  .kra-summary-card-label {
+    font-size: 12px;
+  }
+
+  .kra-summary-card-value {
+    font-size: 27px;
+  }
+
+  .kra-summary-card-trend {
+    left: 17px;
+    bottom: 15px;
+
+    max-width: calc(100% - 84px);
+
+    font-size: 10.5px;
+  }
+
+  .kra-summary-card-icon {
+    top: 27px;
+    right: 17px;
+
+    width: 46px;
+    height: 46px;
+  }
+
+  .kra-summary-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-summary-card {
+    height: 112px;
+
+    padding:
+      15px
+      64px
+      14px
+      15px;
+
+    border-radius: 9px;
+  }
+
+  .kra-summary-card-main {
+    gap: 5px;
+  }
+
+  .kra-summary-card-label {
+    font-size: 11.5px;
+  }
+
+  .kra-summary-card-value {
+    font-size: 25px;
+  }
+
+  .kra-summary-card-trend {
+    left: 15px;
+    bottom: 14px;
+
+    max-width: calc(100% - 76px);
+
+    font-size: 10px;
+  }
+
+  .kra-summary-card-icon {
+    top: 26px;
+    right: 15px;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 8px;
+  }
+
+  .kra-summary-card-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-summary-card {
+    height: 108px;
+
+    padding:
+      14px
+      60px
+      13px
+      14px;
+  }
+
+  .kra-summary-card-main {
+    gap: 4px;
+  }
+
+  .kra-summary-card-label {
+    font-size: 11px;
+  }
+
+  .kra-summary-card-value {
+    font-size: 24px;
+  }
+
+  .kra-summary-card-trend {
+    left: 14px;
+    bottom: 13px;
+
+    max-width: calc(100% - 70px);
+
+    font-size: 9.5px;
+  }
+
+  .kra-summary-card-icon {
+    top: 25px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .kra-summary-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-summary-card {
+    height: 102px;
+
+    padding:
+      13px
+      55px
+      12px
+      13px;
+  }
+
+  .kra-summary-card-main {
+    gap: 4px;
+  }
+
+  .kra-summary-card-label {
+    font-size: 10.5px;
+  }
+
+  .kra-summary-card-value {
+    font-size: 22px;
+  }
+
+  .kra-summary-card-trend {
+    left: 13px;
+    bottom: 12px;
+
+    max-width: calc(100% - 64px);
+
+    font-size: 9px;
+  }
+
+  .kra-summary-card-icon {
+    top: 24px;
+    right: 13px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 7px;
+  }
+
+  .kra-summary-card-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION / ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-summary-card,
+  .kra-summary-card-icon {
+    transition: none;
+  }
+
+  .kra-summary-card:hover,
+  .kra-summary-card:hover .kra-summary-card-icon {
+    transform: none;
+  }
+}

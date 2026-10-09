@@ -1,0 +1,675 @@
+/* ============================================================
+   ALL EMPLOYEES PAGE
+============================================================ */
+
+.all-employees-page {
+  padding: 0 20px 24px 20px;
+
+  background: #f8fafc;
+
+  min-height: calc(100vh - 60px);
+}
+
+@media (max-width: 768px) {
+  .all-employees-page {
+    padding: 0 12px 16px 12px;
+  }
+}
+
+
+/* ============================================================
+   ACTIVATE EMPLOYEE
+   Modal Overlay
+============================================================ */
+
+.activate-employee-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.35);
+
+  backdrop-filter: blur(2px);
+
+  -webkit-backdrop-filter: blur(2px);
+
+  z-index: 9999;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   ACTIVATE EMPLOYEE
+   Modal Container
+============================================================ */
+
+.activate-employee-modal {
+  width: min(620px, 100%);
+
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.16),
+    0 4px 12px rgba(15, 23, 42, 0.06);
+
+  overflow: hidden;
+
+  animation: activateEmployeeModalIn 0.2s ease-out;
+}
+
+
+/* ============================================================
+   MODAL HEADER
+============================================================ */
+
+.activate-employee-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 64px;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   Modal Title
+============================================================ */
+
+.activate-employee-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* ============================================================
+   Close Button
+============================================================ */
+
+.activate-employee-close {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+
+  height: 34px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.activate-employee-close:hover:not(:disabled) {
+  background: #f1f5f9;
+
+  color: #0f172a;
+}
+
+.activate-employee-close:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+
+/* ============================================================
+   FORM
+============================================================ */
+
+.activate-employee-form {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 0;
+
+  max-height: calc(100vh - 48px);
+}
+
+
+/* ============================================================
+   FORM BODY
+============================================================ */
+
+.activate-employee-body {
+  padding: 12px 12px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   FORM GRID
+============================================================ */
+
+.activate-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  column-gap: 24px;
+
+  row-gap: 22px;
+}
+
+
+/* ============================================================
+   FORM FIELD
+============================================================ */
+
+.activate-form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+/* ============================================================
+   FORM LABEL
+============================================================ */
+
+.activate-form-field label {
+  margin-bottom: 8px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   Required Star
+============================================================ */
+
+.activate-form-field label span {
+  margin-left: 3px;
+
+  color: #ef4444;
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   INPUT / SELECT / TEXTAREA
+============================================================ */
+
+.activate-form-field input,
+.activate-form-field select,
+.activate-form-field textarea {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* ============================================================
+   TEXTAREA
+============================================================ */
+
+.activate-form-field textarea {
+  min-height: 76px;
+
+  padding-top: 12px;
+
+  padding-bottom: 12px;
+
+  resize: vertical;
+}
+
+
+/* ============================================================
+   SELECT
+============================================================ */
+
+.activate-form-field select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* ============================================================
+   DATE INPUT
+============================================================ */
+
+.activate-form-field input[type="date"] {
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   NUMBER INPUT
+============================================================ */
+
+.activate-form-field input[type="number"] {
+  appearance: textfield;
+}
+
+
+/* Chrome / Edge / Safari
+============================================================ */
+
+.activate-form-field input[type="number"]::-webkit-inner-spin-button,
+.activate-form-field input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+
+/* ============================================================
+   PLACEHOLDER
+============================================================ */
+
+.activate-form-field input::placeholder,
+.activate-form-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ============================================================
+   FOCUS STATE
+   Primary HRMS Blue
+============================================================ */
+
+.activate-form-field input:focus,
+.activate-form-field select:focus,
+.activate-form-field textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.10);
+
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   HOVER STATE
+============================================================ */
+
+.activate-form-field input:hover:not(:focus),
+.activate-form-field select:hover:not(:focus),
+.activate-form-field textarea:hover:not(:focus) {
+  border-color: #cbd5e1;
+}
+
+
+/* ============================================================
+   NOTICE PERIOD
+============================================================ */
+
+.activate-notice-field {
+  grid-column: 1 / 2;
+}
+
+
+/* ============================================================
+   MODAL FOOTER
+============================================================ */
+
+.activate-employee-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  min-height: 70px;
+
+  padding: 12px 24px;
+
+  background: #f8fafc;
+
+  border-top: 1px solid #e2e8f0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CLOSE BUTTON
+============================================================ */
+
+.activate-close-button {
+  min-width: 82px;
+
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.activate-close-button:hover:not(:disabled) {
+  background: #f1f5f9;
+
+  border-color: #94a3b8;
+
+  color: #334155;
+}
+
+
+/* ============================================================
+   SUBMIT BUTTON
+   Same Teal Color as "Save Employee" Button
+============================================================ */
+
+.activate-submit-button {
+  min-width: 92px;
+
+  height: 40px;
+
+  padding: 0 20px;
+
+  border: 1px solid #1f6669;
+
+  border-radius: 7px;
+
+  background: #1f6669;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 4px rgba(31, 102, 105, 0.15);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* ============================================================
+   Submit Hover
+============================================================ */
+
+.activate-submit-button:hover:not(:disabled) {
+  background: #18565a;
+
+  border-color: #18565a;
+
+  box-shadow:
+    0 4px 10px rgba(31, 102, 105, 0.22);
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   Submit Active
+============================================================ */
+
+.activate-submit-button:active:not(:disabled) {
+  background: #144b4e;
+
+  border-color: #144b4e;
+
+  transform: translateY(0);
+}
+
+
+/* ============================================================
+   Submit Active
+============================================================ */
+
+.activate-submit-button:active:not(:disabled) {
+  background: #1e40af;
+
+  border-color: #1e40af;
+
+  transform: translateY(0);
+}
+
+
+/* ============================================================
+   Disabled Buttons
+============================================================ */
+
+.activate-submit-button:disabled,
+.activate-close-button:disabled,
+.activate-employee-close:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* ============================================================
+   MODAL ANIMATION
+============================================================ */
+
+@keyframes activateEmployeeModalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-10px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 700px) {
+  .activate-employee-overlay {
+    padding: 16px;
+  }
+
+  .activate-employee-modal {
+    max-height: calc(100vh - 32px);
+  }
+
+  .activate-form-grid {
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+  }
+
+  .activate-notice-field {
+    grid-column: auto;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+  .activate-employee-overlay {
+    align-items: flex-start;
+
+    padding: 10px;
+  }
+
+  .activate-employee-modal {
+    width: 100%;
+
+    max-height: calc(100vh - 20px);
+
+    border-radius: 8px;
+  }
+
+  .activate-employee-header {
+    min-height: 58px;
+
+    padding: 0 16px;
+  }
+
+  .activate-employee-header h2 {
+    font-size: 18px;
+  }
+
+  .activate-employee-body {
+    padding: 20px 16px;
+  }
+
+  .activate-form-grid {
+    row-gap: 18px;
+  }
+
+  .activate-form-field label {
+    font-size: 13px;
+
+    margin-bottom: 7px;
+  }
+
+  .activate-form-field input,
+  .activate-form-field select,
+  .activate-form-field textarea {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  .activate-form-field textarea {
+    min-height: 72px;
+  }
+
+  .activate-employee-footer {
+    min-height: 66px;
+
+    padding: 12px 16px;
+  }
+
+  .activate-close-button,
+  .activate-submit-button {
+    height: 40px;
+
+    font-size: 13px;
+  }
+}

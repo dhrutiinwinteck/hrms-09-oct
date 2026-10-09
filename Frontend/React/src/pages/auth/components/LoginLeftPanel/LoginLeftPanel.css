@@ -1,0 +1,136 @@
+/**
+ * @file LoginLeftPanel.css
+ * @description Styles for the left panel with image overlay and stats.
+ * @version 1.0.0
+ */
+
+.login-left-panel {
+  flex: 0 0 60%;
+  position: relative;
+  border-radius: var(--login-border-radius);
+  overflow: hidden;
+}
+
+.login-left-panel__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  /* ---- Right-side fade/blur effect ---- */
+  mask-image: linear-gradient(to right, black 30%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+}
+
+.login-left-panel__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 45, 54, 0.58);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Brand */
+.login-left-panel__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login-left-panel__brand-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.login-left-panel__brand-line {
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+}
+
+/* Content */
+.login-left-panel__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left-panel__heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+}
+
+.login-left-panel__subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Stats card */
+.login-left-panel__stats {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 350px;
+  margin-top: auto;
+}
+
+.login-left-panel__stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.login-left-panel__stats-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.login-left-panel__stats-label {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.login-left-panel__stats-divider {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .login-left-panel {
+    flex: 0 0 280px;
+  }
+  .login-left-panel__heading {
+    font-size: 36px;
+  }
+  .login-left-panel__stats {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-left-panel {
+    display: none;
+  }
+}

@@ -1,0 +1,371 @@
+/**
+ * ======================================================
+ * Attendance Module - Calendar Styles
+ * ======================================================
+ * Enterprise-grade styling for the calendar component.
+ *
+ * @module components/AttendanceCalendar
+ */
+
+/* -----------------------------------------------------------------------------
+ * CSS Variables
+ * ----------------------------------------------------------------------------- */
+
+:root {
+  --calendar-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --calendar-trigger-bg: #ffffff;
+  --calendar-trigger-border: #d1d5db;
+  --calendar-trigger-radius: 0.375rem;
+  --calendar-popover-bg: #ffffff;
+  --calendar-popover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --calendar-popover-radius: 0.75rem;
+  --calendar-transition: all 0.15s ease-in-out;
+  --calendar-day-size: 30px;
+  --calendar-day-hover: #f3f4f6;
+  --calendar-day-selected: #3b82f6;
+  --calendar-day-selected-text: #ffffff;
+  --calendar-day-today: #dbeafe;
+  --calendar-day-today-text: #1e40af;
+  --calendar-text-color: #111827;
+  --calendar-text-secondary: #6b7280;
+}
+
+/* -----------------------------------------------------------------------------
+ * Container
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar {
+  position: relative;
+  display: inline-block;
+  font-family: var(--calendar-font-family);
+}
+
+/* -----------------------------------------------------------------------------
+ * Trigger Button
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  background: var(--calendar-trigger-bg);
+  border: 1px solid var(--calendar-trigger-border);
+  border-radius: var(--calendar-trigger-radius);
+  font-size: 0.8125rem;
+  color: var(--calendar-text-color);
+  cursor: pointer;
+  transition: var(--calendar-transition);
+  min-width: 180px;
+  font-family: var(--calendar-font-family);
+  position: relative;
+}
+
+.attendance-calendar__trigger:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+
+.attendance-calendar__trigger:focus-visible {
+  outline: 2px solid var(--calendar-day-selected);
+  outline-offset: 1px;
+}
+
+.attendance-calendar__trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.attendance-calendar__trigger.has-value {
+  border-color: var(--calendar-day-selected);
+  background: #f8faff;
+}
+
+.attendance-calendar__trigger-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.attendance-calendar__trigger-text {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attendance-calendar__trigger-clear {
+  color: #9ca3af;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0.125rem;
+  border-radius: 50%;
+  transition: var(--calendar-transition);
+}
+
+.attendance-calendar__trigger-clear:hover {
+  color: #4b5563;
+  background: #f3f4f6;
+}
+
+/* -----------------------------------------------------------------------------
+ * Popover
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__popover {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 1000;
+  background: var(--calendar-popover-bg);
+  border-radius: var(--calendar-popover-radius);
+  box-shadow: var(--calendar-popover-shadow);
+  padding: 0.75rem;
+  min-width: 240px;
+  max-width: 340px;
+  animation: popover-fade-in 0.15s ease-in-out;
+  border: 1px solid #e5e7eb;
+}
+
+@keyframes popover-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.attendance-calendar__month-year {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--calendar-text-color);
+}
+
+.attendance-calendar__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: var(--calendar-text-secondary);
+  transition: var(--calendar-transition);
+}
+
+.attendance-calendar__nav-btn:hover {
+  background: var(--calendar-day-hover);
+  color: var(--calendar-text-color);
+}
+
+.attendance-calendar__nav-btn:focus-visible {
+  outline: 2px solid var(--calendar-day-selected);
+  outline-offset: 1px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Weekdays
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.attendance-calendar__weekday {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--calendar-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * Days Grid
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__days {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.attendance-calendar__week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Day Cell
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--calendar-day-size);
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--calendar-text-color);
+  cursor: pointer;
+  transition: var(--calendar-transition);
+  user-select: none;
+  position: relative;
+}
+
+.attendance-calendar__day:hover:not(.selected) {
+  background: var(--calendar-day-hover);
+}
+
+.attendance-calendar__day.other-month {
+  color: #9ca3af;
+}
+
+.attendance-calendar__day.today {
+  background: var(--calendar-day-today);
+  color: var(--calendar-day-today-text);
+  font-weight: 600;
+}
+
+.attendance-calendar__day.today::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--calendar-day-selected);
+}
+
+.attendance-calendar__day.selected {
+  background: var(--calendar-day-selected);
+  color: var(--calendar-day-selected-text);
+  font-weight: 600;
+}
+
+.attendance-calendar__day.selected.today::after {
+  background: var(--calendar-day-selected-text);
+}
+
+.attendance-calendar__day:focus-visible {
+  outline: 2px solid var(--calendar-day-selected);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+/* -----------------------------------------------------------------------------
+ * Footer
+ * ----------------------------------------------------------------------------- */
+
+.attendance-calendar__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  gap: 0.5rem;
+}
+
+.attendance-calendar__today-btn,
+.attendance-calendar__clear-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: var(--calendar-transition);
+  font-family: var(--calendar-font-family);
+}
+
+.attendance-calendar__today-btn {
+  background: var(--calendar-day-selected);
+  color: #ffffff;
+}
+
+.attendance-calendar__today-btn:hover {
+  background: #2563eb;
+}
+
+.attendance-calendar__clear-btn {
+  background: #f3f4f6;
+  color: var(--calendar-text-secondary);
+}
+
+.attendance-calendar__clear-btn:hover {
+  background: #e5e7eb;
+}
+
+.attendance-calendar__today-btn:focus-visible,
+.attendance-calendar__clear-btn:focus-visible {
+  outline: 2px solid var(--calendar-day-selected);
+  outline-offset: 1px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Responsive Adjustments
+ * ----------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .attendance-calendar__popover {
+    min-width: 260px;
+    padding: 0.75rem;
+    left: auto;
+    right: 0;
+  }
+  :root {
+    --calendar-day-size: 34px;
+  }
+  .attendance-calendar__trigger {
+    min-width: 150px;
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.625rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .attendance-calendar__popover {
+    min-width: 240px;
+    padding: 0.625rem;
+    max-width: 280px;
+  }
+  :root {
+    --calendar-day-size: 30px;
+  }
+  .attendance-calendar__trigger {
+    min-width: 120px;
+    font-size: 0.75rem;
+    padding: 0.3125rem 0.5rem;
+  }
+  .attendance-calendar__day {
+    font-size: 0.75rem;
+  }
+  .attendance-calendar__month-year {
+    font-size: 0.8125rem;
+  }
+}

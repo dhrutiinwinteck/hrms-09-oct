@@ -1,0 +1,691 @@
+/* =========================================================
+   EMPLOYEE LEAVE BALANCE TABLE
+   File: AddViewLeaveTable.css
+   ========================================================= */
+
+.add-view-leave-table {
+  width: 100%;
+
+  padding: 0 18px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE SCROLL CONTAINER
+   ========================================================= */
+
+.add-view-leave-table__scroll {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf0;
+  border-radius: 7px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.add-view-leave-table__scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.add-view-leave-table__scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 20px;
+}
+
+.add-view-leave-table__scroll::-webkit-scrollbar-thumb:hover {
+  background: #aebccc;
+}
+
+.add-view-leave-table__scroll::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.add-view-leave-table table {
+  width: 100%;
+  min-width: 900px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  table-layout: auto;
+
+  color: #1e293b;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.add-view-leave-table thead {
+  background: #f7f9fb;
+}
+
+.add-view-leave-table th {
+  height: 40px;
+
+  padding: 0 14px;
+
+  color: #26384c;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-align: left;
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  background: #f7f9fb;
+
+  border-bottom: 1px solid #dfe6ed;
+}
+
+.add-view-leave-table__number-column {
+  width: 34px;
+}
+
+.add-view-leave-table__action-heading {
+  min-width: 130px;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.add-view-leave-table tbody tr {
+  background: #ffffff;
+
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.add-view-leave-table tbody tr:hover {
+  background: #fafdff;
+}
+
+.add-view-leave-table td {
+  height: 44px;
+
+  padding: 0 14px;
+
+  color: #34465a;
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.3;
+
+  text-align: left;
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #e9edf2;
+}
+
+.add-view-leave-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.add-view-leave-table__row-number {
+  color: #172b3a !important;
+
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.add-view-leave-table__employee {
+  display: flex;
+  align-items: center;
+
+  min-width: 150px;
+
+  gap: 10px;
+}
+
+.add-view-leave-table__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+
+  user-select: none;
+}
+
+
+/* Amit */
+
+.add-view-leave-table__avatar--0 {
+  color: #148675;
+  background: #d8f4ec;
+}
+
+
+/* Priya */
+
+.add-view-leave-table__avatar--1 {
+  color: #42526b;
+  background: #e8edf5;
+}
+
+
+/* Rohit */
+
+.add-view-leave-table__avatar--2 {
+  color: #2457b5;
+  background: #dce8ff;
+}
+
+
+/* Sneha */
+
+.add-view-leave-table__avatar--3 {
+  color: #247087;
+  background: #dff2f5;
+}
+
+
+/* Vikram */
+
+.add-view-leave-table__avatar--4 {
+  color: #39704a;
+  background: #e3f2e4;
+}
+
+.add-view-leave-table__employee-name {
+  display: block;
+
+  min-width: 0;
+
+  color: #1e293b;
+
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.add-view-leave-table__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-width: 120px;
+}
+
+.add-view-leave-table__action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 30px;
+
+  width: 30px;
+  height: 29px;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ee;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.add-view-leave-table__action-button--edit {
+  color: #0878f9;
+}
+
+.add-view-leave-table__action-button--view {
+  color: #71849a;
+}
+
+.add-view-leave-table__action-button--delete {
+  color: #ef4444;
+}
+
+
+/* Edit */
+
+.add-view-leave-table__action-button--edit:hover {
+  color: #0067df;
+
+  background: #eef6ff;
+
+  border-color: #c9e0ff;
+
+  box-shadow: 0 2px 5px rgba(8, 120, 249, 0.08);
+}
+
+
+/* View */
+
+.add-view-leave-table__action-button--view:hover {
+  color: #475569;
+
+  background: #f4f7fa;
+
+  border-color: #cbd5e1;
+
+  box-shadow: 0 2px 5px rgba(71, 85, 105, 0.07);
+}
+
+
+/* Delete */
+
+.add-view-leave-table__action-button--delete:hover {
+  color: #dc2626;
+
+  background: #fff5f5;
+
+  border-color: #fecaca;
+
+  box-shadow: 0 2px 5px rgba(220, 38, 38, 0.07);
+}
+
+.add-view-leave-table__action-button:active {
+  transform: translateY(1px);
+}
+
+.add-view-leave-table__action-button:focus-visible {
+  position: relative;
+
+  z-index: 2;
+
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.add-view-leave-table__empty {
+  height: 100px !important;
+
+  color: #64748b !important;
+
+  font-size: 12px !important;
+  font-weight: 400 !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   TABLE FOOTER
+   ========================================================= */
+
+.add-view-leave-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  gap: 20px;
+
+  min-height: 64px;
+
+  padding-top: 15px;
+
+  box-sizing: border-box;
+}
+
+.add-view-leave-table__entries {
+  margin: 0;
+
+  color: #536579;
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+.add-view-leave-table__entries strong {
+  color: #34465a;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.add-view-leave-table__pagination {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  max-width: 100%;
+}
+
+.add-view-leave-table__page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  min-width: 32px;
+  height: 32px;
+
+  padding: 0 9px;
+
+  color: #475569;
+  background: #ffffff;
+
+  border: 1px solid #e0e7ee;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.add-view-leave-table__page-button:hover:not(:disabled) {
+  color: #0878f9;
+
+  background: #f7fbff;
+
+  border-color: #bfdbfe;
+}
+
+.add-view-leave-table__page-button--active {
+  color: #ffffff !important;
+
+  background: #1677e8 !important;
+
+  border-color: #1677e8 !important;
+
+  box-shadow: 0 3px 8px rgba(22, 119, 232, 0.18);
+}
+
+.add-view-leave-table__page-button:disabled {
+  color: #b5c0cc;
+
+  background: #fafbfc;
+
+  border-color: #e5eaf0;
+
+  cursor: not-allowed;
+
+  opacity: 0.75;
+}
+
+.add-view-leave-table__page-button:focus-visible {
+  position: relative;
+
+  z-index: 2;
+
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.add-view-leave-table__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  min-width: 24px;
+  height: 32px;
+
+  color: #8293a6;
+
+  font-size: 12px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .add-view-leave-table table {
+    min-width: 880px;
+  }
+
+  .add-view-leave-table th,
+  .add-view-leave-table td {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .add-view-leave-table {
+    padding: 0 16px 16px;
+  }
+
+  .add-view-leave-table__scroll {
+    border-radius: 6px;
+  }
+
+  .add-view-leave-table table {
+    min-width: 850px;
+  }
+
+  .add-view-leave-table__footer {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 13px;
+
+    min-height: auto;
+
+    padding-top: 15px;
+  }
+
+  .add-view-leave-table__pagination {
+    align-self: flex-end;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .add-view-leave-table {
+    padding: 0 14px 14px;
+  }
+
+  .add-view-leave-table table {
+    min-width: 820px;
+  }
+
+  .add-view-leave-table th {
+    height: 39px;
+
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .add-view-leave-table td {
+    height: 43px;
+
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .add-view-leave-table__avatar {
+    flex-basis: 27px;
+
+    width: 27px;
+    height: 27px;
+  }
+
+  .add-view-leave-table__footer {
+    gap: 12px;
+
+    padding-top: 14px;
+  }
+
+  .add-view-leave-table__entries {
+    white-space: normal;
+  }
+
+  .add-view-leave-table__pagination {
+    align-self: stretch;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 2px 2px 5px;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .add-view-leave-table__pagination::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .add-view-leave-table__pagination::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 20px;
+  }
+
+  .add-view-leave-table__pagination::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .add-view-leave-table__page-button {
+    min-width: 31px;
+    height: 31px;
+  }
+
+  .add-view-leave-table__ellipsis {
+    height: 31px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .add-view-leave-table {
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+  }
+
+  .add-view-leave-table__footer {
+    padding-top: 12px;
+  }
+
+  .add-view-leave-table__pagination {
+    gap: 6px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .add-view-leave-table {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .add-view-leave-table__page-button {
+    min-width: 30px;
+    height: 30px;
+
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .add-view-leave-table__ellipsis {
+    min-width: 20px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,858 @@
+/* ============================================================
+   DEPARTMENT MODAL OVERLAY
+============================================================ */
+
+.department-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(15, 23, 42, 0.22);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  animation: departmentModalOverlayIn 160ms ease-out;
+}
+
+
+/* ============================================================
+   MODAL
+============================================================ */
+
+.department-modal {
+  position: relative;
+
+  width: min(100%, 360px);
+  max-height: calc(100vh - 40px);
+
+  background: #ffffff;
+
+  border: 1px solid #e7ece9;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.08),
+    0 20px 45px rgba(15, 23, 42, 0.10);
+
+  overflow: hidden;
+
+  animation: departmentModalIn 180ms ease-out;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.department-modal-header {
+  min-height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px 0 19px;
+
+  border-bottom: 1px solid #edf0ef;
+
+  box-sizing: border-box;
+}
+
+
+.department-modal-title {
+  margin: 0;
+
+  color: #293136;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* ============================================================
+   CLOSE
+============================================================ */
+
+.department-modal-close {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #626b70;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+
+.department-modal-close:hover:not(:disabled) {
+  color: #3f7568;
+
+  background: #f1f6f3;
+
+  border-color: #e1ebe6;
+}
+
+
+.department-modal-close:focus-visible {
+  outline: 2px solid #9bcbb8;
+  outline-offset: 2px;
+}
+
+
+.department-modal-close:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   FORM
+============================================================ */
+
+.department-modal-form {
+  width: 100%;
+
+  padding: 18px 22px 20px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+}
+
+
+/* ============================================================
+   DELETE CONTENT
+============================================================ */
+
+.department-modal-delete-content {
+  width: 100%;
+
+  padding: 20px 22px 20px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.department-modal-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   ICON
+============================================================ */
+
+.department-modal-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 10px;
+
+  color: #4d8175;
+
+  background: #edf5f0;
+
+  border: 1px solid #e2ede7;
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+
+.department-modal-icon-danger {
+  color: #a26363;
+
+  background: #f8eeee;
+
+  border-color: #f0dede;
+}
+
+
+/* ============================================================
+   HEADING
+============================================================ */
+
+.department-modal-heading {
+  margin: 0;
+
+  color: #2d3539;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.department-modal-description {
+  max-width: 270px;
+
+  margin: 4px 0 17px;
+
+  color: #727a7e;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   FIELD
+============================================================ */
+
+.department-modal-field {
+  width: 100%;
+
+  margin-top: 1px;
+
+  text-align: left;
+}
+
+
+.department-modal-field + .department-modal-field {
+  margin-top: 14px;
+}
+
+
+/* ============================================================
+   LABEL
+============================================================ */
+
+.department-modal-label {
+  display: block;
+
+  margin: 0 0 6px;
+
+  color: #3d4549;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+.department-modal-required {
+  margin-left: 2px;
+
+  color: #b45f5f;
+}
+
+
+/* ============================================================
+   INPUT
+============================================================ */
+
+.department-modal-input {
+  width: 100%;
+  height: 38px;
+
+  display: block;
+
+  padding: 0 11px;
+
+  color: #293136;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7e6;
+  border-radius: 8px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+
+.department-modal-input::placeholder {
+  color: #a0a7aa;
+}
+
+
+.department-modal-input:hover:not(:disabled) {
+  border-color: #cbd7d2;
+}
+
+
+.department-modal-input:focus {
+  border-color: #78a99a;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 129, 117, 0.09);
+}
+
+
+.department-modal-input:disabled {
+  color: #92999c;
+
+  background: #f7f8f8;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   ERROR
+============================================================ */
+
+.department-modal-input-error {
+  border-color: #c98484;
+}
+
+
+.department-modal-input-error:focus {
+  border-color: #bd6e6e;
+
+  box-shadow:
+    0 0 0 3px rgba(189, 110, 110, 0.08);
+}
+
+
+.department-modal-error {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #a65d5d;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 8.5px;
+
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   SELECT
+============================================================ */
+
+.department-modal-select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  padding-right: 30px;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #69746f 50%
+    ),
+    linear-gradient(
+      135deg,
+      #69746f 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 14px) 15px,
+    calc(100% - 10px) 15px;
+
+  background-size:
+    4px 4px,
+    4px 4px;
+
+  background-repeat: no-repeat;
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.department-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+
+/* ============================================================
+   BUTTON
+============================================================ */
+
+.department-modal-button {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  border-radius: 8px;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+
+.department-modal-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+
+.department-modal-button:focus-visible {
+  outline: 2px solid #9bcbb8;
+  outline-offset: 2px;
+}
+
+
+.department-modal-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   CANCEL
+============================================================ */
+
+.department-modal-button-secondary {
+  color: #596460;
+
+  background: #f7faf8;
+
+  border: 1px solid #c9ddd4;
+}
+
+
+.department-modal-button-secondary:hover:not(:disabled) {
+  color: #456e62;
+
+  background: #f0f6f3;
+
+  border-color: #b7d2c7;
+}
+
+
+/* ============================================================
+   SUBMIT / SAVE
+============================================================ */
+
+.department-modal-button-primary {
+  color: #ffffff;
+
+  background: #4d8175;
+
+  border: 1px solid #4d8175;
+}
+
+
+.department-modal-button-primary:hover:not(:disabled) {
+  background: #426f64;
+
+  border-color: #426f64;
+}
+
+
+/* ============================================================
+   DELETE BUTTON
+============================================================ */
+
+.department-modal-button-danger {
+  color: #ffffff;
+
+  background: #a96565;
+
+  border: 1px solid #a96565;
+}
+
+
+.department-modal-button-danger:hover:not(:disabled) {
+  background: #955858;
+
+  border-color: #955858;
+}
+
+
+/* ============================================================
+   DELETE PREVIEW
+============================================================ */
+
+.department-delete-preview {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 3px;
+  padding: 10px;
+
+  background: #fafbfb;
+
+  border: 1px solid #e9eeec;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+
+.department-delete-preview-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 34px;
+
+  margin-right: 9px;
+
+  color: #5b8176;
+
+  background: #edf5f1;
+
+  border-radius: 50%;
+}
+
+
+.department-delete-preview-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.department-delete-preview-name {
+  color: #343b3e;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.department-delete-preview-status {
+  margin-top: 2px;
+
+  color: #7a8285;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 8.5px;
+
+  line-height: 1.3;
+}
+
+
+/* ============================================================
+   DELETE WARNING
+============================================================ */
+
+.department-delete-warning {
+  margin: 10px 1px 0;
+
+  color: #8a7474;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 8.5px;
+
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   LOADER
+============================================================ */
+
+.department-modal-spinner {
+  animation: departmentModalSpin 800ms linear infinite;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes departmentModalOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes departmentModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes departmentModalSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+  .department-modal-overlay {
+    padding: 16px;
+  }
+
+  .department-modal {
+    width: min(100%, 350px);
+
+    max-height: calc(100vh - 32px);
+
+    border-radius: 11px;
+  }
+
+  .department-modal-header {
+    min-height: 47px;
+
+    padding-left: 16px;
+    padding-right: 15px;
+  }
+
+  .department-modal-form {
+    padding: 17px 18px 18px;
+  }
+
+  .department-modal-delete-content {
+    padding: 18px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 375px) {
+  .department-modal-overlay {
+    padding: 12px;
+  }
+
+  .department-modal {
+    width: 100%;
+
+    max-height: calc(100vh - 24px);
+
+    border-radius: 10px;
+  }
+
+  .department-modal-header {
+    min-height: 45px;
+
+    padding-left: 14px;
+    padding-right: 12px;
+  }
+
+  .department-modal-form {
+    padding: 15px 15px 16px;
+  }
+
+  .department-modal-delete-content {
+    padding: 16px 15px;
+  }
+
+  .department-modal-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .department-modal-input {
+    height: 37px;
+  }
+
+  .department-modal-actions {
+    gap: 7px;
+
+    margin-top: 17px;
+  }
+
+  .department-modal-button {
+    min-height: 35px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .department-modal-overlay,
+  .department-modal {
+    animation: none;
+  }
+
+  .department-modal-spinner {
+    animation-duration: 1.5s;
+  }
+}

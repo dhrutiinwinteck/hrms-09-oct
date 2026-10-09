@@ -1,0 +1,109 @@
+/* ReviewInformation.css */
+.review-section-container { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.75rem; 
+  width: 100%; 
+}
+
+.review-item-row {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0.9rem 1.25rem; 
+  background: #F7F5F0; /* Soft beige row background */
+  border-radius: 10px; 
+  border: 1px solid var(--joining-border, #D9DDD9);
+  transition: background 0.2s ease;
+}
+
+.review-item-row:hover {
+  background: #EFECE6; /* Slightly darker on hover for accessibility */
+}
+
+.review-item-row h4 { 
+  margin: 0; 
+  font-size: 0.95rem; 
+  font-weight: 600; 
+  color: var(--joining-text, #19383A); 
+}
+
+/* Edit Button - Accessible, interactive */
+.review-item-row .edit-link { 
+  color: var(--joining-primary, #1F6669); 
+  cursor: pointer; 
+  font-weight: 600; 
+  font-size: 0.85rem; 
+  background: transparent; 
+  border: none; 
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.review-item-row .edit-link:hover {
+  background: rgba(31, 102, 105, 0.08);
+}
+
+/* Icon styling inside the row */
+.row-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--joining-muted, #6B7C7D);
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+/* Confirmation Checkbox Area */
+.confirmation-checkbox-area {
+  margin-top: 1.5rem; 
+  padding: 1rem; 
+  background: #EBE8E3; 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 0.75rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.confirmation-checkbox-area.has-error {
+  border-color: var(--joining-danger, #C94B4B);
+  background: #fffafa;
+}
+
+.confirmation-checkbox-area input { 
+  margin-top: 3px; 
+  accent-color: var(--joining-primary, #1F6669); 
+  width: 18px; 
+  height: 18px; 
+  cursor: pointer; 
+}
+
+.confirmation-checkbox-area label { 
+  font-size: 0.9rem; 
+  cursor: pointer; 
+  color: var(--joining-text, #19383A); 
+}
+
+/* Inline Validation Message */
+.review-validation-error {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--joining-danger, #C94B4B);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-item-row { padding: 0.75rem 1rem; }
+  .review-item-row h4 { font-size: 0.9rem; }
+  .confirmation-checkbox-area { flex-direction: column; align-items: center; text-align: center; }
+}

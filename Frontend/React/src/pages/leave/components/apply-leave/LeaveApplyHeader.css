@@ -1,0 +1,759 @@
+/* =========================================================
+   LEAVE APPLY HEADER
+   Enterprise HRMS
+   Compact / Responsive
+   ========================================================= */
+
+.leave-header,
+.leave-header *,
+.leave-header *::before,
+.leave-header *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER ROOT
+   ========================================================= */
+
+.leave-header {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 82px;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   INNER LAYOUT
+   ========================================================= */
+
+.leave-header__inner {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 82px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 1fr)
+    auto
+    auto;
+
+  align-items: center;
+
+  column-gap: 24px;
+
+  margin: 0;
+
+  padding:
+    10px
+    24px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.leave-header__content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 3px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.leave-header__title {
+  margin: 0;
+  padding: 0;
+
+  color: #101c1a;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.35px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.leave-header__description {
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #53615e;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.leave-header__image-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  justify-self: center;
+  align-self: center;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: visible;
+
+  pointer-events: none;
+  left: 80px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.leave-header__image {
+  display: block;
+
+  width: 420px;
+  height: auto;
+
+  max-width: none;
+  max-height: none;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: scale(1.18);
+  transform-origin: center center;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+.leave-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.leave-header__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  height: 46px;
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #114f4f;
+
+  color: #ffffff;
+
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.leave-header__add-button:hover {
+  background: #0b4343;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.leave-header__breadcrumb {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 6px;
+
+  justify-self: stretch;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DASHBOARD BUTTON
+   ========================================================= */
+
+.leave-header__breadcrumb-link {
+  appearance: none;
+  -webkit-appearance: none;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: #5f6b68;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+
+.leave-header__breadcrumb-link:hover {
+  color: #315f64;
+}
+
+
+.leave-header__breadcrumb-link:focus-visible {
+  border-radius: 3px;
+
+  outline: 2px solid rgba(49, 95, 100, 0.45);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   BREADCRUMB ICON
+   ========================================================= */
+
+.leave-header__breadcrumb-icon {
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 13px;
+
+  color: #929d9a;
+}
+
+
+/* =========================================================
+   CURRENT PAGE
+   ========================================================= */
+
+.leave-header__breadcrumb-current {
+  margin: 0;
+  padding: 0;
+
+  color: #344743;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .leave-header {
+    min-height: 86px;
+  }
+
+  .leave-header__inner {
+    min-height: 86px;
+
+    grid-template-columns:
+      minmax(320px, 1fr)
+      minmax(220px, 300px)
+      minmax(260px, 1fr);
+
+    column-gap: 24px;
+
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .leave-header__image-wrapper {
+    height: 72px;
+  }
+
+  .leave-header__image {
+    width:420px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+
+    transform:scale(1.18);
+}
+}
+
+
+/* =========================================================
+   DESKTOP / SMALL LAPTOP
+   <= 1279px
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .leave-header__inner {
+    grid-template-columns:
+      minmax(240px, 1fr)
+      minmax(180px, 240px)
+      minmax(190px, 1fr);
+
+    column-gap: 16px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .leave-header__title {
+    font-size: 23px;
+  }
+
+  .leave-header__description {
+    font-size: 12px;
+  }
+
+  .leave-header__image {
+    width:360px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+
+    transform:scale(1.12);
+}
+
+  .leave-header__breadcrumb-link,
+  .leave-header__breadcrumb-current {
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .leave-header {
+    min-height: 78px;
+  }
+
+  .leave-header__inner {
+    min-height: 78px;
+
+    grid-template-columns:
+      minmax(220px, 1fr)
+      minmax(150px, 190px)
+      auto;
+
+    column-gap: 12px;
+
+    padding:
+      8px
+      18px;
+  }
+
+  .leave-header__title {
+    font-size: 22px;
+  }
+
+  .leave-header__description {
+    max-width: 280px;
+
+    font-size: 11.5px;
+  }
+
+  .leave-header__image-wrapper {
+    height: 62px;
+  }
+
+.leave-header__image {
+    width:300px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+
+    transform:none;
+}
+
+  .leave-header__breadcrumb {
+    gap: 5px;
+  }
+
+  .leave-header__breadcrumb-link,
+  .leave-header__breadcrumb-current {
+    font-size: 11px;
+  }
+
+  .leave-header__breadcrumb-icon {
+    width: 12px;
+    height: 12px;
+
+    flex-basis: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   <= 768px
+
+   Header content and breadcrumb remain on top.
+   Illustration gets its own centered row.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .leave-header {
+    min-height: 112px;
+  }
+
+  .leave-header__inner {
+    min-height: 112px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+
+    grid-template-areas:
+      "content breadcrumb"
+      "image image";
+
+    align-items: start;
+
+    column-gap: 12px;
+    row-gap: 2px;
+
+    padding:
+      10px
+      14px
+      4px;
+  }
+
+  .leave-header__content {
+    grid-area: content;
+
+    align-self: start;
+  }
+
+  .leave-header__title {
+    font-size: 21px;
+  }
+
+  .leave-header__description {
+    max-width: 330px;
+
+    font-size: 11.5px;
+  }
+
+  .leave-header__breadcrumb {
+    grid-area: breadcrumb;
+
+    align-self: start;
+    justify-self: end;
+
+    padding-top: 3px;
+  }
+
+  .leave-header__image-wrapper {
+    grid-area: image;
+
+    width: 100%;
+    height: 56px;
+
+    align-self: end;
+
+    margin: 0;
+  }
+
+  .leave-header__image {
+    width:260px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+}
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .leave-header {
+    min-height: 126px;
+  }
+
+  .leave-header__inner {
+    min-height: 126px;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "breadcrumb"
+      "content"
+      "image";
+
+    row-gap: 2px;
+
+    padding:
+      8px
+      12px
+      3px;
+  }
+
+  .leave-header__breadcrumb {
+    grid-area: breadcrumb;
+
+    justify-self: end;
+
+    gap: 4px;
+
+    padding: 0;
+  }
+
+  .leave-header__breadcrumb-link,
+  .leave-header__breadcrumb-current {
+    font-size: 10.5px;
+  }
+
+  .leave-header__breadcrumb-icon {
+    width: 11px;
+    height: 11px;
+
+    flex-basis: 11px;
+  }
+
+  .leave-header__content {
+    grid-area: content;
+
+    width: 100%;
+
+    gap: 2px;
+  }
+
+  .leave-header__title {
+    font-size: 20px;
+  }
+
+  .leave-header__description {
+    max-width: 100%;
+
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .leave-header__image-wrapper {
+    grid-area: image;
+
+    width: 100%;
+    height: 54px;
+
+    margin: 0;
+  }
+
+ .leave-header__image {
+    width:220px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+}
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 390px
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .leave-header {
+    min-height: 122px;
+  }
+
+  .leave-header__inner {
+    min-height: 122px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .leave-header__title {
+    font-size: 19px;
+  }
+
+  .leave-header__description {
+    max-width: 285px;
+
+    font-size: 10.5px;
+  }
+
+  .leave-header__image-wrapper {
+    height: 50px;
+  }
+
+  .leave-header__image {
+    width: 150px;
+    height: 51px;
+
+    max-height: 51px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+  .leave-header {
+    min-height: 120px;
+  }
+
+  .leave-header__inner {
+    min-height: 120px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .leave-header__title {
+    font-size: 18px;
+  }
+
+  .leave-header__description {
+    font-size: 10px;
+  }
+
+  .leave-header__breadcrumb-link,
+  .leave-header__breadcrumb-current {
+    font-size: 10px;
+  }
+
+  .leave-header__image-wrapper {
+    height: 48px;
+  }
+
+  .leave-header__image {
+    width: 140px;
+    height: 49px;
+
+    max-height: 49px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-header__breadcrumb-link {
+    transition: none;
+  }
+}

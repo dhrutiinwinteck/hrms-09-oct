@@ -1,0 +1,298 @@
+.family-info {
+  width: 100%;
+  min-width: 0;
+
+  padding: 10px 12px 9px;
+
+  border: 1px solid #e5e8e8;
+  border-top: 2px solid #b39a79;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.family-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.family-info__title {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  min-width: 0;
+}
+
+.family-info__title-icon {
+  width: 21px;
+  height: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 5px;
+
+  background: #f8f2eb;
+
+  color: #a47d4e;
+}
+
+.family-info__title h3 {
+  margin: 0;
+
+  color: #26323f;
+
+  font-size: 9px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.family-info__more {
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #8b949d;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.family-info__table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+}
+
+.family-info__table {
+  width: 100%;
+
+  min-width: 360px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.family-info__table th {
+  padding: 4px 3px 6px;
+
+  color: #8b949d;
+
+  font-size: 5.8px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.family-info__table td {
+  height: 30px;
+
+  padding: 4px 3px;
+
+  border-top: 1px solid #f1f2f3;
+
+  color: #46515e;
+
+  font-size: 6.8px;
+
+  line-height: 1.25;
+
+  vertical-align: middle;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   INLINE INPUTS
+========================================= */
+
+.family-info__table td input {
+  width: 100%;
+
+  height: 20px;
+
+  padding: 2px 4px;
+
+  border: 1px solid #dccfbe;
+
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #fffdf9;
+
+  color: #46515e;
+
+  font-family: inherit;
+
+  font-size: 6.7px;
+
+  box-sizing: border-box;
+}
+
+.family-info__table td input:focus {
+  border-color: #b39a79;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(179, 154, 121, 0.08);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.family-info__actions {
+  min-height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 9px;
+}
+
+.family-info__add,
+.family-info__save,
+.family-info__cancel {
+  height: 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 9px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 6.8px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.family-info__add {
+  min-width: 108px;
+
+  border: 1px solid transparent;
+
+  background: #f8f5ef;
+
+  color: #8c704a;
+}
+
+.family-info__add:hover {
+  background: #f2ede4;
+}
+
+.family-info__add--editing {
+  min-width: 88px;
+}
+
+.family-info__save {
+  border: 1px solid #a98c67;
+
+  background: #a98c67;
+
+  color: #ffffff;
+}
+
+.family-info__cancel {
+  border: 1px solid #e3e7e8;
+
+  background: #ffffff;
+
+  color: #737e87;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .family-info {
+    padding: 10px 11px 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .family-info__table {
+    min-width: 350px;
+  }
+
+  .family-info__table td,
+  .family-info__table td input {
+    font-size: 6.7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .family-info {
+    padding: 9px 10px 8px;
+  }
+
+  .family-info__table {
+    min-width: 330px;
+  }
+
+  .family-info__title h3 {
+    font-size: 8.5px;
+  }
+}

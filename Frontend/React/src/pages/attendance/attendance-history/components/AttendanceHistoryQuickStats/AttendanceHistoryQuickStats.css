@@ -1,0 +1,66 @@
+/* src/pages/attendance/attendance-history/components/AttendanceHistoryQuickStats/AttendanceHistoryQuickStats.css */
+
+.attendance-history-quick-stats {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  padding: 12px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.quick-stats-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+}
+
+.quick-stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}   
+
+.quick-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.quick-stat-label {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.quick-stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.quick-stats-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-row-skeleton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skeleton-label-short {
+  height: 14px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.skeleton-value-short {
+  height: 18px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  width: 30%;
+}

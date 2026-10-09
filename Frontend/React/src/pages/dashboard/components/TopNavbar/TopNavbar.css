@@ -1,0 +1,1621 @@
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e3da;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  position: relative;
+  z-index: 100;
+
+  /* Prevent horizontal/vertical overflow */
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.top-navbar-left {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  min-width: 0;
+
+  margin-left: 10px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 420px;
+  height: 44px;
+
+  padding: 0 16px;
+
+  background-color: #f7f8fa;
+  border: 1px solid #e8e3da;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-wrapper:focus-within {
+  border-color: #8fc746;
+
+  box-shadow:
+    0 0 0 3px rgba(143, 199, 70, 0.1);
+}
+
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.search-icon {
+  color: #90a4ae;
+
+  flex-shrink: 0;
+
+  margin-right: 12px;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-input {
+  flex: 1;
+
+  min-width: 0;
+  width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+
+  color: #333333;
+}
+
+.search-input::placeholder {
+  color: #90a4ae;
+}
+
+
+/* =========================================================
+   RIGHT SECTION
+========================================================= */
+
+.top-navbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+
+  margin-left: 24px;
+
+  position: relative;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+========================================================= */
+
+.icon-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  color: #4a5c5e;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.icon-button:hover {
+  background-color: #f7f8fa;
+
+  transform: translateY(-1px);
+}
+
+.icon-button:active {
+  transform: scale(0.92);
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid #8fc746;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   NOTIFICATION BADGE
+========================================================= */
+
+.notification-badge {
+  position: absolute;
+
+  top: 4px;
+  right: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 18px;
+  height: 18px;
+
+  padding: 0 5px;
+
+  border-radius: 9px;
+
+  background-color: #d32f2f;
+
+  color: #ffffff;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROFILE SECTION
+========================================================= */
+
+.profile-section {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 4px 12px 4px 4px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition: background-color 0.25s ease;
+
+  user-select: none;
+}
+
+.profile-section:hover {
+  background-color: #f7f8fa;
+}
+
+.profile-section:focus-visible {
+  outline: 2px solid #8fc746;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   PROFILE AVATAR
+========================================================= */
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  border: 2px solid #f7f8fa;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION
+========================================================= */
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 2px;
+
+  min-width: 0;
+}
+
+
+/* Profile Name */
+
+.profile-name {
+  max-width: 150px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  color: #1a2424;
+
+  line-height: 1.2;
+}
+
+
+/* Profile Role */
+
+.profile-role {
+  max-width: 150px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  color: #90a4ae;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN ARROW
+========================================================= */
+
+.profile-dropdown-icon {
+  color: #90a4ae;
+
+  flex-shrink: 0;
+
+  transition: transform 0.2s ease;
+}
+
+.profile-dropdown-icon.rotated {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 14px);
+  right: 10px;
+
+  width: 170px;
+  min-width: 170px;
+
+  padding: 6px 0;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e8e3da;
+  border-radius: 12px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.10),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+
+  z-index: 1000;
+
+  overflow: hidden;
+
+  animation: dropdownFadeIn 0.18s ease-out;
+}
+
+
+/* =========================================================
+   DROPDOWN ARROW
+========================================================= */
+
+.profile-dropdown::before {
+  content: "";
+
+  position: absolute;
+
+  top: -8px;
+  right: 24px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+
+  border-top: 1px solid #e8e3da;
+  border-left: 1px solid #e8e3da;
+
+  transform: rotate(45deg);
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   DROPDOWN ITEMS
+========================================================= */
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+  min-height: 46px;
+
+  padding: 11px 18px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #1a2424;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f7f8fa;
+
+  color: #1a2424;
+}
+
+.dropdown-item:active {
+  background-color: #eef1f2;
+}
+
+.dropdown-item:focus-visible {
+  outline: none;
+
+  background-color: #f7f8fa;
+
+  box-shadow:
+    inset 0 0 0 2px rgba(143, 199, 70, 0.25);
+}
+
+.dropdown-item svg {
+  width: 18px;
+  height: 18px;
+
+  color: #64748b;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DROPDOWN SEPARATOR
+========================================================= */
+
+.dropdown-item + .dropdown-item {
+  border-top: 1px solid #f0eee9;
+}
+
+
+/* =========================================================
+   DROPDOWN ANIMATION
+========================================================= */
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   REFER & EARN BUTTON
+========================================================= */
+
+.refer-earn-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid rgba(143, 199, 70, 0.35);
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #f7fbea 0%,
+    #eef8df 100%
+  );
+
+  color: #38551f;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.refer-earn-button:hover {
+  background: linear-gradient(
+    135deg,
+    #eef8df 0%,
+    #e4f3ce 100%
+  );
+
+  border-color: rgba(143, 199, 70, 0.65);
+
+  box-shadow:
+    0 5px 14px rgba(89, 125, 46, 0.12);
+
+  transform: translateY(-1px);
+}
+
+.refer-earn-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.refer-earn-button:focus-visible {
+  outline: 2px solid #8fc746;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REFER & EARN ICON
+========================================================= */
+
+.refer-earn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  color: #5c9826;
+
+  box-shadow:
+    0 2px 6px rgba(89, 125, 46, 0.08);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   REFER & EARN TEXT
+========================================================= */
+
+.refer-earn-text {
+  display: inline-flex;
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   REFER & EARN OVERLAY
+========================================================= */
+
+.refer-earn-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background-color: rgba(15, 23, 42, 0.42);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  z-index: 9999;
+
+  box-sizing: border-box;
+
+  /* Prevent page-level horizontal overflow */
+  overflow: hidden;
+
+  animation: referEarnOverlayIn 0.18s ease-out;
+}
+
+
+/* =========================================================
+   REFER & EARN MODAL
+========================================================= */
+
+.refer-earn-modal {
+  width: 100%;
+  max-width: 460px;
+
+  max-height: calc(100vh - 40px);
+
+  background-color: #ffffff;
+
+  border: 1px solid #e8e3da;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.16),
+    0 8px 20px rgba(15, 23, 42, 0.07);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  animation: referEarnModalIn 0.22s ease-out;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.refer-earn-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 19px;
+
+  border-bottom: 1px solid #edf0f1;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITLE WRAPPER
+========================================================= */
+
+.refer-earn-title-wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TITLE ICON
+========================================================= */
+
+.refer-earn-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+
+  background-color: #eef8df;
+
+  color: #5c9826;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.refer-earn-title-wrapper h2 {
+  margin: 0;
+
+  color: #1a2424;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.refer-earn-title-wrapper p {
+  margin: 3px 0 0;
+
+  color: #90a4ae;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.refer-earn-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.refer-earn-close-button:hover {
+  background-color: #f7f8fa;
+
+  color: #1a2424;
+}
+
+.refer-earn-close-button:active {
+  transform: scale(0.94);
+}
+
+.refer-earn-close-button:focus-visible {
+  outline: 2px solid #8fc746;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.refer-earn-modal-body {
+  padding: 18px 19px 19px;
+
+  box-sizing: border-box;
+
+  max-height: calc(100vh - 130px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.refer-earn-description {
+  margin-bottom: 16px;
+}
+
+.refer-earn-description p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   REFERRAL LINK LABEL
+========================================================= */
+
+.refer-earn-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   REFERRAL LINK WRAPPER
+========================================================= */
+
+.referral-link-wrapper {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+
+  min-height: 44px;
+
+  border: 1px solid #dce3e6;
+
+  border-radius: 9px;
+
+  background-color: #f8fafb;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.referral-link-wrapper:focus-within {
+  border-color: #8fc746;
+
+  box-shadow:
+    0 0 0 3px rgba(143, 199, 70, 0.10);
+}
+
+
+/* =========================================================
+   REFERRAL INPUT
+========================================================= */
+
+.referral-link-input {
+  flex: 1;
+
+  min-width: 0;
+  width: 0;
+
+  height: 42px;
+
+  padding: 0 11px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #334155;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  box-sizing: border-box;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   INLINE COPY BUTTON
+========================================================= */
+
+.referral-copy-inline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-width: 78px;
+
+  padding: 0 10px;
+
+  border: none;
+
+  border-left: 1px solid #dce3e6;
+
+  background-color: #ffffff;
+
+  color: #087b80;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.referral-copy-inline-button:hover {
+  background-color: #f0fafa;
+}
+
+.referral-copy-inline-button.copied {
+  color: #159447;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.refer-earn-actions {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+
+/* =========================================================
+   ACTION BUTTON BASE
+========================================================= */
+
+.refer-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border-radius: 9px;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.refer-action-button:active {
+  transform: scale(0.98);
+}
+
+.refer-action-button:focus-visible {
+  outline: 2px solid #8fc746;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   COPY BUTTON
+========================================================= */
+
+.refer-copy-button {
+  border: 1px solid #d7e1e4;
+
+  background-color: #ffffff;
+
+  color: #334155;
+}
+
+.refer-copy-button:hover {
+  background-color: #f7f8fa;
+
+  border-color: #c6d2d5;
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.refer-earn-info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin-top: 14px;
+
+  padding: 10px 11px;
+
+  border: 1px solid #e5eed8;
+
+  border-radius: 9px;
+
+  background-color: #f8fbf3;
+
+  color: #58713f;
+
+  box-sizing: border-box;
+}
+
+
+/* Information Icon */
+
+.refer-earn-info svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: #6ca633;
+}
+
+
+/* Information Text */
+
+.refer-earn-info span {
+  color: #58713f;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.referral-error {
+  margin: 8px 0 0;
+
+  color: #dc2626;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes referEarnOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes referEarnModalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(12px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .search-wrapper {
+    max-width: 300px;
+  }
+
+  .top-navbar-right {
+    gap: 14px;
+  }
+
+  .refer-earn-button {
+    min-height: 39px;
+
+    padding: 0 10px;
+
+    gap: 6px;
+
+    font-size: 11px;
+  }
+
+  .refer-earn-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .top-navbar {
+    height: 64px;
+
+    padding: 0 16px;
+  }
+
+  .top-navbar-left {
+    margin-left: 0;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .profile-dropdown-icon {
+    display: none;
+  }
+
+  .profile-section {
+    padding: 4px;
+  }
+
+  .profile-dropdown {
+    top: calc(100% + 10px);
+
+    right: -10px;
+
+    width: 160px;
+    min-width: 160px;
+  }
+
+
+  /* Refer & Earn becomes icon only */
+
+  .refer-earn-button {
+    width: 40px;
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    gap: 0;
+  }
+
+  .refer-earn-text {
+    display: none;
+  }
+
+  .refer-earn-icon {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    box-shadow: none;
+  }
+
+  .refer-earn-modal {
+    max-width: 440px;
+
+    max-height: calc(100vh - 30px);
+  }
+
+  .refer-earn-modal-body {
+    max-height: calc(100vh - 120px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .top-navbar {
+    height: 56px;
+
+    padding: 0 12px;
+
+    border-radius: 10px;
+  }
+
+  .top-navbar-left {
+    min-width: 0;
+  }
+
+  .search-wrapper {
+    height: 38px;
+
+    padding: 0 10px;
+
+    border-radius: 10px;
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+
+    margin-right: 8px;
+  }
+
+  .search-input {
+    font-size: 12px;
+  }
+
+  .top-navbar-right {
+    gap: 7px;
+
+    margin-left: 10px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .notification-badge {
+    top: 1px;
+    right: 1px;
+
+    min-width: 16px;
+    height: 16px;
+
+    padding: 0 4px;
+
+    font-size: 9px;
+  }
+
+  .profile-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profile-dropdown {
+    top: calc(100% + 10px);
+
+    right: -5px;
+
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .dropdown-item {
+    min-height: 44px;
+
+    padding: 10px 15px;
+
+    font-size: 13px;
+  }
+
+
+  /* Refer button */
+
+  .refer-earn-button {
+    width: 36px;
+    height: 36px;
+
+    min-height: 36px;
+  }
+
+  .refer-earn-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* Compact modal */
+
+  .refer-earn-overlay {
+    align-items: center;
+
+    padding: 12px;
+
+    overflow: hidden;
+  }
+
+  .refer-earn-modal {
+    max-width: 100%;
+
+    max-height: calc(100vh - 24px);
+
+    border-radius: 14px;
+  }
+
+  .refer-earn-modal-header {
+    padding: 15px 15px;
+  }
+
+  .refer-earn-modal-body {
+    padding: 16px 15px 17px;
+
+    max-height: calc(100vh - 100px);
+  }
+
+  .refer-earn-title-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+  }
+
+  .refer-earn-title-wrapper h2 {
+    font-size: 17px;
+  }
+
+  .refer-earn-title-wrapper p {
+    font-size: 10px;
+  }
+
+  .refer-earn-description {
+    margin-bottom: 14px;
+  }
+
+  .refer-earn-description p {
+    font-size: 11px;
+  }
+
+  .referral-link-input {
+    font-size: 9px;
+  }
+
+  .referral-copy-inline-button {
+    min-width: 68px;
+
+    padding: 0 7px;
+
+    font-size: 10px;
+  }
+
+  .refer-earn-actions {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    margin-top: 11px;
+  }
+
+  .refer-action-button {
+    width: 100%;
+
+    min-height: 38px;
+
+    font-size: 11px;
+  }
+
+  .refer-earn-info {
+    margin-top: 12px;
+
+    padding: 9px 10px;
+  }
+
+  .refer-earn-info span {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .refer-earn-overlay {
+    padding: 8px;
+  }
+
+  .refer-earn-modal {
+    max-height: calc(100vh - 16px);
+  }
+
+  .refer-earn-modal-header {
+    padding: 13px 13px;
+  }
+
+  .refer-earn-modal-body {
+    padding: 14px 13px 15px;
+
+    max-height: calc(100vh - 90px);
+  }
+
+  .refer-earn-title-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .refer-earn-title-wrapper h2 {
+    font-size: 16px;
+  }
+
+  .referral-link-input {
+    font-size: 8px;
+  }
+
+  .referral-copy-inline-button {
+    min-width: 62px;
+
+    font-size: 10px;
+  }
+
+  .refer-action-button {
+    min-height: 37px;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL SAFETY
+   Prevent this navbar from creating page scroll
+========================================================= */
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Prevent flex children from forcing horizontal overflow */
+
+.top-navbar,
+.top-navbar-left,
+.top-navbar-right {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   END
+========================================================= */

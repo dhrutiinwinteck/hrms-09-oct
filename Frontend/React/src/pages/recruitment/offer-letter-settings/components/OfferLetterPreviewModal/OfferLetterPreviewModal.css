@@ -1,0 +1,162 @@
+.ol-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+
+  background: rgba(12, 38, 48, 0.45);
+}
+
+.ol-modal {
+  width: min(1180px, 100%);
+
+  max-height: calc(100vh - 40px);
+
+  overflow: hidden;
+
+  border: 1px solid #d9e3e7;
+
+  border-radius: 12px;
+
+  background: #f3f5f6;
+
+  box-shadow:
+    0 20px 60px rgba(10, 44, 58, 0.24);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.ol-modal-header {
+  height: 57px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid #e0e8eb;
+
+  background: #ffffff;
+}
+
+.ol-modal-header h2 {
+  margin: 0;
+
+  color: #123d4f;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+}
+
+.ol-modal-header p {
+  margin: 3px 0 0;
+
+  color: #738995;
+
+  font-size: 9px;
+}
+
+.ol-modal-close {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid #d7e1e5;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #5b7280;
+
+  cursor: pointer;
+}
+
+.ol-modal-close:hover {
+  border-color: #a9c3cc;
+
+  background: #f7fafb;
+
+  color: #0a586a;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.ol-modal-body {
+  max-height: calc(100vh - 97px);
+
+  overflow-y: auto;
+
+  padding: 18px;
+}
+
+.ol-modal-body .ol-preview-card {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+/*
+ * Remove duplicate "Live Preview" card feeling
+ * inside the modal.
+ */
+
+.ol-modal-body .ol-preview-heading {
+  display: none;
+}
+
+.ol-modal-body .ol-document-frame {
+  border: 0;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  padding: 5px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .ol-modal-overlay {
+    padding: 8px;
+  }
+
+  .ol-modal {
+    max-height: calc(100vh - 16px);
+
+    border-radius: 8px;
+  }
+
+  .ol-modal-body {
+    max-height: calc(100vh - 73px);
+
+    padding: 8px;
+  }
+}

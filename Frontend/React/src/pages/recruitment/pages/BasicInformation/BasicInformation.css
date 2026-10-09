@@ -1,0 +1,294 @@
+.it-basic-info-section {
+  width: 100%;
+}
+
+.it-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* The Square Icon box from image */
+.it-section-icon {
+  background-color: #E0E7E6; /* Light teal tint */
+  color: #4E6868;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.it-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.it-section-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+.it-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.it-col-full {
+  grid-column: 1 / -1;
+}
+
+.it-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.it-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.it-required {
+  color: red;
+}
+
+/* Country Select Dropdown - Replaces the prefix */
+.it-country-select {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  padding: 0 4px 0 0;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 70px;
+  
+}
+
+.it-phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px 0 10px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.it-phone-prefix .it-chevron {
+  font-size: 10px;
+  color: #888;
+  margin-left: 4px;  
+  padding-right: 0;
+}
+
+.it-select-wrapper {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid var(--it-border-color);
+  border-radius: var(--it-radius-md);
+  background: white;
+  padding-right: 12px;       /* Space for the chevron */
+}
+
+.it-select-wrapper .it-select {
+  flex: 1;
+  border: none;
+  height: 100%;
+  padding: 0 20px;
+  background: transparent;   /* Removes default browser background */
+  outline: none;
+  appearance: none;          /* Hides native browser arrow */
+  -webkit-appearance: none;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.it-select-wrapper .it-select:focus {
+  box-shadow: none;          /* Focus handled by the wrapper border */
+}
+
+/* Add a custom chevron to the Position dropdown */
+.it-select-wrapper::after {
+  content: "▼";
+  font-size: 10px;
+  color: #888;
+  pointer-events: none;
+  margin-right: 4px;
+}
+
+/* Optional: Style the select dropdown options */
+.it-country-select option {
+  padding: 8px;
+  font-weight: 400;
+}
+
+/* Standard Inputs */
+.it-input, .it-select {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--it-border-color);
+  border-radius: var(--it-radius-md);
+  font-size: 0.95rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.it-input:focus, .it-select:focus {
+  outline: none;
+  border-color: var(--it-primary);
+  box-shadow: 0 0 0 3px rgba(109, 143, 141, 0.1);
+}
+
+.it-input.error {
+  border-color: var(--it-error);
+}
+
+/* Phone Container Layout */
+.it-phone-container {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border: 1px solid var(--it-border-color);
+  border-radius: var(--it-radius-md);
+  background: white;
+}
+
+.it-phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.it-flag {
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+}
+
+.it-chevron {
+  font-size: 8px;
+  color: #888;
+}
+
+.it-prefix-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.it-phone-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--it-border-color);
+}
+
+.it-phone-input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  height: 100%;
+  font-size: 0.95rem;
+}
+
+.it-phone-input:focus { outline: none; }
+
+/* Custom Date adornment */
+.it-input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.it-input-with-icon .it-input {
+  flex: 1;                     /* Let input take all available space */
+  padding-right: 44px;         /* Increase right padding so text avoids the icon */
+  height: 48px;                /* Ensure standard height */
+  padding-left: 16px;          /* Keep standard left padding */
+}
+
+.it-input-adornment {
+  position: static;
+  margin-left: -36px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #888;
+  height: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+/* Custom File Upload Styling to match image exactly */
+.it-file-upload-wrapper {
+  border: 1px solid var(--it-border-color);
+  border-radius: var(--it-radius-md);
+  height: 48px;
+  overflow: hidden;
+}
+
+.it-file-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.it-file-hidden {
+  display: none;
+}
+
+.it-file-button {
+  background-color: #F1ECE5; /* Light beige button from image */
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  border-right: 1px solid var(--it-border-color);
+}
+
+.it-file-name {
+  padding: 0 16px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.it-file-hint {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.it-error-msg {
+  color: var(--it-error);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .it-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

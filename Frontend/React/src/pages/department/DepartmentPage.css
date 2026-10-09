@@ -1,0 +1,457 @@
+/* ============================================================
+   DEPARTMENT PAGE
+============================================================ */
+
+.department-page {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 10px 10px 18px;
+
+  box-sizing: border-box;
+
+  background: #f8faf9;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* ============================================================
+   PAGE CONTAINER
+============================================================ */
+
+.department-page-container {
+  width: 100%;
+
+  max-width: none;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.department-page-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADING
+============================================================ */
+
+.department-page-heading {
+  min-width: 0;
+}
+
+
+.department-page-title {
+  margin: 0;
+
+  color: #20272b;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.25px;
+}
+
+
+.department-page-subtitle {
+  margin: 5px 0 0;
+
+  color: #737b80;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* ============================================================
+   ADD BUTTON
+============================================================ */
+
+.department-add-button {
+  min-height: 35px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  gap: 7px;
+
+  padding: 0 14px;
+
+  color: #ffffff;
+
+  background: #4d8175;
+
+  border: 1px solid #4d8175;
+
+  border-radius: 7px;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 2px 5px rgba(77, 129, 117, 0.12);
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+
+.department-add-button:hover {
+  background: #426f64;
+
+  border-color: #426f64;
+
+  box-shadow:
+    0 4px 9px rgba(77, 129, 117, 0.15);
+}
+
+
+.department-add-button:active {
+  transform: translateY(1px);
+}
+
+
+.department-add-button:focus-visible {
+  outline: 2px solid #9bcbb8;
+
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   ADD ICON
+============================================================ */
+
+.department-add-icon {
+  width: 15px;
+  height: 15px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* ============================================================
+   COMMON SECTION
+============================================================ */
+
+.department-page-section {
+  width: 100%;
+
+  margin-bottom: 14px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   FILTER
+============================================================ */
+
+.department-page-filter-section {
+  width: 100%;
+
+  margin-bottom: 12px;
+
+  padding: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #e9edeb;
+
+  border-radius: 9px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.015);
+}
+
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.department-page-table-section {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+   >= 1440px
+============================================================ */
+
+@media (min-width: 1440px) {
+  .department-page {
+    /*
+      Main layout already provides outer spacing.
+      Keep this page compact so content uses available width.
+    */
+    padding: 10px 8px 18px;
+  }
+
+  .department-page-header {
+    margin-bottom: 18px;
+  }
+
+  .department-page-title {
+    font-size: 21px;
+  }
+}
+
+
+/* ============================================================
+   LAPTOP
+   1025px - 1439px
+============================================================ */
+
+@media (max-width: 1439px) {
+  .department-page {
+    padding: 10px 10px 18px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   <= 1024px
+============================================================ */
+
+@media (max-width: 1024px) {
+  .department-page {
+    padding: 12px;
+  }
+
+  .department-page-header {
+    margin-bottom: 16px;
+  }
+
+  .department-page-title {
+    font-size: 19px;
+  }
+}
+
+
+/* ============================================================
+   SMALL TABLET
+   <= 768px
+============================================================ */
+
+@media (max-width: 768px) {
+  .department-page {
+    padding: 12px;
+  }
+
+  .department-page-header {
+    gap: 14px;
+  }
+
+  .department-page-filter-section {
+    padding: 9px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   <= 640px
+============================================================ */
+
+@media (max-width: 640px) {
+  .department-page {
+    padding: 10px;
+  }
+
+  .department-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-bottom: 15px;
+  }
+
+  .department-page-heading {
+    width: 100%;
+  }
+
+  .department-page-title {
+    font-size: 18px;
+  }
+
+  .department-page-subtitle {
+    margin-top: 4px;
+
+    font-size: 9.5px;
+  }
+
+  .department-add-button {
+    width: 100%;
+
+    min-height: 36px;
+  }
+
+  .department-page-section {
+    margin-bottom: 10px;
+  }
+
+  .department-page-filter-section {
+    margin-bottom: 10px;
+
+    padding: 9px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   <= 480px
+============================================================ */
+
+@media (max-width: 480px) {
+  .department-page {
+    padding: 9px;
+  }
+
+  .department-page-title {
+    font-size: 17px;
+  }
+
+  .department-page-subtitle {
+    font-size: 9px;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL MOBILE
+   <= 375px
+============================================================ */
+
+@media (max-width: 375px) {
+  .department-page {
+    padding: 8px;
+  }
+
+  .department-page-title {
+    font-size: 16px;
+  }
+
+  .department-page-subtitle {
+    font-size: 8.8px;
+  }
+
+  .department-page-filter-section {
+    padding: 8px;
+  }
+
+  .department-add-button {
+    min-height: 35px;
+
+    font-size: 9.5px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL DEVICES
+   <= 320px
+============================================================ */
+
+@media (max-width: 320px) {
+  .department-page {
+    padding: 7px;
+  }
+
+  .department-page-header {
+    gap: 9px;
+  }
+
+  .department-page-title {
+    font-size: 15.5px;
+  }
+
+  .department-page-subtitle {
+    font-size: 8.5px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .department-add-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,17 @@
+.holiday-calendar-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .holiday-calendar-page {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .holiday-calendar-page {
+    padding: 16px;
+  }
+}

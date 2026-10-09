@@ -1,0 +1,48 @@
+.holiday-calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.holiday-calendar-header-image {
+  flex-shrink: 0;
+}
+
+.holiday-calendar-image {
+  width: 308px;
+  height: 98px;
+  /* object-fit: contain; */
+}
+
+.holiday-calendar-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.holiday-calendar-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.holiday-calendar-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .holiday-calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .holiday-calendar-title {
+    font-size: 24px;
+  }
+}

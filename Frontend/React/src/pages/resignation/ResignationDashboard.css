@@ -1,0 +1,445 @@
+/* ============================================================
+   RESIGNATION DASHBOARD CSS
+   Enterprise HRMS Dashboard
+   Designed for 100% browser zoom
+   ============================================================ */
+
+
+/* ============================================================
+   MAIN DASHBOARD CONTAINER
+   ============================================================ */
+
+.resignation-dashboard {
+  display: flex;
+  flex-direction: column;
+
+  /*
+   * Important:
+   * Prevent the dashboard from expanding beyond its parent
+   * when wide children such as tables are rendered.
+   */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  padding: 4px 8px;
+
+  background-color: #ffffff;
+
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  /*
+   * Horizontal scrolling should belong to the table container,
+   * not the entire dashboard.
+   */
+  overflow-x: hidden;
+}
+
+
+/* ============================================================
+   SECTION SPACING
+   ============================================================ */
+
+.dashboard-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  margin-bottom: 8px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADER SECTION
+   ============================================================ */
+
+.resignation-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  box-sizing: border-box;
+
+  /*
+   * Prevent long content from forcing the header wider
+   * than the available viewport.
+   */
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   HEADER LEFT
+   ============================================================ */
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  min-width: 0;
+
+  flex: 1 1 auto;
+}
+
+
+/* ============================================================
+   PAGE TITLE
+   ============================================================ */
+
+.page-title {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #1d2939;
+
+  margin: 0;
+
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+
+  /*
+   * Prevent title from forcing horizontal overflow.
+   */
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   PAGE SUBTITLE
+   ============================================================ */
+
+.page-subtitle {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  color: #475467;
+
+  margin: 0;
+
+  line-height: 1.4;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   HEADER RIGHT
+   ============================================================ */
+
+.header-right {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 8px;
+
+  flex: 0 0 auto;
+
+  min-width: 0;
+
+  max-width: 100%;
+}
+
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #475467;
+
+  white-space: nowrap;
+
+  display: flex;
+
+  align-items: center;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   BREADCRUMB SEPARATOR
+   ============================================================ */
+
+.breadcrumb-separator {
+  margin: 0 8px;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   PRIMARY BUTTON
+   ============================================================ */
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  height: 32px;
+
+  padding: 0 14px;
+
+  border: none;
+
+  border-radius: 100px;
+
+  background-color: #254348;
+
+  color: #ffffff;
+
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   PRIMARY BUTTON HOVER
+   ============================================================ */
+
+.btn-primary:hover {
+  background-color: #1a3135;
+
+  box-shadow:
+    0 4px 12px rgba(37, 67, 72, 0.15);
+}
+
+
+/* ============================================================
+   PRIMARY BUTTON DISABLED
+   ============================================================ */
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+
+/* ============================================================
+   RESPONSIVE DESKTOP
+   ============================================================ */
+
+/*
+ * This breakpoint is intentionally higher than tablet.
+ *
+ * The HRMS layout can become constrained before the device
+ * actually reaches tablet width.
+ */
+
+@media (max-width: 1400px) {
+  .resignation-dashboard {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .resignation-header {
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+
+  .header-left {
+    gap: 5px;
+  }
+
+  .btn-primary {
+    height: 31px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .resignation-dashboard {
+    padding: 8px;
+  }
+
+  .resignation-header {
+    gap: 12px;
+  }
+
+  .page-title {
+    font-size: 15px;
+  }
+
+  .page-subtitle {
+    font-size: 11px;
+  }
+
+  .header-right {
+    flex-shrink: 0;
+  }
+
+  .btn-primary {
+    height: 32px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .resignation-dashboard {
+    padding: 12px;
+  }
+
+  .resignation-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    overflow: visible;
+  }
+
+  .header-left {
+    width: 100%;
+  }
+
+  .header-right {
+    width: 100%;
+
+    align-items: stretch;
+  }
+
+  .page-title,
+  .page-subtitle {
+    white-space: normal;
+
+    overflow: visible;
+
+    text-overflow: unset;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .dashboard-section {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .resignation-dashboard {
+    padding: 8px;
+  }
+
+  .resignation-header {
+    gap: 10px;
+  }
+
+  .page-title {
+    font-size: 15px;
+  }
+
+  .page-subtitle {
+    font-size: 11px;
+  }
+}

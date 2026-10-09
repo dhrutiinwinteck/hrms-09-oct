@@ -1,0 +1,511 @@
+/* ============================================================
+   ROSTER SUMMARY
+============================================================ */
+
+.roster-summary {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   GRID
+============================================================ */
+
+.roster-summary__grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.roster-summary__card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 88px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px 15px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edeb;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.045);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.roster-summary__card:hover {
+  border-color: #dce6e3;
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.06);
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   ICON WRAPPER
+============================================================ */
+
+.roster-summary__icon-wrapper {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+
+.roster-summary__icon-wrapper svg {
+  width: 23px;
+  height: 23px;
+}
+
+
+/* ============================================================
+   EMPLOYEES ICON
+============================================================ */
+
+.roster-summary__card--employees
+  .roster-summary__icon-wrapper {
+  color: #477fc9;
+
+  background: #edf4ff;
+}
+
+
+/* ============================================================
+   SHIFTS ICON
+============================================================ */
+
+.roster-summary__card--shifts
+  .roster-summary__icon-wrapper {
+  color: #439c82;
+
+  background: #ebf8f2;
+}
+
+
+/* ============================================================
+   COVERAGE ICON
+============================================================ */
+
+.roster-summary__card--coverage
+  .roster-summary__icon-wrapper {
+  color: #e89a35;
+
+  background: #fff3e4;
+}
+
+
+/* ============================================================
+   HOURS ICON
+============================================================ */
+
+.roster-summary__card--hours
+  .roster-summary__icon-wrapper {
+  color: #8b79d6;
+
+  background: #f2efff;
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.roster-summary__content {
+  min-width: 0;
+
+  flex: 1 1 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.roster-summary__title {
+  margin: 0;
+
+  color: #59666a;
+
+  font-size: 9px;
+
+  line-height: 13px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   VALUE
+============================================================ */
+
+.roster-summary__value {
+  margin: 1px 0 0;
+
+  color: #1e3b4b;
+
+  font-size: 19px;
+
+  line-height: 23px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.roster-summary__description {
+  margin: 1px 0 0;
+
+  color: #728083;
+
+  font-size: 8.5px;
+
+  line-height: 12px;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   COVERAGE PROGRESS
+============================================================ */
+
+.roster-summary__progress {
+  width: 100%;
+
+  height: 3px;
+
+  margin-top: 6px;
+
+  overflow: hidden;
+
+  background: #e7eeeb;
+
+  border-radius: 999px;
+}
+
+
+.roster-summary__progress-fill {
+  display: block;
+
+  height: 100%;
+
+  background: #398a78;
+
+  border-radius: inherit;
+
+  transition: width 300ms ease;
+}
+
+
+/* ============================================================
+   COVERAGE CARD CONTENT
+============================================================ */
+
+.roster-summary__card--coverage
+  .roster-summary__value {
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   HOURS CARD CONTENT
+============================================================ */
+
+.roster-summary__card--hours
+  .roster-summary__value {
+  font-size: 17px;
+
+  letter-spacing: -0.25px;
+}
+
+
+/* ============================================================
+   TABLET
+   <= 1024px
+============================================================ */
+
+@media (max-width: 1024px) {
+  .roster-summary__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .roster-summary__card {
+    min-height: 88px;
+  }
+}
+
+
+/* ============================================================
+   SMALL TABLET
+   <= 768px
+============================================================ */
+
+@media (max-width: 768px) {
+  .roster-summary__grid {
+    gap: 10px;
+  }
+
+  .roster-summary__card {
+    gap: 12px;
+
+    padding: 11px 13px;
+  }
+
+  .roster-summary__icon-wrapper {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+
+    border-radius: 12px;
+  }
+
+  .roster-summary__icon-wrapper svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .roster-summary__title {
+    font-size: 8.5px;
+  }
+
+  .roster-summary__value {
+    font-size: 18px;
+  }
+
+  .roster-summary__description {
+    font-size: 8px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   <= 640px
+============================================================ */
+
+@media (max-width: 640px) {
+  .roster-summary__grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .roster-summary__card {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 11px 14px;
+  }
+
+  .roster-summary__icon-wrapper {
+    width: 45px;
+    height: 45px;
+
+    flex-basis: 45px;
+  }
+
+  .roster-summary__title {
+    font-size: 9px;
+  }
+
+  .roster-summary__value {
+    font-size: 18px;
+
+    line-height: 22px;
+  }
+
+  .roster-summary__description {
+    font-size: 8.5px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   <= 480px
+============================================================ */
+
+@media (max-width: 480px) {
+  .roster-summary__card {
+    min-height: 78px;
+
+    gap: 11px;
+
+    padding: 10px 12px;
+  }
+
+  .roster-summary__icon-wrapper {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    border-radius: 11px;
+  }
+
+  .roster-summary__icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .roster-summary__title {
+    font-size: 8.5px;
+
+    line-height: 12px;
+  }
+
+  .roster-summary__value {
+    font-size: 17px;
+
+    line-height: 21px;
+  }
+
+  .roster-summary__description {
+    font-size: 8px;
+
+    line-height: 11px;
+  }
+
+  .roster-summary__progress {
+    height: 3px;
+
+    margin-top: 5px;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL MOBILE
+   <= 375px
+============================================================ */
+
+@media (max-width: 375px) {
+  .roster-summary__grid {
+    gap: 8px;
+  }
+
+  .roster-summary__card {
+    min-height: 74px;
+
+    padding: 9px 11px;
+
+    gap: 10px;
+  }
+
+  .roster-summary__icon-wrapper {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .roster-summary__icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .roster-summary__title {
+    font-size: 8px;
+  }
+
+  .roster-summary__value {
+    font-size: 16px;
+
+    line-height: 20px;
+  }
+
+  .roster-summary__description {
+    font-size: 7.5px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .roster-summary__card,
+  .roster-summary__progress-fill {
+    transition: none;
+  }
+}

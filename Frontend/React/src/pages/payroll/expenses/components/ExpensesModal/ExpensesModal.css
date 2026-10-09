@@ -1,0 +1,253 @@
+.expenses-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.expenses-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    rgba(25, 39, 42, 0.57);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+}
+
+.expenses-modal__dialog {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: min(615px, calc(100vw - 36px));
+  max-height: calc(100vh - 36px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow:
+    0 22px 65px rgba(17, 35, 38, 0.32),
+    0 4px 18px rgba(17, 35, 38, 0.12);
+  animation:
+    expenses-modal-enter
+    180ms
+    ease-out;
+}
+
+@keyframes expenses-modal-enter {
+  from {
+    opacity: 0;
+    transform:
+      translateY(8px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.expenses-modal__header {
+  position: relative;
+  min-height: 76px;
+  overflow: hidden;
+  padding: 14px 19px 12px;
+  background:
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #fbfaf7 57%,
+      #f1eee5 100%
+    );
+  border-bottom: 1px solid #eeece6;
+}
+
+.expenses-modal__heading {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.expenses-modal__title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  border-radius: 9px;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      145deg,
+      #4f7d7e,
+      #315f61
+    );
+  box-shadow:
+    0 4px 10px rgba(46, 92, 94, 0.14);
+}
+
+.expenses-modal__heading h2 {
+  margin: 0;
+  color: #263f46;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.expenses-modal__heading p {
+  margin: 3px 0 0;
+  color: #7e8c8f;
+  font-size: 8px;
+  line-height: 1.25;
+}
+
+.expenses-modal__close {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #566c6e;
+  background: #e5e2d8;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.expenses-modal__close:hover:not(:disabled) {
+  color: #284d4f;
+  background: #d8d5ca;
+  transform: rotate(4deg);
+}
+
+.expenses-modal__close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.expenses-modal__art {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 275px;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.expenses-modal__art img {
+  position: absolute;
+  top: -16px;
+  right: -17px;
+  width: 285px;
+  height: 145px;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.82;
+  mix-blend-mode: multiply;
+}
+
+.expenses-modal__art-copy {
+  position: absolute;
+  z-index: 3;
+  top: 43px;
+  right: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.expenses-modal__art-copy strong {
+  color: #36515a;
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.expenses-modal__art-copy span {
+  width: 24px;
+  height: 2px;
+  margin-top: 5px;
+  background: #3d6769;
+}
+
+/* =========================================================
+   RESPONSIVE HEADER
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .expenses-modal__header {
+    min-height: 72px;
+  }
+
+  .expenses-modal__art {
+    width: 200px;
+    opacity: 0.75;
+  }
+
+  .expenses-modal__art img {
+    width: 225px;
+  }
+
+  .expenses-modal__art-copy {
+    right: 19px;
+  }
+}
+
+@media (max-width: 450px) {
+  .expenses-modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .expenses-modal__dialog {
+    width: 100%;
+    max-height: calc(100vh - 12px);
+    border-radius: 13px 13px 0 0;
+  }
+
+  .expenses-modal__header {
+    min-height: 70px;
+    padding-left: 14px;
+  }
+
+  .expenses-modal__art {
+    width: 170px;
+  }
+
+  .expenses-modal__art-copy {
+    display: none;
+  }
+}

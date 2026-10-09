@@ -1,0 +1,76 @@
+/* Sidebar.css */
+
+.sidebar-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  
+  /* REMOVED position: fixed; */
+  /* REMOVED top, left, z-index */
+  
+  position: fixed; /* Let it sit naturally in the DOM flow */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-radius: 3px ;
+  overflow: hidden;
+  flex-shrink: 0; /* Prevents the sidebar from squishing */
+}
+
+.sidebar-panel-wrapper {
+  width: 320px;
+  height: 100vh;
+  flex-shrink: 0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border-radius: 0;
+  background-color: #254348;
+}
+
+.sidebar-panel-wrapper.collapsed {
+  width: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.sidebar-panel-wrapper.expanded {
+  width: 220px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar-panel-wrapper.expanded {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    border-radius: 0 16px 16px 0;
+  }
+  
+  .sidebar-panel-wrapper.expanded {
+    width: 240px;
+  }
+  
+  .sidebar-panel-wrapper {
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-container {
+    border-radius: 0;
+  }
+  
+  .sidebar-panel-wrapper.expanded {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .sidebar-panel-wrapper {
+    border-radius: 0;
+  }
+} 

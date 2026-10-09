@@ -1,0 +1,60 @@
+.comp-off-how-card {
+  min-width: 0;
+  border: 1px solid #e6ebe8;
+  border-radius: 10px;
+  background: #f5f1e7;
+  overflow: hidden;
+}
+
+.how-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 16px 11px;
+}
+
+.how-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #39716e;
+}
+
+.how-card-header h2 {
+  margin: 0;
+  color: #152c3d;
+  font-size: 16px;
+}
+
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 3px 16px 17px;
+}
+
+.how-step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.how-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  border-radius: 50%;
+  background: #71908d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.how-step span {
+  color: #42565b;
+  font-size: 10px;
+  line-height: 1.35;
+}

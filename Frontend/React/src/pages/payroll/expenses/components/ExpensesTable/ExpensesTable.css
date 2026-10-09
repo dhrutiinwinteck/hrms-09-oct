@@ -1,0 +1,585 @@
+/* =====================================================
+   TABLE CARD
+===================================================== */
+
+.expenses-table-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid #edf1f2;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(30, 56, 61, 0.025);
+}
+
+/* =====================================================
+   TABLE SCROLL
+===================================================== */
+
+.expenses-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #7b9c9c #eef3f2;
+  -webkit-overflow-scrolling: touch;
+}
+
+.expenses-table-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.expenses-table-scroll::-webkit-scrollbar-track {
+  background: #eef3f2;
+  border-radius: 10px;
+}
+
+.expenses-table-scroll::-webkit-scrollbar-thumb {
+  background: #7b9c9c;
+  border-radius: 10px;
+}
+
+.expenses-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #527f80;
+}
+
+/* =====================================================
+   TABLE STRUCTURE
+===================================================== */
+
+.expenses-table {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.expenses-table thead {
+  background: #f8fafb;
+}
+
+.expenses-table th {
+  height: 37px;
+  padding: 0 7px;
+  border-bottom: 1px solid #e9eeef;
+  color: #42575d;
+  font-size: 8px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* =====================================================
+   RESPONSIVE COLUMN WIDTHS
+
+   Total width = 100%
+
+   15 columns:
+   Delete + Type + Description + Category + Amount
+   + From + To + 5 Attachments + Location
+   + HR + Promoter
+===================================================== */
+
+.expenses-table th:nth-child(1) {
+  width: 4.5%;
+}
+
+.expenses-table th:nth-child(2) {
+  width: 5%;
+}
+
+.expenses-table th:nth-child(3) {
+  width: 10%;
+}
+
+.expenses-table th:nth-child(4) {
+  width: 8%;
+}
+
+.expenses-table th:nth-child(5) {
+  width: 6%;
+}
+
+.expenses-table th:nth-child(6) {
+  width: 6.5%;
+}
+
+.expenses-table th:nth-child(7) {
+  width: 6.5%;
+}
+
+.expenses-table th:nth-child(8),
+.expenses-table th:nth-child(9),
+.expenses-table th:nth-child(10),
+.expenses-table th:nth-child(11),
+.expenses-table th:nth-child(12) {
+  width: 8%;
+}
+
+.expenses-table th:nth-child(13) {
+  width: 8%;
+}
+
+.expenses-table th:nth-child(14),
+.expenses-table th:nth-child(15) {
+  width: 6.5%;
+}
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.expenses-table td {
+  height: 52px;
+  padding: 8px 7px;
+  border-bottom: 1px solid #edf1f2;
+  color: #52656b;
+  font-size: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.expenses-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.expenses-table__row {
+  transition: background 150ms ease;
+}
+
+.expenses-table__row:hover {
+  background: #fbfdfd;
+}
+
+/* =====================================================
+   TABLE HEADING
+===================================================== */
+
+.expenses-table__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  min-width: 0;
+}
+
+.expenses-table__heading span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expenses-table__heading svg {
+  flex-shrink: 0;
+  color: #7e999d;
+}
+
+/* =====================================================
+   DELETE
+===================================================== */
+
+.expenses-table__delete-column {
+  text-align: center;
+}
+
+.expenses-table__delete-cell {
+  text-align: center;
+}
+
+.expenses-table__delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid #f5dddd;
+  border-radius: 6px;
+  color: #c66c6c;
+  background: #fff3f3;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.expenses-table__delete-button:hover:not(:disabled) {
+  border-color: #edbcbc;
+  color: #b94b4b;
+  background: #ffe8e8;
+}
+
+.expenses-table__delete-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   GENERAL TEXT
+===================================================== */
+
+.expenses-table__text {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #52656b;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.expenses-table__description {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.expenses-table__description span {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #52656b;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   AMOUNT
+===================================================== */
+
+.expenses-table__amount {
+  color: #246b6c !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.expenses-table__date {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   ATTACHMENTS
+===================================================== */
+
+.expenses-table__attachment {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  max-width: 100%;
+  overflow: hidden;
+  color: #5d8587;
+}
+
+.expenses-table__attachment svg {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  color: #5d8587;
+}
+
+.expenses-table__attachment span {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expenses-table__muted {
+  color: #a0afb2;
+  font-size: 8px;
+}
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.expenses-table__location {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #52656b;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   STATUS COLUMN
+===================================================== */
+
+.expenses-table__status-column {
+  text-align: center;
+}
+
+.expenses-table__status-cell {
+  padding: 5px !important;
+  text-align: center;
+}
+
+/* =====================================================
+   EDITABLE STATUS SELECT
+===================================================== */
+
+.expenses-table__status {
+  width: 100%;
+  max-width: 92px;
+  min-width: 0;
+  height: 25px;
+  padding: 0 3px;
+  border-radius: 20px;
+  outline: none;
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 700;
+  text-align: center;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.expenses-table__status:focus {
+  box-shadow: 0 0 0 2px rgba(36, 107, 108, 0.13);
+}
+
+.expenses-table__status:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+/* Pending */
+
+.expenses-table__status--pending {
+  border: 1px solid #f2dfb2;
+  color: #9b742b;
+  background: #fff8e8;
+}
+
+/* Approved */
+
+.expenses-table__status--approved {
+  border: 1px solid #c9e7d6;
+  color: #318054;
+  background: #eefaf2;
+}
+
+/* Rejected */
+
+.expenses-table__status--rejected {
+  border: 1px solid #f1cccc;
+  color: #bb5555;
+  background: #fff1f1;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.expenses-table__loading {
+  height: 116px;
+  text-align: center;
+}
+
+.expenses-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #738287;
+  font-size: 9px;
+}
+
+.expenses-loading__spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #dce7e8;
+  border-top-color: #2b6668;
+  border-radius: 50%;
+  animation: expenses-spin 700ms linear infinite;
+}
+
+@keyframes expenses-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.expenses-empty {
+  height: 116px;
+  padding: 0 !important;
+}
+
+.expenses-empty__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 116px;
+}
+
+.expenses-empty__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 37px;
+  margin-bottom: 4px;
+  color: #a4b3b5;
+  background: #eef3f2;
+  border-radius: 5px 5px 7px 7px;
+  opacity: 0.9;
+}
+
+.expenses-empty__icon::before {
+  position: absolute;
+  top: -4px;
+  left: 7px;
+  content: "";
+  width: 33px;
+  height: 7px;
+  border-radius: 4px;
+  background: #e3eae9;
+}
+
+.expenses-empty__content h3 {
+  margin: 2px 0 3px;
+  color: #34484e;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.expenses-empty__content p {
+  margin: 0;
+  color: #8b989c;
+  font-size: 8px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.expenses-table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 43px;
+  padding: 0 12px;
+  border-top: 1px solid #edf1f2;
+  background: #ffffff;
+}
+
+.expenses-table-footer__summary {
+  color: #52656b;
+  font-size: 8px;
+}
+
+.expenses-pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.expenses-pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border: 1px solid #e5ebed;
+  border-radius: 6px;
+  color: #52686d;
+  background: #ffffff;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.expenses-pagination button:hover:not(:disabled) {
+  border-color: #bdd0d1;
+  background: #f7faf9;
+}
+
+.expenses-pagination button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.expenses-pagination
+  .expenses-pagination__active {
+  border-color: #245f62;
+  color: #ffffff;
+  background: #245f62;
+}
+
+/* =====================================================
+   RESPONSIVE TABLE
+
+   Horizontal scrolling is retained on smaller
+   screens so columns do not overlap.
+===================================================== */
+
+@media (max-width: 1400px) {
+  .expenses-table {
+    min-width: 1450px;
+  }
+
+  .expenses-table th {
+    padding: 0 8px;
+    font-size: 8px;
+  }
+
+  .expenses-table td {
+    padding: 8px;
+    font-size: 8px;
+  }
+
+  .expenses-table__status {
+    max-width: 85px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 900px) {
+  .expenses-table {
+    min-width: 1450px;
+  }
+
+  .expenses-table-card {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .expenses-table-footer {
+    padding: 0 9px;
+  }
+
+  .expenses-table-footer__summary {
+    font-size: 7px;
+  }
+}

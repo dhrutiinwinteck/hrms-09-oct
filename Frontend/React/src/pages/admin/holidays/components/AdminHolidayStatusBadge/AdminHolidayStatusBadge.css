@@ -1,0 +1,36 @@
+/* src/pages/admin/holidays/components/AdminHolidayStatusBadge/AdminHolidayStatusBadge.css */
+
+.admin-holiday-status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  min-width: 60px;
+}
+
+.admin-holiday-status-active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.admin-holiday-status-active:hover {
+  background: #a7f3d0;
+}
+
+.admin-holiday-status-inactive {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.admin-holiday-status-inactive:hover {
+  background: #e5e7eb;
+}
+
+.admin-holiday-status-badge:active {
+  transform: scale(0.95);
+}

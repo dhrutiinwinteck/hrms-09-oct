@@ -1,0 +1,201 @@
+/* src/pages/shifts/shift-assignment/components/ShiftPatternSelect/ShiftPatternSelect.css */
+
+.sa-shift-pattern-select {
+    position: relative;
+    width: 100%;
+}
+
+.sa-shift-pattern-select__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.sa-shift-pattern-select__required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.sa-shift-pattern-select__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+}
+
+.sa-shift-pattern-select__control:hover:not(.sa-shift-pattern-select__control--disabled) {
+    border-color: #9ca3af;
+}
+
+.sa-shift-pattern-select__control--open {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.10);
+}
+
+.sa-shift-pattern-select__control--error.sa-shift-pattern-select__control--open {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.10);
+}
+
+.sa-shift-pattern-select__control--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f9fafb;
+}
+
+.sa-shift-pattern-select__value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.sa-shift-pattern-select__value-icon {
+    color: #9ca3af;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sa-shift-pattern-select__value-text {
+    font-size: 13px;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sa-shift-pattern-select__value-sub {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.sa-shift-pattern-select__placeholder {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.sa-shift-pattern-select__chevron {
+    color: #9ca3af;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+
+.sa-shift-pattern-select__chevron--open {
+    transform: rotate(180deg);
+}
+
+/* Dropdown is now positioned by inline styles via React Portal */
+.sa-shift-pattern-select__dropdown {
+    background: #ffffff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    padding: 4px 0;
+    pointer-events: auto;
+}
+
+.sa-shift-pattern-select__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+.sa-shift-pattern-select__option:hover {
+    background: #f3f4f6;
+}
+
+.sa-shift-pattern-select__option--selected {
+    background: #ecfdf5;
+}
+
+.sa-shift-pattern-select__option--selected:hover {
+    background: #d1fae5;
+}
+
+.sa-shift-pattern-select__option-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    flex: 1;
+}
+
+.sa-shift-pattern-select__option-name {
+    font-size: 13px;
+    color: #111827;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.sa-shift-pattern-select__option-time {
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.3;
+}
+
+.sa-shift-pattern-select__option-desc {
+    font-size: 10px;
+    color: #9ca3af;
+    line-height: 1.2;
+}
+
+.sa-shift-pattern-select__option-check {
+    color: #0d9488;
+    flex-shrink: 0;
+    margin-left: 8px;
+    width: 14px;
+    height: 14px;
+}
+
+.sa-shift-pattern-select__no-results {
+    padding: 16px 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.sa-shift-pattern-select__error {
+    font-size: 11px;
+    color: #ef4444;
+    margin-top: 3px;
+}
+
+/* Scrollbar styling */
+.sa-shift-pattern-select__dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sa-shift-pattern-select__dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sa-shift-pattern-select__dropdown::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+.sa-shift-pattern-select__dropdown::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}

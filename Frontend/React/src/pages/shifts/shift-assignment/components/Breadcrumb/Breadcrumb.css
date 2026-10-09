@@ -1,0 +1,49 @@
+/* src/pages/shifts/shift-assignment/components/Breadcrumb/Breadcrumb.css */
+
+.sa-breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.sa-breadcrumb__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.sa-breadcrumb__item {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.sa-breadcrumb__item--active .sa-breadcrumb__text {
+    color: #0d9488;
+    font-weight: 600;
+}
+
+.sa-breadcrumb__separator {
+    margin: 0 6px;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+.sa-breadcrumb__link {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.sa-breadcrumb__link:hover {
+    color: #0d9488;
+    text-decoration: underline;
+}
+
+.sa-breadcrumb__text {
+    color: #1f2937;
+}

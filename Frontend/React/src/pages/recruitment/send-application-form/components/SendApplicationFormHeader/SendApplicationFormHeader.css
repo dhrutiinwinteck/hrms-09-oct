@@ -1,0 +1,293 @@
+/* =========================================================
+   SEND APPLICATION FORM HEADER
+   Compact Enterprise HRMS Header
+   ========================================================= */
+
+.send-application-form-header {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0 0 8px;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   TOP ROW
+   ========================================================= */
+
+.send-application-form-header__top {
+  width: 100%;
+  min-height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.send-application-form-header__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  min-width: 0;
+
+  font-size: 11px;
+  line-height: 17px;
+
+  color: #64748b;
+}
+
+.send-application-form-header__breadcrumb-link {
+  appearance: none;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  font: inherit;
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.send-application-form-header__breadcrumb-link:hover {
+  color: #2563eb;
+}
+
+.send-application-form-header__breadcrumb-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+
+  border-radius: 3px;
+}
+
+.send-application-form-header__separator {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0 6px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1;
+}
+
+.send-application-form-header__breadcrumb-current {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.send-application-form-header__back-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 32px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.send-application-form-header__back-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.05);
+}
+
+.send-application-form-header__back-button:active {
+  transform: translateY(1px);
+}
+
+.send-application-form-header__back-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.send-application-form-header__back-button svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   HEADER CONTENT
+   ========================================================= */
+
+.send-application-form-header__content {
+  margin-top: 4px;
+}
+
+.send-application-form-header__title {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 700;
+
+  letter-spacing: -0.35px;
+}
+
+.send-application-form-header__description {
+  margin: 1px 0 0;
+
+  color: #64748b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .send-application-form-header {
+    padding-bottom: 12px;
+  }
+
+  .send-application-form-header__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .send-application-form-header__description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .send-application-form-header {
+    padding-bottom: 12px;
+  }
+
+  .send-application-form-header__top {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .send-application-form-header__breadcrumb {
+    max-width: calc(100% - 135px);
+
+    font-size: 10.5px;
+    line-height: 16px;
+  }
+
+  .send-application-form-header__separator {
+    margin: 0 5px;
+    font-size: 13px;
+  }
+
+  .send-application-form-header__back-button {
+    min-height: 30px;
+
+    padding: 0 9px;
+
+    gap: 5px;
+
+    font-size: 10.5px;
+  }
+
+  .send-application-form-header__back-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .send-application-form-header__content {
+    margin-top: 5px;
+  }
+
+  .send-application-form-header__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .send-application-form-header__description {
+    margin-top: 2px;
+
+    font-size: 11px;
+    line-height: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .send-application-form-header__top {
+    display: block;
+  }
+
+  .send-application-form-header__breadcrumb {
+    max-width: 100%;
+  }
+
+  .send-application-form-header__back-button {
+    margin-top: 8px;
+  }
+
+  .send-application-form-header__content {
+    margin-top: 8px;
+  }
+}

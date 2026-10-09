@@ -1,0 +1,104 @@
+/* src/pages/shifts/shift-assignment/components/WeekOffDays/WeekOffDays.css */
+
+.sa-section--weekoff .sa-section__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.sa-section--weekoff .sa-section__title {
+    flex: 1;
+}
+
+.sa-weekoff__clear-btn {
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    background: transparent;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    height: 32px;
+    white-space: nowrap;
+}
+
+.sa-weekoff__clear-btn:hover:not(:disabled) {
+    color: #0d9488;
+    border-color: #0d9488;
+    background: #f0fdf4;
+}
+
+.sa-weekoff__clear-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.sa-weekoff__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sa-weekoff__option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px 6px 10px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background: #ffffff;
+    user-select: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.sa-weekoff__option:hover:not(:has(input:disabled)) {
+    border-color: #9ca3af;
+}
+
+.sa-weekoff__option--selected {
+    border-color: #0d9488;
+    background: #ecfdf5;
+    color: #0d9488;
+}
+
+.sa-weekoff__option--selected:hover {
+    background: #d1fae5;
+}
+
+.sa-weekoff__checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #0d9488;
+    cursor: pointer;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.sa-weekoff__checkbox:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sa-weekoff__label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .sa-weekoff__grid {
+        gap: 6px;
+    }
+
+    .sa-weekoff__option {
+        padding: 4px 10px 4px 8px;
+        font-size: 12px;
+    }
+}
+

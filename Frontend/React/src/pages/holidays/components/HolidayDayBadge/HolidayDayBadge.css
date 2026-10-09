@@ -1,0 +1,50 @@
+.holiday-day-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  background-color: #f0f4f8;
+  color: #2c3e50;
+}
+
+.holiday-day-badge.monday {
+  background-color: #e8f0fe;
+  color: #1a56db;
+}
+
+.holiday-day-badge.tuesday {
+  background-color: #f3e8ff;
+  color: #6b21a5;
+}
+
+.holiday-day-badge.wednesday {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.holiday-day-badge.thursday {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.holiday-day-badge.friday {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.holiday-day-badge.saturday {
+  background-color: #e0f7fa;
+  color: #00695c;
+}
+
+.holiday-day-badge.sunday {
+  background-color: #fce4ec;
+  color: #880e4f;
+}
+
+.holiday-day-badge.default {
+  background-color: #f1f5f9;
+  color: #475569;
+}

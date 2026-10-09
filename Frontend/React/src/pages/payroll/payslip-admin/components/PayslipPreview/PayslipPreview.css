@@ -1,0 +1,854 @@
+/* ============================================================
+   PAYSLIP PREVIEW
+   A4 LANDSCAPE DOCUMENT STYLE
+   ============================================================ */
+
+.payslip-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   BACKDROP
+   ============================================================ */
+
+.payslip-preview__backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.48);
+
+  backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   DIALOG
+   ============================================================ */
+
+.payslip-preview__dialog {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(1450px, 100%);
+  height: min(96vh, 900px);
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #d9dedf;
+  border-radius: 4px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.payslip-preview__toolbar {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 52px;
+
+  padding: 8px 12px;
+
+  background: #f3f4f6;
+
+  border-bottom: 1px solid #dfe3e5;
+}
+
+.payslip-preview__eyebrow {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.payslip-preview__toolbar h2 {
+  margin: 2px 0 0;
+
+  color: #1f2937;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.payslip-preview__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 5px;
+
+  flex-wrap: wrap;
+}
+
+.payslip-preview__action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-height: 28px;
+
+  padding: 0 9px;
+
+  border: 1px solid #cbd5d9;
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.payslip-preview__action-button:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.payslip-preview__action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.payslip-preview__email-button {
+  color: #ffffff;
+
+  background: #16a34a;
+
+  border-color: #16a34a;
+}
+
+.payslip-preview__email-button:hover:not(:disabled) {
+  color: #ffffff;
+  background: #15803d;
+  border-color: #15803d;
+}
+
+.payslip-preview__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  cursor: pointer;
+}
+
+.payslip-preview__close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ============================================================
+   SCROLL AREA
+   ============================================================ */
+
+.payslip-preview__scroll {
+  flex: 1 1 auto;
+
+  overflow: auto;
+
+  padding: 20px;
+
+  background: #e9ecef;
+
+  box-sizing: border-box;
+}
+
+.payslip-preview__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+
+  color: #64748b;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+}
+
+/* ============================================================
+   A4 LANDSCAPE PAYSLIP DOCUMENT
+   ============================================================ */
+
+.payslip-document {
+  width: 1123px;
+  min-height: 794px;
+
+  margin: 0 auto;
+
+  padding: 22px 24px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #d5dadd;
+
+  color: #202020;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   COMPANY HEADER
+   ============================================================ */
+
+.payslip-document__company {
+  padding-bottom: 10px;
+
+  text-align: center;
+}
+
+.payslip-document__logo {
+  display: block;
+
+  width: auto;
+
+  max-width: 225px;
+  max-height: 70px;
+
+  margin: 0 auto 5px;
+
+  object-fit: contain;
+}
+
+.payslip-document__company h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.payslip-document__company p {
+  margin: 1px 0;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.35;
+}
+
+.payslip-document__company h2 {
+  margin: 8px 0 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-decoration: underline;
+}
+
+/* ============================================================
+   COMMON TABLE
+   ============================================================ */
+
+.payslip-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+}
+
+.payslip-table th,
+.payslip-table td {
+  box-sizing: border-box;
+
+  padding: 4px 5px;
+
+  border: 1px solid #d6dcde;
+
+  vertical-align: middle;
+
+  line-height: 1.2;
+
+  overflow-wrap: break-word;
+}
+
+/* ============================================================
+   EMPLOYEE INFORMATION TABLE
+   ============================================================ */
+
+.payslip-employee-table {
+  margin-top: 2px;
+}
+
+.payslip-employee-table td {
+  height: 21px;
+
+  background: #ffffff;
+}
+
+.payslip-label {
+  width: 14%;
+
+  color: #52616b;
+
+  background: #ffffff;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  text-align: left;
+}
+
+.payslip-employee-table td:nth-child(2) {
+  width: 36%;
+
+  color: #222222;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.payslip-employee-table td:nth-child(4) {
+  width: 36%;
+
+  color: #222222;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+/*
+   The four-column structure is:
+
+   Label | Value | Label | Value
+*/
+
+.payslip-employee-table td:nth-child(3) {
+  width: 14%;
+}
+
+/* ============================================================
+   EARNING / DEDUCTION TABLE
+   ============================================================ */
+
+.payslip-salary-table {
+  margin-top: 9px;
+}
+
+.payslip-salary-table th {
+  height: 22px;
+
+  padding: 4px 5px;
+
+  color: #202020;
+
+  background: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.payslip-salary-table th:nth-child(1) {
+  width: 38%;
+}
+
+.payslip-salary-table th:nth-child(2) {
+  width: 12%;
+}
+
+.payslip-salary-table th:nth-child(3) {
+  width: 38%;
+}
+
+.payslip-salary-table th:nth-child(4) {
+  width: 12%;
+}
+
+.payslip-salary-table tbody td {
+  height: 20px;
+
+  background: #ffffff;
+
+  font-size: 8px;
+}
+
+.payslip-salary-table tbody td:nth-child(1),
+.payslip-salary-table tbody td:nth-child(3) {
+  color: #34444c;
+
+  font-weight: 400;
+
+  text-align: left;
+}
+
+.payslip-salary-table .amount {
+  color: #222222;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  text-align: right;
+
+  white-space: nowrap;
+
+  font-variant-numeric: tabular-nums;
+}
+
+.payslip-salary-table .total-value {
+  font-weight: 700;
+}
+
+/* ============================================================
+   TOTAL ROW
+   ============================================================ */
+
+.payslip-total-row td {
+  height: 22px;
+
+  color: #222222;
+
+  background: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.payslip-total-row td:first-child,
+.payslip-total-row td:nth-child(3) {
+  font-weight: 700;
+}
+
+/* ============================================================
+   NET PAYABLE
+   ============================================================
+
+   Image 1 does not contain the large green Net Payable
+   banner. The actual Net Pay is already present in the
+   salary table.
+
+   We preserve the JSX and data logic but remove the
+   additional visual block.
+*/
+
+.payslip-net-pay {
+  display: none !important;
+}
+
+/* ============================================================
+   AMOUNT IN WORDS
+   ============================================================ */
+
+.payslip-amount-words {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 5px;
+
+  margin-top: 7px;
+
+  min-height: 22px;
+
+  padding: 5px 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6dcde;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-size: 8px;
+
+  line-height: 1.3;
+}
+
+.payslip-amount-words strong {
+  color: #222222;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.payslip-amount-words span {
+  color: #333333;
+
+  font-size: 8px;
+
+  font-weight: 400;
+}
+
+/* ============================================================
+   FOOTER NOTE
+   ============================================================ */
+
+.payslip-footer-note {
+  margin: 10px 0 0;
+
+  color: #333333;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  line-height: 1.35;
+}
+
+/* ============================================================
+   RESPONSIVE PREVIEW
+   ============================================================ */
+
+@media (max-width: 1200px) {
+  .payslip-preview__scroll {
+    padding: 12px;
+  }
+
+  .payslip-document {
+    width: 1123px;
+  }
+}
+
+@media (max-width: 760px) {
+  .payslip-preview {
+    padding: 0;
+  }
+
+  .payslip-preview__dialog {
+    width: 100%;
+    height: 100vh;
+
+    border: 0;
+    border-radius: 0;
+  }
+
+  .payslip-preview__toolbar {
+    min-height: 48px;
+
+    padding: 7px 9px;
+  }
+
+  .payslip-preview__toolbar h2 {
+    font-size: 13px;
+  }
+
+  .payslip-preview__actions {
+    gap: 3px;
+  }
+
+  .payslip-preview__action-button {
+    min-width: 28px;
+
+    padding: 0 7px;
+  }
+
+  .payslip-preview__action-button span {
+    display: none;
+  }
+
+  .payslip-preview__scroll {
+    padding: 8px;
+
+    overflow: auto;
+  }
+
+  .payslip-document {
+    width: 1123px;
+    min-height: 794px;
+
+    margin: 0;
+
+    padding: 22px 24px 18px;
+  }
+}
+
+/* ============================================================
+   PRINT / PDF
+   ============================================================ */
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .payslip-preview,
+  .payslip-preview__dialog,
+  .payslip-preview__scroll,
+  .payslip-document,
+  .payslip-document * {
+    visibility: visible;
+  }
+
+  .payslip-preview {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+
+    background: #ffffff;
+  }
+
+  .payslip-preview__backdrop,
+  .payslip-preview__toolbar {
+    display: none !important;
+  }
+
+  .payslip-preview__dialog {
+    position: static;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+
+    overflow: visible;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .payslip-preview__scroll {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+
+    overflow: visible;
+
+    background: #ffffff;
+  }
+
+  .payslip-document {
+    width: 100%;
+
+    min-height: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    box-shadow: none;
+
+    background: #ffffff;
+  }
+
+  .payslip-document__company {
+    padding-bottom: 7px;
+  }
+
+  .payslip-document__logo {
+    max-width: 190px;
+    max-height: 58px;
+
+    margin-bottom: 3px;
+  }
+
+  .payslip-document__company h1 {
+    font-size: 11px;
+  }
+
+  .payslip-document__company p {
+    font-size: 7px;
+  }
+
+  .payslip-document__company h2 {
+    margin-top: 6px;
+
+    font-size: 8px;
+  }
+
+  .payslip-table {
+    font-size: 7px;
+  }
+
+  .payslip-table th,
+  .payslip-table td {
+    padding: 3px 4px;
+  }
+
+  .payslip-employee-table td {
+    height: 18px;
+  }
+
+  .payslip-salary-table {
+    margin-top: 7px;
+  }
+
+  .payslip-salary-table th {
+    height: 19px;
+  }
+
+  .payslip-salary-table tbody td {
+    height: 18px;
+  }
+
+  .payslip-amount-words {
+    margin-top: 6px;
+
+    min-height: 19px;
+
+    padding: 4px 5px;
+
+    font-size: 7px;
+  }
+
+  .payslip-amount-words strong,
+  .payslip-amount-words span {
+    font-size: 7px;
+  }
+
+  .payslip-footer-note {
+    margin-top: 7px;
+
+    font-size: 6.5px;
+  }
+
+  .payslip-net-pay {
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

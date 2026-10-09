@@ -1,0 +1,137 @@
+.comp-off-header {
+  margin-bottom: 16px;
+}
+
+.comp-off-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 8px;
+  color: #647573;
+  font-size: 13px;
+}
+
+.breadcrumb-separator {
+  color: #9aa9a6;
+  font-size: 18px;
+}
+
+.comp-off-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.comp-off-title-content h1 {
+  margin: 0;
+  color: #10283a;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.comp-off-title-content p {
+  margin: 4px 0 0;
+  color: #647573;
+  font-size: 13px;
+}
+
+.comp-off-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 45px;
+  padding: 0 19px;
+  border: 0;
+  border-radius: 8px;
+  background: #356b6c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.comp-off-primary-button:hover {
+  background: #28585a;
+  transform: translateY(-1px);
+}
+
+.comp-off-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  min-height: 76px;
+  margin-top: -18px;
+  padding-right: 225px;
+  pointer-events: none;
+}
+
+.comp-off-banner-illustration {
+  position: relative;
+  width: 120px;
+  height: 72px;
+}
+
+.banner-calendar {
+  position: absolute;
+  top: 3px;
+  left: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  background: #fff;
+  color: #a88654;
+  box-shadow: 0 6px 20px rgba(15, 118, 110, 0.08);
+}
+
+.banner-leaf {
+  position: absolute;
+  bottom: 7px;
+  width: 28px;
+  height: 45px;
+  border-radius: 80% 15% 80% 15%;
+  background: #72a5a0;
+  transform: rotate(-30deg);
+}
+
+.banner-leaf-one {
+  left: 13px;
+}
+
+.banner-leaf-two {
+  left: 30px;
+  bottom: 4px;
+  transform: rotate(20deg);
+  opacity: 0.8;
+}
+
+.comp-off-banner-message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 295px;
+  min-height: 61px;
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: #f1eee4;
+  color: #233b47;
+}
+
+.comp-off-banner-message strong {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.comp-off-banner-message span {
+  color: #65736e;
+  font-size: 11px;
+}

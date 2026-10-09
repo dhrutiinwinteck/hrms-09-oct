@@ -1,0 +1,233 @@
+.highlights-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.highlights-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 14px;
+  gap: 12px;
+}
+
+.highlights-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111827;
+}
+
+.highlights-view-all-btn {
+  border: none;
+  background: transparent;
+  color: #1976d2;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.highlights-view-all-btn:hover {
+  background: #eff6ff;
+}
+
+/* List */
+.highlights-card-list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 20px 20px;
+}
+
+/* Individual highlight */
+.highlights-card-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+/* Left section */
+.highlights-item-left {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Icon */
+.highlights-item-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #edf8ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+/* Content */
+.highlights-item-content {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+/* Main title */
+.highlights-item-title {
+  display: block;
+  width: 100%;
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+/* IMPORTANT:
+   Allow the complete anniversary/birthday text
+   to wrap instead of showing ... */
+.highlights-item-subtitle {
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: #7b8794;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  /* Remove ellipsis */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+
+  /* Allow long names/text to wrap */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Status / Info button */
+.highlights-item-status {
+  flex: 0 0 auto;
+  min-width: 54px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* Status colors */
+.highlights-status-success {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.highlights-status-warning {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.highlights-status-info {
+  color: #1976d2;
+  background: #e3f2fd;
+}
+
+.highlights-status-neutral {
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+/* Empty state */
+.highlight-empty {
+  width: 100%;
+  padding: 30px 10px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .highlights-card-header {
+    padding: 16px;
+  }
+
+  .highlights-card-list {
+    padding: 4px 16px 16px;
+  }
+
+  .highlights-card-title {
+    font-size: 18px;
+  }
+
+  .highlights-item-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .highlights-card-item {
+    gap: 10px;
+  }
+
+  .highlights-item-left {
+    gap: 8px;
+  }
+
+  .highlights-item-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 19px;
+  }
+
+  .highlights-item-title {
+    font-size: 14px;
+  }
+
+  .highlights-item-subtitle {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .highlights-item-status {
+    min-width: 48px;
+    height: 30px;
+    padding: 0 11px;
+    font-size: 12px;
+  }
+}

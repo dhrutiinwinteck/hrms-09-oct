@@ -1,0 +1,32 @@
+.shift-pattern-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: transparent;
+  color: #64748b;
+}
+
+.action-edit:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.action-delete {
+  color: #ef4444;
+}
+
+.action-delete:hover {
+  background: #fee2e2;
+}

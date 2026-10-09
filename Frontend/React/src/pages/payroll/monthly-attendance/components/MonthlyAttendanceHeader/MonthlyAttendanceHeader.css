@@ -1,0 +1,474 @@
+/* =========================================================
+   MONTHLY ATTENDANCE HEADER
+   ========================================================= */
+
+.monthly-attendance-header {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  min-height: 128px;
+
+  padding: 17px 22px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e8eeee;
+  border-radius: 10px;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(221, 242, 239, 0.72) 0,
+      rgba(221, 242, 239, 0) 29%
+    ),
+    linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #fcfefe 52%,
+      #f4faf9 100%
+    );
+
+  box-shadow:
+    0 3px 15px rgba(39, 78, 83, 0.045);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SOFT BACKGROUND SHAPE
+   ========================================================= */
+
+.monthly-attendance-header::before {
+  content: "";
+
+  position: absolute;
+
+  right: 132px;
+  bottom: -92px;
+
+  width: 410px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: rgba(218, 239, 236, 0.43);
+
+  transform: rotate(-5deg);
+
+  pointer-events: none;
+}
+
+.monthly-attendance-header::after {
+  content: "";
+
+  position: absolute;
+
+  right: -60px;
+  top: -95px;
+
+  width: 290px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  background: rgba(237, 248, 246, 0.72);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.monthly-attendance-header__content {
+  position: relative;
+  z-index: 3;
+
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.monthly-attendance-header__identity {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+}
+
+.monthly-attendance-header__icon {
+  position: relative;
+
+  flex: 0 0 58px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 17px;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4d8788 0%,
+      #225c60 100%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 5px 13px rgba(34, 92, 96, 0.13);
+}
+
+.monthly-attendance-header__rupee {
+  position: absolute;
+
+  right: 6px;
+  bottom: 6px;
+
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #216165;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.monthly-attendance-header__heading {
+  min-width: 0;
+}
+
+.monthly-attendance-header__eyebrow {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #658087;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: 2.3px;
+}
+
+.monthly-attendance-header__title {
+  margin: 0;
+
+  color: #122e37;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(25px, 2.1vw, 32px);
+  line-height: 1.03;
+
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.monthly-attendance-header__description {
+  margin: 5px 0 0;
+
+  color: #64777d;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+  line-height: 1.35;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.monthly-attendance-header__features {
+  display: flex;
+  align-items: center;
+
+  gap: 29px;
+
+  margin-left: 1px;
+  margin-top: 9px;
+}
+
+.monthly-attendance-header__feature {
+  display: flex;
+  align-items: center;
+
+  min-width: 115px;
+}
+
+.monthly-attendance-header__feature-icon {
+  flex: 0 0 30px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 7px;
+
+  border-radius: 9px;
+
+  color: #17565a;
+
+  background: #e7f2f0;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(52, 116, 116, 0.045);
+}
+
+.monthly-attendance-header__feature-copy {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.monthly-attendance-header__feature-copy strong {
+  color: #29444c;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 8.5px;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.monthly-attendance-header__feature-copy small {
+  margin-top: 2px;
+
+  color: #819197;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+  line-height: 1.25;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ARTWORK
+   ========================================================= */
+
+.monthly-attendance-header__artwork {
+  position: relative;
+  z-index: 2;
+
+  flex: 0 0 345px;
+
+  min-width: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 1px;
+
+  pointer-events: none;
+}
+
+.monthly-attendance-header__image {
+  display: block;
+
+  width: 310px;
+  height: 124px;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter:
+    drop-shadow(
+      0 5px 8px rgba(38, 85, 86, 0.045)
+    );
+}
+
+.monthly-attendance-header__artwork-caption {
+  position: absolute;
+
+  right: 4px;
+  top: 43px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: rotate(-8deg);
+
+  color: #315d61;
+
+  font-family:
+    "Segoe Print",
+    "Bradley Hand",
+    cursive;
+
+  font-size: 9px;
+  line-height: 1.45;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.monthly-attendance-header__artwork-caption::after {
+  content: "";
+
+  display: block;
+
+  width: 52px;
+  height: 1px;
+
+  margin-top: 3px;
+
+  background: #5b8d8c;
+
+  transform: rotate(-2deg);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .monthly-attendance-header {
+    padding-left: 18px;
+    padding-right: 14px;
+  }
+
+  .monthly-attendance-header__artwork {
+    flex-basis: 280px;
+    min-width: 250px;
+  }
+
+  .monthly-attendance-header__image {
+    width: 260px;
+  }
+
+  .monthly-attendance-header__features {
+    gap: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 820px) {
+  .monthly-attendance-header {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .monthly-attendance-header__artwork {
+    display: none;
+  }
+
+  .monthly-attendance-header__features {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .monthly-attendance-header {
+    padding: 15px;
+    border-radius: 9px;
+  }
+
+  .monthly-attendance-header__icon {
+    flex-basis: 50px;
+    width: 50px;
+    height: 50px;
+
+    margin-right: 12px;
+  }
+
+  .monthly-attendance-header__title {
+    font-size: 23px;
+  }
+
+  .monthly-attendance-header__description {
+    font-size: 8px;
+  }
+
+  .monthly-attendance-header__features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .monthly-attendance-header__feature {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .monthly-attendance-header__features {
+    grid-template-columns: 1fr;
+  }
+
+  .monthly-attendance-header__feature-copy strong,
+  .monthly-attendance-header__feature-copy small {
+    white-space: normal;
+  }
+}

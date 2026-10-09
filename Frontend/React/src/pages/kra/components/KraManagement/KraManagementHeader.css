@@ -1,0 +1,319 @@
+/* =========================================================
+   KRA MANAGEMENT HEADER
+   Enterprise HRMS
+   Compact Reference-Aligned Header
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER ROOT
+   ========================================================= */
+
+.kra-management-header {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.kra-management-header-left {
+  min-width: 0;
+
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.kra-management-header-title {
+  margin: 0;
+  padding: 0;
+
+  color: #101c1a;
+
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.kra-management-header-description {
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #5b6865;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.kra-management-header-breadcrumb {
+  min-width: 0;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 6px;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BREADCRUMB ITEM
+   ========================================================= */
+
+.kra-management-header-breadcrumb-item {
+  margin: 0;
+  padding: 0;
+
+  color: #66716e;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   CURRENT BREADCRUMB
+   ========================================================= */
+
+.kra-management-header-breadcrumb-current {
+  color: #3e4d49;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BREADCRUMB ICON
+   ========================================================= */
+
+.kra-management-header-breadcrumb-icon {
+  width: 12px;
+  height: 12px;
+
+  flex: 0 0 12px;
+
+  color: #96a09d;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1440px
+
+   Keep header compact even on large screens.
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-management-header {
+    gap: 20px;
+  }
+
+  .kra-management-header-title {
+    font-size: 25px;
+  }
+
+  .kra-management-header-description {
+    font-size: 12px;
+  }
+
+  .kra-management-header-breadcrumb-item {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1279px
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .kra-management-header {
+    gap: 16px;
+  }
+
+  .kra-management-header-title {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .kra-management-header {
+    gap: 14px;
+  }
+
+  .kra-management-header-title {
+    font-size: 23px;
+  }
+
+  .kra-management-header-description {
+    font-size: 11.5px;
+  }
+
+  .kra-management-header-breadcrumb-item {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 7px;
+  }
+
+  .kra-management-header-left {
+    width: 100%;
+
+    gap: 3px;
+  }
+
+  .kra-management-header-title {
+    font-size: 22px;
+
+    letter-spacing: -0.3px;
+  }
+
+  .kra-management-header-description {
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+
+  .kra-management-header-breadcrumb {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-header {
+    gap: 6px;
+  }
+
+  .kra-management-header-left {
+    gap: 2px;
+  }
+
+  .kra-management-header-title {
+    font-size: 21px;
+    line-height: 1.2;
+
+    letter-spacing: -0.25px;
+  }
+
+  .kra-management-header-description {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .kra-management-header-breadcrumb {
+    gap: 5px;
+
+    flex-wrap: wrap;
+
+    white-space: normal;
+  }
+
+  .kra-management-header-breadcrumb-item {
+    font-size: 10.5px;
+  }
+
+  .kra-management-header-breadcrumb-icon {
+    width: 11px;
+    height: 11px;
+
+    flex: 0 0 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-header-title {
+    font-size: 20px;
+  }
+
+  .kra-management-header-description {
+    font-size: 10.5px;
+  }
+
+  .kra-management-header-breadcrumb-item {
+    font-size: 10px;
+  }
+}

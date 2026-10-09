@@ -1,0 +1,751 @@
+/* =========================================================
+   KRA MANAGEMENT - SEARCH & FILTERS
+   Enterprise HRMS
+   Compact Reference-Aligned Layout
+   ========================================================= */
+
+
+/* =========================================================
+   FILTER CARD
+   ========================================================= */
+
+.kra-management-filters {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 14px 18px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8e5;
+  border-radius: 9px;
+
+  box-shadow:
+    0 1px 3px rgba(25, 49, 44, 0.025),
+    0 4px 12px rgba(25, 49, 44, 0.035);
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+   ========================================================= */
+
+.kra-management-filter-decoration {
+  position: absolute;
+
+  top: 13px;
+  right: 18px;
+
+  width: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 3px);
+
+  justify-content: end;
+
+  gap: 7px;
+
+  pointer-events: none;
+
+  opacity: 0.48;
+}
+
+.kra-management-filter-decoration span {
+  width: 3px;
+  height: 3px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #ddd8cf;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.kra-management-filter-heading {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0 0 11px;
+}
+
+.kra-management-filter-heading-icon {
+  width: 26px;
+  height: 26px;
+
+  flex: 0 0 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #f0f1ed;
+
+  color: #315f60;
+}
+
+.kra-management-filter-heading-icon svg {
+  width: 15px;
+  height: 15px;
+
+  display: block;
+}
+
+.kra-management-filter-heading h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #172522;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.3;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   DESKTOP GRID
+
+   ROW 1:
+   SEARCH | SEARCH | YEAR | EMPTY
+
+   ROW 2:
+   SELECT YEAR | FROM MONTH | TO MONTH | DOWNLOAD
+   ========================================================= */
+
+.kra-management-filter-grid {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(132px, 0.7fr);
+
+  grid-template-areas:
+    "search search year empty"
+    "selectYear fromMonth toMonth download";
+
+  column-gap: 16px;
+  row-gap: 10px;
+
+  align-items: end;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GRID POSITIONS
+   ========================================================= */
+
+.kra-management-filter-search {
+  grid-area: search;
+}
+
+.kra-management-filter-year {
+  grid-area: year;
+}
+
+.kra-management-filter-select-year {
+  grid-area: selectYear;
+}
+
+.kra-management-filter-from {
+  grid-area: fromMonth;
+}
+
+.kra-management-filter-to {
+  grid-area: toMonth;
+}
+
+.kra-management-filter-download {
+  grid-area: download;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.kra-management-filter-field {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.kra-management-filter-field label {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #264640;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+   ========================================================= */
+
+.kra-management-filter-field input,
+.kra-management-filter-field select {
+  width: 100%;
+  height: 36px;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  border: 1px solid #d8e0dd;
+  border-radius: 6px;
+
+  outline: none;
+
+  background-color: #ffffff;
+
+  color: #354642;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.kra-management-filter-field input {
+  padding:
+    0
+    38px
+    0
+    11px;
+}
+
+.kra-management-filter-field select {
+  padding:
+    0
+    30px
+    0
+    11px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.kra-management-filter-field input::placeholder {
+  color: #7c8986;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.kra-management-filter-field input:hover,
+.kra-management-filter-field select:hover {
+  border-color: #bdcbc7;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.kra-management-filter-field input:focus,
+.kra-management-filter-field select:focus {
+  border-color: #477a77;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 95, 96, 0.07);
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.kra-management-search-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.kra-management-search-wrapper input {
+  width: 100%;
+}
+
+.kra-management-search-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 11px;
+
+  width: 16px;
+  height: 16px;
+
+  color: #315f60;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   REMOVE NATIVE SEARCH DECORATIONS
+   ========================================================= */
+
+.kra-management-search-wrapper
+input[type='search']::-webkit-search-cancel-button,
+.kra-management-search-wrapper
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+/* =========================================================
+   DOWNLOAD AREA
+   ========================================================= */
+
+.kra-management-filter-download {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.kra-management-download-button {
+  min-width: 132px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 14px;
+
+  border: 1px solid #315f68;
+  border-radius: 6px;
+
+  background: #315f68;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 3px rgba(31, 70, 73, 0.08);
+
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+.kra-management-download-button svg {
+  width: 15px;
+  height: 15px;
+
+  flex: 0 0 15px;
+}
+
+.kra-management-download-button:hover {
+  border-color: #274f56;
+
+  background: #274f56;
+
+  box-shadow:
+    0 3px 7px rgba(31, 70, 73, 0.12);
+
+  transform: translateY(-1px);
+}
+
+.kra-management-download-button:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 1px 2px rgba(31, 70, 73, 0.08);
+}
+
+.kra-management-download-button:focus-visible {
+  outline: 3px solid rgba(49, 95, 104, 0.14);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1440px
+
+   Keep compact proportions.
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-management-filters {
+    padding:
+      14px
+      18px;
+  }
+
+  .kra-management-filter-grid {
+    column-gap: 16px;
+    row-gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   STANDARD DESKTOP / LAPTOP
+   1025px - 1439px
+
+   Preserve reference desktop structure.
+   ========================================================= */
+
+@media (max-width: 1439px) and (min-width: 1025px) {
+  .kra-management-filters {
+    padding:
+      13px
+      16px;
+  }
+
+  .kra-management-filter-heading {
+    margin-bottom: 10px;
+  }
+
+  .kra-management-filter-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr)
+      minmax(125px, 0.65fr);
+
+    column-gap: 13px;
+    row-gap: 9px;
+  }
+
+  .kra-management-download-button {
+    min-width: 125px;
+
+    padding:
+      0
+      12px;
+
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP
+   901px - 1024px
+
+   Keep all controls accessible while avoiding a large
+   unnecessary third row.
+   ========================================================= */
+
+@media (max-width: 1024px) and (min-width: 901px) {
+  .kra-management-filters {
+    padding:
+      13px
+      14px;
+  }
+
+  .kra-management-filter-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    grid-template-areas:
+      "search search year"
+      "selectYear fromMonth toMonth"
+      "download download download";
+
+    column-gap: 12px;
+    row-gap: 9px;
+  }
+
+  .kra-management-filter-download {
+    justify-content: flex-end;
+  }
+
+  .kra-management-download-button {
+    min-width: 128px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .kra-management-filters {
+    padding: 14px;
+  }
+
+  .kra-management-filter-heading {
+    margin-bottom: 10px;
+  }
+
+  .kra-management-filter-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    grid-template-areas:
+      "search search"
+      "year selectYear"
+      "fromMonth toMonth"
+      "download download";
+
+    column-gap: 12px;
+    row-gap: 10px;
+  }
+
+  .kra-management-filter-decoration {
+    top: 13px;
+    right: 14px;
+  }
+
+  .kra-management-filter-download {
+    justify-content: flex-end;
+  }
+
+  .kra-management-download-button {
+    min-width: 132px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-filters {
+    padding: 12px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-filter-heading {
+    margin-bottom: 10px;
+  }
+
+  .kra-management-filter-heading-icon {
+    width: 25px;
+    height: 25px;
+
+    flex-basis: 25px;
+  }
+
+  .kra-management-filter-heading h2 {
+    font-size: 13.5px;
+  }
+
+  .kra-management-filter-decoration {
+    display: none;
+  }
+
+  .kra-management-filter-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    grid-template-areas:
+      "search"
+      "year"
+      "selectYear"
+      "fromMonth"
+      "toMonth"
+      "download";
+
+    gap: 9px;
+  }
+
+  .kra-management-filter-field {
+    gap: 4px;
+  }
+
+  .kra-management-filter-field label {
+    font-size: 10.5px;
+  }
+
+  .kra-management-filter-field input,
+  .kra-management-filter-field select {
+    height: 38px;
+
+    font-size: 11.5px;
+  }
+
+  .kra-management-filter-download {
+    width: 100%;
+
+    margin-top: 1px;
+  }
+
+  .kra-management-download-button {
+    width: 100%;
+    min-width: 0;
+    height: 38px;
+
+    font-size: 11.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-filters {
+    padding: 11px;
+  }
+
+  .kra-management-filter-heading {
+    gap: 6px;
+
+    margin-bottom: 9px;
+  }
+
+  .kra-management-filter-heading-icon {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+  }
+
+  .kra-management-filter-heading-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .kra-management-filter-heading h2 {
+    font-size: 13px;
+  }
+
+  .kra-management-filter-grid {
+    gap: 8px;
+  }
+
+  .kra-management-filter-field input,
+  .kra-management-filter-field select {
+    height: 37px;
+  }
+
+  .kra-management-download-button {
+    height: 37px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 340px
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-management-filters {
+    padding:
+      10px;
+  }
+
+  .kra-management-filter-field label {
+    font-size: 10px;
+  }
+
+  .kra-management-filter-field input,
+  .kra-management-filter-field select {
+    font-size: 11px;
+  }
+
+  .kra-management-download-button {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-management-filter-field input,
+  .kra-management-filter-field select,
+  .kra-management-download-button {
+    transition: none;
+  }
+
+  .kra-management-download-button:hover {
+    transform: none;
+  }
+}

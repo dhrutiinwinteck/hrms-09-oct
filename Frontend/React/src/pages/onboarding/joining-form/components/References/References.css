@@ -1,0 +1,482 @@
+/* ============================================================
+   REFERENCES
+   ============================================================ */
+
+.dynamic-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ============================================================
+   REFERENCE CARD
+   ============================================================ */
+
+.dynamic-item-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  padding: 1.5rem;
+
+  box-shadow: 0 2px 6px rgba(25, 56, 58, 0.04);
+}
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.dynamic-item-wrapper .basic-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 1.25rem 1.5rem;
+
+  width: 100%;
+}
+
+/* ============================================================
+   FORM FIELD
+   ============================================================ */
+
+.dynamic-item-wrapper .form-field {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.dynamic-item-wrapper .form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.dynamic-item-wrapper .form-field > label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #19383a;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.dynamic-item-wrapper .required {
+  color: #d9534f;
+
+  margin-left: 2px;
+}
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.dynamic-item-wrapper .form-field input[type="text"],
+.dynamic-item-wrapper .form-field input[type="email"],
+.dynamic-item-wrapper .form-field input[type="tel"] {
+  width: 100%;
+  min-width: 0;
+
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #d9ddd9;
+  border-radius: 8px;
+
+  background: #fafaf8;
+
+  color: #19383a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ============================================================
+   INPUT FOCUS
+   ============================================================ */
+
+.dynamic-item-wrapper .form-field input[type="text"]:focus,
+.dynamic-item-wrapper .form-field input[type="email"]:focus,
+.dynamic-item-wrapper .form-field input[type="tel"]:focus {
+  border-color: #1f6669;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(31, 102, 105, 0.10);
+}
+
+/* ============================================================
+   PLACEHOLDER
+   ============================================================ */
+
+.dynamic-item-wrapper
+  .form-field
+  input::placeholder {
+  color: #aab5b2;
+}
+
+/* ============================================================
+   REMOVE BUTTON
+   ============================================================ */
+
+.dynamic-item-wrapper .remove-item-btn {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 30px;
+
+  padding: 5px 12px;
+
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dynamic-item-wrapper .remove-item-btn:hover {
+  background: #fecaca;
+  border-color: #fca5a5;
+
+  transform: translateY(-1px);
+}
+
+.dynamic-item-wrapper .remove-item-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   MAY WE CONTACT CHECKBOX
+   ============================================================ */
+
+.references-checkbox-field {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  margin-top: 2px;
+}
+
+/* Checkbox + text */
+
+.references-checkbox-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  margin: 0;
+
+  color: #19383a;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+/* ============================================================
+   CUSTOM CHECKBOX
+   ============================================================ */
+
+.references-checkbox-label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  flex: 0 0 auto;
+
+  width: 20px;
+  height: 20px;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 2px solid #9aa8a6;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ============================================================
+   CHECKED STATE
+   ============================================================ */
+
+.references-checkbox-label
+  input[type="checkbox"]:checked {
+  background: #1f6669;
+
+  border-color: #1f6669;
+}
+
+/* White check mark */
+
+.references-checkbox-label
+  input[type="checkbox"]:checked::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  top: 2px;
+
+  width: 6px;
+  height: 10px;
+
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+
+  transform: rotate(45deg);
+}
+
+/* ============================================================
+   CHECKBOX HOVER
+   ============================================================ */
+
+.references-checkbox-label
+  input[type="checkbox"]:hover {
+  border-color: #1f6669;
+}
+
+/* ============================================================
+   CHECKBOX FOCUS
+   ============================================================ */
+
+.references-checkbox-label
+  input[type="checkbox"]:focus-visible {
+  outline: none;
+
+  box-shadow:
+    0 0 0 3px rgba(31, 102, 105, 0.15);
+}
+
+/* ============================================================
+   CHECKBOX TEXT
+   ============================================================ */
+
+.references-checkbox-label span {
+  display: inline-block;
+
+  color: #19383a;
+
+  white-space: normal;
+}
+
+/* ============================================================
+   ADD REFERENCE BUTTON
+   ============================================================ */
+
+.dynamic-list-container > .add-item-btn {
+  width: 100%;
+
+  min-height: 42px;
+
+  margin-top: 0.25rem;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px dashed #1f6669;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #1f6669;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dynamic-list-container > .add-item-btn:hover {
+  background: rgba(31, 102, 105, 0.05);
+
+  border-color: #155053;
+
+  transform: translateY(-1px);
+}
+
+.dynamic-list-container > .add-item-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   BUTTON FOCUS
+   ============================================================ */
+
+.dynamic-item-wrapper .remove-item-btn:focus-visible,
+.dynamic-list-container > .add-item-btn:focus-visible {
+  outline: 3px solid rgba(31, 102, 105, 0.15);
+
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .dynamic-item-wrapper {
+    padding: 1.25rem;
+  }
+
+  .dynamic-item-wrapper .basic-info-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+
+  .dynamic-item-wrapper
+    .form-field.full-width {
+    grid-column: 1;
+  }
+
+  .references-checkbox-field {
+    grid-column: 1;
+  }
+
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .dynamic-item-wrapper {
+    padding: 1rem;
+
+    border-radius: 10px;
+  }
+
+  .dynamic-item-wrapper
+    .form-field
+    input[type="text"],
+  .dynamic-item-wrapper
+    .form-field
+    input[type="email"],
+  .dynamic-item-wrapper
+    .form-field
+    input[type="tel"] {
+    height: 40px;
+
+    font-size: 13px;
+  }
+
+  .dynamic-item-wrapper
+    .form-field
+    > label {
+    font-size: 12px;
+  }
+
+  .references-checkbox-label {
+    align-items: flex-start;
+
+    font-size: 13px;
+
+    gap: 9px;
+  }
+
+  .references-checkbox-label
+    input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+  }
+
+  .dynamic-item-wrapper .remove-item-btn {
+    top: 10px;
+    right: 10px;
+
+    padding: 4px 9px;
+
+    font-size: 11px;
+  }
+
+}
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+  .dynamic-item-wrapper {
+    padding: 0.85rem;
+  }
+
+  .references-checkbox-label {
+    font-size: 12px;
+  }
+
+  .dynamic-list-container > .add-item-btn {
+    font-size: 13px;
+  }
+
+}

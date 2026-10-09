@@ -1,0 +1,466 @@
+/* =========================================================
+   LEAVE SUMMARY
+   ========================================================= */
+
+.leave-summary,
+.leave-summary *,
+.leave-summary *::before,
+.leave-summary *::after {
+  box-sizing: border-box;
+}
+
+.leave-summary {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 8px 0;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.leave-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  gap: 12px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.leave-summary-card {
+  --leave-accent: #2563eb;
+  --leave-border: #dbe5f0;
+  --leave-icon-bg: #eff6ff;
+
+  position: relative;
+
+  min-width: 0;
+  min-height: 94px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 14px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid
+    var(--leave-border);
+
+  border-left:
+    3px solid
+    var(--leave-accent);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 1px 2px
+      rgba(15, 23, 42, 0.025),
+    0 4px 10px
+      rgba(15, 23, 42, 0.035);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+@media (hover: hover) {
+  .leave-summary-card:hover {
+    transform:
+      translateY(-1px);
+
+    box-shadow:
+      0 2px 4px
+        rgba(15, 23, 42, 0.035),
+      0 6px 14px
+        rgba(15, 23, 42, 0.05);
+  }
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.leave-summary-card__icon-wrapper {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leave-summary-card__icon {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--leave-accent);
+
+  background:
+    var(--leave-icon-bg);
+
+  border:
+    1px solid
+    var(--leave-border);
+
+  border-radius: 9px;
+}
+
+.leave-summary-card__icon svg {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.leave-summary-card__content {
+  min-width: 0;
+
+  display: flex;
+  flex: 1 1 auto;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.leave-summary-card__title {
+  margin: 0 0 4px;
+
+  overflow: hidden;
+
+  color: #344b46;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.leave-summary-card__value {
+  margin: 0 0 4px;
+
+  color: #172d28;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.35px;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.leave-summary-card__description {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #73827e;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9.5px;
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.leave-summary-card--total {
+  --leave-accent: #2563eb;
+  --leave-border: #dbe7f5;
+  --leave-icon-bg: #eff6ff;
+}
+
+/* =========================================================
+   PENDING
+   ========================================================= */
+
+.leave-summary-card--pending {
+  --leave-accent: #d97706;
+  --leave-border: #f1e4cc;
+  --leave-icon-bg: #fff8eb;
+}
+
+/* =========================================================
+   APPROVED
+   ========================================================= */
+
+.leave-summary-card--approved {
+  --leave-accent: #16845e;
+  --leave-border: #d9e9e3;
+  --leave-icon-bg: #edf7f3;
+}
+
+/* =========================================================
+   REJECTED
+   ========================================================= */
+
+.leave-summary-card--rejected {
+  --leave-accent: #dc3545;
+  --leave-border: #f0dadd;
+  --leave-icon-bg: #fff1f2;
+}
+
+/* =========================================================
+   CANCELLED
+   ========================================================= */
+
+/* .leave-summary-card--cancelled {
+  --leave-accent: #64748b;
+  --leave-border: #e1e6eb;
+  --leave-icon-bg: #f4f6f8;
+} */
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+  .leave-summary__grid {
+    gap: 10px;
+  }
+
+  .leave-summary-card {
+    min-height: 90px;
+
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+  .leave-summary-card__icon {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+  }
+
+  .leave-summary-card__icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .leave-summary-card__title {
+    font-size: 10.5px;
+  }
+
+  .leave-summary-card__value {
+    font-size: 21px;
+  }
+
+  .leave-summary-card__description {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .leave-summary__grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .leave-summary {
+    padding: 6px 0;
+  }
+
+  .leave-summary__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 10px;
+  }
+
+  .leave-summary-card {
+    min-height: 86px;
+
+    padding: 11px 12px;
+  }
+
+  .leave-summary-card__title {
+    white-space: normal;
+  }
+
+  .leave-summary-card__description {
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .leave-summary__grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .leave-summary-card {
+    min-height: 78px;
+
+    gap: 11px;
+
+    padding: 10px 12px;
+
+    border-left-width: 3px;
+
+    border-radius: 7px;
+  }
+
+  .leave-summary-card__icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .leave-summary-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .leave-summary-card__title {
+    margin-bottom: 3px;
+
+    font-size: 10.5px;
+  }
+
+  .leave-summary-card__value {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+  }
+
+  .leave-summary-card__description {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .leave-summary__grid {
+    gap: 7px;
+  }
+
+  .leave-summary-card {
+    min-height: 76px;
+
+    padding: 9px 10px;
+  }
+
+  .leave-summary-card__icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .leave-summary-card__icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .leave-summary-card__value {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leave-summary-card {
+    transition: none;
+  }
+
+  .leave-summary-card:hover {
+    transform: none;
+  }
+}

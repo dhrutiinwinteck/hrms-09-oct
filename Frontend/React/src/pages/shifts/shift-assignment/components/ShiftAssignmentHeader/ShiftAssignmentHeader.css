@@ -1,0 +1,83 @@
+/* src/pages/shifts/shift-assignment/components/ShiftAssignmentHeader/ShiftAssignmentHeader.css */
+
+.sa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 24px 0;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.sa-header__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sa-header__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #d1fae5;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.sa-header__icon {
+    color: #0d9488;
+}
+
+.sa-header__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sa-header__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.sa-header__subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.sa-header__right {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .sa-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0 18px 0;
+    }
+
+    .sa-header__right {
+        width: 100%;
+    }
+
+    .sa-header__title {
+        font-size: 18px;
+    }
+
+    .sa-header__icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sa-header__icon {
+        width: 20px;
+        height: 20px;
+    }
+}

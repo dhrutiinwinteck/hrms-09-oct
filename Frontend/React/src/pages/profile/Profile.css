@@ -1,0 +1,741 @@
+/* =========================================================
+   PROFILE PAGE
+========================================================= */
+
+.profile-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+
+  /*
+    Keep the profile content close to the dashboard edges.
+    This removes the excessive left/right whitespace visible
+    in the current layout.
+  */
+  padding: 10px 8px 24px;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.profile-page__top {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin: 0 0 10px;
+}
+
+
+.profile-page__heading {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.profile-page__top h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 23px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.25px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.profile-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 4px;
+
+  color: #8a95a3;
+
+  font-size: 9px;
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+.profile-breadcrumb strong {
+  color: #52606d;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   VIEW AS BUTTON
+========================================================= */
+
+.profile-view-button {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  min-width: 78px;
+  height: 32px;
+
+  padding: 0 11px;
+
+  border: 1px solid #e3e7eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #344054;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.profile-view-button:hover {
+  border-color: #cbd5e1;
+
+  background: #f8fafc;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+.profile-view-button:active {
+  transform: translateY(1px);
+}
+
+
+.profile-view-button:focus-visible {
+  outline: 2px solid #5d9494;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION GRID
+========================================================= */
+
+.profile-information-grid {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  /*
+    Desktop:
+    3 equal cards per row
+  */
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  align-items: stretch;
+}
+
+
+/*
+  Make every direct child fill its grid area.
+*/
+
+.profile-information-grid > * {
+  min-width: 0;
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.profile-page > .experience-info {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   SAVE NOTE
+========================================================= */
+
+.profile-save-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  width: 100%;
+
+  padding: 10px 0 0;
+
+  color: #7b8794;
+
+  font-size: 8px;
+  line-height: 1.4;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+.profile-save-note span:first-child {
+  color: #7b8794;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1441px) {
+  .profile-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .profile-page__top {
+    margin-bottom: 11px;
+  }
+
+  .profile-information-grid {
+    gap: 11px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1201px - 1440px
+========================================================= */
+
+@media (max-width: 1440px) {
+  .profile-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .profile-information-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL DESKTOP / LARGE TABLET
+   1025px - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .profile-page {
+    padding: 10px 8px 24px;
+  }
+
+  .profile-page__top {
+    gap: 14px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 22px;
+  }
+
+  .profile-information-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .profile-page {
+    padding: 10px 8px 22px;
+  }
+
+  .profile-page__top {
+    margin-bottom: 10px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 21px;
+  }
+
+  .profile-breadcrumb {
+    font-size: 9px;
+  }
+
+  .profile-information-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+  .profile-save-note {
+    padding-top: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   601px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 12px 10px 22px;
+  }
+
+  .profile-page__top {
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 21px;
+  }
+
+  .profile-breadcrumb {
+    margin-top: 4px;
+
+    font-size: 8.5px;
+  }
+
+  .profile-information-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .profile-save-note {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 11px 9px 20px;
+  }
+
+  .profile-page__top {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 20px;
+  }
+
+  .profile-breadcrumb {
+    gap: 5px;
+
+    font-size: 8px;
+  }
+
+  .profile-view-button {
+    min-width: 72px;
+    height: 30px;
+
+    padding: 0 9px;
+
+    font-size: 8px;
+  }
+
+  .profile-information-grid {
+    margin-top: 9px;
+
+    gap: 9px;
+  }
+
+  .profile-save-note {
+    justify-content: center;
+
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   361px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 10px 8px 18px;
+  }
+
+  .profile-page__top {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 19px;
+  }
+
+  .profile-breadcrumb {
+    font-size: 8px;
+  }
+
+  .profile-view-button {
+    align-self: flex-start;
+
+    min-width: 72px;
+  }
+
+  .profile-information-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .profile-save-note {
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    text-align: left;
+
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .profile-page {
+    padding: 9px 7px 16px;
+  }
+
+  .profile-page__top h1 {
+    font-size: 18px;
+  }
+
+  .profile-breadcrumb {
+    gap: 4px;
+
+    font-size: 7.5px;
+  }
+
+  .profile-view-button {
+    height: 29px;
+
+    font-size: 7.5px;
+  }
+
+  .profile-information-grid {
+    gap: 8px;
+  }
+
+  .profile-save-note {
+    font-size: 6.8px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.profile-page button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.profile-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================================
+   PROFILE PAGE STATE
+========================================================= */
+
+.profile-page-state {
+  width: 100%;
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  color: #52606d;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.profile-page-state--error {
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   PROFILE TABS
+========================================================= */
+
+.profile-tabs {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  padding: 5px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================================
+   TAB BUTTON
+========================================================= */
+
+.profile-tab {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 38px;
+
+  padding: 0 18px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-tab svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TAB HOVER
+========================================================= */
+
+.profile-tab:hover {
+  color: #356f70;
+  background: #f0f7f7;
+}
+
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+.profile-tab--active {
+  color: #ffffff;
+
+  background: #356f70;
+
+  border-color: #356f70;
+
+  box-shadow:
+    0 2px 5px rgba(53, 111, 112, 0.14);
+}
+
+.profile-tab--active:hover {
+  color: #ffffff;
+  background: #356f70;
+}
+
+
+/* =========================================================
+   TAB FOCUS
+========================================================= */
+
+.profile-tab:focus-visible {
+  outline: 2px solid #5d9494;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TAB CONTENT
+========================================================= */
+
+.profile-tab-content {
+  width: 100%;
+  min-width: 0;
+
+  animation: profile-tab-content-enter 0.18s ease-out;
+}
+
+.profile-tab-content--payroll {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TAB ANIMATION
+========================================================= */
+
+@keyframes profile-tab-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE TABS
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .profile-tabs {
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+    padding: 4px;
+
+    gap: 3px;
+  }
+
+  .profile-tab {
+    min-height: 35px;
+
+    padding: 0 12px;
+
+    gap: 6px;
+
+    font-size: 10px;
+  }
+
+  .profile-tab svg {
+    width: 14px;
+    height: 14px;
+  }
+
+}
+
+
+@media (max-width: 360px) {
+
+  .profile-tab {
+    padding: 0 10px;
+
+    font-size: 9px;
+  }
+
+}

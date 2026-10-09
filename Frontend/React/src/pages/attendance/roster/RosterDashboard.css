@@ -1,0 +1,180 @@
+/* ============================================================
+   ROSTER DASHBOARD
+============================================================ */
+
+.roster-dashboard {
+  width: 100%;
+
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  background: #f8faf9;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.roster-dashboard__container {
+  width: 100%;
+
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 16px 20px 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   HEADER SECTION
+============================================================ */
+
+.roster-dashboard__header {
+  width: 100%;
+
+  margin-bottom: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edeb;
+
+  border-radius: 11px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.015),
+    0 3px 12px rgba(15, 23, 42, 0.02);
+}
+
+
+/* ============================================================
+   TABLE SECTION
+============================================================ */
+
+.roster-dashboard__table-section {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1440px) {
+  .roster-dashboard__container {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    padding-top: 18px;
+  }
+
+  .roster-dashboard__header {
+    margin-bottom: 14px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1024px) {
+  .roster-dashboard__container {
+    padding: 16px 18px 22px;
+  }
+
+  .roster-dashboard__header {
+    margin-bottom: 11px;
+
+    border-radius: 10px;
+  }
+}
+
+
+/* ============================================================
+   SMALL TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+  .roster-dashboard__container {
+    padding: 14px 14px 20px;
+  }
+
+  .roster-dashboard__header {
+    margin-bottom: 10px;
+
+    border-radius: 9px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+  .roster-dashboard__container {
+    padding: 12px 11px 18px;
+  }
+
+  .roster-dashboard__header {
+    margin-bottom: 9px;
+
+    border-radius: 8px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+  .roster-dashboard__container {
+    padding: 10px 9px 16px;
+  }
+
+  .roster-dashboard__header {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL
+============================================================ */
+
+@media (max-width: 375px) {
+  .roster-dashboard__container {
+    padding: 9px 8px 14px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL
+============================================================ */
+
+@media (max-width: 320px) {
+  .roster-dashboard__container {
+    padding: 8px 7px 13px;
+  }
+}

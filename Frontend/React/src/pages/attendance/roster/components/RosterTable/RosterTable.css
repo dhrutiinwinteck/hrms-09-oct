@@ -1,0 +1,926 @@
+/* ============================================================
+   ROSTER TABLE
+============================================================ */
+
+.roster-table {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edeb;
+
+  border-radius: 11px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.015),
+    0 4px 14px rgba(15, 23, 42, 0.025);
+}
+
+
+/* ============================================================
+   SCROLL CONTAINER
+============================================================ */
+
+.roster-table__scroll {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd8d5 transparent;
+}
+
+
+/* ============================================================
+   WEBKIT SCROLLBAR
+============================================================ */
+
+.roster-table__scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.roster-table__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.roster-table__scroll::-webkit-scrollbar-thumb {
+  background: #cbd8d5;
+
+  border-radius: 10px;
+}
+
+.roster-table__scroll::-webkit-scrollbar-thumb:hover {
+  background: #aebfba;
+}
+
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.roster-table__table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  color: #3b474c;
+}
+
+
+/* ============================================================
+   COLUMN WIDTH
+============================================================ */
+
+.roster-table__table th:first-child,
+.roster-table__table td:first-child {
+  width: 125px;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.roster-table__table thead th {
+  height: 48px;
+
+  padding: 7px 8px;
+
+  background: #f8fbfa;
+
+  border-bottom: 1px solid #e7edeb;
+
+  box-sizing: border-box;
+
+  vertical-align: middle;
+}
+
+
+/* ============================================================
+   EMPLOYEE HEADER
+============================================================ */
+
+.roster-table__employee-header {
+  padding-left: 17px !important;
+
+  color: #405158;
+
+  font-size: 9.5px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-align: left;
+
+  text-transform: none;
+}
+
+
+/* ============================================================
+   DAY HEADER
+============================================================ */
+
+.roster-table__day-header {
+  color: #425158;
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+
+.roster-table__day-name {
+  display: block;
+
+  color: #354b54;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+
+.roster-table__day-date {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #7a898e;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* ============================================================
+   ROW
+============================================================ */
+
+.roster-table__table tbody tr {
+  height: 43px;
+
+  transition:
+    background-color 120ms ease;
+}
+
+
+.roster-table__table tbody tr:hover {
+  background: #fcfdfd;
+}
+
+
+/* ============================================================
+   CELL
+============================================================ */
+
+.roster-table__table tbody td {
+  padding: 5px 6px;
+
+  border-bottom: 1px solid #edf1f0;
+
+  box-sizing: border-box;
+
+  vertical-align: middle;
+}
+
+
+.roster-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   EMPLOYEE CELL
+============================================================ */
+
+.roster-table__employee-cell {
+  padding-left: 10px !important;
+}
+
+
+/* ============================================================
+   EMPLOYEE
+============================================================ */
+
+.roster-table__employee {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* ============================================================
+   AVATAR
+============================================================ */
+
+.roster-table__avatar {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.1px;
+}
+
+
+/* Different avatar tones */
+
+.roster-table__table tbody tr:nth-child(4n + 1)
+.roster-table__avatar {
+  color: #3e9b88;
+
+  background: #e3f4ee;
+}
+
+.roster-table__table tbody tr:nth-child(4n + 2)
+.roster-table__avatar {
+  color: #9d7b35;
+
+  background: #faf0d9;
+}
+
+.roster-table__table tbody tr:nth-child(4n + 3)
+.roster-table__avatar {
+  color: #3977a5;
+
+  background: #e5f0f8;
+}
+
+.roster-table__table tbody tr:nth-child(4n + 4)
+.roster-table__avatar {
+  color: #5d5ca5;
+
+  background: #ecebfa;
+}
+
+
+/* ============================================================
+   EMPLOYEE NAME
+============================================================ */
+
+.roster-table__employee-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #25383f;
+
+  font-size: 8.5px;
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+/* ============================================================
+   SHIFT CELL
+============================================================ */
+
+.roster-table__shift-cell {
+  text-align: center;
+}
+
+
+/* ============================================================
+   SHIFT BUTTON
+============================================================ */
+
+.roster-table__shift {
+  width: 65%;
+
+  min-height: 27px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 5px;
+
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+
+
+.roster-table__shift:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 2px 5px rgba(15, 23, 42, 0.045);
+}
+
+
+.roster-table__shift:active {
+  transform: translateY(0);
+}
+
+
+.roster-table__shift:focus-visible {
+  outline: 2px solid rgba(77, 129, 117, 0.3);
+
+  outline-offset: 1px;
+}
+
+
+/* ============================================================
+   DAY SHIFT
+============================================================ */
+
+.roster-table__shift--day {
+  color: #4d8175;
+
+  background: #edf8f4;
+
+  border-color: #e1f0eb;
+}
+
+
+/* ============================================================
+   NIGHT SHIFT
+============================================================ */
+
+.roster-table__shift--night {
+  color: #244f82;
+
+  background: #edf3fc;
+
+  border-color: #dce6f4;
+}
+
+/* Darker moon icon for night shift */
+.roster-table__shift--night .roster-table__shift-icon {
+  color: #1f4a7a;
+
+  stroke-width: 2.4;
+}
+
+
+/* ============================================================
+   WEEK OFF ONLY
+   Unique warm highlight within existing HRMS theme
+============================================================ */
+
+.roster-table__shift--off {
+  color: #7a6845;
+
+  background: #f8f3e6;
+
+  border-color: #eadfbe;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.roster-table__shift--off:hover {
+  color: #66552f;
+
+  background: #f3ead5;
+
+  border-color: #dfd0a8;
+
+  box-shadow:
+    0 2px 6px rgba(122, 104, 69, 0.08);
+}
+
+
+/* ============================================================
+   SHIFT ICON
+============================================================ */
+
+.roster-table__shift-icon {
+  width: 10px;
+  height: 10px;
+
+  flex: 0 0 auto;
+
+  stroke-width: 2.2;
+  display: none;
+}
+
+.roster-table__shift--night .roster-table__shift-icon {
+  color: #1f4a7a;
+  stroke-width: 2.5;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+
+.roster-table__empty {
+  height: 180px;
+
+  color: #7d898e;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.roster-table__footer {
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 7px 14px;
+
+  background: #fbfcfc;
+
+  border-top: 1px solid #edf1f0;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LEGEND
+============================================================ */
+
+.roster-table__legend {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+
+.roster-table__legend-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #7a878b;
+
+  font-size: 7.8px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   LEGEND BOX
+============================================================ */
+
+.roster-table__legend-box {
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  display: inline-block;
+
+  border-radius: 3px;
+}
+
+
+.roster-table__legend-box--day {
+  background: #dcefe9;
+}
+
+
+.roster-table__legend-box--night {
+  background: #dce6f7;
+}
+
+
+.roster-table__legend-box--off {
+  background: #e8ebec;
+}
+
+
+/* ============================================================
+   HINT
+============================================================ */
+
+.roster-table__hint {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #7c898e;
+
+  font-size: 7.8px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+.roster-table__hint-icon {
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 auto;
+
+  color: #7c8d93;
+
+  stroke-width: 1.8;
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.roster-table__loading {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #718085;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+.roster-table__loading-spinner {
+  width: 22px;
+  height: 22px;
+
+  border: 2px solid #e3ebe8;
+
+  border-top-color: #4d8175;
+
+  border-radius: 50%;
+
+  animation:
+    roster-table-spin 700ms linear infinite;
+}
+
+
+@keyframes roster-table-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1440px) {
+  .roster-table__table {
+    min-width: 980px;
+  }
+
+  .roster-table__table th:first-child,
+  .roster-table__table td:first-child {
+    width: 145px;
+  }
+
+  .roster-table__employee-header {
+    padding-left: 18px !important;
+
+    font-size: 10px;
+  }
+
+  .roster-table__day-name {
+    font-size: 9.5px;
+  }
+
+  .roster-table__day-date {
+    font-size: 8.5px;
+  }
+
+  .roster-table__employee-name {
+    font-size: 9px;
+  }
+
+  .roster-table__shift {
+    min-height: 28px;
+
+    font-size: 8.3px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1024px) {
+  .roster-table__table {
+    min-width: 900px;
+  }
+
+  .roster-table__footer {
+    gap: 12px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .roster-table__legend {
+    gap: 10px;
+  }
+}
+
+
+/* ============================================================
+   SMALL TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+  .roster-table {
+    border-radius: 9px;
+  }
+
+  .roster-table__table {
+    min-width: 880px;
+  }
+
+  .roster-table__footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    padding: 10px 11px;
+  }
+
+  .roster-table__legend {
+    width: 100%;
+
+    gap: 10px 14px;
+  }
+
+  .roster-table__hint {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+  .roster-table__table {
+    min-width: 850px;
+  }
+
+  .roster-table__table thead th {
+    height: 46px;
+  }
+
+  .roster-table__table tbody tr {
+    height: 42px;
+  }
+
+  .roster-table__employee-header {
+    padding-left: 12px !important;
+  }
+
+  .roster-table__employee-cell {
+    padding-left: 8px !important;
+  }
+
+  .roster-table__avatar {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+
+    border-radius: 6px;
+
+    font-size: 7.5px;
+  }
+
+  .roster-table__employee {
+    gap: 7px;
+  }
+
+  .roster-table__employee-name {
+    font-size: 8px;
+  }
+
+  .roster-table__shift {
+    min-height: 26px;
+
+    font-size: 7.7px;
+
+    gap: 3px;
+  }
+
+  .roster-table__shift-icon {
+    width: 9px;
+    height: 9px;
+  }
+
+  .roster-table__footer {
+    padding: 9px 10px;
+  }
+
+  .roster-table__legend-item,
+  .roster-table__hint {
+    font-size: 7.5px;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+  .roster-table__table {
+    min-width: 820px;
+  }
+
+  .roster-table__day-name {
+    font-size: 8.5px;
+  }
+
+  .roster-table__day-date {
+    font-size: 7.5px;
+  }
+
+  .roster-table__employee-name {
+    font-size: 7.8px;
+  }
+
+  .roster-table__shift {
+    min-height: 25px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    font-size: 7.3px;
+  }
+
+  .roster-table__legend {
+    gap: 8px 11px;
+  }
+
+  .roster-table__legend-item,
+  .roster-table__hint {
+    font-size: 7.2px;
+  }
+
+  .roster-table__legend-box {
+    width: 12px;
+    height: 12px;
+
+    flex-basis: 12px;
+  }
+}
+
+
+/* ============================================================
+   EXTRA SMALL
+============================================================ */
+
+@media (max-width: 375px) {
+  .roster-table__table {
+    min-width: 790px;
+  }
+
+  .roster-table__table thead th {
+    height: 44px;
+  }
+
+  .roster-table__table tbody tr {
+    height: 40px;
+  }
+
+  .roster-table__employee-name {
+    font-size: 7.5px;
+  }
+
+  .roster-table__shift {
+    min-height: 24px;
+
+    font-size: 7px;
+  }
+
+  .roster-table__footer {
+    padding: 8px 9px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .roster-table__shift {
+    transition: none;
+  }
+
+  .roster-table__shift:hover {
+    transform: none;
+  }
+
+  .roster-table__loading-spinner {
+    animation: none;
+  }
+
+  .roster-table__table tbody tr {
+    transition: none;
+  }
+}

@@ -1,0 +1,164 @@
+/* ============================================================
+   SHIFT SWAP SUMMARY
+   ============================================================ */
+
+.shift-swap-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+
+/* ============================================================
+   SUMMARY CARD
+   ============================================================ */
+
+.shift-swap-summary__card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 94px;
+  padding: 15px 18px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.shift-swap-summary__card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.shift-swap-summary__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 46px;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.shift-swap-summary__content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.shift-swap-summary__count {
+  color: #172033;
+
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.shift-swap-summary__label {
+  margin-top: 3px;
+
+  color: #334155;
+
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.shift-swap-summary__sub-label {
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+
+/* ============================================================
+   TOTAL REQUESTS
+   ============================================================ */
+
+.shift-swap-summary__card--total
+  .shift-swap-summary__icon {
+  background: #edf4ff;
+  color: #2563eb;
+}
+
+
+/* ============================================================
+   PENDING
+   ============================================================ */
+
+.shift-swap-summary__card--pending
+  .shift-swap-summary__icon {
+  background: #edf4ff;
+  color: #2563eb;
+}
+
+
+/* ============================================================
+   APPROVED
+   ============================================================ */
+
+.shift-swap-summary__card--approved
+  .shift-swap-summary__icon {
+  background: #eaf8f0;
+  color: #159570;
+}
+
+
+/* ============================================================
+   REJECTED
+   ============================================================ */
+
+.shift-swap-summary__card--rejected
+  .shift-swap-summary__icon {
+  background: #fff0f2;
+  color: #df5261;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .shift-swap-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 520px) {
+  .shift-swap-summary {
+    grid-template-columns: 1fr;
+  }
+}

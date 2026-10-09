@@ -1,0 +1,137 @@
+/* AnnouncementCard.css */
+
+.announcement-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.announcement-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.announcement-card-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A2424;
+  margin: 0;
+}
+
+.announcement-view-btn {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #8FC746;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.announcement-view-btn:hover {
+  background-color: #F7F8FA;
+}
+
+.announcement-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.announcement-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 0;
+  border-bottom: 1px solid #F0F0F0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.announcement-card-item:last-child {
+  border-bottom: none;
+}
+
+.announcement-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.announcement-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.announcement-item-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A2424;
+  flex: 1;
+}
+
+.announcement-item-priority {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.priority-high {
+  background-color: #FFEBEE;
+  color: #D32F2F;
+}
+
+.priority-medium {
+  background-color: #FFF3E0;
+  color: #F57C00;
+}
+
+.priority-low {
+  background-color: #E8F5E9;
+  color: #8FC746;
+}
+
+.announcement-item-bottom {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.announcement-item-date {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #90A4AE;
+  flex-shrink: 0;
+}
+
+.announcement-item-desc {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #90A4AE;
+  line-height: 1.4;
+}

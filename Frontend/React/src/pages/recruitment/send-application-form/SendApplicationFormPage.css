@@ -1,0 +1,91 @@
+/* ============================================================
+   SEND APPLICATION FORM PAGE
+   ============================================================ */
+
+.send-application-form-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 0px 8px;
+
+  background: #f8fafc;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.send-application-form-page > .send-application-form-header {
+  width: 100%;
+
+  flex: 0 0 auto;
+
+  margin: 0 0 2px;
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+
+.send-application-form-page > .send-application-form-card {
+  width: 100%;
+  max-width: 100%;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+}
+
+/* ============================================================
+   IMPORTANT:
+   PAGE MUST NEVER BECOME TWO COLUMNS
+   ============================================================ */
+
+.send-application-form-page {
+  flex-direction: column;
+}
+
+.send-application-form-page > .send-application-form-header,
+.send-application-form-page > .send-application-form-card {
+  align-self: stretch;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1200px) {
+  .send-application-form-page {
+    padding: 20px 22px 32px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .send-application-form-page {
+    padding: 16px;
+  }
+
+  .send-application-form-page > .send-application-form-header {
+    margin-bottom: 18px;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .send-application-form-page {
+    padding: 12px;
+  }
+}

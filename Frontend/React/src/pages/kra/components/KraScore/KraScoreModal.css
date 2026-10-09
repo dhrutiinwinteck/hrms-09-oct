@@ -1,0 +1,2499 @@
+/* =========================================================
+
+   KRA SCORE MODAL
+
+   Enterprise HRMS
+
+   Supports: Add / Edit / View
+
+   Theme: Teal + White + Soft Mint
+
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+
+   OVERLAY
+
+   ========================================================= */
+
+
+
+.kra-score-modal-overlay {
+
+position:fixed;
+
+inset: 0;
+
+z-index: 1200;
+
+
+
+display: flex;
+ align-items: center;
+
+justify-content: center;
+
+
+
+box-sizing: border-box;
+
+padding: 24px;
+
+
+
+ background: rgba(15, 35, 31, 0.42);
+
+
+ backdrop-filter: blur(3px);
+
+ -webkit-backdrop-filter: blur(3px);
+
+
+
+ animation: kra-modal-overlay-enter 0.18s ease-out;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MODAL CONTAINER
+
+   ========================================================= */
+
+
+
+.kra-score-modal {
+
+ position: relative;
+
+
+
+ width: min(660px, 100%);
+
+ max-height: calc(100vh - 48px);
+
+
+
+ display: flex;
+
+ flex-direction: column;
+
+
+
+ box-sizing: border-box;
+
+
+
+ background: #ffffff;
+
+
+ border: 1px solid #dce6e3;
+
+ border-radius: 10px;
+
+
+
+ box-shadow:
+
+ 0 8px 24px rgba(15, 45, 39, 0.08),
+
+ 0 24px 64px rgba(15, 45, 39, 0.16);
+
+
+
+ overflow: hidden;
+
+
+
+ animation: kra-modal-enter 0.2s ease-out;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TOP ACCENT
+
+   ========================================================= */
+
+
+
+.kra-score-modal::before {
+
+ content: "";
+
+
+ position: absolute;
+
+ top: 0;
+
+ left: 0;
+
+ right: 0;
+
+
+
+ z-index: 2;
+
+
+ height: 3px;
+
+
+ background: #087f70;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   HEADER
+
+   ========================================================= */
+
+
+
+.kra-score-modal-header {
+
+ position: relative;
+
+
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+
+ gap: 20px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 20px 22px 18px;
+
+
+
+ background: #ffffff;
+
+
+
+ border-bottom: 1px solid #e5ecea;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   HEADING WRAPPER
+
+   ========================================================= */
+
+
+
+.kra-score-modal-heading {
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ align-items: center;
+
+
+
+ gap: 13px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   HEADING ICON
+
+   ========================================================= */
+
+
+
+.kra-score-modal-heading-icon {
+
+ width: 42px;
+
+ height: 42px;
+
+
+
+ flex: 0 0 42px;
+
+
+
+ display: inline-flex;
+
+ align-items: center;
+
+ justify-content: center;
+
+
+
+ box-sizing: border-box;
+
+
+
+ border: 1px solid #cfe4df;
+
+ border-radius: 9px;
+
+
+
+ background: #eaf5f2;
+
+
+
+ color: #087f70;
+
+}
+
+
+
+.kra-score-modal-heading-icon svg {
+
+ width: 20px;
+
+ height: 20px;
+
+
+
+ flex-shrink: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLE
+
+   ========================================================= */
+
+
+
+.kra-score-modal-heading h2 {
+
+ margin: 0;
+
+
+
+ color: #182522;
+
+
+
+ font-family: inherit;
+
+ font-size: 17px;
+
+ line-height: 1.3;
+
+ font-weight: 650;
+
+
+
+ letter-spacing: -0.015em;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SUBTITLE
+
+   ========================================================= */
+
+
+
+.kra-score-modal-heading p {
+
+ max-width: 450px;
+
+
+
+ margin: 4px 0 0;
+
+
+
+ color: #71817d;
+
+
+
+ font-family: inherit;
+
+ font-size: 11.5px;
+
+ line-height: 1.45;
+
+ font-weight: 400;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CLOSE BUTTON
+
+   ========================================================= */
+
+
+
+.kra-score-modal-close {
+
+ width: 34px;
+
+ height: 34px;
+
+
+
+ flex: 0 0 34px;
+
+
+
+ display: inline-flex;
+
+ align-items: center;
+
+ justify-content: center;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 0;
+
+
+
+ border: 1px solid #dce5e2;
+
+ border-radius: 7px;
+
+
+
+ background: #ffffff;
+
+
+
+ color: #687974;
+
+
+
+ cursor: pointer;
+
+
+
+ transition:
+
+ background-color 0.16s ease,
+
+ border-color 0.16s ease,
+
+ color 0.16s ease,
+
+ transform 0.16s ease;
+
+}
+
+
+
+.kra-score-modal-close:hover {
+
+ border-color: #c7d6d2;
+
+
+
+ background: #f4f8f7;
+
+
+
+ color: #18312b;
+
+
+ transform: rotate(3deg);
+
+}
+
+
+
+.kra-score-modal-close:active {
+
+ transform: scale(0.96);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FORM
+
+   ========================================================= */
+
+
+
+.kra-score-modal-form {
+
+ min-height: 0;
+
+
+
+ display: flex;
+
+ flex: 1;
+
+ flex-direction: column;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BODY
+
+   ========================================================= */
+
+
+
+.kra-score-modal-body {
+
+ min-height: 0;
+
+
+
+ display: grid;
+
+ grid-template-columns:
+
+ repeat(2, minmax(0, 1fr));
+
+
+
+ align-items: start;
+
+
+
+ gap: 18px 20px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 22px;
+
+
+
+ background: #ffffff;
+
+
+
+ overflow-x: hidden;
+
+ overflow-y: auto;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SCROLLBAR
+
+   ========================================================= */
+
+
+
+.kra-score-modal-body {
+
+ scrollbar-width: thin;
+
+ scrollbar-color: #c7d7d3 transparent;
+
+}
+
+
+
+.kra-score-modal-body::-webkit-scrollbar {
+
+ width: 6px;
+
+}
+
+
+
+.kra-score-modal-body::-webkit-scrollbar-track {
+
+ background: transparent;
+
+}
+
+
+
+.kra-score-modal-body::-webkit-scrollbar-thumb {
+
+ border-radius: 10px;
+
+
+
+ background: #c7d7d3;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FIELD
+
+   ========================================================= */
+
+
+
+.kra-score-field {
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ flex-direction: column;
+
+
+
+ gap: 7px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FULL WIDTH FIELD
+
+   ========================================================= */
+
+
+
+.kra-score-field-full {
+
+ grid-column: 1 / -1;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LABEL
+
+   ========================================================= */
+
+
+
+.kra-score-field label {
+
+ display: inline-flex;
+
+ align-items: center;
+
+
+
+ gap: 2px;
+
+
+
+ margin: 0;
+
+
+
+ color: #293c37;
+
+
+
+ font-family: inherit;
+
+ font-size: 11.5px;
+
+ line-height: 1.4;
+
+ font-weight: 550;
+
+}
+
+
+
+.kra-score-field label > span {
+
+ margin-left: 1px;
+
+
+
+ color: #087f70;
+
+
+
+ font-size: 12px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INPUT + SELECT
+
+   ========================================================= */
+
+
+
+.kra-score-field input,
+
+.kra-score-field select {
+
+ width: 100%;
+
+ height: 42px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ margin: 0;
+
+ padding: 0 12px;
+
+
+
+ border: 1px solid #d1ddda;
+
+ border-radius: 7px;
+
+
+ outline: none;
+
+
+
+ background: #ffffff;
+
+
+ color: #20322d;
+
+
+
+ font-family: inherit;
+
+ font-size: 12px;
+
+ line-height: normal;
+
+ font-weight: 400;
+
+
+
+ transition:
+
+ border-color 0.16s ease,
+
+ background-color 0.16s ease,
+
+ box-shadow 0.16s ease;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELECT
+
+   ========================================================= */
+
+
+
+.kra-score-field select {
+
+ cursor: pointer;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   PLACEHOLDER
+
+   ========================================================= */
+
+
+
+.kra-score-field input::placeholder {
+
+ color: #9aa8a4;
+
+
+
+ opacity: 1;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INPUT HOVER
+
+   ========================================================= */
+
+
+
+.kra-score-field input:hover:not(:disabled),
+
+.kra-score-field select:hover:not(:disabled) {
+
+ border-color: #afc2bd;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   INPUT FOCUS
+
+   ========================================================= */
+
+
+
+.kra-score-field input:focus,
+
+.kra-score-field select:focus {
+
+ border-color: #087f70;
+
+
+
+ background: #ffffff;
+
+
+
+ box-shadow:
+
+ 0 0 0 3px rgba(8, 127, 112, 0.09);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DATE / MONTH INPUT
+
+   ========================================================= */
+
+
+
+.kra-score-field input[type="date"],
+
+.kra-score-field input[type="month"] {
+
+ cursor: pointer;
+
+}
+
+
+
+.kra-score-field input[type="date"]::-webkit-calendar-picker-indicator,
+
+.kra-score-field input[type="month"]::-webkit-calendar-picker-indicator {
+
+ cursor: pointer;
+
+
+
+ opacity: 0.65;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DISABLED / VIEW MODE INPUT
+
+   ========================================================= */
+
+
+
+.kra-score-field input:disabled,
+
+.kra-score-field select:disabled,
+
+.kra-score-field input[readonly] {
+
+ border-color: #e1e8e6;
+
+
+
+ background: #f7f9f8;
+
+
+
+ color: #52635e;
+
+
+
+ cursor: default;
+
+
+
+ opacity: 1;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VALIDATION ERROR
+
+   ========================================================= */
+
+
+
+.kra-score-field .kra-score-input-error {
+
+ border-color: #c75d5d;
+
+
+
+ background: #fffdfd;
+
+}
+
+
+
+.kra-score-field .kra-score-input-error:hover {
+
+ border-color: #b94e4e;
+
+}
+
+
+
+.kra-score-field .kra-score-input-error:focus {
+
+ border-color: #c75d5d;
+
+
+
+ box-shadow:
+
+ 0 0 0 3px rgba(199, 93, 93, 0.09);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ERROR MESSAGE
+
+   ========================================================= */
+
+
+
+.kra-score-field small {
+
+ display: block;
+
+
+
+ margin: -1px 0 0;
+
+
+
+ color: #b64d4d;
+
+
+
+ font-family: inherit;
+
+ font-size: 10px;
+
+ line-height: 1.4;
+
+ font-weight: 450;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SELF SCORE
+
+   ========================================================= */
+
+
+
+.kra-self-score-wrapper {
+
+ position: relative;
+
+
+
+ width: 100%;
+
+ min-width: 0;
+
+}
+
+
+
+.kra-self-score-wrapper input {
+ padding-right: 64px;
+
+}
+
+
+
+.kra-self-score-suffix {
+
+ position: absolute;
+
+
+
+ top: 50%;
+
+right: 13px;
+
+
+
+ transform: translateY(-50%);
+
+
+
+ color: #74847f;
+
+
+
+ font-family: inherit;
+ font-size: 11px;
+
+ line-height: 1;
+
+ font-weight: 500;
+
+
+
+ pointer-events: none;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REMOVE NUMBER SPINNER
+
+   ========================================================= */
+
+
+
+.kra-self-score-wrapper
+
+ input[type="number"]::-webkit-inner-spin-button,
+
+.kra-self-score-wrapper
+
+ input[type="number"]::-webkit-outer-spin-button {
+
+ margin: 0;
+
+
+
+ -webkit-appearance: none;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FOOTER
+
+   ========================================================= */
+
+
+
+.kra-score-modal-footer {
+
+ display: flex;
+
+ align-items: center;
+
+ justify-content: flex-end;
+
+
+
+ gap: 10px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 14px 22px;
+
+
+
+border-top: 1px solid #e3ebe8;
+
+
+ background: #fafcfb;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   COMMON FOOTER BUTTON
+
+   ========================================================= */
+
+
+
+.kra-score-modal-cancel,
+
+.kra-score-modal-submit {
+
+ min-width: 92px;
+
+ min-height: 39px;
+
+
+
+ display: inline-flex;
+
+ align-items: center;
+
+ justify-content: center;
+
+
+
+ gap: 7px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 0 17px;
+
+
+
+ border-radius: 7px;
+
+
+
+ font-family: inherit;
+
+ font-size: 12px;
+
+ line-height: 1;
+
+ font-weight: 550;
+
+
+
+ white-space: nowrap;
+
+
+
+ cursor: pointer;
+
+
+
+ transition:
+
+ background-color 0.16s ease,
+
+ border-color 0.16s ease,
+
+ color 0.16s ease,
+
+ box-shadow 0.16s ease,
+
+ transform 0.16s ease;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CANCEL
+
+   ========================================================= */
+
+
+
+.kra-score-modal-cancel {
+
+ border: 1px solid #ccd9d5;
+
+
+ background: #ffffff;
+
+
+
+ color: #465954;
+
+}
+
+
+
+.kra-score-modal-cancel:hover {
+
+ border-color: #afc0bb;
+
+
+
+ background: #f4f8f7;
+
+
+
+ color: #263c36;
+
+}
+
+
+
+.kra-score-modal-cancel:active {
+
+ background: #edf3f1;
+
+
+
+ transform: translateY(1px);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SUBMIT
+
+   ========================================================= */
+
+
+
+.kra-score-modal-submit {
+
+ min-width: 135px;
+
+
+
+ border: 1px solid #087f70;
+
+
+
+ background: #087f70;
+
+
+
+ color: #ffffff;
+
+
+
+ box-shadow:
+
+ 0 2px 5px rgba(8, 127, 112, 0.15);
+
+}
+
+
+
+.kra-score-modal-submit:hover {
+
+ border-color: #076f62;
+
+
+
+ background: #076f62;
+
+
+
+ box-shadow:
+
+ 0 4px 10px rgba(8, 127, 112, 0.19);
+
+
+
+ transform: translateY(-1px);
+
+}
+
+
+
+.kra-score-modal-submit:active {
+
+ border-color: #066458;
+
+
+
+ background: #066458;
+
+
+
+ box-shadow:
+
+ 0 1px 3px rgba(8, 127, 112, 0.16);
+
+
+ transform: translateY(0);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BUTTON ICON
+
+   ========================================================= */
+
+
+
+.kra-score-modal-submit svg {
+
+ width: 16px;
+
+ height: 16px;
+
+ flex-shrink: 0;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DISABLED BUTTON
+
+   ========================================================= */
+
+
+
+.kra-score-modal-submit:disabled,
+
+.kra-score-modal-cancel:disabled {
+
+ cursor: not-allowed;
+
+
+
+ opacity: 0.55;
+
+
+
+ transform: none;
+
+
+
+ box-shadow: none;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VIEW MODE
+
+   Add these classes from TSX when View is implemented.
+
+   ========================================================= */
+
+
+
+.kra-score-modal--view .kra-score-modal-heading-icon {
+
+ border-color: #d5e6e2;
+
+
+
+ background: #edf7f4;
+
+
+
+ color: #087f70;
+
+}
+
+
+
+.kra-score-modal--view .kra-score-modal-body {
+
+ gap: 14px 20px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VIEW DETAIL CARD
+
+   ========================================================= */
+
+
+
+.kra-score-view-field {
+
+ min-width: 0;
+
+
+
+ display: flex;
+
+ flex-direction: column;
+
+
+
+ gap: 5px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 13px 14px;
+
+
+
+ border: 1px solid #e1e9e7;
+
+ border-radius: 8px;
+
+
+
+ background: #fafcfb;
+
+}
+
+
+
+.kra-score-view-field--full {
+
+ grid-column: 1 / -1;
+
+}
+
+
+
+.kra-score-view-label {
+
+ color: #788783;
+
+
+
+ font-size: 10.5px;
+
+ line-height: 1.3;
+
+ font-weight: 500;
+
+}
+
+
+
+.kra-score-view-value {
+
+ color: #20332e;
+
+
+
+ font-size: 13px;
+
+ line-height: 1.4;
+
+ font-weight: 600;
+
+ word-break: break-word;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VIEW SCORE
+
+   ========================================================= */
+
+
+
+.kra-score-view-score {
+
+ display: inline-flex;
+
+ align-items: center;
+
+
+
+ width: fit-content;
+
+
+
+ min-height: 27px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 0 10px;
+
+
+
+ border: 1px solid #cce2dc;
+
+ border-radius: 6px;
+
+
+ background: #eaf5f2;
+
+
+
+ color: #087f70;
+
+
+
+ font-size: 11.5px;
+
+ font-weight: 650;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   VIEW STATUS
+
+   ========================================================= */
+
+
+
+.kra-score-view-status {
+
+ display: inline-flex;
+
+ align-items: center;
+
+
+
+ width: fit-content;
+
+
+
+ gap: 6px;
+
+
+
+ min-height: 27px;
+
+
+
+ box-sizing: border-box;
+
+
+
+ padding: 0 10px;
+
+
+
+ border: 1px solid #cfe3de;
+
+ border-radius: 999px;
+
+
+
+ background: #edf7f4;
+
+
+
+ color: #24695f;
+
+
+
+ font-size: 11px;
+
+ font-weight: 600;
+
+}
+
+
+
+.kra-score-view-status::before {
+
+ content: "";
+
+
+
+ width: 6px;
+
+ height: 6px;
+
+ flex-shrink: 0;
+
+ border-radius: 50%;
+
+ background: #087f70;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   EDIT MODE
+
+   ========================================================= */
+
+
+
+.kra-score-modal--edit .kra-score-modal-heading-icon {
+
+ border-color: #cfe4df;
+
+
+
+ background: #eaf5f2;
+
+
+
+ color: #087f70;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FOCUS
+
+   ========================================================= */
+
+
+
+.kra-score-modal-close:focus-visible,
+
+.kra-score-modal-cancel:focus-visible,
+
+.kra-score-modal-submit:focus-visible {
+
+ outline: 2px solid rgba(8, 127, 112, 0.28);
+
+ outline-offset: 2px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ANIMATIONS
+
+   ========================================================= */
+
+
+
+@keyframes kra-modal-overlay-enter {
+
+ from {
+
+ opacity: 0;
+
+ }
+
+
+
+ to {
+
+ opacity: 1;
+
+ }
+
+}
+
+
+
+@keyframes kra-modal-enter {
+
+ from {
+
+ opacity: 0;
+
+
+
+ transform:
+
+ translateY(10px)
+
+ scale(0.985);
+
+ }
+
+
+
+ to {
+
+ opacity: 1;
+
+
+
+ transform:
+
+ translateY(0)
+
+ scale(1);
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET
+
+   ========================================================= */
+
+
+
+@media (max-width: 768px) {
+
+ .kra-score-modal-overlay {
+
+ padding: 16px;
+
+ }
+
+
+ .kra-score-modal {
+
+ width: min(620px, 100%);
+
+ max-height: calc(100vh - 32px);
+
+
+
+ border-radius: 12px;
+ }
+
+
+ .kra-score-modal-header {
+
+ padding: 17px 18px;
+ }
+
+
+
+ .kra-score-modal-body {
+
+ grid-template-columns: 1fr;
+
+
+
+ gap: 15px;
+
+
+
+ padding: 18px;
+
+ }
+
+
+
+ .kra-score-field-full,
+
+ .kra-score-view-field--full {
+
+ grid-column: auto;
+
+ }
+
+
+
+ .kra-score-modal-footer {
+
+ padding: 14px 18px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MOBILE
+
+   ========================================================= */
+
+
+
+@media (max-width: 576px) {
+
+ .kra-score-modal-overlay {
+
+ align-items: flex-end;
+
+
+
+ padding: 0;
+
+ }
+
+
+
+ .kra-score-modal {
+
+ width: 100%;
+
+ max-height: 92dvh;
+
+
+
+ border-right: 0;
+
+ border-bottom: 0;
+
+ border-left: 0;
+
+
+
+ border-radius: 14px 14px 0 0;
+
+ }
+
+
+
+ .kra-score-modal-header {
+
+ align-items: center;
+
+
+
+ gap: 12px;
+
+
+
+ padding: 16px;
+
+ }
+
+
+
+ .kra-score-modal-heading {
+
+ gap: 10px;
+
+ }
+
+
+
+ .kra-score-modal-heading-icon {
+ width: 38px;
+
+ height: 38px;
+
+
+
+ flex-basis: 38px;
+
+
+
+ border-radius: 8px;
+
+ }
+
+
+
+ .kra-score-modal-heading h2 {
+
+ font-size: 16px;
+
+ }
+
+
+
+ .kra-score-modal-heading p {
+
+ display: none;
+
+ }
+
+
+
+ .kra-score-modal-body {
+ padding: 16px;
+
+
+
+ gap: 14px;
+
+ }
+
+
+
+ .kra-score-field input,
+
+ .kra-score-field select {
+
+ height: 43px;
+
+ }
+
+
+
+ .kra-score-modal-footer {
+
+ display: grid;
+
+ grid-template-columns: 1fr 1fr;
+
+
+
+ gap: 9px;
+
+
+
+ padding: 13px 16px
+
+ calc(13px + env(safe-area-inset-bottom));
+
+ }
+
+
+
+ .kra-score-modal-cancel,
+
+ .kra-score-modal-submit {
+
+ width: 100%;
+
+ min-width: 0;
+
+
+
+ min-height: 42px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SMALL MOBILE
+
+   ========================================================= */
+
+
+
+@media (max-width: 380px) {
+
+ .kra-score-modal-header {
+
+ padding: 14px;
+
+ }
+
+
+
+ .kra-score-modal-body {
+
+ padding: 14px;
+
+ }
+
+
+
+ .kra-score-modal-footer {
+
+ padding-right: 14px;
+
+ padding-left: 14px;
+
+ }
+
+
+
+ .kra-score-modal-heading-icon {
+
+ width: 36px;
+
+ height: 36px;
+
+
+
+ flex-basis: 36px;
+ }
+
+
+
+ .kra-score-modal-heading h2 {
+
+ font-size: 15px;
+
+ }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   REDUCED MOTION
+
+   ========================================================= */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+ .kra-score-modal-overlay,
+
+ .kra-score-modal {
+
+ animation: none;
+
+ }
+
+
+
+ .kra-score-modal-close,
+
+ .kra-score-modal-cancel,
+
+ .kra-score-modal-submit,
+
+ .kra-score-field input,
+
+ .kra-score-field select {
+
+ transition: none;
+
+ }
+
+
+
+ .kra-score-modal-close:hover,
+
+ .kra-score-modal-submit:hover {
+
+ transform: none;
+
+ }
+
+}
+
+
+/* =========================================================
+   KRA PARAMETER AREA — PREMIUM TABLE UI
+   ========================================================= */
+
+.kra-parameter-section {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.kra-parameter-loading {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #dce9e5;
+  border-radius: 9px;
+  background: #f7fbfa;
+  color: #60736d;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.kra-parameter-loading svg {
+  flex: 0 0 auto;
+  color: #087f70;
+  animation: kra-spin 0.9s linear infinite;
+}
+
+.kra-parameter-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 11px 13px;
+  box-sizing: border-box;
+  border: 1px solid #ead7d7;
+  border-left: 3px solid #b85a5a;
+  border-radius: 8px;
+  background: #fffafa;
+  color: #7e4a4a;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.kra-parameter-table-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #dce7e4;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 45, 39, 0.035);
+}
+
+.kra-parameter-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.kra-parameter-table th {
+  padding: 12px 12px;
+  border-bottom: 1px solid #dce7e4;
+  background: #f4f8f7;
+  color: #30443f;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 10.5px;
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: 0.005em;
+}
+
+.kra-parameter-table th + th,
+.kra-parameter-table td + td {
+  border-left: 1px solid #edf2f0;
+}
+
+.kra-parameter-table th span {
+  display: block;
+  margin-top: 3px;
+  color: #82908c;
+  font-size: 9px;
+  line-height: 1.3;
+  font-weight: 450;
+}
+
+.kra-parameter-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #edf2f0;
+  color: #2d403b;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+.kra-parameter-table tbody tr:not(.kra-total-row):hover td {
+  background: #fbfdfc;
+}
+
+.kra-parameter-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.kra-col-focused {
+  width: 28%;
+}
+
+.kra-col-weight {
+  width: 13%;
+}
+
+.kra-col-rating {
+  width: 20%;
+}
+
+.kra-col-improvement {
+  width: 39%;
+}
+
+.kra-focused-area {
+  color: #243a34;
+  font-weight: 550;
+  word-break: break-word;
+}
+
+.kra-weightage-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 25px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 1px solid #d4e5e1;
+  border-radius: 6px;
+  background: #f0f8f6;
+  color: #087f70;
+  font-weight: 650;
+  font-size: 11px;
+}
+
+.kra-parameter-input {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 9px;
+  border: 1px solid #d3dfdc;
+  border-radius: 6px;
+  outline: none;
+  background: #ffffff;
+  color: #233731;
+  font-family: inherit;
+  font-size: 11.5px;
+  line-height: normal;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.kra-parameter-input:hover:not(:disabled):not([readonly]) {
+  border-color: #aebfba;
+}
+
+.kra-parameter-input:focus {
+  border-color: #087f70;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(8, 127, 112, 0.09);
+}
+
+.kra-parameter-input--readonly,
+.kra-parameter-input:disabled,
+.kra-parameter-input[readonly] {
+  border-color: #e1e9e6;
+  background: #f7f9f8;
+  color: #61716c;
+  cursor: default;
+  opacity: 1;
+}
+
+.kra-rating-help {
+  display: block;
+  margin-top: 4px;
+  color: #8a9894;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+/* TOTAL */
+
+.kra-total-row td {
+  border-top: 1px solid #dce7e4;
+  border-bottom: 0 !important;
+  background: #f5f9f8;
+  color: #243a34;
+  font-weight: 650;
+}
+
+.kra-total-row td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.kra-total-row td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.kra-total-value {
+  color: #087f70;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   GRADE
+   ========================================================= */
+
+.kra-grade-section {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 12px 13px;
+  box-sizing: border-box;
+  border: 1px solid #dce7e4;
+  border-radius: 9px;
+  background: #fbfdfc;
+}
+
+.kra-grade-title {
+  color: #31443f;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 650;
+}
+
+.kra-grade-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.kra-grade-badge {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5px 7px;
+  border: 1px solid;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.25;
+  font-weight: 550;
+}
+
+.kra-grade-below {
+  border-color: #ead1d1;
+  background: #fff7f7;
+  color: #a04d4d;
+}
+
+.kra-grade-average {
+  border-color: #eadfbe;
+  background: #fffaf0;
+  color: #87691f;
+}
+
+.kra-grade-met {
+  border-color: #cfe4df;
+  background: #edf8f5;
+  color: #087565;
+}
+
+.kra-grade-exceeded {
+  border-color: #d1dfeb;
+  background: #f3f8fc;
+  color: #416b88;
+}
+
+.kra-current-grade {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 1px solid #cfe4df;
+  border-radius: 7px;
+  background: #eaf5f2;
+  color: #087f70;
+  text-align: center;
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: 650;
+}
+
+.kra-current-grade.kra-grade-below {
+  border-color: #ead1d1;
+  background: #fff3f3;
+  color: #a04d4d;
+}
+
+.kra-current-grade.kra-grade-average {
+  border-color: #eadfbe;
+  background: #fff8e9;
+  color: #87691f;
+}
+
+.kra-current-grade.kra-grade-met {
+  border-color: #cfe4df;
+  background: #eaf5f2;
+  color: #087565;
+}
+
+.kra-current-grade.kra-grade-exceeded {
+  border-color: #d1dfeb;
+  background: #f0f7fb;
+  color: #416b88;
+}
+
+/* Keep the modal wide enough for the 4-column KRA table. */
+.kra-score-modal {
+  width: min(900px, 100%);
+}
+
+.kra-score-modal-body {
+  gap: 16px 20px;
+}
+
+/* Existing-period notice should not look like a raw error paragraph. */
+.kra-parameter-section > .kra-parameter-error {
+  border-left-color: #087f70;
+  border-color: #cfe4df;
+  background: #f3faf8;
+  color: #3c5c55;
+}
+
+/* Smooth spinner for Loader2. */
+@keyframes kra-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 820px) {
+  .kra-score-modal {
+    width: min(760px, 100%);
+  }
+
+  .kra-grade-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .kra-score-modal {
+    width: 100%;
+  }
+
+  .kra-parameter-table {
+    min-width: 680px;
+  }
+
+  .kra-grade-list {
+    grid-template-columns: 1fr;
+  }
+}

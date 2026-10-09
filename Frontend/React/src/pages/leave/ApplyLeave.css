@@ -1,0 +1,240 @@
+/* ==========================================================
+   ADD NEW EMPLOYEE BUTTON
+   ========================================================== */
+
+.add-view-leave-page__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-view-leave-page__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-view-leave-page__add-button:hover {
+  background: #1d4ed8;
+
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.25);
+
+  transform: translateY(-1px);
+}
+
+.add-view-leave-page__add-button:active {
+  transform: translateY(0);
+}
+
+.add-view-leave-page__add-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ==========================================================
+   ERROR
+   ========================================================== */
+
+.add-view-leave-page__error {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+/* ==========================================================
+   LOADING
+   ========================================================== */
+
+.add-view-leave-page__loading {
+  padding: 40px;
+
+  text-align: center;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   MODAL OVERLAY
+   ========================================================== */
+
+.add-view-leave-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  overflow-y: auto;
+
+  animation: addViewLeaveOverlayIn 0.2s ease-out;
+}
+
+/* ==========================================================
+   MODAL WRAPPER
+   ========================================================== */
+
+.add-view-leave-modal-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 720px;
+
+  max-height: calc(100vh - 48px);
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+
+  animation: addViewLeaveModalIn 0.25s ease-out;
+}
+
+/* ==========================================================
+   CLOSE BUTTON
+   ========================================================== */
+
+.add-view-leave-modal-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.add-view-leave-modal-close:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.add-view-leave-modal-close:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+@keyframes addViewLeaveOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes addViewLeaveModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+  .add-view-leave-page__actions {
+    justify-content: stretch;
+  }
+
+  .add-view-leave-page__add-button {
+    width: 100%;
+  }
+
+  .add-view-leave-modal-overlay {
+    align-items: flex-start;
+
+    padding: 16px;
+  }
+
+  .add-view-leave-modal-wrapper {
+    max-height: calc(100vh - 32px);
+
+    border-radius: 10px;
+  }
+}

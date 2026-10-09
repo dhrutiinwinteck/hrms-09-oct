@@ -1,0 +1,808 @@
+/* =========================================================
+   KRA MANAGEMENT SUMMARY
+   Enterprise HRMS
+   Compact Reference-Aligned Summary Cards
+   ========================================================= */
+
+
+/* =========================================================
+   SUMMARY GRID
+   Desktop = 4 cards in one row
+   ========================================================= */
+
+.kra-management-summary {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+   ========================================================= */
+
+.kra-management-summary-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 112px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5e2;
+  border-radius: 9px;
+
+  box-shadow:
+    0 1px 3px rgba(24, 55, 50, 0.025),
+    0 4px 12px rgba(24, 55, 50, 0.04);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.kra-management-summary-card:hover {
+  border-color: #cfdcd8;
+
+  box-shadow:
+    0 2px 5px rgba(24, 55, 50, 0.03),
+    0 6px 15px rgba(24, 55, 50, 0.055);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.kra-management-summary-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 88px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 15px 14px 8px;
+}
+
+
+/* =========================================================
+   ICON BLOCK
+   ========================================================= */
+
+.kra-management-summary-icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  border-radius: 9px;
+}
+
+.kra-management-summary-icon svg {
+  width: 23px;
+  height: 23px;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+.kra-management-summary-info {
+  min-width: 0;
+
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.kra-management-summary-title {
+  display: block;
+
+  max-width: 100%;
+
+  margin: 0 0 1px;
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #173934;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.kra-management-summary-value {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #0d1816;
+
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -0.5px;
+
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.kra-management-summary-badge {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin-top: 5px;
+
+  padding: 2px 7px;
+
+  overflow: hidden;
+
+  color: #254a43;
+
+  background: #e3efec;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.15;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOTAL KRAs
+   ========================================================= */
+
+.kra-management-summary-card--primary
+.kra-management-summary-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #3c7773 0%,
+      #255f5d 100%
+    );
+}
+
+.kra-management-summary-card--primary
+.kra-management-summary-badge {
+  color: #245149;
+
+  background: #e2efec;
+}
+
+
+/* =========================================================
+   ACTIVE KRAs
+   ========================================================= */
+
+.kra-management-summary-card--warning
+.kra-management-summary-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #e6d0b5 0%,
+      #d9b68d 100%
+    );
+}
+
+.kra-management-summary-card--warning
+.kra-management-summary-badge {
+  color: #68503a;
+
+  background: #f3e9dc;
+}
+
+
+/* =========================================================
+   EMPLOYEES
+   ========================================================= */
+
+.kra-management-summary-card--employee
+.kra-management-summary-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #79afad 0%,
+      #579290 100%
+    );
+}
+
+.kra-management-summary-card--employee
+.kra-management-summary-badge {
+  color: #28534c;
+
+  background: #deedeb;
+}
+
+
+/* =========================================================
+   KRAs THIS YEAR
+   ========================================================= */
+
+.kra-management-summary-card--year
+.kra-management-summary-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #397772 0%,
+      #245e5c 100%
+    );
+}
+
+.kra-management-summary-card--year
+.kra-management-summary-badge {
+  color: #234c46;
+
+  background: #deebe8;
+}
+
+
+/* =========================================================
+   DECORATIVE WAVE
+   ========================================================= */
+
+.kra-management-summary-wave {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 30px;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.kra-management-summary-wave svg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+.kra-management-summary-wave-fill {
+  fill: rgba(66, 130, 125, 0.065);
+}
+
+.kra-management-summary-wave-line {
+  fill: none;
+
+  stroke: #669f9b;
+  stroke-width: 1.25;
+
+  vector-effect: non-scaling-stroke;
+}
+
+
+/* =========================================================
+   ACTIVE KRA WAVE
+   ========================================================= */
+
+.kra-management-summary-card--warning
+.kra-management-summary-wave-fill {
+  fill: rgba(217, 182, 141, 0.085);
+}
+
+.kra-management-summary-card--warning
+.kra-management-summary-wave-line {
+  stroke: #ddb98f;
+}
+
+
+/* =========================================================
+   EMPLOYEE WAVE
+   ========================================================= */
+
+.kra-management-summary-card--employee
+.kra-management-summary-wave-fill {
+  fill: rgba(91, 151, 148, 0.07);
+}
+
+.kra-management-summary-card--employee
+.kra-management-summary-wave-line {
+  stroke: #76aaa7;
+}
+
+
+/* =========================================================
+   YEAR WAVE
+   ========================================================= */
+
+.kra-management-summary-card--year
+.kra-management-summary-wave-fill {
+  fill: rgba(38, 111, 103, 0.065);
+}
+
+.kra-management-summary-card--year
+.kra-management-summary-wave-line {
+  stroke: #3f887f;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   >= 1440px
+
+   Keep cards compact even on wide displays.
+   ========================================================= */
+
+@media (min-width: 1440px) {
+  .kra-management-summary {
+    gap: 12px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 112px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 88px;
+
+    padding:
+      15px
+      14px
+      8px;
+  }
+
+  .kra-management-summary-icon {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   STANDARD DESKTOP / LAPTOP
+   1025px - 1439px
+
+   Preserve four cards in one row.
+   ========================================================= */
+
+@media (max-width: 1439px) and (min-width: 1025px) {
+  .kra-management-summary {
+    gap: 10px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 108px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 85px;
+
+    gap: 9px;
+
+    padding:
+      14px
+      12px
+      7px;
+  }
+
+  .kra-management-summary-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .kra-management-summary-title {
+    font-size: 10.5px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 24px;
+  }
+
+  .kra-management-summary-badge {
+    padding-right: 6px;
+    padding-left: 6px;
+
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET LANDSCAPE
+   901px - 1024px
+
+   Four cards still fit because the compact card design
+   has sufficient horizontal space.
+   ========================================================= */
+
+@media (max-width: 1024px) and (min-width: 901px) {
+  .kra-management-summary {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 106px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 83px;
+
+    gap: 8px;
+
+    padding:
+      13px
+      10px
+      7px;
+  }
+
+  .kra-management-summary-icon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .kra-management-summary-title {
+    font-size: 10px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 23px;
+  }
+
+  .kra-management-summary-badge {
+    margin-top: 4px;
+
+    padding:
+      2px
+      6px;
+
+    font-size: 8px;
+  }
+
+  .kra-management-summary-wave {
+    height: 28px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 900px
+
+   Switch to two columns before cards become cramped.
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .kra-management-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 108px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 85px;
+
+    gap: 10px;
+
+    padding:
+      14px
+      13px
+      7px;
+  }
+
+  .kra-management-summary-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .kra-management-summary-title {
+    font-size: 10.5px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 24px;
+  }
+
+  .kra-management-summary-badge {
+    margin-top: 4px;
+
+    font-size: 8.5px;
+  }
+
+  .kra-management-summary-wave {
+    height: 28px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+
+   One card per row.
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-management-summary {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 9px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 104px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 82px;
+
+    gap: 11px;
+
+    padding:
+      13px
+      13px
+      7px;
+  }
+
+  .kra-management-summary-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .kra-management-summary-title {
+    margin-top: 0;
+
+    font-size: 10.5px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 24px;
+  }
+
+  .kra-management-summary-badge {
+    margin-top: 4px;
+
+    min-height: 17px;
+
+    font-size: 8.5px;
+  }
+
+  .kra-management-summary-wave {
+    height: 27px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-management-summary {
+    gap: 8px;
+  }
+
+  .kra-management-summary-card {
+    min-height: 100px;
+  }
+
+  .kra-management-summary-card-content {
+    min-height: 79px;
+
+    gap: 9px;
+
+    padding:
+      12px
+      11px
+      6px;
+  }
+
+  .kra-management-summary-icon {
+    width: 39px;
+    height: 39px;
+
+    flex: 0 0 39px;
+
+    border-radius: 8px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .kra-management-summary-title {
+    font-size: 10px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 22px;
+  }
+
+  .kra-management-summary-badge {
+    min-height: 16px;
+
+    padding:
+      2px
+      6px;
+
+    font-size: 8px;
+  }
+
+  .kra-management-summary-wave {
+    height: 25px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 340px
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .kra-management-summary-card-content {
+    gap: 8px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .kra-management-summary-icon {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+  }
+
+  .kra-management-summary-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .kra-management-summary-value {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-management-summary-card {
+    transition: none;
+  }
+
+  .kra-management-summary-card:hover {
+    transform: none;
+  }
+}

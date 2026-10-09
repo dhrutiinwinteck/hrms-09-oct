@@ -1,0 +1,78 @@
+.expenses-row {
+  height: 43px;
+  border-bottom: 1px solid #edf1f2;
+  transition: background 150ms ease;
+}
+
+.expenses-row:hover {
+  background: #fbfdfd;
+}
+
+.expenses-row td {
+  padding: 0 14px;
+  color: #42565d;
+  font-size: 9px;
+}
+
+.expenses-row__delete {
+  width: 16%;
+}
+
+.expenses-row__type {
+  width: 28%;
+  font-weight: 600;
+}
+
+.expenses-row__description {
+  width: 56%;
+}
+
+.expenses-row__description span {
+  color: #69797e;
+}
+
+.expenses-row__delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: #a35a5a;
+  background: #fff1f1;
+  cursor: pointer;
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+.expenses-row__delete-button:hover {
+  color: #d23d46;
+  background: #ffe4e4;
+}
+
+.expenses-row__delete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .expenses-row td {
+    padding: 0 10px;
+    font-size: 8px;
+  }
+
+  .expenses-row__delete {
+    width: 20%;
+  }
+
+  .expenses-row__type {
+    width: 30%;
+  }
+
+  .expenses-row__description {
+    width: 50%;
+  }
+}

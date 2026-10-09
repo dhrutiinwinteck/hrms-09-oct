@@ -1,0 +1,904 @@
+/* =========================================================
+   KRA MODAL
+   Enterprise HRMS Theme
+   Teal + White + Soft Mint
+   Fully Scoped / Responsive / Production Ready
+   ========================================================= */
+
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --kra-primary: #087f70;
+  --kra-primary-hover: #06695e;
+  --kra-primary-active: #075e54;
+
+  --kra-primary-soft: #eaf5f2;
+  --kra-primary-soft-hover: #e1efeb;
+
+  --kra-white: #ffffff;
+  --kra-surface: #f8faf9;
+
+  --kra-text-primary: #182522;
+  --kra-text-secondary: #52635f;
+  --kra-text-muted: #899793;
+
+  --kra-border: #d8e1de;
+  --kra-border-light: #e5ebe9;
+  --kra-input-border: #aabbb6;
+
+  --kra-danger: #c94b4b;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.kra-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  background: rgba(17, 36, 32, 0.46);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  animation: kraOverlayFade 0.18s ease-out;
+}
+
+@keyframes kraOverlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MODAL CONTAINER
+   ========================================================= */
+
+.kra-modal-container {
+  width: 100%;
+  max-width: 600px;
+  max-height: 88vh;
+  max-height: 88dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--kra-white);
+
+  border: 1px solid #cfdcd8;
+  border-radius: 10px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 45, 39, 0.16),
+    0 4px 14px rgba(15, 45, 39, 0.08);
+
+  animation: kraModalEnter 0.2s ease-out;
+}
+
+@keyframes kraModalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.kra-modal-header {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  background: var(--kra-white);
+
+  border-bottom: 1px solid var(--kra-border-light);
+}
+
+.kra-modal-header h2 {
+  min-width: 0;
+
+  margin: 0;
+
+  color: var(--kra-text-primary);
+
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.kra-modal-close {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #647570;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.kra-modal-close:hover {
+  background: var(--kra-primary-soft);
+  color: var(--kra-primary-active);
+}
+
+.kra-modal-close:active {
+  transform: scale(0.94);
+}
+
+.kra-modal-close:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.kra-modal-form {
+  min-height: 0;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   MODAL BODY
+   ========================================================= */
+
+.kra-modal-body {
+  min-height: 0;
+
+  flex: 1;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  overscroll-behavior: contain;
+
+  background: var(--kra-white);
+
+  scrollbar-width: thin;
+  scrollbar-color: #bdcbc7 transparent;
+}
+
+.kra-modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.kra-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kra-modal-body::-webkit-scrollbar-thumb {
+  background: #bdcbc7;
+  border-radius: 10px;
+}
+
+.kra-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #9cafa9;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.kra-modal-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 14px;
+  row-gap: 13px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.kra-modal-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.kra-modal-full-width {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.kra-modal-field label {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin: 0;
+
+  color: #263934;
+
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   REQUIRED INDICATOR
+   ========================================================= */
+
+.kra-required {
+  margin-left: 3px;
+
+  color: var(--kra-danger);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+
+.kra-modal-control {
+  width: 100%;
+  height: 36px;
+
+  min-width: 0;
+
+  padding: 7px 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--kra-input-border);
+  border-radius: 5px;
+
+  outline: none;
+
+  background: var(--kra-white);
+  color: var(--kra-text-primary);
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.kra-modal-control::placeholder {
+  color: var(--kra-text-muted);
+  opacity: 1;
+}
+
+.kra-modal-control:hover {
+  border-color: #6f9189;
+}
+
+.kra-modal-control:focus {
+  border-color: var(--kra-primary);
+
+  background: var(--kra-white);
+
+  box-shadow:
+    0 0 0 3px rgba(8, 127, 112, 0.1);
+}
+
+.kra-modal-control:focus-visible {
+  outline: none;
+}
+
+
+/* =========================================================
+   SELECT CONTROL
+   ========================================================= */
+
+select.kra-modal-control {
+  padding-right: 32px;
+
+  color: #263934;
+  background-color: var(--kra-white);
+
+  cursor: pointer;
+
+  appearance: auto;
+  -webkit-appearance: auto;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+
+/* Select Hover */
+
+select.kra-modal-control:hover {
+  border-color: #6f9189;
+  background-color: #fbfdfc;
+}
+
+
+/* Select Focus */
+
+select.kra-modal-control:focus {
+  outline: none;
+
+  border-color: var(--kra-primary);
+
+  background-color: var(--kra-white);
+
+  box-shadow:
+    0 0 0 3px rgba(8, 127, 112, 0.1);
+}
+
+
+/* Dropdown Options */
+
+select.kra-modal-control option {
+  background-color: #ffffff;
+
+  color: #263934;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+/* Selected Option */
+
+select.kra-modal-control option:checked {
+  background:
+    linear-gradient(
+      #eaf5f2,
+      #eaf5f2
+    );
+
+  background-color: #eaf5f2;
+
+  color: #075e54;
+
+  font-weight: 600;
+}
+
+
+/* Option Hover */
+
+select.kra-modal-control option:hover {
+  background-color: #f1f8f6;
+
+  color: #075e54;
+}
+
+
+/* Disabled Select */
+
+select.kra-modal-control:disabled {
+  background-color: #f3f6f5;
+
+  border-color: #dce4e1;
+
+  color: #8a9793;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   NUMBER INPUT
+   ========================================================= */
+
+input[type="number"].kra-modal-control {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="number"].kra-modal-control::-webkit-inner-spin-button,
+input[type="number"].kra-modal-control::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.kra-modal-textarea {
+  height: 66px;
+  min-height: 66px;
+  max-height: 120px;
+
+  padding: 9px 10px;
+
+  line-height: 1.5;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   DISABLED CONTROLS
+   ========================================================= */
+
+.kra-modal-control:disabled {
+  background: #f3f6f5;
+
+  color: #8a9793;
+
+  border-color: #dce4e1;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.kra-modal-footer {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding: 11px 18px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  background: var(--kra-surface);
+
+  border-top: 1px solid var(--kra-border-light);
+}
+
+
+/* =========================================================
+   BUTTON BASE
+   ========================================================= */
+
+.kra-modal-btn {
+  min-width: 82px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.kra-modal-btn-cancel {
+  background: var(--kra-white);
+
+  border-color: var(--kra-border);
+
+  color: #394a46;
+}
+
+.kra-modal-btn-cancel:hover {
+  background: var(--kra-primary-soft);
+
+  border-color: #bfd8d2;
+
+  color: var(--kra-primary-active);
+}
+
+.kra-modal-btn-cancel:active {
+  background: #dfece8;
+
+  transform: translateY(1px);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.kra-modal-btn-primary {
+  background: var(--kra-primary);
+
+  border-color: var(--kra-primary);
+
+  color: var(--kra-white);
+
+  box-shadow:
+    0 2px 4px rgba(8, 127, 112, 0.18);
+}
+
+.kra-modal-btn-primary:hover {
+  background: var(--kra-primary-hover);
+
+  border-color: var(--kra-primary-hover);
+
+  box-shadow:
+    0 4px 10px rgba(8, 127, 112, 0.22);
+
+  transform: translateY(-1px);
+}
+
+.kra-modal-btn-primary:active {
+  background: var(--kra-primary-active);
+
+  border-color: var(--kra-primary-active);
+
+  box-shadow: none;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+   ========================================================= */
+
+.kra-modal-btn:focus-visible {
+  outline: 2px solid rgba(8, 127, 112, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.kra-modal-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   TABLET
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .kra-modal-overlay {
+    padding: 18px;
+  }
+
+  .kra-modal-container {
+    width: 100%;
+    max-width: 560px;
+
+    max-height: 92vh;
+    max-height: 92dvh;
+
+    border-radius: 9px;
+  }
+
+  .kra-modal-header {
+    min-height: 52px;
+
+    padding: 0 16px;
+  }
+
+  .kra-modal-header h2 {
+    font-size: 15px;
+  }
+
+  .kra-modal-body {
+    padding: 16px;
+  }
+
+  .kra-modal-grid {
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+
+  .kra-modal-footer {
+    min-height: 56px;
+
+    padding: 10px 16px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .kra-modal-overlay {
+    align-items: center;
+
+    padding: 12px;
+  }
+
+  .kra-modal-container {
+    width: 100%;
+    max-width: 100%;
+
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+
+    border-radius: 8px;
+  }
+
+  .kra-modal-header {
+    min-height: 50px;
+
+    padding: 0 14px;
+  }
+
+  .kra-modal-header h2 {
+    font-size: 14px;
+  }
+
+  .kra-modal-close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .kra-modal-body {
+    padding: 14px;
+  }
+
+  .kra-modal-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  .kra-modal-full-width {
+    grid-column: auto;
+  }
+
+  .kra-modal-field label {
+    font-size: 11px;
+  }
+
+  .kra-modal-control {
+    height: 38px;
+
+    padding: 8px 10px;
+
+    font-size: 13px;
+  }
+
+  select.kra-modal-control {
+    padding-right: 32px;
+  }
+
+  .kra-modal-textarea {
+    height: 70px;
+    min-height: 70px;
+    max-height: 110px;
+  }
+
+  .kra-modal-footer {
+    min-height: 56px;
+
+    padding: 10px 14px;
+
+    gap: 8px;
+  }
+
+  .kra-modal-btn {
+    min-width: 80px;
+    height: 35px;
+
+    padding: 0 14px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .kra-modal-overlay {
+    padding: 8px;
+  }
+
+  .kra-modal-container {
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+
+    border-radius: 7px;
+  }
+
+  .kra-modal-header {
+    min-height: 48px;
+
+    padding: 0 12px;
+  }
+
+  .kra-modal-body {
+    padding: 12px;
+  }
+
+  .kra-modal-grid {
+    gap: 10px;
+  }
+
+  .kra-modal-footer {
+    padding: 9px 12px;
+  }
+
+  .kra-modal-btn {
+    min-width: 76px;
+
+    padding: 0 12px;
+  }
+}
+
+
+/* =========================================================
+   SHORT HEIGHT DEVICES
+   Small laptops / landscape tablet / mobile landscape
+   ========================================================= */
+
+@media (max-height: 650px) {
+  .kra-modal-overlay {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .kra-modal-container {
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+
+  .kra-modal-header {
+    min-height: 48px;
+  }
+
+  .kra-modal-body {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .kra-modal-footer {
+    min-height: 52px;
+  }
+
+  .kra-modal-grid {
+    row-gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kra-modal-overlay,
+  .kra-modal-container {
+    animation: none;
+  }
+
+  .kra-modal-close,
+  .kra-modal-control,
+  .kra-modal-btn {
+    transition: none;
+  }
+}

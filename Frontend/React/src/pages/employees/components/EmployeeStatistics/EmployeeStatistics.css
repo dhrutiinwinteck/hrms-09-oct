@@ -1,0 +1,99 @@
+/* src/pages/employees/components/EmployeeStatistics/EmployeeStatistics.css */
+
+.employee-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.statistic-card {
+  background: #ffffff;
+  border-radius: 20px; /* Highly rounded corners */
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden; /* Important for the wave clipping */
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.statistic-card:hover {
+  transform: translateY(-4px);
+}
+
+.statistic-content {
+  padding: 14px;
+  z-index: 2; /* Keep text above the wave */
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.statistic-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statistic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statistic-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.statistic-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statistic-footer-text {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* The Wave Container */
+.statistic-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 1;
+}
+
+.statistic-wave svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive fixes */
+@media (max-width: 1200px) {
+  .employee-statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .employee-statistics {
+    grid-template-columns: 1fr;
+  }
+}

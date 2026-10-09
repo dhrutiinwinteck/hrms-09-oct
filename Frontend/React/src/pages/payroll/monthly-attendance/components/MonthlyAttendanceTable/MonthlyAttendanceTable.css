@@ -1,0 +1,332 @@
+/* =========================================================
+   MONTHLY ATTENDANCE TABLE
+   ========================================================= */
+
+.monthly-attendance-table-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  padding: 0 16px 14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+.monthly-attendance-table-scroll {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+
+  border: 1px solid #e5eded;
+  border-radius: 6px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c6d8d7 transparent;
+}
+
+.monthly-attendance-table {
+  width: 100%;
+  min-width: 720px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+   ========================================================= */
+
+.monthly-attendance-table__column--employee {
+  width: 24%;
+  text-align: left;
+}
+
+.monthly-attendance-table__column--uan {
+  width: 10%;
+}
+
+.monthly-attendance-table__column--esic {
+  width: 10%;
+}
+
+.monthly-attendance-table__column--bank {
+  width: 17%;
+}
+
+.monthly-attendance-table__column--account {
+  width: 15%;
+}
+
+.monthly-attendance-table__column--ifsc {
+  width: 11%;
+}
+
+.monthly-attendance-table__column--salary {
+  width: 13%;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.monthly-attendance-table__head {
+  background:
+    linear-gradient(
+      180deg,
+      #e9f3f3 0%,
+      #e3eeee 100%
+    );
+}
+
+.monthly-attendance-table__heading {
+  height: 30px;
+
+  padding: 0 10px;
+
+  border-right: 1px solid rgba(199, 218, 217, 0.52);
+
+  color: #29474f;
+
+  font-size: 8px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.monthly-attendance-table__heading:first-child {
+  padding-left: 14px;
+}
+
+.monthly-attendance-table__heading:last-child {
+  border-right: 0;
+}
+
+.monthly-attendance-table__heading-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 6px;
+}
+
+.monthly-attendance-table__sort-icon {
+  flex: 0 0 auto;
+
+  color: #9aadb0;
+
+  opacity: 0.8;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.monthly-attendance-table__body {
+  background: #ffffff;
+}
+
+.monthly-attendance-table__row {
+  transition:
+    background 150ms ease;
+}
+
+.monthly-attendance-table__row:hover {
+  background: #f7fbfa;
+}
+
+.monthly-attendance-table__cell {
+  height: 38px;
+
+  padding: 0 10px;
+
+  border-top: 1px solid #edf2f2;
+
+  color: #4b6268;
+
+  font-size: 8px;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+.monthly-attendance-table__cell:first-child {
+  padding-left: 14px;
+
+  color: #2c474f;
+
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.monthly-attendance-table__cell:last-child {
+  padding-right: 14px;
+
+  color: #275d60;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.monthly-attendance-table__empty {
+  min-height: 88px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 20px 13px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fdfefe 100%
+    );
+}
+
+.monthly-attendance-table__empty-icon {
+  position: relative;
+
+  width: 42px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  color: #7e979b;
+}
+
+.monthly-attendance-table__empty-icon::after {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+  bottom: 3px;
+
+  width: 23px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: #d9e5e5;
+}
+
+.monthly-attendance-table__empty-accent {
+  position: absolute;
+
+  display: block;
+
+  border-radius: 2px;
+
+  background: #8ca9aa;
+}
+
+.monthly-attendance-table__empty-accent--one {
+  width: 5px;
+  height: 2px;
+
+  top: 8px;
+  right: 1px;
+
+  transform: rotate(38deg);
+}
+
+.monthly-attendance-table__empty-accent--two {
+  width: 5px;
+  height: 2px;
+
+  top: 13px;
+  right: 0;
+
+  transform: rotate(-28deg);
+}
+
+.monthly-attendance-table__empty-title {
+  margin: 0;
+
+  color: #334d55;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+.monthly-attendance-table__empty-description {
+  margin: 3px 0 0;
+
+  color: #829398;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+  line-height: 1.4;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .monthly-attendance-table-wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .monthly-attendance-table {
+    min-width: 760px;
+  }
+
+  .monthly-attendance-table__empty {
+    min-height: 105px;
+  }
+}
+
+@media (max-width: 520px) {
+  .monthly-attendance-table-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .monthly-attendance-table-scroll {
+    border-radius: 5px;
+  }
+}

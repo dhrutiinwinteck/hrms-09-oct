@@ -1,0 +1,25 @@
+/* src/pages/admin/holidays/AdminHolidayCalendarPage.css */
+
+.admin-holiday-calendar-page {
+  padding-top: 5px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.admin-holiday-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-holiday-calendar-page {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-holiday-calendar-page {
+    padding: 12px;
+  }
+}
